@@ -1,0 +1,53 @@
+version: "3.4"
+
+networks:
+  k6:
+  grafana:
+
+services:
+  influxdb:
+    image: armdocker.rnd.ericsson.se/dockerhub-ericsson-remote/influxdb:1.8
+    networks:
+      - k6
+      - grafana
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=k6
+
+  grafana:
+    image: armdocker.rnd.ericsson.se/dockerhub-ericsson-remote/grafana/grafana:latest
+    networks:
+      - grafana
+    ports:
+      - "3030:3000"
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+    volumes:
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/provisioning/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
+      - ./grafana/provisioning/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+
+  k6:
+    image: armdocker.rnd.ericsson.se/dockerhub-ericsson-remote/loadimpact/k6:latest
+    platform: linux/amd64
+    user: root
+    networks:
+      - k6
+    ports:
+      - "6565:6565"
+    environment:
+      # Use these values if you're using the bash script `load-test-start.sh`
+      - K6_OUT=influxdb=http://host.docker.internal:8086/k6
+      - BASE_API_URL=http://host.docker.internal:3000
+      - MAX_VUS=100
+
+      # Use these values if you're using the bob ruleset `ruleset2.0.yaml`
+      # - K6_OUT=influxdb=http://influxdb:8086/k6
+      # - BASE_API_URL=$BASE_API_URL
+      # - MAX_VUS=$MAX_VUS
+    volumes:
+      - ../src:/scripts
+      - ../../.bob/load-test-report:/report

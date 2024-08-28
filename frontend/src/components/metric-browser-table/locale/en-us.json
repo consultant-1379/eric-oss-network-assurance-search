@@ -1,0 +1,9 @@
+{
+  "CONFIG_ERROR": "The table couldn't be built. 'Refresh' to try again.",
+  "NO_RESULTS": "There are no results to display.",
+  "SETTINGS": "Settings",
+  "MORE": "More",
+  "TABLE_RESULTS_LABEL": "{{start}} - {{end}} of {{total}} results",
+  "HISTORIICAL_DASHBOARD_BUTTON": "Historical Data",
+  "CONTEXT_ITEM_PREFIX": "Open Context: "
+}

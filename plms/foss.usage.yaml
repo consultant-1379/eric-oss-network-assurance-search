@@ -1,0 +1,93 @@
+modelVersion: 2
+fosses:
+- product_number: CAX1055958
+  license: MIT
+  linking: Not Linked
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Node.js is an open-source, cross-platform, JavaScript runtime environment. It executes JavaScript code outside of a browser.
+- product_number: CAX1057487
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Lodash modular utilities.
+- product_number: CAX1058498
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Node.js body parsing middleware
+- product_number: CAX1058501
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Fast, unopinionated, minimalist web framework
+- product_number: CTX1020044
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    A light-weight module that brings Fetch API to node.js
+- product_number: CTX1021451
+  license: MIT
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Decode JWT tokens, mostly useful for browser applications.
+- product_number: CTX1025225
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Express middleware for the validator module.
+- product_number: CTX1030642
+  license: MIT
+  linking: Dynamic
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    A fast and easy to use JSON Schema validator
+- product_number: CTX1034350
+  license: MIT
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Shims for the latest ES module features
+- product_number: CTX1022130
+  license: BSD-3-Clause
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    HTML templates literals in JavaScript
+- product_number: CTX1024283
+  license: MIT
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Immutable date wrapper
+- product_number: CTX1034498
+  license: MIT
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Polyfill for the URLPattern API
+- product_number: CTX1031683
+  license: BSD-3-Clause
+  linking: Static
+  obligation: |
+    Including the full license text in a prominent place with the software when the FOSS is distributed
+  usage: |
+    Scoped CustomElementRegistry Polyfill

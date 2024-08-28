@@ -1,0 +1,142 @@
+{
+  "offset": 1,
+  "length": 5,
+  "total": 6,
+  "results": [
+    {
+      "type": {
+        "id": "SNSSAI_Site",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "Site"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "1:2",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "BC",
+          "type": {
+            "id": "c_Site"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "SNSSAI_Site",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "Site"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "1:2",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "BC",
+          "type": {
+            "id": "c_Site"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "SNSSAI_Site",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "Site"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "1:1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "BC",
+          "type": {
+            "id": "c_Site"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "SNSSAI_Site",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "Site"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "1:1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "BC",
+          "type": {
+            "id": "c_Site"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "SNSSAI_Site",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "Site"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "1:1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "BC",
+          "type": {
+            "id": "c_Site"
+          }
+        }
+      ]
+    }
+  ]
+}

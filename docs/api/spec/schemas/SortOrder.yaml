@@ -1,0 +1,6 @@
+type: string
+description: sort order
+enum:
+  - asc
+  - desc
+default: asc

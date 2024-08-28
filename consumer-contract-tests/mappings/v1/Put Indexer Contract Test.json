@@ -1,0 +1,68 @@
+{
+  "id" : "5b2c0b9a-3f42-4735-9de2-1ce93c85f2a4",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/indexer",
+    "method" : "PUT",
+    "headers" : {
+      "Content-Type" : {
+        "equalTo" : "application/json"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['name'] == 'nameOfIndexerA')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['description'] == 'description for indexer A')]"
+    }, {
+      "matchesJsonPath" : "$.['source'][?(@.['name'] == 'KafkaTopicName')]"
+    }, {
+      "matchesJsonPath" : "$.['source'][?(@.['type'] == 'pmstatsexporter')]"
+    }, {
+      "matchesJsonPath" : "$.['target'][?(@.['displayName'] == 'SearchIndexA_DisplayName')]"
+    }, {
+      "matchesJsonPath" : "$.['target'][?(@.['name'] == 'search_index_a_name')]"
+    }, {
+      "matchesJsonPath" : "$.['target'][?(@.['indexDescription'] == 'SearchIndexA_Description')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*][?(@.['name'] == 'writerA_name')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*][?(@.['inputSchema'] == 'writerA_schemaRegistryName')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['context'][*][?(@.['name'] == 'contextFieldA_name')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['context'][*][?(@.['displayName'] == 'Context Field A')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['context'][*][?(@.['nameType'] == 'straight')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['context'][*][?(@.['recordName'] == 'contextFieldA_recordName')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['context'][*][?(@.['description'] == 'contextFieldA Description')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['name'] == 'valueFieldA_name')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['displayName'] == 'Value Field A')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['unit'] == 'errors/minute')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['type'] == 'float')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['recordName'] == 'valueFieldA_recordName')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['value'][*][?(@.['description'] == 'valueFieldA Description')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['info'][*][?(@.['name'] == 'infoFieldA_name')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['info'][*][?(@.['displayName'] == 'Info Field A')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['info'][*][?(@.['type'] == 'string')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['info'][*][?(@.['recordName'] == 'infoFieldA_recordName')]"
+    }, {
+      "matchesJsonPath" : "$.['writers'][*].['info'][*][?(@.['description'] == 'infoFieldA Description')]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "5b2c0b9a-3f42-4735-9de2-1ce93c85f2a4"
+}

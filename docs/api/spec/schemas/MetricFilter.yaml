@@ -1,0 +1,35 @@
+allOf:
+  - $ref: '../schemas/Filter.yaml'
+  - type: object
+    required:
+      - type
+      - metricType
+    properties:
+      type:
+        type: string
+        enum:
+          - metric
+        description: filter type
+      metricType:
+        $ref: '../schemas/MetricType.yaml'
+        description: which metric this filter applies to
+      from:
+        type: number
+        description: from limit
+      to:
+        type: number
+        description: to limit
+    example:
+      {
+        "type": "metric",
+        "metricType":
+        {
+          "id": "vi_SNSSAI_NSI_PDUSessionEstSR",
+          "name": "PDU Session Est SR",
+          "valueType": "integer",
+          "description": "PDUSessionEstSR Description",
+          "unit": "errors/minute"
+        },
+        "from": 10.3,
+        "to": 30.78
+      }

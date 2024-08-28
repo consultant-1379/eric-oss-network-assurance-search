@@ -1,0 +1,13 @@
+type: object
+description: index
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: name for the context
+    example: "ran"
+  description:
+    type: string
+    description: index description
+    example: "Radio Access Network (RAN)"

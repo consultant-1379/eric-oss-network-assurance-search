@@ -1,0 +1,15 @@
+:host{
+  display: inline-block;
+}
+
+button {
+  color: var(--blue);
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,1112 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-2001",
+          "vi_AMFMeanRegNbr": "80"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-1000",
+          "vi_AMFMeanRegNbr": "81"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-3000",
+          "vi_AMFMeanRegNbr": "81"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-4001",
+          "vi_AMFMeanRegNbr": "81"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-1002",
+          "vi_AMFMeanRegNbr": "82"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-2002",
+          "vi_AMFMeanRegNbr": "82"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-3001",
+          "vi_AMFMeanRegNbr": "82"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-1001",
+          "vi_AMFMeanRegNbr": "83"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-3001",
+          "vi_AMFMeanRegNbr": "83"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-1000",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-1002",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-3001",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-3001",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-4001",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-4000",
+          "vi_AMFMeanRegNbr": "85"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-4000",
+          "vi_AMFMeanRegNbr": "85"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-3002",
+          "vi_AMFMeanRegNbr": "86"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-3001",
+          "vi_AMFMeanRegNbr": "86"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-4001",
+          "vi_AMFMeanRegNbr": "87"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-3002",
+          "vi_AMFMeanRegNbr": "87"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-4002",
+          "vi_AMFMeanRegNbr": "87"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-2000",
+          "vi_AMFMeanRegNbr": "87"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-4000",
+          "vi_AMFMeanRegNbr": "87"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-3002",
+          "vi_AMFMeanRegNbr": "88"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-1000",
+          "vi_AMFMeanRegNbr": "88"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-2001",
+          "vi_AMFMeanRegNbr": "89"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-4002",
+          "vi_AMFMeanRegNbr": "89"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-2001",
+          "vi_AMFMeanRegNbr": "89"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-3002",
+          "vi_AMFMeanRegNbr": "89"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-4002",
+          "vi_AMFMeanRegNbr": "90"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-4001",
+          "vi_AMFMeanRegNbr": "90"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-2000",
+          "vi_AMFMeanRegNbr": "91"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-2002",
+          "vi_AMFMeanRegNbr": "93"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-2001",
+          "vi_AMFMeanRegNbr": "94"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-2002",
+          "vi_AMFMeanRegNbr": "94"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-2001",
+          "vi_AMFMeanRegNbr": "94"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-1000",
+          "vi_AMFMeanRegNbr": "94"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-3001",
+          "vi_AMFMeanRegNbr": "95"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-2000",
+          "vi_AMFMeanRegNbr": "95"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-4001",
+          "vi_AMFMeanRegNbr": "95"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-1001",
+          "vi_AMFMeanRegNbr": "95"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-4002",
+          "vi_AMFMeanRegNbr": "96"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-2002",
+          "vi_AMFMeanRegNbr": "96"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-3002",
+          "vi_AMFMeanRegNbr": "96"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-3000",
+          "vi_AMFMeanRegNbr": "96"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-3000",
+          "vi_AMFMeanRegNbr": "97"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-1000",
+          "vi_AMFMeanRegNbr": "98"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-4001",
+          "vi_AMFMeanRegNbr": "98"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-3001",
+          "vi_AMFMeanRegNbr": "99"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-1002",
+          "vi_AMFMeanRegNbr": "100"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-2001",
+          "vi_AMFMeanRegNbr": "100"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-4000",
+          "vi_AMFMeanRegNbr": "100"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-2002",
+          "vi_AMFMeanRegNbr": "101"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-4000",
+          "vi_AMFMeanRegNbr": "101"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-3002",
+          "vi_AMFMeanRegNbr": "101"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-3002",
+          "vi_AMFMeanRegNbr": "102"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-4000",
+          "vi_AMFMeanRegNbr": "102"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-4001",
+          "vi_AMFMeanRegNbr": "102"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-2000",
+          "vi_AMFMeanRegNbr": "103"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-1001",
+          "vi_AMFMeanRegNbr": "103"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-3001",
+          "vi_AMFMeanRegNbr": "103"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-3001",
+          "vi_AMFMeanRegNbr": "103"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-1000",
+          "vi_AMFMeanRegNbr": "104"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-4001",
+          "vi_AMFMeanRegNbr": "104"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-3002",
+          "vi_AMFMeanRegNbr": "104"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-1001",
+          "vi_AMFMeanRegNbr": "104"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-1000",
+          "vi_AMFMeanRegNbr": "106"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-1001",
+          "vi_AMFMeanRegNbr": "106"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-1001",
+          "vi_AMFMeanRegNbr": "106"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-1001",
+          "vi_AMFMeanRegNbr": "106"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-1000",
+          "vi_AMFMeanRegNbr": "107"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-2002",
+          "vi_AMFMeanRegNbr": "109"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-1000",
+          "vi_AMFMeanRegNbr": "109"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-3001",
+          "vi_AMFMeanRegNbr": "110"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-1001",
+          "vi_AMFMeanRegNbr": "110"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-4001",
+          "vi_AMFMeanRegNbr": "110"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-3002",
+          "vi_AMFMeanRegNbr": "111"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-1002",
+          "vi_AMFMeanRegNbr": "112"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-4002",
+          "vi_AMFMeanRegNbr": "113"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-2000",
+          "vi_AMFMeanRegNbr": "113"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-4001",
+          "vi_AMFMeanRegNbr": "113"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-3000",
+          "vi_AMFMeanRegNbr": "113"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-3000",
+          "vi_AMFMeanRegNbr": "114"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-1002",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-1001",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-2000",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-2001",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-3001",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-1002",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-4001",
+          "vi_AMFMeanRegNbr": "115"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "2-2000",
+          "vi_AMFMeanRegNbr": "116"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "4-3002",
+          "vi_AMFMeanRegNbr": "116"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-3000",
+          "vi_AMFMeanRegNbr": "116"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-3000",
+          "vi_AMFMeanRegNbr": "116"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "2-2000",
+          "vi_AMFMeanRegNbr": "117"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-1002",
+          "vi_AMFMeanRegNbr": "118"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "1-3001",
+          "vi_AMFMeanRegNbr": "118"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-1002",
+          "vi_AMFMeanRegNbr": "119"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-1000",
+          "vi_AMFMeanRegNbr": "119"
+        },
+        "value": [1715830349, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-1001",
+          "vi_AMFMeanRegNbr": "119"
+        },
+        "value": [1715830349, "1"]
+      }
+    ]
+  },
+  "stats": {
+    "seriesFetched": "138",
+    "executionTimeMsec": 4
+  }
+}

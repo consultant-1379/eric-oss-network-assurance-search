@@ -1,0 +1,103 @@
+{
+  "apps": [
+    {
+      "name": "network-assurance-dashboard",
+      "module": "network-assurance-dashboard",
+      "displayName": "Service Assurance Dashboard",
+      "type": "euisdk",
+      "route": "service-assurance-dashboard"
+    }
+  ],
+  "components": [
+    {
+      "name": "systembar-user-info",
+      "module": "systembar-user-info",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-browser",
+      "module": "metric-browser",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-browser-table",
+      "module": "metric-browser-table",
+      "version": "1.0.0"
+    },
+    {
+      "name": "custom-table",
+      "module": "custom-table",
+      "version": "1.0.0"
+    },
+    {
+      "name": "filter-accordion",
+      "module": "filter-accordion",
+      "version": "1.0.0"
+    },
+    {
+      "name": "filter-panel",
+      "module": "filter-panel",
+      "version": "1.0.0"
+    },
+    {
+      "name": "checkbox-filter-accordion",
+      "module": "checkbox-filter-accordion",
+      "version": "1.0.0"
+    },
+    {
+      "name": "radio-filter-accordion",
+      "module": "radio-filter-accordion",
+      "version": "1.0.0"
+    },
+    {
+      "name": "inline-button",
+      "module": "inline-button",
+      "version": "1.0.0"
+    },
+    {
+      "name": "error-banner",
+      "module": "error-banner",
+      "version": "1.0.0"
+    },
+    {
+      "name": "info-banner",
+      "module": "info-banner",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tab-bar",
+      "module": "tab-bar",
+      "version": "1.0.0"
+    },
+    {
+      "name": "table-setting-dialog",
+      "module": "table-setting-dialog",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tutorial-banner",
+      "module": "tutorial-banner",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-category-picker",
+      "module": "metric-category-picker",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-category-pill",
+      "module": "metric-category-pill",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-category-dropdown",
+      "module": "metric-category-dropdown",
+      "version": "1.0.0"
+    },
+    {
+      "name": "metric-category-menu",
+      "module": "metric-category-menu",
+      "version": "1.0.0"
+    }
+  ]
+}

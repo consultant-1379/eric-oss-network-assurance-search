@@ -1,0 +1,37 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "FOO",
+        "context": [
+          {
+            "name": "context-field-BAR",
+            "documentName": "Doc BAR",
+            "description": "BAR"
+          }
+        ]
+      },
+      {
+        "name": "BAR",
+        "context": [
+          {
+            "name": "context-field-BAR",
+            "documentName": "Doc BAR",
+            "description": "BAR"
+          }
+        ]
+      },
+      {
+        "name": "BAZ",
+        "context": [
+          {
+            "name": "context-field-BAR",
+            "documentName": "Doc BAR",
+            "description": "BAR"
+          }
+        ]
+      }
+    ]
+  }
+]

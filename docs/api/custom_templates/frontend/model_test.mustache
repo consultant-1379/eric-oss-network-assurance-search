@@ -1,0 +1,43 @@
+{{>licenseInfo}}
+
+import { expect } from "chai";
+import * as AssuranceSearchApi from "../../src/index.js";
+(function testing{{classname}}Model(root, factory) {
+  factory();
+}(this, function() {
+
+
+  let instance;
+
+  beforeEach(() => {
+{{#models}}
+{{#model}}
+{{^isEnum}}
+    instance = new {{moduleName}}.{{classname}}();
+{{/isEnum}}
+{{/model}}
+{{/models}}
+  });
+
+  describe('{{classname}}', function() {
+    it('should create an instance of {{classname}}', function() {
+      // uncomment below and update the code to test {{classname}}
+      instance = new {{moduleName}}.{{classname}}();
+      expect(instance).to.be.an.instanceOf({{moduleName}}.{{classname}});
+    });
+
+{{#models}}
+{{#model}}
+{{#vars}}
+    it('should have the property {{name}} (base name: "{{baseName}}")', function() {
+      // uncomment below and update the code to test the property {{name}}
+      instance = new {{moduleName}}.{{classname}}();
+      expect(instance).to.not.have.property('placeholder');
+    });
+
+{{/vars}}
+{{/model}}
+{{/models}}
+  });
+
+}));

@@ -1,0 +1,144 @@
+{
+  "took": 5,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 6,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr2__SNSSAI_1:2__Site_BC",
+        "_score": null,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:2",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr2",
+          "value_name": "AMFMeanRegNbr2",
+          "vi_SNSSAI_Site_AMFMeanRegNbr2": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr2_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIyIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr2__SNSSAI_1:2__Site_BC",
+          "offset": "28",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": ["1:2"]
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr3__SNSSAI_1:2__Site_BC",
+        "_score": null,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:2",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr3",
+          "value_name": "AMFMeanRegNbr3",
+          "vi_SNSSAI_Site_AMFMeanRegNbr3": 20,
+          "xv_SNSSAI_Site_AMFMeanRegNbr3_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIzIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr3__SNSSAI_1:2__Site_BC",
+          "offset": "28",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": ["1:2"]
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__SNSSAI_1:1__Site_BC",
+        "_score": null,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_SNSSAI_Site_AMFMeanRegNbr": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__SNSSAI_1:1__Site_BC",
+          "offset": "27",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": ["1:1"]
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr2__SNSSAI_1:1__Site_BC",
+        "_score": null,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr2",
+          "value_name": "AMFMeanRegNbr2",
+          "vi_SNSSAI_Site_AMFMeanRegNbr2": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr2_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIyIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr2__SNSSAI_1:1__Site_BC",
+          "offset": "27",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": ["1:1"]
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr3__SNSSAI_1:1__Site_BC",
+        "_score": null,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr3",
+          "value_name": "AMFMeanRegNbr3",
+          "vi_SNSSAI_Site_AMFMeanRegNbr3": 10,
+          "xv_SNSSAI_Site_AMFMeanRegNbr3_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIzIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr3__SNSSAI_1:1__Site_BC",
+          "offset": "27",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": ["1:1"]
+      }
+    ]
+  }
+}

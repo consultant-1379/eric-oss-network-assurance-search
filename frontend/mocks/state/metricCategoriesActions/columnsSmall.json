@@ -1,0 +1,67 @@
+[
+  {
+    "title": "NF",
+    "name": "NF",
+    "attribute": "c_nf",
+    "valueType": "string",
+    "sortable": true,
+    "additionalInfo": "Network Function",
+    "width": "6em",
+    "mandatory": true,
+    "type": {
+      "id": "c_nf",
+      "name": "NF",
+      "description": "Network Function",
+      "dataType": "entityType"
+    },
+    "sort": null
+  },
+  {
+    "title": "MetricOne (subscribers)",
+    "name": "MetricOne",
+    "attribute": "vi_nf_MetricOne",
+    "valueType": "integer",
+    "sortable": true,
+    "additionalInfo": "Metric One",
+    "width": "8em",
+    "sortNotificationInfo": "MetricOne",
+    "sort": "asc",
+    "hidden": false
+  },
+  {
+    "title": "MetricTwo (subscribers)",
+    "name": "MetricTwo",
+    "attribute": "vi_nf_MetricTwo",
+    "valueType": "integer",
+    "sortable": true,
+    "additionalInfo": "Metric Two",
+    "width": "8em",
+    "sortNotificationInfo": "MetricTwo",
+    "sort": "asc",
+    "hidden": false
+  },
+  {
+    "title": "MetricThree (subscribers)",
+    "name": "MetricThree",
+    "attribute": "vi_nf_MetricThree",
+    "valueType": "integer",
+    "sortable": true,
+    "additionalInfo": "Metric Three",
+    "width": "8em",
+    "sortNotificationInfo": "MetricThree",
+    "sort": "asc",
+    "hidden": false
+  },
+  {
+    "title": "MetricFour (subscribers)",
+    "name": "MetricFour",
+    "attribute": "vi_nf_MetricFour",
+    "valueType": "integer",
+    "sortable": true,
+    "additionalInfo": "Metric Four",
+    "width": "8em",
+    "sortNotificationInfo": "MetricFour",
+    "sort": "asc",
+    "hidden": false
+  }
+]

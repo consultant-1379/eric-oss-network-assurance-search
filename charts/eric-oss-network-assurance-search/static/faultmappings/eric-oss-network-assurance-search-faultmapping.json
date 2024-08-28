@@ -1,0 +1,38 @@
+[
+  {
+    "faultName": "log_transformer_error",
+    "code": 17432577,
+    "defaultDescription": "Log Transformer Service error",
+    "vendor": 193,
+    "defaultSeverity": "Critical",
+    "probableCause": 158,
+    "category": "ProcessingErrorAlarm"
+  },
+  {
+    "faultName": "eric_oss_network_assurance_search_server_error",
+    "code": 17432578,
+    "defaultDescription": "Internal assurance search server error",
+    "vendor": 193,
+    "defaultSeverity": "Critical",
+    "probableCause": 158,
+    "category": "ProcessingErrorAlarm"
+  },
+  {
+    "faultName": "certificate_error",
+    "code": 17432579,
+    "defaultDescription": "Certificate Error",
+    "vendor": 193,
+    "defaultSeverity": "Critical",
+    "probableCause": 158,
+    "category": "ProcessingErrorAlarm"
+  },
+  {
+    "faultName": "K8S_api_error",
+    "code": 17432580,
+    "defaultDescription": "K8S api not available",
+    "vendor": 193,
+    "defaultSeverity": "Critical",
+    "probableCause": 158,
+    "category": "ProcessingErrorAlarm"
+  }
+]

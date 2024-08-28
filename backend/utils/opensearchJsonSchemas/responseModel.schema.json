@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nas.ericsson.com/schemas/opensearchResponseModel.schema.json",
+  "title": "Opensearch Response Model Schema",
+  "description": "The schema for the response object coming from Opensearch after a successful request has been made.",
+  "type": "object",
+  "properties": {
+    "took": {
+      "description": "Time it took to complete query.",
+      "type": "integer"
+    },
+    "timed_out": {
+      "description": "Indicates whether the response timed out or not.",
+      "type": "boolean"
+    },
+    "_shards": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "successful": {
+          "type": "integer"
+        },
+        "skipped": {
+          "type": "integer"
+        },
+        "failed": {
+          "type": "integer"
+        }
+      }
+    },
+    "hits": {
+      "description": "An object that contains the query results and it's metadata.",
+      "$ref": "https://nas.ericsson.com/schemas/opensearchHitsModel.schema.json"
+    }
+  },
+  "required": ["hits"]
+}

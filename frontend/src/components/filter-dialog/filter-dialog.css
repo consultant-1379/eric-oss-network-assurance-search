@@ -1,0 +1,64 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+#border {
+  padding: 10px;
+}
+
+.field {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.value-field {
+  padding: 10px 5px 5px 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+eui-button {
+  padding-left: 6px;
+}
+
+.icon-triangle-warning {
+  --icon-size: 12px;
+  --icon-color: var(--input-error-icon, #bb0b02);
+  margin-right: var(--space-small, 4px);
+}
+
+.input__validation {
+  line-height: 14px;
+  font-size: 12px;
+  color: var(--input-error-text, #242424);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.help {
+  max-width: 500px;
+}
+
+eui-combobox, eui-dropdown {
+  width: 100%;
+}
+
+.disclosure-warning-message {
+  display: flex;
+  line-height: 14px;
+  font-size: 12px;
+}
+
+.icon-warning-message {
+  padding: 5px;
+}
+
+.disclosure-text {
+  padding-top: 5px;
+}

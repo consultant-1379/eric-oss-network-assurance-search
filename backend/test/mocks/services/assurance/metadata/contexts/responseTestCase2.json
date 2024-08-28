@@ -1,0 +1,20 @@
+[
+  {
+    "id": "managedElement",
+    "contextFields": [
+      { "id": "c_managedElement", "name": "Managed Element", "description": "Managed Elemenet" }
+    ],
+    "name": "Network Owner (RAN) - NF Focus",
+    "description": "Service KPIs for the network aggregated by gNodeB"
+  },
+  {
+    "id": "cellId_managedElement_tac",
+    "contextFields": [
+      { "id": "c_cellId", "name": "Cell ID", "description": "Cell Identifier" },
+      { "id": "c_managedElement", "name": "Managed Element", "description": "Managed Elemenet" },
+      { "id": "c_tac", "name": "TAC", "description": "Tracking Area Code" }
+    ],
+    "name": "Network Owner (RAN) - Cell Focus",
+    "description": "Service KPIs for the network aggregated by Tracking Area, gNodeB and Cell"
+  }
+]

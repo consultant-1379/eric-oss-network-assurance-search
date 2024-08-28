@@ -1,0 +1,39 @@
+{
+  "APP_NAME": "Service Assurance Dashboard",
+  "ADD_TAB": "Add tab",
+  "ADDING_TAB_TITLE": "Add Context",
+  "ADDING_TAB_FLYOUT_PANEL_ADD": "Add",
+  "ADDING_TAB_FLYOUT_PANEL_CANCEL": "Cancel",
+
+  "APP_LOADING": "Dashboard is loading...",
+  "SYSTEM_STATE_LOADING": "Service Assurance Dashboard is awaiting configuration information. This may take a moment...",
+
+  "ARIA_CLEAR_MATCH_DESCRIPTION": "Clear all matched contexts",
+
+  "CLEAR_MATCH_BTN_LABEL": "Clear",
+
+  "ERROR": "Error",
+  "WARNING": "Warning",
+  "NETWORK_ERROR_MESSAGE": "Dashboard failed to load. Reload the page to try again.",
+  "NO_DATA_WARNING_MESSAGE": "The system is currently in the process of initialization. You can reload the page to try again.",
+  "SYSTEM_ERROR": "Service Assurance Dashboard failed to start because configurator service is unavailable. Please contact your system administrator if the issue persists.",
+
+  "FIND_CONTEXTS_LABEL": "Find Contexts",
+  "FIND_CONTEXTS_PLACEHOLDER": "Find Contexts by name...",
+
+  "CONTEXT_FILTER_LABEL_PREFIX": "Contexts",
+  "CONTEXT_FILTER_LABEL_SHOWING": "Showing",
+  "CONTEXT_FILTER_LABEL_OF": "of",
+  "SORT_NOTIFICATION_MESSAGE": "Filter {{deselectedSort}} has been deselected and the result set has changed to be based on {{appliedSort}} because of the applied sort.",
+  "BUTTON_TABLE_SETTING": "Settings",
+  "APP_HELP": "In the Service Assurance Dashboard you can view KPI rollups computed using different contextual characteristics (ex. TAC & PLMNInfo, et cetera). These are called \"Contexts\": Contexts allow you to investigate the health of your network at different contextual levels. You can find other Contexts to explore by clicking \"Add Context\" below or by selecting a row of the table and selecting \"View Other Contexts\". Any configuration you do to an opened tab will be kept for you in this browser until you close the Context tab.",
+  "BROWSER_HELP": "The table below represents a rollup of KPIs computed for different network characteristics (these are the network characteristics shown as the left columns of the table). You can refine the table results by selecting the 'Filters' button on the top right of the table or by selecting the filter icon next to the tile title. You can select a row of the table to view additional actions for the row like viewing the Historical Dashboard or finding other Contexts which you can open as another Context tab. You can configure the display of this table by selecting Settings.",
+  "FILTER_HELP": "You can add new filters using the \"Add\" button. Once filters are applied you can select, deselect, edit, or remove them. Filters you configure will be persisted in this browser on your computer for your next visit. If you close the Context tab you will lose your configurations. Your filters will not be available in incognito mode.",
+  "RENAME_DESCRIPTION": "You can rename this Context tab using the field below.",
+  "APPLY_RENAME": "Apply",
+  "RENAME_DIALOG_TITLE": "Rename Context Tab",
+  "HISTORICAL_DASHBORD_TITLE": "Historical Dashboard",
+  "HISTORICAL_DASHBOARD_SUBTITLE": "KPIs for: ",
+  "NO_RESULTS": "There were no results for the Historical Dashboard selection",
+  "HISTORICAL_DASHBOARD_HELP": "This historical dashboard shows data in the form of timeseries charts for the active row selection in the Service Assurance Dashboard. This view can have other perspectives configured for it: these will be represented as tabs along the top inside of the sidebar panel if available. You can configure each chart by selecting the top right button on the chart. You can configure the timerange for all charts in the panel by selecting the global timerange picker at the top right of the sidebar panel content. To change the Historical Dashboard selection, interact with the table on the left in the opened and active Service Assurance Dashboard Context tab."
+}

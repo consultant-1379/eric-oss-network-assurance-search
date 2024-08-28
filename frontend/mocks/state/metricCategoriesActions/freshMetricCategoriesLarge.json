@@ -1,0 +1,313 @@
+[
+  {
+    "id": "all",
+    "title": "All",
+    "unselected": false,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricOne",
+        "name": "MetricOne"
+      },
+      {
+        "id": "vi_nf_MetricTwo",
+        "name": "MetricTwo"
+      },
+      {
+        "id": "vi_nf_MetricThree",
+        "name": "MetricThree"
+      },
+      {
+        "id": "vi_nf_MetricFour",
+        "name": "MetricFour"
+      },
+      {
+        "id": "vi_nf_MetricFive",
+        "name": "MetricFive"
+      },
+      {
+        "id": "vi_nf_MetricSix",
+        "name": "MetricSix"
+      },
+      {
+        "id": "vi_nf_MetricSeven",
+        "name": "MetricSeven"
+      },
+      {
+        "id": "vi_nf_MetricEight",
+        "name": "MetricEight"
+      },
+      {
+        "id": "vi_nf_MetricNine",
+        "name": "MetricNine"
+      },
+      {
+        "id": "vi_nf_MetricTen",
+        "name": "MetricTen"
+      },
+      {
+        "id": "vi_nf_MetricEleven",
+        "name": "MetricEleven"
+      },
+      {
+        "id": "vi_nf_MetricTwelve",
+        "name": "MetricTwelve"
+      },
+      {
+        "id": "vi_nf_MetricThirteen",
+        "name": "MetricThirteen"
+      },
+      {
+        "id": "vi_nf_MetricFourteen",
+        "name": "MetricFourteen"
+      },
+      {
+        "id": "vi_nf_MetricFifteen",
+        "name": "MetricFifteen"
+      },
+      {
+        "id": "vi_nf_MetricSixteen",
+        "name": "MetricSixteen"
+      }
+    ]
+  },
+  {
+    "id": "category-1",
+    "title": "Category A",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricOne",
+        "name": "MetricOne"
+      },
+      {
+        "id": "vi_nf_MetricNine",
+        "name": "MetricNine"
+      }
+    ]
+  },
+  {
+    "id": "category-2",
+    "title": "Category B",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricOne",
+        "name": "MetricOne"
+      },
+      {
+        "id": "vi_nf_MetricNine",
+        "name": "MetricNine"
+      }
+    ]
+  },
+  {
+    "id": "category-3",
+    "title": "Category C",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricTwo",
+        "name": "MetricTwo"
+      },
+      {
+        "id": "vi_nf_MetricTen",
+        "name": "MetricTen"
+      }
+    ]
+  },
+  {
+    "id": "category-4",
+    "title": "Category D",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricTwo",
+        "name": "MetricTwo"
+      },
+      {
+        "id": "vi_nf_MetricTen",
+        "name": "MetricTen"
+      }
+    ]
+  },
+  {
+    "id": "category-5",
+    "title": "Category E",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricThree",
+        "name": "MetricThree"
+      },
+      {
+        "id": "vi_nf_MetricEleven",
+        "name": "MetricEleven"
+      }
+    ]
+  },
+  {
+    "id": "category-6",
+    "title": "Category F",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricThree",
+        "name": "MetricThree"
+      },
+      {
+        "id": "vi_nf_MetricEleven",
+        "name": "MetricEleven"
+      }
+    ]
+  },
+  {
+    "id": "category-7",
+    "title": "Category G",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricFour",
+        "name": "MetricFour"
+      },
+      {
+        "id": "vi_nf_MetricTwelve",
+        "name": "MetricTwelve"
+      }
+    ]
+  },
+  {
+    "id": "category-8",
+    "title": "Category H",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricFour",
+        "name": "MetricFour"
+      },
+      {
+        "id": "vi_nf_MetricTwelve",
+        "name": "MetricTwelve"
+      }
+    ]
+  },
+  {
+    "id": "category-9",
+    "title": "Category I",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricFive",
+        "name": "MetricFive"
+      },
+      {
+        "id": "vi_nf_MetricThirteen",
+        "name": "MetricThirteen"
+      }
+    ]
+  },
+  {
+    "id": "category-10",
+    "title": "Category J",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricFive",
+        "name": "MetricFive"
+      },
+      {
+        "id": "vi_nf_MetricThirteen",
+        "name": "MetricThirteen"
+      }
+    ]
+  },
+  {
+    "id": "category-11",
+    "title": "Category K",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricSix",
+        "name": "MetricSix"
+      },
+      {
+        "id": "vi_nf_MetricFourteen",
+        "name": "MetricFourteen"
+      }
+    ]
+  },
+  {
+    "id": "category-12",
+    "title": "Category L",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricSix",
+        "name": "MetricSix"
+      },
+      {
+        "id": "vi_nf_MetricFourteen",
+        "name": "MetricFourteen"
+      }
+    ]
+  },
+  {
+    "id": "category-13",
+    "title": "Category M",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricSeven",
+        "name": "MetricSeven"
+      },
+      {
+        "id": "vi_nf_MetricFifteen",
+        "name": "MetricFifteen"
+      }
+    ]
+  },
+  {
+    "id": "category-14",
+    "title": "Category N",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricSeven",
+        "name": "MetricSeven"
+      },
+      {
+        "id": "vi_nf_MetricFifteen",
+        "name": "MetricFifteen"
+      }
+    ]
+  },
+  {
+    "id": "category-15",
+    "title": "Category O",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricEight",
+        "name": "MetricEight"
+      },
+      {
+        "id": "vi_nf_MetricSixteen",
+        "name": "MetricSixteen"
+      }
+    ]
+  },
+  {
+    "id": "category-16",
+    "title": "Category P",
+    "unselected": true,
+    "metrics": [
+      {
+        "id": "vi_nf_MetricEight",
+        "name": "MetricEight"
+      },
+      {
+        "id": "vi_nf_MetricSixteen",
+        "name": "MetricSixteen"
+      }
+    ]
+  }
+]

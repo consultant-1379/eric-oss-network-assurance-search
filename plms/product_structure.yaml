@@ -1,0 +1,97 @@
+modelVersion: "2.0"
+flavor: "Generic"
+service:
+  # name of the service:
+  name: "Network Assurance Search"
+  # Design Country (set on the source products)
+  design_countries:
+    - CA                 # Canada
+  # Compilation Country (Set on the derivative products)
+  sw_compilation_country: SE
+
+  # Release responsible
+  release_responsible: BDGSBEW
+  #  Design responsible
+  design_responsible: BDGSBEW
+
+  documents:
+    # Read documents revisions from this file
+    # Use munin-doc search to generate this file.
+    # Use full or relative path to product-structure.yaml
+    import: ../.bob/documents.yaml
+
+  # using "Completed" when encryption is not changed compared to previous released version.
+  #encryption_status: "Completed"
+
+  # Bookmarks
+  #bookmark: PRIM
+
+  top_product:
+    alias: ["eric-oss-network-assurance-search"]
+    # APR Product Number
+    number: APR 201 726
+    # Description
+    description: "Network assurance search"
+    # Includes
+    includes:
+      # VA Report
+      - eridoc: 1/1597-APR 201 551/1
+        step_strategy: highest revision letter
+      # Secure Coding Report
+      - eridoc: 1/0360-APR 201 551/1
+        step_strategy: highest revision letter
+
+      #      - munin: CXC 201 2331             #API Gateway
+      #        version: 1.0.34
+      #        secondPartyProduct: "True"
+
+      # SUSE Licenses
+      - prim: 1/FAL 115 3215
+        rstate: R1A
+      - prim: 3/FAL 115 3215
+        rstate: R1A
+      - prim: 5/FAL 115 3215
+        rstate: R1A
+      - prim: 7/FAL 115 3215
+        rstate: R1A
+
+  # Details of the Source product structure
+  src_products:
+    # Source Code Product
+    - label: Source
+      number: CAV 101 0525  #not sure put UI cav no here
+
+  # Details of zero or more derivative product structures, use [] for zero
+  derivative_products:
+    # Label describing the product, must be unique per list item
+    - label: "HELM"
+      number: "CXD 101 415"
+      alias: ["eric-oss-network-assurance-search"]
+      derivedFrom:
+        munin: CAV 101 0525
+
+    - label: "IMAGE"
+      number: "CXU 101 1693"
+      description: "Ericsson Network Assurance Search"
+      includes:
+        # Common Base OS
+        - munin: CXC 201 2032
+          version: SUSE_IMAGE_VERSION                # Version to be confirmed for each release
+          secondPartyProduct: "True"
+        # Common Base OS Repo
+        - munin: CXC 201 2031
+          version: SUSE_IMAGE_VERSION                    # Version to be confirmed for each release
+          secondPartyProduct: "True"
+        # EUI SDK
+        # To get the PRIM and RSTATE for a given version:
+        # Open the PRI document at https://euisdk.seli.wh.rnd.internal.ericsson.com/showcase/esm-docs/#release
+        - prim: CNA 403 3599
+          rstate: R2B
+
+      uses_foss:
+        - dependencies_file: ./dependencies_foss_combined.yaml   #  Dependencies YAML
+        - foss_usage: foss.usage.yaml   #  FOSS Usage YAML
+      uses_encryption:
+        - import: encryptions.yaml      #  ENCRYPTIONS YAML
+      derivedFrom:
+        munin: CAV 101 0525

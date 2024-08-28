@@ -1,0 +1,27 @@
+{{>licenseInfo}}
+
+import ApiClient from './ApiClient.js';
+{{#models}}import {{#model}}{{classFilename}}{{/model}} from './{{#modelPackage}}{{.}}/{{/modelPackage}}{{importPath}}.js';
+{{/models}}{{#apiInfo}}{{#apis}}import {{importPath}} from './{{#apiPackage}}{{.}}/{{/apiPackage}}{{importPath}}.js';
+{{/apis}}{{/apiInfo}}
+
+export {
+    {{=< >=}}
+    <#emitJSDoc>/**
+     * The ApiClient constructor.
+     * @property {module:<#invokerPackage><invokerPackage>/</invokerPackage>ApiClient}
+     */</emitJSDoc>
+    ApiClient<#models>,
+
+    <#emitJSDoc>/**
+     * The <importPath> model constructor.
+     * @property {module:<#invokerPackage><invokerPackage>/</invokerPackage><#modelPackage><modelPackage>/</modelPackage><importPath>}
+     */</emitJSDoc>
+    <importPath></models><#apiInfo><#apis>,
+
+    <#emitJSDoc>/**
+    * The <importPath> service constructor.
+    * @property {module:<#invokerPackage><invokerPackage>/</invokerPackage><#apiPackage><apiPackage>/</apiPackage><importPath>}
+    */</emitJSDoc>
+    <importPath></apis></apiInfo>
+};<={{ }}=>

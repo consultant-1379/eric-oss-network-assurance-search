@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  ais-stub-runner:
+    container_name: ais-stub-runner
+    image: wiremock/wiremock:2.35.0
+    ports:
+      - "8282:8080"
+    volumes:
+      - $PWD:/home/wiremock
+    command:
+      - --verbose
+      - --enable-stub-cors
+      - --enable-browser-proxying
+      - --trust-all-proxy-targets
+    networks:
+      - standalone-network
+
+networks:
+  standalone-network:
+    driver: bridge

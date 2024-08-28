@@ -1,0 +1,21 @@
+{
+  "schema-version": "1.0.0",
+  "documents": [
+    {
+      "name": "lorem-tutorial",
+      "displayName": "Lorem Tutorial",
+      "version": "B",
+      "path": "./path/to/doc2.md",
+      "type": "tutorial",
+      "format": "markdown",
+      "groupNames": ["lorem"]
+    }
+  ],
+  "groups": [
+    {
+      "name": "lorem",
+      "displayName": "Lorem",
+      "type": "category"
+    }
+  ]
+}

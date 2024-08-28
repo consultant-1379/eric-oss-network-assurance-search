@@ -1,0 +1,29 @@
+{
+  "type": {
+    "id": "NF_SNSSAI",
+    "contextFields": [
+      {
+        "id": "NF"
+      },
+      {
+        "id": "SNSSAI"
+      }
+    ]
+  },
+  "contextFields": [
+    {
+      "id": "NF_AMF_ON2",
+      "type": {
+        "id": "c_NF"
+      },
+      "name": "AMF_ON2"
+    },
+    {
+      "id": "SNSSAI_2:1",
+      "type": {
+        "id": "c_SNSSAI"
+      },
+      "name": "2:1"
+    }
+  ]
+}

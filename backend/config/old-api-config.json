@@ -1,0 +1,29 @@
+{
+  "internal": {
+    "prefix": "/internal-api",
+    "routes": {
+      "config": "/uiConfig"
+    }
+  },
+  "meta": {
+    "prefix": "/help-meta/v1",
+    "routes": {
+      "test": "/test",
+      "documents": "/documents",
+      "groups": "/groups",
+      "content": "/content",
+      "services": "/services"
+    }
+  },
+  "content": {
+    "prefix": "/help-content/v1"
+  },
+  "api": {
+    "prefix": "/api",
+    "routes": {
+      "ticket": "/ticket",
+      "tickets": "/tickets",
+      "helloworld": "/helloworld"
+    }
+  }
+}

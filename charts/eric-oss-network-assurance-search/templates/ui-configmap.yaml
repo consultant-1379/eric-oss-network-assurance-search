@@ -1,0 +1,68 @@
+{{- $global := fromJson (include "eric-oss-network-assurance-search.global" .) -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}-ui-configmap
+  labels:
+    {{- include "eric-oss-network-assurance-search.labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+data:
+  frontend-config.json: |
+    {
+      "localMode": false,
+      "logging": {
+        "logLevel": "info"
+      },
+      "frontendRoutePrefix": "{{ .Values.frontendRoutePrefix }}",
+      "featureFlags": {
+        "persistenceEngine": "{{ $global.persistenceEngine }}",
+        "discovery": "{{ $global.discovery }}",
+      },
+      "routes": {
+        "serviceAggregationApi": {
+          "prefix": "/internal-api",
+          "routes": {
+            "config": "/uiConfig",
+            "ui": "/ui"
+          }
+        },
+        "internal": {
+          "prefix": "/ui",
+          "routes": {
+            "configuration": "/configuration"
+          }
+        },
+        "api": {
+          "prefix": "",
+          "routes": {
+            "searchMetrics": "/:index/search/metrics",
+            "searchContexts": "/:index/search/contexts",
+            "searchRelatedContextsFacets": "/:index/search/related-contexts-facets",
+            "metadataRelations": "/:index/metadata/relations",
+            "metadataContexts": "/:index/metadata/contexts",
+            "metadataMetrics": "/:index/metadata/metrics",
+            "metadataAll": "/:index/metadata",
+            "metadataIndexes": "/metadata/indexes"
+          }
+        },
+        "meta": {
+          "prefix": "/help-meta/v1",
+          "routes": {
+            "groups": "/groups"
+          }
+        }
+      },
+      "exponentialBackoffRetryAttempts": {{ .Values.exponentialBackoffRetryAttempts }},
+      "authnConfig": {
+        "host": "{{ .Values.authn.host }}",
+        "port": "{{ .Values.authn.port }}",
+        "path": "{{ .Values.authn.path }}"
+      },
+      "cnomConfig": {
+        "host": "{{ .Values.cnom.host }}",
+        "port": "{{ .Values.cnom.port }}",
+        "path": "{{ .Values.cnom.path }}"
+      },
+      "cnomDataSourceType": "{{ .Values.cnomDataSourceType }}"
+    }

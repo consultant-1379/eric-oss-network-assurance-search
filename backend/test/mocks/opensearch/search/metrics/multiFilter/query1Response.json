@@ -1,0 +1,28 @@
+{
+  "hits": {
+    "total": {
+      "value": 1,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_BC::SNSSAI:1:2::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1:2",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 20,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        },
+        "sort": [20]
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{{- $global := fromJson (include "eric-oss-network-assurance-search.global" .) -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}-config
+  labels:
+    {{- include "eric-oss-network-assurance-search.labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+data:
+  manual-service-config.json: |
+    {}
+  backend-service-config.json: |
+    {
+      "searchEngineUrl": "{{ .Values.searchEngineUrl }}",
+      "indexerUrl": "{{ .Values.indexerUrl }}",
+      "persistenceEngine": "{{ $global.persistenceEngine }}",
+      "discovery": "{{ $global.discovery }}",
+      "victoriaMetricsUrl": "{{ .Values.victoriaMetricsUrl }}",
+      "csacUrl": "{{ .Values.csacUrl }}",
+      "k8sLabelValue":  "workspace-gui",
+      "logging": {
+        "enabled": {{ .Values.config.logging.enabled }},
+        "defaultLogLevel": "{{ .Values.config.logging.defaultLogLevel }}",
+        "serviceName": "{{ include "eric-oss-network-assurance-search.name" . }}",
+        "stdout": {
+          "enabled": {{ include "eric-oss-network-assurance-search.log-stdout-enabled" . }}
+        },
+        "syslog": {
+          "enabled": {{ include "eric-oss-network-assurance-search.log-syslog-enabled" . }},
+          "syslogHost": "{{ .Values.config.logging.syslog.syslogHost }}",
+          "syslogFacility": "{{ .Values.config.logging.syslog.syslogFacility }}"
+        }
+      },
+      "faultIndications": {
+        "enabled": false
+      },
+      "ingressPath": "/",
+      "useHttps": {{ $global.security.tls.enabled }},
+      "verifyClientCertificate": "{{ .Values.service.endpoints.http.tls.verifyClientCertificate }}",
+      "enforcedTLS": "{{ .Values.service.endpoints.http.tls.enforced }}",
+      "serviceName": "{{ include "eric-oss-network-assurance-search.name" . }}",
+      "headlessServiceName": "{{ include "eric-oss-network-assurance-search.name" . }}-headless-svc",
+      "servicePort": "{{ include "eric-oss-network-assurance-search.service-port" . }}",
+      "dependencies": {
+        "logtransformer": {
+          "enabled": {{ include "eric-oss-network-assurance-search.log-syslog-enabled" . }}
+        },
+        "prometheus": {
+          "enabled": true,
+          "appName": "{{ include "eric-oss-network-assurance-search.name" . }}",
+          "endpointsToCountRequests": [
+            "/ui",
+            "/internal-api/uiConfig"
+          ]
+        },
+        "faultHandler": {
+          "enabled": {{ .Values.config.faultHandler.enabled }},
+          "hostname": "eric-fh-alarm-handler",
+          "tlsPort": 6006,
+          "httpPort": 6005,
+          "serviceName": "{{ include "eric-oss-network-assurance-search.name" . }}"
+        },
+        "httpClient": {
+          "enabled": {{ .Values.config.httpClient.enabled }},
+          "tls": {
+            "verifyServerCert": true,
+            "sendClientCert": true
+          }
+        }
+      }
+    }
+  customization-service-config.json: |
+{{ .Files.Get "static/customizations/customization-service-config.json" | indent 4 }}

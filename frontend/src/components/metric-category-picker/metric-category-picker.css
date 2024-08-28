@@ -1,0 +1,34 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+.metric-category-picker {
+  padding-top: 15px;
+  width: 40vw;
+}
+
+.metric-category-pills {
+  margin-right: var(--space-small, 4px);
+  margin-bottom: var(--space-small, 4px);
+}
+
+.metric-category-picker-view-options-link {
+  display: block;
+  width: fit-content;
+  padding-top: 5px;
+  color: var(--link-blue, #0069c2);
+  text-decoration: none;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.metric-category-picker-view-options-link:focus-visible {
+  outline: var(--purple-59, #a56ebe) solid 2px;
+}
+
+.metric-category-picker-view-options-link eui-icon {
+  vertical-align: middle;
+}

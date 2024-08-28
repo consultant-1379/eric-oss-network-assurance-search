@@ -1,0 +1,12 @@
+{
+  "schema-version": "1.0.0",
+  "files": [
+    {
+      "name": "service-doc-1",
+      "version": "1.1.0",
+      "type": "zip",
+      "packageDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "path": "/relative/path/to/pkg-1.zip"
+    }
+  ]
+}

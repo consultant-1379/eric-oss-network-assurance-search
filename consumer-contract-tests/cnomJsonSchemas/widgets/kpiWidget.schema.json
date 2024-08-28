@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/kpiWidget.schema.json",
+  "title": "KPI widget",
+  "description": "A widget that displays information in KPI format. KPI is a measurable value that represents how close is that value to a specific goal, e.g., how well it is 'performing'.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "kpi"
+        },
+        "variables": true,
+        "maximizable": {
+          "default": false
+        },
+        "showWhen": true,
+        "placeholder": true,
+        "showTimestamp": {
+          "description": "Whether to display the timestamp in the footer. The timestamp indicates when the data in the widget were last updated.",
+          "type": "boolean",
+          "default": false
+        },
+        "colorOfValue": {
+          "description": "Define different color of item's value number with different labels",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["red", "yellow", "orange", "blue"]
+          },
+          "examples": [
+            {
+              "Critical": "red"
+            }
+          ]
+        },
+        "acceptTime": {
+          "description": "Whether the widget should pass the time range chosen by users to the source. Defaults to true. Some sources tend to fetch the latest data if the time range is not passed.",
+          "type": "boolean",
+          "default": true
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "heading": {
+                "description": "The heading above the data from the source.",
+                "type": "string"
+              },
+              "unit": {
+                "description": "Unit(s) of the data from the source, like 'B' for bytes, '%' for percentages. Using '%' will multiply the data value by 100 and append a percent sign. Using an object here like {KPI-1: 'B', KPI-2: '%'} can set unit per KPI.",
+                "anyOf": [{ "type": "object" }, { "type": "string" }]
+              },
+              "autoUnitPrefix": {
+                "description": "Whether to automatically select the unit prefix based on the size of the number.",
+                "type": "boolean",
+                "default": true
+              },
+              "order": {
+                "description": "Set the order of KPIs. By default KPIs are arranged in alphabetical order. KPIs will be displayed in the order of this array. KPIs not in this array will be ignored.",
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "tooltip": {
+                "description": "The tooltip displayed on this section",
+                "type": "string"
+              },
+              "kpiType": {
+                "description": "The type of the KPI. There are different types of KPIs. 'label' displays with the KPI value and a label. 'progressBar' displays the KPI value, an upper limit and a progress bar displaying the ratio of the value to the limit (requires extraData property).",
+                "type": "string",
+                "enum": ["label", "progressBar"],
+                "default": "label"
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "type": "object",
+                  "required": ["kpiType"],
+                  "properties": {
+                    "kpiType": { "const": "progressBar" }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "extraData": {
+                      "description": "Additional data for certain KPI types.",
+                      "type": "object",
+                      "required": ["maxValue"],
+                      "properties": {
+                        "maxValue": {
+                          "type": "number",
+                          "description": "Progress bar: an upper value telling the limit of the KPI."
+                        },
+                        "valueToShow": {
+                          "description": "Progress bar: which value to display above the progress bar.",
+                          "type": "string",
+                          "enum": ["both", "value", "maxValue"],
+                          "default": "both"
+                        },
+                        "threshold": {
+                          "type": "number",
+                          "description": "Progress bar: a value which determines the threshold for the progress bar. If the threshold is reached, the progress bar turns to red."
+                        },
+                        "thresholdMessage": {
+                          "type": "string",
+                          "description": "Progress bar: a message and a warning icon to the left of the message which appears under the progress bar when the 'threshold' is breached."
+                        },
+                        "message": {
+                          "type": "string",
+                          "description": "Progress bar: a message which goes below the progress bar when set. If 'threshold' and 'thresholdMessage' properties are set, this property is replaced by the 'thresholdMessage' when the KPI value is greater than the 'threshold'."
+                        }
+                      },
+                      "default": {}
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

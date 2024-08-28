@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "generate-docs": "node src/docsGenerator.js --input-file spec/assurance.yaml --output-file-name assurance --generate --validate-schema-examples",
+    "generate-base-templates:client": "openapi-generator-cli author template -g javascript -o templates/frontend --library javascript",
+    "generate-base-templates:server": "openapi-generator-cli author template -g javascript -o templates/backend --library javascript",
+    "add-custom-templates:client": "shx cp -R ./custom_templates/frontend/. ./templates/frontend/",
+    "add-custom-templates:server": "shx cp -R ./custom_templates/backend/. ./templates/backend/",
+    "generate-code:client": "shx rm -rf ./generated-sources/frontend/ && openapi-generator-cli generate -t templates/frontend -i spec/assurance.yaml -g javascript -o generated-sources/frontend --additional-properties=emitModelMethods=true,usePromises=true",
+    "generate-code:server": "shx rm -rf ./generated-sources/backend/ && openapi-generator-cli generate -t templates/backend -i spec/assurance.yaml -g javascript -o generated-sources/backend --additional-properties=emitModelMethods=true,usePromises=true",
+    "delete-templates:client": "shx rm -rf ./templates/frontend",
+    "delete-templates:server": "shx rm -rf ./templates/backend",
+    "move-files:client": "shx cp ./generated-sources/frontend/src/index.js ../../frontend/src/index.js && shx cp ./generated-sources/frontend/src/ApiClient.js ../../frontend/src/ApiClient.js && shx cp -R ./generated-sources/frontend/src/api/. ../../frontend/src/api && shx cp -R ./generated-sources/frontend/src/model/. ../../frontend/src/model && shx cp -R ./generated-sources/frontend/test/api/. ../../frontend/test/api && shx cp -R ./generated-sources/frontend/test/model/. ../../frontend/test/model",
+    "move-files:server": "shx cp ./generated-sources/backend/src/ApiClient.js ../../backend/utils/ModelUtil.js && shx cp -R ./generated-sources/backend/src/model/. ../../backend/model",
+    "generate-move:client": "npm run generate-base-templates:client && npm run add-custom-templates:client && npm run generate-code:client && npm run delete-templates:client && npm run move-files:client",
+    "generate-move:server": "npm run generate-base-templates:server && npm run add-custom-templates:server && npm run generate-code:server && npm run delete-templates:server && npm run move-files:server",
+    "generate-move:all": "npm run generate-move:client && npm run generate-move:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://gerrit-gamma.gic.ericsson.se:29418/OSS/com.ericsson.oss.use/eric-oss-network-assurance-search"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2",
+    "openapi-examples-validator": "^4.6.0",
+    "shx": "^0.3.4",
+    "swagger-cli": "^4.0.4",
+    "widdershins": "^4.0.1",
+    "yargs": "^17.6.2"
+  },
+  "overrides": {
+    "semver": "7.5.4"
+  }
+}

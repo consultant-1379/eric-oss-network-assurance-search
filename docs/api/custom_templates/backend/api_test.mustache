@@ -1,0 +1,37 @@
+{{>licenseInfo}}
+
+import { expect } from "chai";
+import * as AssuranceSearchApi from "../../src/index.js";
+
+(function testing{{classname}}Api(root, factory) {
+  factory();
+}(this, function() {
+
+  var instance;
+
+  beforeEach(function() {
+    instance = new {{moduleName}}.{{classname}}();
+  });
+
+  describe('{{classname}}', function() {
+{{#operations}}
+{{#operation}}
+    describe('{{operationId}}', function() {
+      it('should call {{operationId}} successfully', function(done) {
+        //instance.{{operationId}}().then(
+        //  (data) => {
+        //    console.log(JSON.stringify(data, null, 4));
+        //  },
+        //  (error) => {
+        //    console.error(error);
+        //  },
+        //);
+        expect(instance).to.not.have.property('placeholder');
+        done();
+      });
+    });
+{{/operation}}
+{{/operations}}
+  });
+
+}));

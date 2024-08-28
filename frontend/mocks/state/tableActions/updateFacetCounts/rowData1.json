@@ -1,0 +1,100 @@
+{
+  "c_NF": "AMF_BC",
+  "vi_NF_AMFMeanRegNbr3": 60,
+  "metadata": {
+    "contextName": "NF",
+    "context": {
+      "type": {
+        "id": "NF",
+        "contextFields": [
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "NF_AMF_BC",
+          "type": {
+            "id": "c_NF"
+          },
+          "name": "AMF_BC"
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "id": "vi_NF_AMFMeanRegNbr2",
+        "name": "AMFMeanRegNbr2",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr3",
+        "name": "AMFMeanRegNbr3",
+        "value": 60,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr",
+        "name": "AMFMeanRegNbr",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr2",
+        "name": "AMFMeanRegNbr2",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr3",
+        "name": "AMFMeanRegNbr3",
+        "value": 60,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr",
+        "name": "AMFMeanRegNbr",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr",
+        "name": "AMFMeanRegNbr",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr",
+        "name": "AMFMeanRegNbr",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr3",
+        "name": "AMFMeanRegNbr3",
+        "value": 60,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr2",
+        "name": "AMFMeanRegNbr2",
+        "value": 0,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr3",
+        "name": "AMFMeanRegNbr3",
+        "value": 60,
+        "valueType": "integer"
+      },
+      {
+        "id": "vi_NF_AMFMeanRegNbr2",
+        "name": "AMFMeanRegNbr2",
+        "value": 0,
+        "valueType": "integer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+/* style goes here */
+:host {
+  display: block;
+  width: auto;
+}
+
+#panelSubtitle {
+  margin-top: -10px;
+  color: var(--gray-text, #6a6a6a);
+}
+
+#clear-btn {
+  padding: 0 5px;
+}
+
+#error-icon {
+  vertical-align: text-top;
+}
+
+#metric-browser-help {
+  width: 500px;
+  z-index: 1;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.autorefresh-control {
+  vertical-align: top;
+}
+
+.separator {
+  border-left: 1px solid var(--gray-text, #6a6a6a);
+  padding-left: var(--space-small, 4px);
+  margin-left: var(--space-small, 4px);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+eui-loader {
+  padding-left: 2px;
+}
+
+.action-button {
+  margin-top: 8px;
+}
+
+#filter-help {
+  width: 200px;
+  text-align: left;
+  white-space: pre-line;
+}

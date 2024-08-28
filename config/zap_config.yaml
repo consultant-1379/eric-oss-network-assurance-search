@@ -1,0 +1,55 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+zapConfig:
+  baseUrl: "http://eric-oss-network-assurance-search:3000"
+  scanType: "full"
+  # scanType: "api"
+  config_dir: "config/zap"
+  globalConfig:
+  - id: "100000"
+    action: "IGNORE"
+    message: "A Server Error response code was returned by the server"
+  endpoints:
+  - name: "searchMetrics"
+    url: "/soa/search/metrics"
+    config:
+  - name: "searchContexts"
+    url: "/soa/search/contexts"
+    config:
+  - name: "searchRelatedContextsFacets"
+    url: "/soa/search/related-contexts-facets"
+    config:
+  - name: "metadataRelations"
+    url: "/soa/metadata/relations"
+    config:
+  - name: "metadataContexts"
+    url: "/soa/metadata/contexts"
+    config:
+  - name: "metadataMetrics"
+    url: "/soa/metadata/metrics"
+    config:
+  - name: "metadataAll"
+    url: "/soa/metadata"
+    config:
+  - name: "metadataIndexes"
+    url: "/metadata/indexes"
+    config:
+  report:
+    dir: "build/va-reports/zap-reports"
+    format:
+      - html
+      - json
+      - md
+      - xml
+  properties:
+    zap_container_port: 9625

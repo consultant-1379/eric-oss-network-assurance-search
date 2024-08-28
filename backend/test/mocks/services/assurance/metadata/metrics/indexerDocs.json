@@ -1,0 +1,51 @@
+{
+  "fullContext": {
+    "name": "NSSAI_NSI",
+    "context": [
+      {
+        "name": "nssai_nsi",
+        "displayName": "NSSAI_NSI",
+        "documentName": "c_NSSAI_NSI",
+        "description": "NSSAI_NSI description"
+      }
+    ]
+  },
+  "value": [
+    {
+      "name": "PDUSessionEstSR",
+      "displayName": "PDU Session Est SR",
+      "unit": "errors/minute",
+      "type": "integer",
+      "valueContextDocumentName": "PDUSessionEstSR_NSSAI_NSI",
+      "valueDocumentName": "vi_NSSAI_NSI_PDUSessionEstSR",
+      "description": "PDUSessionEstSR Description"
+    },
+    {
+      "name": "SessionModificationReqRcvd",
+      "displayName": "Session Modification Req Rcvd",
+      "unit": "errors/minute",
+      "type": "integer",
+      "valueContextDocumentName": "SessionModificationReqRcvd_NSSAI_NSI",
+      "valueDocumentName": "vi_NSSAI_NSI_SessionModificationReqRcvd",
+      "description": "SessionModificationReqRcvd Description"
+    },
+    {
+      "name": "AMFMeanRegNbr",
+      "unit": "errors/minute",
+      "displayName": "AMF Mean Reg Nbr",
+      "type": "float",
+      "valueContextDocumentName": "AMFMeanRegNbr_NSSAI_NSI",
+      "valueDocumentName": "vd_NSSAI_NSI_AMFMeanRegNbr",
+      "description": "AMFMeanRegNbr Description"
+    },
+    {
+      "name": "ULIpv4PacketsDr",
+      "unit": "test/unit",
+      "displayName": "ULIpv4PacketsDr",
+      "type": "float",
+      "valueContextDocumentName": "ULIpv4PacketsDr_NSSAI_NSI",
+      "valueDocumentName": "vd_NSSAI_NSI_ULIpv4PacketsDr",
+      "description": "ULIpv4PacketsDr"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+type: object
+description: aggregation context
+required:
+  - type
+  - contextFields
+properties:
+  id:
+    $ref: '../schemas/ContextId.yaml'
+    description: a unique identifier of the context instance
+  name:
+    type: string
+    description: name for the context
+    example: "SNSSAI_a1 & NSI_b2"
+  type:
+    $ref: '../schemas/ContextType.yaml'
+    description: a type of this context
+    example:
+      {
+        "id": "SNSSAI_NSI",
+        "contextFields": [
+          {
+            "id": "c_NSI",
+          },
+          {
+            "id": "c_SNSSAI",
+          }
+        ]
+      }
+  contextFields:
+    type: array
+    description: aggregated entities in this context
+    items:
+      $ref: '../schemas/Entity.yaml'
+    minItems: 1
+    example:
+      [
+        {
+          "id": "SNSSAI_a1",
+          "type": {
+            "id": "c_SNSSAI",
+          }
+        },
+        {
+          "id": "NSI_b2",
+          "type": {
+            "id": "c_NSI",
+          }
+        }
+      ]
+

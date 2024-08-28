@@ -1,0 +1,7 @@
+{  
+  "report-dir": "./.nyc_coverage",  
+  "reporter": ["lcov"],  
+  "all": true,  
+  "include": ["test/**.js"],  
+  "exclude": []
+}

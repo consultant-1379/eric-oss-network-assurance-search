@@ -1,0 +1,42 @@
+{
+  "status": "success",
+  "isPartial": false,
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "context": "nf",
+          "instance": "corvus-vm-metrics-generator:9000",
+          "job": "corvus-vm-metrics-generator",
+          "nf": "AMF_ON1",
+          "vd_DTSNSI": "185",
+          "vd_N3DownstreamThr": "252",
+          "vd_PDUSesMeanNbr": "277",
+          "vd_PDUSessEstSR": "132",
+          "vi_AMFMaxRegNbr": "177",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715965212, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf",
+          "instance": "corvus-vm-metrics-generator:9000",
+          "job": "corvus-vm-metrics-generator",
+          "nf": "AMF_ON2",
+          "vd_DTSNSI": "209",
+          "vd_N3DownstreamThr": "248",
+          "vd_PDUSesMeanNbr": "279",
+          "vd_PDUSessEstSR": "121",
+          "vi_AMFMaxRegNbr": "143",
+          "vi_AMFMeanRegNbr": "92"
+        },
+        "value": [1715965212, "1"]
+      }
+    ]
+  },
+  "stats": {
+    "seriesFetched": "18"
+  }
+}

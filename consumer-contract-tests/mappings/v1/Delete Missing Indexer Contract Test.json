@@ -1,0 +1,21 @@
+{
+  "id" : "d408a9d1-56b4-45cd-95a5-b362a0e03928",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/indexer",
+    "method" : "DELETE",
+    "queryParameters" : {
+      "name" : {
+        "equalTo" : "invalidIndexName"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"type\":\"about:blank\",\"title\":\"Not Found\",\"status\":404,\"detail\":\"An indexer with the name 'invalidIndexName', was not found.\",\"instance\":null}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "d408a9d1-56b4-45cd-95a5-b362a0e03928"
+}

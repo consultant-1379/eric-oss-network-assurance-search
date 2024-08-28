@@ -1,0 +1,127 @@
+[
+  {
+    "id": "vi_NF_Site_AMFMeanRegNbr",
+    "name": "AMF Mean Reg Nbr",
+    "description": "AMFMeanRegNbr Description",
+    "value": 218,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "visualization": {
+      "groups": {
+        "default": [
+          "vi_NF_Site_AMFMeanRegNbr"
+        ]
+      }
+    },
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_site_11"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f4"
+      }
+    ]
+  },
+  {
+    "id": "vi_NF_Site_AMFMeanRegNbr2",
+    "name": "AMF Mean Reg Nbr 2",
+    "description": "AMFMeanRegNbr2 Description",
+    "value": 95,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "visualization": {
+      "groups": {
+        "default": [
+          "vi_NF_Site_AMFMeanRegNbr2"
+        ]
+      }
+    },
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_site_11"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_f9ddffc3_102e_4bac_a294_a251fca36b81"
+      }
+    ]
+  },
+  {
+    "id": "vi_NF_Site_AMFMeanRegNbr3",
+    "name": "AMF Mean Reg Nbr 3",
+    "description": "AMFMeanRegNbr3 Description",
+    "value": 423,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "visualization": {
+      "groups": {
+        "default": [
+          "vi_NF_Site_AMFMeanRegNbr3"
+        ]
+      }
+    },
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_site_11"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_60eef4ad_b044_486b_84b7_2eb3a4e44bbb"
+      }
+    ]
+  },
+  {
+    "id": "vi_NF_Site_PDUSessionEstSR",
+    "name": "PDU Session Est SR",
+    "description": "PDUSessionEstSR Description",
+    "value": 209,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "visualization": {
+      "groups": {
+        "default": [
+          "vi_NF_Site_PDUSessionEstSR"
+        ]
+      }
+    },
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_site_11"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_79824734_b4f2_447c_83c5_e4bacf4d1a74"
+      }
+    ]
+  },
+  {
+    "id": "vi_NF_Site_SessionModificationReqRcvd",
+    "name": "Session Modification Req Rcvd",
+    "description": "SessionModificationReqRcvd Description",
+    "value": 302,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "visualization": {
+      "groups": {
+        "default": [
+          "vi_NF_Site_SessionModificationReqRcvd"
+        ]
+      }
+    },
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_site_11"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_13df9d88_8cbe_4b31_bcf2_5c8826f3caa0"
+      }
+    ]
+  }
+]

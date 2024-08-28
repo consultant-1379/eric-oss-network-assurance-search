@@ -1,0 +1,100 @@
+{
+  "families": [
+    {
+      "name": "default",
+      "widget": "timeline"
+    },
+    {
+      "name": "family1",
+      "title": "Family 1",
+      "subtitle": "Subtitle for Family 1",
+      "unit": "unit1",
+      "widget": "timeline"
+    },
+    {
+      "name": "family2",
+      "title": "Family 2",
+      "subtitle": "Subtitle for Family 2",
+      "unit": "unit2",
+      "widget": "donut"
+    },
+    {
+      "name": "family3",
+      "title": "Family 3",
+      "subtitle": "Subtitle for Family 3",
+      "unit": "unit3",
+      "widget": "barChart"
+    },
+    {
+      "name": "family4",
+      "title": "Family 4",
+      "subtitle": "Subtitle for Family 4",
+      "unit": "unit4",
+      "widget": "kpi"
+    },
+    {
+      "name": "family5",
+      "title": "Family 5",
+      "subtitle": "Subtitle for Family 5",
+      "unit": "unit5",
+      "widget": "gauge"
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "title": "Historical Dashboard",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group1",
+      "title": "Panel 1",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group2",
+      "title": "Panel 2",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    }
+  ],
+  "categories": [
+    {
+      "name": "category1",
+      "title": "Category 1"
+    },
+    {
+      "name": "category2",
+      "title": "Category 2"
+    }
+  ],
+  "contexts": [
+    {
+      "id": "CFID_SNSSAI_NSI",
+      "name": "SNSSAI & NSI",
+      "description": "SNSSAI & NSI"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "metric1",
+      "category": ["category1", "category2"],
+      "groups": {
+        "group1": ["family1", "family3"],
+        "group2": ["family2"]
+      },
+      "query": "${metricName}{snssai=~\"sn.*-4\"}"
+    },
+    {
+      "name": "metric2",
+      "category": ["category1"],
+      "groups": {
+        "group1": ["family2"],
+        "group2": ["family1"]
+      },
+      "query": "${metricName}{snssai=~\"sn.*-4\"}"
+    }
+  ]
+}

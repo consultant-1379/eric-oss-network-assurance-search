@@ -1,0 +1,8 @@
+type: string
+enum:
+  - CONTAINED_BY
+  - CONTAINS
+  - RELATED_TO
+  - RELATED_BY
+description: type of the relation
+example: RELATED_TO

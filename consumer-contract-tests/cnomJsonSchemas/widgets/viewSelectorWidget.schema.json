@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/viewSelectorWidget.schema.json",
+  "title": "View selector widget",
+  "description": "A widget that is used to select a node name and a view to display some widgets belonging to the view",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["views", "nodeType"],
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "viewSelector"
+        },
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "nodeNameVariable": {
+          "type": "string",
+          "description": "The Dashboard variable name that refers to the selected node name in this component."
+        },
+        "views": {
+          "type": "array",
+          "description": "Options of views for users to select.",
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": {
+                "description": "The text displayed to users",
+                "type": "string"
+              },
+              "value": {
+                "description": "The value referred in 'showWhen' field of other widgets. Must be numbers or english letters.",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "nodeType": {
+          "type": "string",
+          "description": "The node type to select."
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

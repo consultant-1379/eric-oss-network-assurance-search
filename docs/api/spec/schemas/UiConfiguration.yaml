@@ -1,0 +1,22 @@
+type: object
+properties:
+  families:
+    description: Array of configuration family objects
+    type: array
+    items:
+      $ref: '../schemas/Family.yaml'
+  groups:
+    description: Array of configuration group objects
+    type: array
+    items:
+      $ref: '../schemas/Group.yaml'
+  categories:
+    description: Array of configuration category objects
+    type: array
+    items:
+      $ref: '../schemas/Category.yaml'
+additionalProperties:
+  type: array
+  description: Array of more configuration objects
+  items:
+    type: object

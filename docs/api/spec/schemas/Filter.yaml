@@ -1,0 +1,15 @@
+type: object
+properties:
+  name:
+    type: string
+    description: name of the filter
+  not:
+    type: boolean
+    description: if true, inverses the filter
+    default: false
+example:
+  {
+    "name": "Metric range filter",
+    "not": true
+  }
+

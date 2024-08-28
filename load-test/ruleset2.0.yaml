@@ -1,0 +1,21 @@
+modelVersion: 2.0
+
+env:
+  - BASE_API_URL (default=http://host.docker.internal:3000)
+  - MAX_VUS (default=100)
+
+rules:
+  start-graphing-containers:
+    - task: start-containers
+      cmd: docker-compose --file docker/docker-compose.yaml up -d
+        influxdb
+        grafana
+  run-load-tests:
+    - task: run-tests
+      cmd: docker-compose --file docker/docker-compose.yaml run
+        -e BASE_API_URL=${env.BASE_API_URL}
+        -e MAX_VUS=${env.MAX_VUS}
+        k6 run /scripts/load-test.js
+  clean-up-containers:
+    - task: remove-containers
+      cmd: docker-compose --file docker/docker-compose.yaml down

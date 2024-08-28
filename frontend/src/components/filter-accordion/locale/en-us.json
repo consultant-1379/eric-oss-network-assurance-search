@@ -1,0 +1,10 @@
+{
+  "OPERATOR_LABEL_EQUAL": "Equal to",
+  "OPERATOR_LABEL_NOT_EQUAL": "Not Equal to",
+  "OPERATOR_LABEL_GREATER_THEN_EQUAL": "Greater than or Equal to",
+  "OPERATOR_LABEL_LESS_THAN_EQUAL": "Less than or Equal to",
+  "OPERATOR_LABEL_IN_RANGE": "In Range",
+  "OPERATOR_LABEL_NOT_IN_RANGE": "Not In Range",
+  "OPERATOR_LABEL_DOESNT_MATCH": "Doesn't Match",
+  "OPERATOR_LABEL_UNKNOWN": "Unknown"
+}

@@ -1,0 +1,50 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-self: flex-end;
+  width: 90%;
+}
+
+#no-results {
+  padding: 5%;
+}
+
+eui-custom-table {
+  padding-top: 10px;
+}
+
+.action-btn {
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+#hamburger-menu-button {
+  padding-top: 13px;
+  padding-right: 5px;
+}
+
+#settings {
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+.metrics-table {
+  margin-top: 10px;
+}
+
+.table-metadata {
+  color: var(--gray-text, #6a6a6a);
+  font-style: italic;
+  padding-top: 20px;
+}
+
+.metrics-table {
+  margin-top: 10px;
+}
+

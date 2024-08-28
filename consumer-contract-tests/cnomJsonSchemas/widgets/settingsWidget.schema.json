@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/settingsWidget.schema.json",
+  "title": "Settings widget",
+  "description": "For internal use only. A widget that displays information in setting format",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "settings"
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "description": "If type is pill, use pill component to display the settings config",
+                "type": "string",
+                "enum": ["pill"],
+                "default": "pill"
+              },
+              "multiSelect": {
+                "description": "Whether it's possible to select multiple item at once",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

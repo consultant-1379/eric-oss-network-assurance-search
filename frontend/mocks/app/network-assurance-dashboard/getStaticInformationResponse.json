@@ -1,0 +1,57 @@
+[
+  {
+    "contextType": {
+      "contextFields": [
+        {
+          "id": "c_SNSSAI",
+          "name": "My SNSSAI",
+          "description": "Network Slice Selection Assistance Information"
+        },
+        {
+          "id": "c_NSI",
+          "name": "My NSI",
+          "description": "Network Slice Instance"
+        }
+      ],
+      "id": "SNSSAI_NSI",
+      "name": "SNSSAI & NSI"
+    },
+    "relations": [
+      {
+        "relationType": "RELATED_TO",
+        "related": {
+          "contextFields": [
+            {
+              "id": "c_SNSSAI_1234",
+              "name": "SNSSAI 1234",
+              "description": "Instance of SNSSAI 1234"
+            },
+            {
+              "id": "c_NSI_4321",
+              "name": "NSI 4321",
+              "description": "Instance of NSI 4321"
+            }
+          ],
+          "id": "NSSAI_NSI",
+          "name": "SNSSAI & NSI Context"
+        }
+      }
+    ],
+    "metricTypes": [
+      {
+        "id": "vi_SNSSAI_NSI_sessionModificationReqRcvd",
+        "name": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "valueType": "integer",
+        "description": "Session Modification Request Received"
+      },
+      {
+        "id": "vd_SNSSAI_NSI_dlUnstrDropPackets",
+        "name": "DlUnstr Drop Packets",
+        "unit": "errors/minute",
+        "valueType": "float",
+        "description": "Dropped Packets"
+      }
+    ]
+  }
+]

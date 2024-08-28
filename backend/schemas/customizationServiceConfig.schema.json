@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "$async": true,
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "title"]
+      },
+      "maxItems": 20
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "widget": {
+            "type": "string",
+            "enum": ["timeline", "donut"]
+          },
+          "unit": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "widget"]
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "string",
+            "enum": ["alphabetical"]
+          },
+          "sortOrder": {
+            "type": "string",
+            "enum": ["asc", "des"]
+          }
+        },
+        "required": ["name", "sort", "sortOrder"]
+      }
+    },
+    "contexts": {
+      "$async": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "contextFields": {
+            "type": "array"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["contextFields", "name", "description"]
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "query": {
+            "type": "string"
+          },
+          "groups": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    }
+  },
+  "required": ["categories", "families", "groups", "contexts", "metrics"]
+}

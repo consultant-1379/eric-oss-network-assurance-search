@@ -1,0 +1,15 @@
+type: object
+description: metric category
+required:
+  - name
+  - title
+properties:
+  name:
+    type: string
+    description: metric category name
+    example: "category1"
+  title:
+    type: string
+    description: metric category title which is displayed on UI
+    example: "Category 1"
+example: { "name": "category1", "title": "Category 1" }

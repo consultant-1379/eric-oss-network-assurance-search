@@ -1,0 +1,21 @@
+{
+  "id" : "4a192399-0332-48b6-84a1-edb3b3d246a0",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/spec/fullcontexts",
+    "method" : "GET",
+    "queryParameters" : {
+      "searchEngineIndexName" : {
+        "equalTo" : "assurance-searchEngineIndexName"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"documentName\":\"full_context\",\"fullContext\":[{\"name\":\"Context4_c1\",\"context\":[{\"name\":\"c1\",\"displayName\":\"Context1_DisplayName\",\"documentName\":\"c_c1\",\"description\":\"Context1_Description\"},{\"name\":\"Context4\",\"displayName\":\"Context2_DisplayName\",\"documentName\":\"c_Context4\",\"description\":null}]},{\"name\":\"Context0_c1\",\"context\":[{\"name\":\"c1\",\"displayName\":\"Context1_DisplayName\",\"documentName\":\"c_c1\",\"description\":\"Context1_Description\"},{\"name\":\"Context0\",\"displayName\":\"Context2_DisplayName\",\"documentName\":\"c_Context0\",\"description\":null}]}]}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "4a192399-0332-48b6-84a1-edb3b3d246a0"
+}

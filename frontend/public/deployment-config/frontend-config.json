@@ -1,0 +1,57 @@
+{
+  "localMode": true,
+  "logging": {
+    "logLevel": "info"
+  },
+  "frontendRoutePrefix": "",
+  "featureFlags": {
+    "persistenceEngine": "os",
+    "discovery": "ais"
+  },
+  "routes": {
+    "serviceAggregationApi": {
+      "prefix": "/internal-api",
+      "routes": {
+        "config": "/uiConfig",
+        "ui": "/ui"
+      }
+    },
+    "internal": {
+      "prefix": "/ui",
+      "routes": {
+        "configuration": "/configuration"
+      }
+    },
+    "api": {
+      "prefix": "",
+      "routes": {
+        "searchMetrics": "/:index/search/metrics",
+        "searchContexts": "/:index/search/contexts",
+        "searchRelatedContextsFacets": "/:index/search/related-contexts-facets",
+        "metadataRelations": "/:index/metadata/relations",
+        "metadataContexts": "/:index/metadata/contexts",
+        "metadataMetrics": "/:index/metadata/metrics",
+        "metadataAll": "/:index/metadata",
+        "metadataIndexes": "/metadata/indexes"
+      }
+    },
+    "meta": {
+      "prefix": "/help-meta/v1",
+      "routes": {
+        "groups": "/groups"
+      }
+    }
+  },
+  "exponentialBackoffRetryAttempts": 6,
+  "authnConfig": {
+    "host": "http://localhost",
+    "port": 3000,
+    "path": "/sec/authn/v1/logout"
+  },
+  "cnomConfig": {
+    "host": "http://localhost",
+    "port": 8081,
+    "path": "/?embedded=true#service-assurance-viewer"
+  },
+  "cnomDataSourceType": "pmStatsQueryService"
+}

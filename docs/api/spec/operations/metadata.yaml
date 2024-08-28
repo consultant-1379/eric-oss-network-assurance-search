@@ -1,0 +1,359 @@
+metadata-indexes:
+  get:
+    tags:
+      - metadata
+    summary: Return available indexes
+    description: metadata endpoint for returning available indexes (domains)
+    operationId: getAvailableIndexes
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/Index.yaml"
+            example:
+              [
+                { "name": "ran", "description": "Radio Access Network (RAN)" },
+                { "name": "soa", "description": "Some description" },
+              ]
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"
+
+metadata-contexts:
+  get:
+    tags:
+      - metadata
+    summary: Return available context
+    description: metadata endpoint for returning available context types
+    operationId: getAvailableContexts
+    # These headers parameters required by the API linter but
+    # conflicting with some of our tools. Temporary disabled.
+    #      - $ref: '../operations/parameters.yaml#/accept'
+    #      - $ref: '../operations/parameters.yaml#/accept-version'
+    #      - $ref: '../operations/parameters.yaml#/content-type'
+    parameters:
+      - $ref: "../operations/parameters.yaml#/index"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/ContextType.yaml"
+            example:
+              [
+                {
+                  "contextFields":
+                    [
+                      {
+                        "id": "c_SNSSAI",
+                        "description": "Network Slice Selection Assistance Information",
+                      },
+                      {
+                        "id": "c_NSI",
+                        "description": "Network Slice Instance"
+                      },
+                    ],
+                  "id": "CFID_SNSSAI_NSI",
+                  "name": "SNSSAI & NSI",
+                },
+                {
+                  "contextFields":
+                    [
+                      {
+                        "id": "c_SNSSAI",
+                        "description": "Network Slice Selection Assistance Information",
+                      },
+                      {
+                        "id": "c_NSI",
+                        "description": "Network Slice Instance"
+                      },
+                    ],
+                  "id": "CFID_SNSSAI_NF",
+                  "name": "SNSSAI & NF",
+                },
+              ]
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"
+
+metadata-relations:
+  get:
+    tags:
+      - metadata
+    summary: Get relations for given context
+    description: relation to a context
+    operationId: getRelationByContextId
+    parameters:
+      # These headers parameters required by the API linter but
+      # conflicting with some of our tools. Temporary disabled.
+      #      - $ref: '../operations/parameters.yaml#/accept'
+      #      - $ref: '../operations/parameters.yaml#/accept-version'
+      #      - $ref: '../operations/parameters.yaml#/content-type'
+      - $ref: "../operations/parameters.yaml#/index"
+      - name: contextTypeId
+        in: query
+        required: true
+        description: a context type used for searching
+        schema:
+          $ref: "../schemas/ContextTypeId.yaml"
+        example: "SNSSAI_NF"
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/Relation.yaml"
+            example:
+              [
+                {
+                  "relationType": "RELATED_TO",
+                  "related":
+                    {
+                      "contextFields":
+                        [
+                          {
+                            "id": "c_SNSSAI_1234",
+                            "name": "SNSSAI 1234",
+                            "description": "Instance of SNSSAI 1234",
+                          },
+                          {
+                            "id": "c_NSI_4321",
+                            "name": "NSI 4321",
+                            "description": "Instance of NSI 4321",
+                          },
+                        ],
+                      "id": "SNSSAI_NSI",
+                      "name": "SNSSAI & NSI Context",
+                    },
+                },
+              ]
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"
+
+metadata-metrics:
+  get:
+    tags:
+      - metadata
+    summary: Return available metrics types
+    description: metadata endpoint for returning available metrics types for a given context
+    operationId: getMetricsByContext
+    parameters:
+      # These headers parameters required by the API linter but
+      # conflicting with some of our tools. Temporary disabled.
+      #      - $ref: '../operations/parameters.yaml#/accept'
+      #      - $ref: '../operations/parameters.yaml#/accept-version'
+      #      - $ref: '../operations/parameters.yaml#/content-type'
+      - $ref: '../operations/parameters.yaml#/index'
+      - name: contextTypeId
+        in: query
+        required: true
+        description: a context type used for searching
+        schema:
+          $ref: "../schemas/ContextTypeId.yaml"
+        example: "SNSSAI_NF"
+    responses:
+      '200':
+        description: OK - available metric types
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../schemas/MetricType.yaml'
+            example:
+              [
+                {
+                  "id": "vi_SNSSAI_NSI_PDUSessionEstSR",
+                  "name": "PDU Session Est SR",
+                  "valueType": "integer",
+                  "description": "PDUSessionEstSR Description",
+                  "unit": "errors/minute",
+                  "visualization": {
+                    "category": ["observability", "performance"],
+                    "group1": ["family1", "family2"],
+                    "group2": ["family2"],
+                    "query": "${metricName}{snssai=~\"sn.*-4\"}"
+                  }
+                },
+                {
+                  "id": "vi_SNSSAI_NSI_SessionModificationReqRcvd",
+                  "name":"Session Modification Req Rcvd",
+                  "valueType":"integer",
+                  "description":"SessionModificationReqRcvd Description",
+                  "unit":"errors/minute",
+                  "visualization": {
+                    "category": ["observability", "performance"],
+                    "group1": ["family1", "family2"],
+                    "group2": ["family2"],
+                    "query": "${metricName}{snssai=~\"sn.*-4\"}"
+                  }
+                },
+                {
+                  "id": "vd_SNSSAI_NSI_AMFMeanRegNbr",
+                  "name": "AMF Mean Reg Nbr",
+                  "valueType": "float",
+                  "description": "AMFMeanRegNbr Description",
+                  "unit": "errors/minute",
+                  "visualization": {
+                    "category": ["observability", "performance"],
+                    "group1": ["family1", "family2"],
+                    "group2": ["family2"],
+                    "query": "${metricName}{snssai=~\"sn.*-4\"}"
+                  }
+                }
+              ]
+      '400':
+        $ref: '../responses/BadRequest.yaml'
+      '401':
+        $ref: '../responses/Unauthorized.yaml'
+      '503':
+        $ref: '../responses/ServiceUnavailable.yaml'
+      default:
+        $ref: '../responses/UnexpectedError.yaml'
+
+metadata:
+  get:
+    tags:
+      - metadata
+    summary: Return all static data combined together
+    description: metadata endpoint for returning all static data combined together
+    operationId: getStaticInformation
+    # These headers parameters required by the API linter but
+    # conflicting with some of our tools. Temporary disabled.
+    #      - $ref: '../operations/parameters.yaml#/accept'
+    #      - $ref: '../operations/parameters.yaml#/accept-version'
+    #      - $ref: '../operations/parameters.yaml#/content-type'
+    parameters:
+      - $ref: "../operations/parameters.yaml#/index"
+    responses:
+      "200":
+        description: OK - available metric types
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                description: full information about a context
+                required:
+                  - contextType
+                  - relations
+                  - metricTypes
+                properties:
+                  contextType:
+                    $ref: "../schemas/ContextType.yaml"
+                  relations:
+                    type: array
+                    items:
+                      $ref: "../schemas/Relation.yaml"
+                  metricTypes:
+                    type: array
+                    items:
+                      $ref: "../schemas/MetricType.yaml"
+            example:
+              [
+                {
+                  "contextType":
+                    {
+                      "contextFields":
+                        [
+                          {
+                            "id": "c_SNSSAI",
+                            "description": "Network Slice Selection Assistance Information",
+                          },
+                          {
+                            "id": "c_NSI",
+                            "description": "Network Slice Instance" },
+                        ],
+                      "id": "SNSSAI_NSI",
+                      "name": "SNSSAI & NSI",
+                    },
+                  "relations":
+                    [
+                      {
+                        "relationType": "RELATED_TO",
+                        "related":
+                          {
+                            "contextFields":
+                              [
+                                {
+                                  "id": "c_SNSSAI_1234",
+                                  "name": "SNSSAI 1234",
+                                  "description": "Instance of SNSSAI 1234",
+                                },
+                                {
+                                  "id": "c_NSI_4321",
+                                  "name": "NSI 4321",
+                                  "description": "Instance of NSI 4321",
+                                },
+                              ],
+                            "id": "NSSAI_NSI",
+                            "name": "SNSSAI & NSI Context",
+                          },
+                      },
+                    ],
+                  "metricTypes":
+                    [
+                      {
+                        "id":"vi_SNSSAI_NSI_sessionModificationReqRcvd",
+                        "name":"Session Modification Req Rcvd",
+                        "unit": "errors/minute",
+                        "valueType": "integer",
+                        "description": "Session Modification Request Received",
+                        "visualization": {
+                          "category": ["observability", "performance"],
+                          "group1": ["family1", "family2"],
+                          "group2": ["family2"],
+                          "query": "${metricName}{snssai=~\"sn.*-4\"}"
+                        }
+                      },
+                      {
+                        "id": "vd_SNSSAI_NSI_dlUnstrDropPackets",
+                        "name":"DlUnstr Drop Packets",
+                        "unit": "errors/minute",
+                        "valueType": "float",
+                        "description": "Dropped Packets",
+                        "visualization": {
+                          "category": ["observability", "performance"],
+                          "group1": ["family1", "family2"],
+                          "group2": ["family2"],
+                          "query": "${metricName}{snssai=~\"sn.*-4\"}"
+                        }
+                      }
+                    ]
+                },
+              ]
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"

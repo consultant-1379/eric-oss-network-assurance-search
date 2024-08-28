@@ -1,0 +1,9 @@
+{
+  "CONTEXT_ERROR_MESSAGE": "The KPI Context for '{{name}}' for index '{{index}}' doesn't exist. You can click 'Add KPI Context' button to explore available KPI Contexts.",
+  "VALIDATION_ERROR_MESSAGE": "There was a problem creating the KPI Context. You can click 'Add KPI Context' to explore available KPI Contexts or refresh the page to try again.",
+  "DASHBOARD_VALIDATION_ERROR_MESSAGE": "There was a problem creating the Historical Dashboard: the identifier types provided for the Historical Dashboard are incorrect for the selected Context. You can click 'Add KPI Context' to explore available KPI Contexts or refresh the page to try again.",
+  "UNKNOWN_ERROR_MESSAGE": "An unknown error occurred.",
+  "NO_INDEXES": "No indexes are configured. This can happen as the system is initializing. Reload to try again.",
+  "NO_CONTEXTS": "No contexts are configured. This can happen as the system is initializing. Reload to try again.",
+  "NETWORK_ERROR": "There was an unexpected issue connecting to our services for data. Reload to try again."
+}

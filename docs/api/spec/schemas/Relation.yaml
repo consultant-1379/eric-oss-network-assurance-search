@@ -1,0 +1,42 @@
+type: object
+description: a relation to a context
+required:
+  - relationType
+  - related
+properties:
+  relationType:
+    $ref: "../schemas/RelationType.yaml"
+  related:
+    $ref: "../schemas/ContextType.yaml"
+example:
+  {
+    "relationType": "RELATED_TO",
+    "related":
+      {
+        "contextFields":
+          [
+            {
+              "id": "SNSSAI_1234",
+              "name": "SNSSAI 1234",
+              "description": "Instance of SNSSAI 1234",
+              "type":
+                {
+                  "id": "c_SNSSAI",
+                  "description": "Network Slice Selection Assistance Information",
+                },
+            },
+            {
+              "id": "NSI_4321",
+              "name": "NSI 4321",
+              "description": "Instance of NSI 4321",
+              "type":
+                {
+                  "id": "c_NSI",
+                  "description": "Network Slice Instance"
+                },
+            },
+          ],
+        "id": "NSSAI_NSI",
+        "name": "NSSAI & NSI Context",
+      },
+  }

@@ -1,0 +1,70 @@
+{
+  "state1": {
+    "browsers": [
+      {
+        "id": "a42aab1b-5611-47c6-800d-08d5dde5128d",
+        "title": "Metric Browser",
+        "loading": false,
+        "filters": [],
+        "data": {},
+        "context": {
+          "contextType": {
+            "id": "test_context",
+            "contextFields": []
+          },
+          "relations": [],
+          "metricTypes": [],
+          "relationActions": [],
+          "filterCategories": [],
+          "name": "test context",
+          "columns": [],
+          "index": "soa"
+        },
+        "historicalDashboardData": {
+          "historicalDashboardModel": {},
+          "showHistoricalDashboard": false
+        },
+        "active": true,
+        "urlSearchParams": "id=a42aab1b-5611-47c6-800d-08d5dde5128d&contextTypeId=test_context&index=soa"
+      }
+    ],
+    "version": "1.0.0",
+    "postgresSchemaName": "kpi",
+    "loading": false,
+    "discoveryCompleted": true
+  },
+  "state2": {
+    "browsers": [
+      {
+        "id": "a42aab1b-5611-47c6-800d-08d5dde5128d",
+        "title": "Metric Browser",
+        "loading": false,
+        "context": {
+          "contextType": {
+            "id": "test_context",
+            "contextFields": []
+          },
+          "relations": [],
+          "metricTypes": [],
+          "relationActions": [],
+          "filterCategories": [],
+          "name": "test context",
+          "columns": [],
+          "index": "soa"
+        },
+        "filters": [],
+        "data": {},
+        "historicalDashboardData": {
+          "historicalDashboardModel": {},
+          "showHistoricalDashboard": true
+        },
+        "active": true,
+        "urlSearchParams": "id=a42aab1b-5611-47c6-800d-08d5dde5128d&contextTypeId=test_context&index=soa"
+      }
+    ],
+    "version": "1.0.0",
+    "postgresSchemaName": "kpi",
+    "loading": false,
+    "discoveryCompleted": true
+  }
+}

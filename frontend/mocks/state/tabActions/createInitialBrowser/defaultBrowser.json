@@ -1,0 +1,23 @@
+{
+  "title": "Metric Browser",
+  "filters": [],
+  "loading": false,
+  "match": "",
+  "settings": { "autoRefresh": true, "rowHeight": "compact" },
+  "data": {
+    "total": 0,
+    "numpages": 1,
+    "numentries": 13,
+    "currentpage": 1,
+    "tableData": [],
+    "sort": {}
+  },
+  "metricCategoryPickerData": {
+    "viewAllSelected": false,
+    "maxPillCount": 10
+  },
+  "historicalDashboardData": {
+    "historicalDashboardModel": {},
+    "showHistoricalDashboard": false
+  }
+}

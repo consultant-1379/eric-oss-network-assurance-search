@@ -1,0 +1,16 @@
+{
+  "id" : "28394ac9-a595-48f5-a9a1-fa041949caa2",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/search-engine-index-list",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"name\":\"assurance-soa\",\"displayName\":\"Display Name for 'SOA' index.\",\"indexDescription\":\"SOA index description\"}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "28394ac9-a595-48f5-a9a1-fa041949caa2"
+}

@@ -1,0 +1,34 @@
+type: object
+description: metric family
+required:
+  - name
+  - widget
+properties:
+  name:
+    type: string
+    description: metric family name
+    example: "family1"
+  title:
+    type: string
+    description: metric family title
+    example: "Family 1"
+  subtitle:
+    type: string
+    description: metric family subtitle
+    example: "Subtitle for Family 1"
+  unit:
+    type: string
+    description: metric family units
+    example: "unit1"
+  widget:
+    type: string
+    description: metric category widget which is displayed within the historical dashboard family's tab
+    example: "timeline"
+example:
+  {
+    "name": "family1",
+    "title": "Family 1",
+    "subtitle": "Subtitle for Family 1",
+    "unit": "unit1",
+    "widget": "timeline",
+  }

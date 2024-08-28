@@ -1,0 +1,283 @@
+{
+  "consumer": {
+    "name": "network-assurance-search"
+  },
+  "interactions": [
+    {
+      "description": "a request for full contexts",
+      "providerStates": [
+        {
+          "name": "there are full contexts"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/spec/fullcontexts",
+        "query": {
+          "searchEngineIndexName": [
+            "assurance-searchEngineIndexName"
+          ]
+        }
+      },
+      "response": {
+        "body": [
+          {
+            "documentName": "full_context",
+            "fullContext": [
+              {
+                "context": [
+                  {
+                    "description": "Context1_Description",
+                    "displayName": "Context1_DisplayName",
+                    "documentName": "c_c1",
+                    "name": "c1"
+                  },
+                  {
+                    "description": null,
+                    "displayName": "Context2_DisplayName",
+                    "documentName": "c_Context4",
+                    "name": "Context4"
+                  }
+                ],
+                "name": "Context4_c1"
+              },
+              {
+                "context": [
+                  {
+                    "description": "Context1_Description",
+                    "displayName": "Context1_DisplayName",
+                    "documentName": "c_c1",
+                    "name": "c1"
+                  },
+                  {
+                    "description": null,
+                    "displayName": "Context2_DisplayName",
+                    "documentName": "c_Context0",
+                    "name": "Context0"
+                  }
+                ],
+                "name": "Context0_c1"
+              }
+            ]
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for full contexts with an invalid `searchEngineIndexName` query parameter",
+      "providerStates": [
+        {
+          "name": "there are full contexts"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/spec/fullcontexts",
+        "query": {
+          "searchEngineIndexName": [
+            "invalidSearchEngineIndexName"
+          ]
+        }
+      },
+      "response": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 404
+      }
+    },
+    {
+      "description": "a request for search engine indexes",
+      "providerStates": [
+        {
+          "name": "there are search engine indexes"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/search-engine-index-list"
+      },
+      "response": {
+        "body": [
+          {
+            "displayName": "soa_DisplayName",
+            "indexDescription": "Description of soa",
+            "name": "soa"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for values for a full context",
+      "providerStates": [
+        {
+          "name": "there are values for a full context"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/spec/values-for-fullcontext",
+        "query": {
+          "fullContextName": [
+            "Context4_c1"
+          ],
+          "searchEngineIndexName": [
+            "assurance-searchEngineIndexName"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "value": [
+            {
+              "description": "valueFieldX Description",
+              "name": "valueFieldX-name",
+              "type": "float",
+              "valueContextDocumentName": "value_context",
+              "valueDocumentName": "vd_ContextA_ContextB_valueFieldX-name"
+            }
+          ]
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.value": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for values for a full context with an invalid `fullContextName` query parameter",
+      "providerStates": [
+        {
+          "name": "there are values for a full context"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/spec/values-for-fullcontext",
+        "query": {
+          "fullContextName": [
+            "invalidContext"
+          ],
+          "searchEngineIndexName": [
+            "assurance-searchEngineIndexName"
+          ]
+        }
+      },
+      "response": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 404
+      }
+    },
+    {
+      "description": "a request for values for a full context with an invalid `searchEngineIndexName` query parameter",
+      "providerStates": [
+        {
+          "name": "there are values for a full context"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "GET",
+        "path": "/v1/indexer-info/spec/values-for-fullcontext",
+        "query": {
+          "fullContextName": [
+            "Context4_c1"
+          ],
+          "searchEngineIndexName": [
+            "invalidSearchEngineIndexName"
+          ]
+        }
+      },
+      "response": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 404
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "assurance-indexer-service"
+  }
+}

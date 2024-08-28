@@ -1,0 +1,343 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/dashboard.schema.json",
+  "title": "A dashboard",
+  "description": "A dashboard describes the layout of a collection of widgets.",
+  "type": "object",
+  "required": ["title"],
+  "additionalProperties": false,
+  "properties": {
+    "_id": {
+      "description": "A unique ID for the dashboard.",
+      "$ref": "definitions.schema.json#/definitions/_id"
+    },
+    "title": { "description": "The title of the dashboard.", "type": "string" },
+    "apps": {
+      "description": "Which apps the dashboard should appear in. Apps are the entries in the left menu. Only 'statusOverview' is supported, the other values are for internal use.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "statusOverview",
+          "alarmViewer",
+          "logViewer",
+          "healthCheckViewer",
+          "radioMetricViewer",
+          "assuranceViewer"
+        ]
+      }
+    },
+    "order": {
+      "description": "Used to determine the order of tabs in the app. Dashboards are sorted by this property, in ascending order. Dashboards without this property are sorted last. In case of a tie, dashboards are sorted alphabetically by title.",
+      "type": "integer"
+    },
+    "columns": {
+      "description": "Set the number of columns in the grid layout",
+      "type": "number",
+      "minimum": 6,
+      "default": 10
+    },
+    "tiles": {
+      "description": "The tiles in the dashboard, and their layout. A tile contains one widget. The tiles are laid out in rows, a new row starting when the previous one is full.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["widget"],
+        "additionalProperties": false,
+        "properties": {
+          "xSize": {
+            "description": "How many columns the tile takes up. The max number of columns for one row shouldn't exceed 30.",
+            "type": "integer",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 30
+          },
+          "ySize": {
+            "description": "How many rows the tile takes up.",
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+          },
+          "optional": {
+            "description": "When it's true, it means this tile can be hidden in page, it works with showAndHideOptionalWidgets property",
+            "type": "boolean",
+            "default": false
+          },
+          "variables": {
+            "$ref": "definitions.schema.json#/definitions/variables"
+          },
+          "widget": {
+            "description": "_id of the widget to place in this tile.",
+            "$ref": "definitions.schema.json#/definitions/_id"
+          }
+        }
+      }
+    },
+    "timePicker": {
+      "description": "It is used to store time picker related properties.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxTimeRangeDuration": {
+          "description": "Config the maximum selection time in hours for the sources in the dashboard. 0 means unlimited.",
+          "type": "number",
+          "minimum": 0,
+          "default": 0
+        }
+      }
+    },
+    "useTimePicker": {
+      "description": "Whether to allow configuring the monitored time range. This only makes sense if the dashboard includes timeline data.",
+      "type": "boolean",
+      "default": true
+    },
+    "useQuickTimeReference": {
+      "description": "Whether to allow configuring the quick time range reference.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "description": "Name of dropdown item.",
+            "type": "string"
+          },
+          "value": {
+            "description": "Value of dropdown item.",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dashboardType": {
+      "type": "string",
+      "description": "Determines which dashboard type to render. This is only used internally by standalone CNOM applications.",
+      "oneOf": [
+        {
+          "const": "standard",
+          "description": "The standard dashboard app."
+        },
+        {
+          "const": "labelingKPI",
+          "description": "Ignores the tile property."
+        },
+        {
+          "const": "comparison",
+          "description": "A dashboard type that contains comparison Table and Timeline widgets."
+        },
+        {
+          "const": "counterView",
+          "description": "A dashboard type that contains a Timeline widget for counters."
+        },
+        {
+          "const": "kpiTable",
+          "description": "A dashboard type that contains a Table widget with dynamic dropdowns for KPIs."
+        }
+      ],
+      "default": "standard"
+    },
+    "showAndHideOptionalWidgets": {
+      "description": "It is used to store the prompt information of user operation",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "showMessage": {
+          "description": "Prompt the user to show the specific information of the widget.",
+          "type": "string"
+        },
+        "hideMessage": {
+          "description": "Prompt the user to hide the specific information of the widget.",
+          "type": "string"
+        }
+      }
+    },
+    "showAndHideOptionalIcon": {
+      "description": "It is used to store the icon information of user operation in top bar",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hideDownloadIcon": {
+          "description": "Disable to download icon.",
+          "type": "boolean",
+          "default": false
+        },
+        "infoTooltip": {
+          "description": "Show a tooltip message over an info icon.",
+          "type": "string"
+        }
+      }
+    },
+    "dashboardTreeView": {
+      "type": "object",
+      "description": "Dashboard Tree View configuration for the dashboard.",
+      "properties": {
+        "sourceBuiltTree": {
+          "description": "Whether the Dashboard Tree View tree data is provided from Sources. Sources are defined in the appConfig under dashboardTreeView.sources",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "if": {
+        "required": ["sourceBuiltTree"],
+        "properties": {
+          "sourceBuiltTree": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "tree": {
+            "type": "array",
+            "description": "Tree item names that matches items received from Tree View Sources. Sources are defined in the appConfig under dashboardTreeView.sources",
+            "items": {
+              "description": "A tree item name. When this is selected in the Dashboard Tree View this dashboard will be shown in the app.",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "else": {
+        "type": "object",
+        "properties": {
+          "tree": {
+            "description": "Lists of Dashboard Tree View item names. These items creates a path to where in the Tree View the deashboard resides.",
+            "type": "array",
+            "items": {
+              "description": "Tree item names for the Dashboard Tree View. These items will be created in the Dashboard Tree View in a hierarchy where the first item is the top level.",
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Dashboard Tree View item names."
+              }
+            }
+          }
+        }
+      }
+    },
+    "trafficHandler": true,
+    "nodeType": true,
+    "selectionLabel": true,
+    "hasTable": true,
+    "isMultiple": true,
+    "useCustomizedTopBar": true
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["apps"],
+        "properties": {
+          "apps": {
+            "type": "array",
+            "contains": { "const": "alarmViewer" }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "useCustomizedTopBar": {
+            "description": "Whether to use customized top bar that contains the severity pills.",
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["dashboardType"],
+        "properties": {
+          "dashboardType": { "const": "labelingKPI" }
+        }
+      },
+      "then": {
+        "required": ["trafficHandler"],
+        "properties": {
+          "trafficHandler": {
+            "description": "The traffic handler name.",
+            "type": "string",
+            "enum": ["BGF", "CSCF", "MTAS", "SBG", "AFG"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["dashboardType"],
+        "properties": {
+          "dashboardType": { "const": "comparison" }
+        }
+      },
+      "then": {
+        "properties": {
+          "nodeType": {
+            "description": "The type of nodes",
+            "type": "string",
+            "enum": [
+              "PCCMM",
+              "PCCSM",
+              "PCG",
+              "CCRC",
+              "CCPC",
+              "CCDM",
+              "CCSM",
+              "MTAS",
+              "MRF",
+              "AFG",
+              "BGF",
+              "CSCF",
+              "SBG",
+              "Mixed",
+              "MCPTT-PTT-AS",
+              "MCPTT-USM"
+            ]
+          },
+          "selectionLabel": {
+            "description": "The label displayed for each selection dropdown list(four in total).",
+            "type": "object"
+          },
+          "hasTable": {
+            "description": "Whether the dashboard have compared table.",
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["dashboardType"],
+        "properties": {
+          "dashboardType": { "const": "counterView" }
+        }
+      },
+      "then": {
+        "properties": {
+          "isMultiple": {
+            "description": "Used in multiple nodes",
+            "type": "boolean",
+            "default": false
+          },
+          "nodeType": {
+            "description": "Node type.",
+            "type": "string",
+            "enum": [
+              "MTAS",
+              "CSCF",
+              "BGF",
+              "SBG",
+              "MRF",
+              "MCPTT-PTT-AS",
+              "MCPTT-USM",
+              "MCPTT-ESA",
+              "MCPTT-MR-CDR",
+              "Mixed"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

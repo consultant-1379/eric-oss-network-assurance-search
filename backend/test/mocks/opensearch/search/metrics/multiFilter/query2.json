@@ -1,0 +1,46 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 1000,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "full_context": "NF_SNSSAI"
+            }
+          }
+        ],
+        "should": [
+          {
+            "match": {
+              "c_SNSSAI": "1:2"
+            }
+          },
+          {
+            "match": {
+              "c_NF": "AMF_BC"
+            }
+          }
+        ],
+        "minimum_should_match": 2,
+        "filter": {
+          "bool": {
+            "should": [
+              {
+                "range": {
+                  "vi_NF_SNSSAI_AMFMeanRegNbr": {
+                    "gte": 10.3,
+                    "lte": 30.78
+                  }
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      }
+    }
+  }
+}

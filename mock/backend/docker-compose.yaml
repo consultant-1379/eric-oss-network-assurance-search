@@ -1,0 +1,19 @@
+version: '3.0'
+
+services:
+  openapi_mock:
+    container_name: assurance_mock
+    image: muonsoft/openapi-mock:latest
+    environment:
+      OPENAPI_MOCK_SPECIFICATION_URL: /spec/assurance.yaml
+      OPENAPI_MOCK_DEBUG: 1
+      OPENAPI_MOCK_LOG_FORMAT: tty
+      OPENAPI_MOCK_USE_EXAMPLES: if_present
+      OPENAPI_MOCK_SUPPRESS_ERRORS: 0
+      OPENAPI_MOCK_CORS_ENABLED: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: ../../docs/api/api_bundled/
+        target: /spec

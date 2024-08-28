@@ -1,0 +1,26 @@
+{
+  "schema-version": "1.0.0",
+  "documents": [
+    {
+      "name": "tech-tutorial",
+      "displayName": "Tech Tutorial",
+      "version": "B",
+      "path": "./path/to/doc3.md",
+      "type": "tutorial",
+      "format": "markdown",
+      "groupNames": ["technical", "eea"]
+    }
+  ],
+  "groups": [
+    {
+      "name": "technical",
+      "displayName": "Technical",
+      "type": "category"
+    },
+    {
+      "name": "eea",
+      "displayName": "EEA4 Documentation",
+      "type": "product"
+    }
+  ]
+}

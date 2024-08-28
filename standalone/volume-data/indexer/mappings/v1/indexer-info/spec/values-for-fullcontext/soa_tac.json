@@ -1,0 +1,1 @@
+{"request": {"urlPath": "/v1/indexer-info/spec/values-for-fullcontext", "method": "GET", "headers": {"Content-Type": {"equalTo": "application/json"}}, "queryParameters": {"searchEngineIndexName": {"equalTo": "soa"}, "fullContextName": {"equalTo": "tac"}}}, "response": {"status": 200, "bodyFileName": "../__files/v1/indexer-info/spec/values-for-fullcontext/soa_tac.json"}}

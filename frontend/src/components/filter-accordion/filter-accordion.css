@@ -1,0 +1,36 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+.fieldsBox {
+  vertical-align: middle;
+}
+
+.error-banner {
+  padding-bottom: 10px;
+}
+
+.error-banner eui-icon {
+  vertical-align: top;
+  --icon-color: var(--input-error-icon, #bb0b02);
+}
+
+.banner {
+  text-align: center;
+  color: var(--gray-text, #6a6a6a);
+  padding: 5px 0 10px 0;
+}
+
+#no-filters-banner {
+  padding: 20px 0 10px 0;
+}
+
+#help_content {
+  width: 287px;
+  white-space: pre-line;
+}
+
+eui-combobox {
+  width: 160px;
+}

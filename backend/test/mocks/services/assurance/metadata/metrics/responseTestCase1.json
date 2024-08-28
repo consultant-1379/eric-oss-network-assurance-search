@@ -1,0 +1,70 @@
+[
+  {
+    "id": "vi_NSSAI_NSI_PDUSessionEstSR",
+    "name": "PDU Session Est SR",
+    "valueType": "integer",
+    "description": "PDUSessionEstSR Description",
+    "unit": "errors/minute",
+    "visualization": {
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_successful_request_percentage"
+        ],
+        "group_core": [
+          "timeline_successful_request_percentage"
+        ]
+      }
+    }
+  },
+  {
+    "id": "vi_NSSAI_NSI_SessionModificationReqRcvd",
+    "name": "Session Modification Req Rcvd",
+    "valueType": "integer",
+    "description": "SessionModificationReqRcvd Description",
+    "unit": "errors/minute"
+  },
+  {
+    "id": "vd_NSSAI_NSI_AMFMeanRegNbr",
+    "name": "AMF Mean Reg Nbr",
+    "valueType": "float",
+    "description": "AMFMeanRegNbr Description",
+    "unit": "errors/minute",
+    "visualization": {
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_accessibility_subscribers"
+        ],
+        "group_core": [
+          "timeline_accessibility_subscribers"
+        ]
+      }
+    }
+  },
+  {
+    "id": "vd_NSSAI_NSI_ULIpv4PacketsDr",
+    "name": "ULIpv4PacketsDr",
+    "valueType": "float",
+    "description": "ULIpv4PacketsDr",
+    "unit": "test/unit",
+    "visualization": {
+        "category": [
+            "integrity"
+        ],
+        "groups": {
+            "default": [
+                "timeline_integrity_ul"
+            ],
+            "group_core": [
+                "timeline_ms",
+                "donut_ms"
+            ]
+        }
+    }
+}
+]

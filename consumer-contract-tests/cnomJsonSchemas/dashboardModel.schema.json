@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/dashboardModel.schema.json",
+  "title": "Dashboard model",
+  "description": "Contains a namespace and any number of dashboards, widgets and sources. Usually each dashboard model would contain one dashboard and all its widgets and sources.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "description": "This can be used by editors to provide hints and verify that the JSON can be read correctly by CNOM. Currently only possible to use by CNOM developers.",
+      "type": "string"
+    },
+    "namespace": {
+      "description": "If present, specifies the namespace for everything in the dashboard model. This is a CNOM dashboard model specific namespace and not related to the Kubernetes namespace.",
+      "type": "string",
+      "pattern": "^[^:]+$"
+    },
+    "dashboards": {
+      "description": "A list of dashboards.",
+      "type": "array",
+      "items": { "$ref": "dashboard.schema.json" },
+      "default": []
+    },
+    "widgets": {
+      "description": "A list of widgets. A widget is a single GUI element in a dashboard. The widget is laid out in a grid layout.",
+      "type": "array",
+      "items": { "$ref": "./widgets/widget.schema.json" },
+      "default": []
+    },
+    "sources": {
+      "description": "A list of sources. A source defines an API call, often to an external peer service, to fetch data. This data can then be displayed in a widget. The returned data is always an array of {label1: value1, label2: value2, ...}.",
+      "type": "array",
+      "items": { "$ref": "./sources/source.schema.json" },
+      "default": []
+    }
+  }
+}

@@ -1,0 +1,11 @@
+:host :hover {
+    cursor: pointer;
+}
+
+eui-banner {
+    margin-bottom: 10px;
+}
+
+.help-banner {
+    padding: 10px;
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "file://schema/HelpContentMetadata#",
+  "title": "Help Content Metadata",
+  "description": "Help Content Metadata describes the provided help content.",
+  "type": "object",
+  "properties": {
+    "schema-version": {
+      "description": "The version of the schema used to validate Help Content Metadata.",
+      "type": "string",
+      "pattern": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$"
+    },
+    "files": {
+      "description": "The files including the provided help content.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "packageDescription": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^(.+)\\/([^\\/]+)$"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["zip"]
+          }
+        },
+        "required": ["name", "path"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["schema-version", "files"],
+  "additionalProperties": false
+}

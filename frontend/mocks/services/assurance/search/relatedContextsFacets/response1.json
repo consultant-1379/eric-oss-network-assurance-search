@@ -1,0 +1,56 @@
+[
+  {
+    "contextType": {
+      "id": "NF_SNSSAI",
+      "contextFields": [
+        {
+          "id": "c_SNSSAI",
+          "name": "My SNSSAI",
+          "description": "Soup Network Slice Selection Assistance Information"
+        },
+        {
+          "id": "c_NF",
+          "name": "My NF",
+          "description": "New Finger"
+        }
+      ]
+    },
+    "count": 2
+  },
+  {
+    "contextType": {
+      "id": "NF_NSI",
+      "contextFields": [
+        {
+          "id": "c_NSI",
+          "name": "My NSI",
+          "description": "No Sharks Inside"
+        },
+        {
+          "id": "c_NF",
+          "name": "My NF",
+          "description": "New Finger"
+        }
+      ]
+    },
+    "count": 1
+  },
+  {
+    "contextType": {
+      "id": "NF_Site",
+      "contextFields": [
+        {
+          "id": "c_Site",
+          "name": "My Site",
+          "description": "Site"
+        },
+        {
+          "id": "c_NF",
+          "name": "My NF",
+          "description": "New Finger"
+        }
+      ]
+    },
+    "count": 1
+  }
+]

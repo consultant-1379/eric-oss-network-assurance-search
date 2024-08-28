@@ -1,0 +1,126 @@
+{
+  "contextName": "NSSI & QoS",
+  "context": {
+    "type": {
+      "id": "nssi_qos",
+      "contextFields": [
+        {
+          "id": "nssi"
+        },
+        {
+          "id": "qos"
+        }
+      ]
+    },
+    "contextFields": [
+      {
+        "id": "nssi_MMSharedSlice_1_NSSI",
+        "type": {
+          "id": "c_nssi"
+        },
+        "name": "MMSharedSlice_1_NSSI"
+      },
+      {
+        "id": "qos_86",
+        "type": {
+          "id": "c_qos"
+        },
+        "name": "86"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "vd_nssi_qos_PartialDRBAccessibility",
+      "name": "Partial DRB Accessibility",
+      "description": "The Data Radio Bearer (DRB) setup success rate, including the success rate for setting up Radio Resource Control (RRC) connection and Next Generation (NG) signaling connection",
+      "value": 25.3,
+      "valueType": "float",
+      "unit": "successes",
+      "visualization": {
+        "groups": {
+          "default": ["vd_nssi_qos_PartialDRBAccessibility"]
+        }
+      },
+      "extra": [
+        {
+          "key": "csac_table",
+          "value": "kpi_csac_nssi_qos_10"
+        },
+        {
+          "key": "csac_column",
+          "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h4"
+        }
+      ]
+    },
+    {
+      "id": "vd_nssi_qos_DLLat_gNB-DU",
+      "name": "DLLat_gNB-DU",
+      "description": "The gNodeB-Distributed unit (gNB-DU) part of the packet transmission latency experienced by an end-user. It is used to evaluate the gNB latency contribution to the total packet latency",
+      "value": 113.1,
+      "valueType": "float",
+      "unit": "milliseconds",
+      "visualization": {
+        "groups": {
+          "default": ["vd_nssi_qos_DLLat_gNB-DU"]
+        }
+      },
+      "extra": [
+        {
+          "key": "csac_table",
+          "value": "kpi_csac_nssi_qos_10"
+        },
+        {
+          "key": "csac_column",
+          "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h5"
+        }
+      ]
+    },
+    {
+      "id": "vd_nssi_qos_DLDelay_gNBDU",
+      "name": "DLDelay_gNBDU",
+      "description": "The average packet transmission delay through RAN to the UE. It is used to evaluate delay performance of NG-RAN in downlink for a network slice subnet",
+      "value": 473.5,
+      "valueType": "float",
+      "unit": "milliseconds",
+      "visualization": {
+        "groups": {
+          "default": ["vd_nssi_qos_DLDelay_gNBDU"]
+        }
+      },
+      "extra": [
+        {
+          "key": "csac_table",
+          "value": "kpi_csac_nssi_qos_10"
+        },
+        {
+          "key": "csac_column",
+          "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h6"
+        }
+      ]
+    },
+    {
+      "id": "vd_nssi_qos_DLUeThroughput",
+      "name": "DLUeThroughput",
+      "description": "The average downlink RAN UE throughput for a NRCellDU",
+      "value": 160.9,
+      "valueType": "float",
+      "unit": "bits/second",
+      "visualization": {
+        "groups": {
+          "default": ["vd_nssi_qos_DLUeThroughput"]
+        }
+      },
+      "extra": [
+        {
+          "key": "csac_table",
+          "value": "kpi_csac_nssi_qos_10"
+        },
+        {
+          "key": "csac_column",
+          "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/donutWidget.schema.json",
+  "title": "Donut widget",
+  "description": "A widget that displays data in proportions in a donut shaped form. It can be used to analyze parts of a whole and it is also recommended to not have more than 5 categories of data in the same Donut widget.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "donut"
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "displayAsPercentage": {
+          "description": "Display the percentage value of a section instead of its numerical value.",
+          "type": "boolean",
+          "default": false
+        },
+        "showTotalValue": {
+          "description": "Show total value when set to true.",
+          "type": "boolean",
+          "default": true
+        },
+        "format": {
+          "description": "A d3 specifier to format the displayed data values.",
+          "type": "string"
+        },
+        "sources": true,
+        "unit": {
+          "description": "A unit label for the donut chart.",
+          "type": "string"
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

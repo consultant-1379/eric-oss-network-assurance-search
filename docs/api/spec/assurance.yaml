@@ -1,0 +1,80 @@
+openapi: 3.0.3
+info:
+  x-api-id: d0184f38-b98d-11e7-9c56-68f728c1ba70
+  x-audience: company-internal
+  title: Assurance Search API
+  description: |
+    ```
+      Ericsson   |   DocNo n/155 19-CAF CAF 101 105/3   |   Rev PA1   |   Inter-work Description
+    ```
+    ## Introduction
+    This document describes the User Interface Internal REST API identified in the ADP GUI FA.
+    ### Terms
+    - **UI Internal Interface**: The interface providing access to static content meant to be used exclusively by the User Interface itself. All static content paths are relative to this URI.
+    - **Client Container**: An SPA (Single Page Application) implementing the App Shell pattern e.g. E-UI SDK Container.
+    - **UI App**: A full screen user interface exposed by a Microservice that can execute in the Client Container e.g. E-UI SDK App.
+    - ***External UI App***: Any UIs that have a separate web page (outside the Client Container) or other alternative renderer e.g. Citrix.
+    - **UI Component**: A reusable, embeddable UI Web Component exposed by a Microservice e.g. E-UI SDK Shareable Components.
+  contact:
+    email: sasha.katsman@ericsson.com
+  license:
+    name: Commercial
+  version: 1.0.0
+tags:
+  - name: IF.BOS_ASSC.GUI.UI
+    description: Provides access to static resources meant to be used by the User Interface.
+    x-displayName: UI Internal Interface
+    externalDocs:
+      url: https://adp.ericsson.se/marketplace/network-assurance-search/documentation/1.0.0/dpi/api-documentation
+  - name: IF.BOS_ASSC.GUI.CONFIG
+    description: Endpoint to provide the current ui-config JSON to the UI. The config is constructed from the helm values.
+    x-displayName: API for internal configs
+    externalDocs:
+      url: https://adp.ericsson.se/marketplace/network-assurance-search/documentation/1.0.0/dpi/api-documentation
+  - name: IF.BOS_ASSC.GUI.SEARCH
+    description: Provides access to Assurance Search functionality.
+    x-displayName: Assurance Search API
+    externalDocs:
+      url: https://adp.ericsson.se/marketplace/network-assurance-search/documentation/1.0.0/dpi/api-documentation
+  - name: IF.BOS_ASSC.GUI.METADATA
+    description: Provides access to metadata information used by UI application.
+    x-displayName: Assurance Metadata API
+    externalDocs:
+      url: https://adp.ericsson.se/marketplace/network-assurance-search/documentation/1.0.0/dpi/api-documentation
+servers:
+  - url: /
+    description: base url
+paths:
+  # === Service Aggregation API Endpoints ===
+  /internal-api/ui:
+    "$ref": "./operations/serviceAggregation.yaml#/ui"
+  /internal-api/uiConfig:
+    "$ref": "./operations/serviceAggregation.yaml#/uiConfig"
+
+  # === Internal API Endpoints ===
+  /ui:
+    "$ref": "./operations/ui.internal.yaml#/ui"
+  /ui/configuration:
+    "$ref": "./operations/ui.internal.yaml#/configuration"
+
+  # === External API Endpoints ===
+  /{index}/search/metrics:
+    "$ref": "./operations/search.yaml#/search-metrics"
+  /{index}/search/contexts:
+    "$ref": "./operations/search.yaml#/search-contexts"
+  /{index}/search/related-contexts-facets:
+    "$ref": "./operations/search.yaml#/related-contexts-facets"
+  /{index}/metadata/relations:
+    "$ref": "./operations/metadata.yaml#/metadata-relations"
+  /{index}/metadata/contexts:
+    "$ref": "./operations/metadata.yaml#/metadata-contexts"
+  /{index}/metadata/metrics:
+    "$ref": "./operations/metadata.yaml#/metadata-metrics"
+  /{index}/metadata:
+    "$ref": "./operations/metadata.yaml#/metadata"
+  /metadata/indexes:
+    "$ref": "./operations/metadata.yaml#/metadata-indexes"
+
+  # === System API Endpoints ===
+  /system/state:
+    "$ref": "./operations/system.yaml#/state"

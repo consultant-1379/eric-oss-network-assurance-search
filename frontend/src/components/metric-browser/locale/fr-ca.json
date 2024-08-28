@@ -1,0 +1,15 @@
+{
+    "FILTER_PANEL_TITLE": "Filtres",
+    "CONTEXT_PANEL_TITLE_PREFIX": "Détails pour : ",
+    "METRIC_BROWSER_HELP":"Le tableau affiche les informations de performance liées à l'onglet Contexte KPI ouvert. Un contexte KPI est caractérisé comme une perspective à partir de laquelle vous mesurez la performance des entités du réseau. Par exemple, une perspective possible est celle du niveau NSI avec les statistiques de performances globales des fonctions réseau associées au NSI. \n\nUne autre perspective possible est les performances des NSI ventilées par S-NSSAI. Vous pouvez accéder aux options de contexte KPI en cliquant sur "Ajouter un contexte KPI". Lorsque vous sélectionnez un nouveau KPI Context dans le menu, un nouvel onglet s'ouvre avec un tableau dédié à l'affichage des métriques de performance liées au KPI Context sélectionné. Vous pouvez définir des filtres sur les données affichées dans le tableau en utilisant l'icône en forme d'entonnoir à gauche du titre du tableau . Si vous voyez des mesures intéressantes, sélectionnez une ligne du tableau et accédez aux options d'action pour le résultat.",
+    "LAST_REFRESHED_PREFIX": "Dernière actualisation",
+    "FILTER_APPLIED_SUBTITLE": "1 filtre appliqué",
+    "FILTERS_APPLIED_SUBTITLE": "filtres appliqués",
+    "NO_FILTERS_APPLIED_SUBTITLE": "Aucun filtre appliqué",
+    "CLEAR_FILTERS_BTN_LABEL": "effacer les filtres",
+    "FETCH_FAILURE": "Échec du chargement des données -",
+    "LOADING": "Chargement...",
+    "ARIA_METRIC_BROWSER_LABEL": "Parcourir les données analytiques pour ",
+    "ARIA_CLEAR_FILTERS_DESCRIPTION": "Effacer tous les filtres sélectionnés pour la table",
+    "ACTIVE_FILTERS": "Filtrage pour:"
+}

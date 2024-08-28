@@ -1,0 +1,28 @@
+allOf:
+  - $ref: '../schemas/Filter.yaml'
+  - type: object
+    required:
+      - type
+      - entityType
+      - searchPattern
+    properties:
+      type:
+        type: string
+        enum:
+          - entity
+        description: filter type
+      entityType:
+        $ref: '../schemas/EntityType.yaml'
+        description: entity type use for the search
+      searchPattern:
+        type: string
+        description: substring match pattern for the resource name
+    example:
+      {
+        "type": "entity",
+        "not": true,
+        "entityType": {
+          "id": "c_SNSSAI",
+        },
+        "searchPattern": "N*",
+      }

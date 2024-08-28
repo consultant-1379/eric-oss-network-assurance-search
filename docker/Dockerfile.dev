@@ -1,0 +1,39 @@
+ARG NODEJS_BUILDER_VERSION=20.12.2
+
+FROM node:$NODEJS_BUILDER_VERSION as nodejs
+
+ENV NODE_ENV=development
+ENV LANG=en_US.UTF-8
+
+# ======= Frontend =======
+FROM nodejs as frontend
+ARG DEV
+
+WORKDIR /nas/frontend
+
+# Install NPM dependencies
+COPY frontend/package.json package.json
+COPY frontend/package-lock.json package-lock.json
+COPY frontend/.npmrc .npmrc
+
+RUN npm install
+
+# ======= Backend =======
+FROM nodejs as backend
+ARG DEV
+
+WORKDIR /nas/backend
+
+# Install NPM dependencies
+COPY backend/package.json package.json
+COPY backend/package-lock.json package-lock.json
+COPY backend/.npmrc .npmrc
+
+RUN npm install
+
+# ======= Start Microservice =======
+WORKDIR /nas
+
+COPY docker/entrypoint.dev.sh /nas/entrypoint.dev.sh
+
+CMD ["/nas/entrypoint.dev.sh"]

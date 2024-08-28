@@ -1,0 +1,25 @@
+{
+  "contexts": [
+    {
+      "id": "CFID_SNSSAI_NSI",
+      "name": "SNSSAI & NSI",
+      "description": "SNSSAI & NSI"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "metric1",
+      "category": ["category1", "category2"],
+      "group1": ["family1", "family3"],
+      "group2": ["family2"],
+      "query": "${metricName}{snssai=~\"sn.*-4\"}"
+    },
+    {
+      "name": "metric2",
+      "category": ["category1"],
+      "group1": ["family2"],
+      "group2": ["family1"],
+      "query": "${metricName}{snssai=~\"sn.*-4\"}"
+    }
+  ]
+}

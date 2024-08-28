@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../server/jsonSchemas/dashboardModel.schema.json",
+  "dashboards": [],
+  "namespace": null,
+  "widgets": [],
+  "sources": []
+}

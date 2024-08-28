@@ -1,0 +1,19 @@
+{
+  "schema-version": "1.0.0",
+  "files": [
+    {
+      "name": "doc-1",
+      "version": "1.1.0",
+      "type": "zip",
+      "packageDescription": "This is the metadata for files which cannot have embedded meta-data (unlike markdown or DITA files), e.g., PDF files or other types in the future",
+      "path": "/relative/path/to/pkg-1.zip"
+    },
+    {
+      "name": "doc-2",
+      "version": "B",
+      "type": "zip",
+      "packageDescription": "Description for another PDF files",
+      "path": "/relative/path/to/pkg-2.zip"
+    }
+  ]
+}

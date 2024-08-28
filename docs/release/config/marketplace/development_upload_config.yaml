@@ -1,0 +1,16 @@
+documents:
+  - name: "Service User Guide"
+    filepath: build/doc-archive/html/service-user-guide.zip
+    default: true
+  - name: "Release Notes"
+    filepath: build/doc-archive/html/release-notes.zip
+  - name: "Contributing Guideline"
+    filepath: build/doc-archive/html/contributing-guideline.zip
+  - name: "Inner Source README"
+    external-link: "https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/OSS/com.ericsson.oss.air/eric-oss-network-assurance-search/+/master/README.md"
+  - name: "API Documentation"
+    filepath: build/doc-archive/html/api-documentation.zip
+  - name: "Application Developers Guide"
+    filepath: build/doc-archive/html/application-developers-guide.zip
+  - name: "Test Specification"
+    filepath: build/doc-archive/html/test-specification.zip

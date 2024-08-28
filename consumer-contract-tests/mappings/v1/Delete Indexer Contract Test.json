@@ -1,0 +1,21 @@
+{
+  "id" : "af2881e7-6505-4f86-9e3a-25693d07a26b",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/indexer",
+    "method" : "DELETE",
+    "queryParameters" : {
+      "name" : {
+        "equalTo" : "nameOfIndexerA"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"name\":\"nameOfIndexerA\",\"description\":\"description for indexer A\",\"source\":{\"name\":\"KafkaTopicName\",\"type\":\"pmstatsexporter\"},\"target\":{\"displayName\":\"SearchIndexA_DisplayName\",\"name\":\"assurance-search_index_a_name\",\"indexDescription\":\"SearchIndexA_Description\"},\"writers\":[{\"name\":\"writerA_name\",\"inputSchema\":\"writerA_schemaRegistryName\",\"context\":[{\"name\":\"contextFieldA_name\",\"displayName\":\"Context Field A\",\"nameType\":\"straight\",\"recordName\":\"contextFieldA_recordName\",\"description\":\"contextFieldA Description\"}],\"value\":[{\"name\":\"valueFieldA_name\",\"displayName\":\"Value Field A\",\"unit\":\"errors/minute\",\"type\":\"float\",\"recordName\":\"valueFieldA_recordName\",\"description\":\"valueFieldA Description\"}],\"info\":[{\"name\":\"infoFieldA_name\",\"displayName\":\"Info Field A\",\"type\":\"string\",\"recordName\":\"infoFieldA_recordName\",\"description\":\"infoFieldA Description\"}]}]}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "af2881e7-6505-4f86-9e3a-25693d07a26b"
+}

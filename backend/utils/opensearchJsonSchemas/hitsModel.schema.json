@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nas.ericsson.com/schemas/opensearchHitsModel.schema.json",
+  "title": "Opensearch Hits Model Schema",
+  "description": "The schema for the hits object which is a property within the response object coming from Opensearch after a successful request has been made.",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "The number of documents retrieved from the search query.",
+          "type": "integer"
+        },
+        "relation": {
+          "type": "string"
+        }
+      },
+      "required": ["value"]
+    },
+    "hits": {
+      "description": "An array that contains the search documents.",
+      "type": "array",
+      "items": { "$ref": "https://nas.ericsson.com/schemas/opensearchDocumentModel.schema.json" },
+      "default": []
+    }
+  },
+  "required": ["hits"]
+}

@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ template "eric-oss-network-assurance-search.name" . }}
+  labels:
+  {{- include "eric-oss-network-assurance-search.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+spec:
+  minAvailable: {{ template "eric-oss-network-assurance-search.pod-disruption-budget" . }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ template "eric-oss-network-assurance-search.name" . }}

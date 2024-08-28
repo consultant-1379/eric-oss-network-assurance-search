@@ -1,0 +1,2 @@
+# This cronjob will execute the data generation script every 15 minutes
+*/15 * * * * root /bin/bash /home/src/generate_data.sh "generate"

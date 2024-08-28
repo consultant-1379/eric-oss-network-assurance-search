@@ -1,0 +1,17 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+#error-banner {
+  justify-content: center;
+  text-align: center;
+  margin-top: 15%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 50%;
+}
+
+#error-banner eui-icon {
+  vertical-align: bottom;
+}

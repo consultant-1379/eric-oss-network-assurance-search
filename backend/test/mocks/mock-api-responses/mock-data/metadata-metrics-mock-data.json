@@ -1,0 +1,37 @@
+[
+  {
+    "description": "Session Modification Request Received",
+    "id": "vi_NF_sessionModificationReqRcvd",
+    "valueType": "integer"
+  },
+  {
+    "description": "Dropped Packets",
+    "id": "vi_NF_dlUnstrDropPackets",
+    "valueType": "integer"
+  },
+  {
+    "description": "Eaten Bananas",
+    "id": "vd_NF_eatenBananas",
+    "valueType": "float"
+  },
+  {
+    "description": "Screams Per Minute",
+    "id": "vi_NF_screamsPerMinute",
+    "valueType": "integer"
+  },
+  {
+    "description": "Handshakes Per Day",
+    "id": "vi_NF_handshakesPerDay",
+    "valueType": "integer"
+  },
+  {
+    "description": "Time Spent Holding Babies",
+    "id": "vd_NF_timeSpentHoldingBabies",
+    "valueType": "float"
+  },
+  {
+    "description": "Number Of Misquito Bites",
+    "id": "vi_NF_numberOfMisquitoBites",
+    "valueType": "integer"
+  }
+]

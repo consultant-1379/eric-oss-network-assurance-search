@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/timelineWidget.schema.json",
+  "title": "Timeline widget",
+  "description": "A widget that displays information in line chart format. A line chart is a visual representation of a series of values with a continuous relation between them, connected using solid line segments. E.g. Stock market graph. ",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "timeline"
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "selectionMechanism": {
+          "description": "Using the selection mechanism allows the timeline to be configured with selectors for choosing what data to be shown in the graph",
+          "type": "object",
+          "required": ["selectorConfigId"],
+          "properties": {
+            "selectorConfigId": {
+              "description": "The id of the configuration file for the selectors.",
+              "type": "string"
+            },
+            "filter": {
+              "description": "Filters for selector data.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "A filter object containing a selector id and a regex to filter selector data with.",
+                "required": ["selectorId", "regex"],
+                "properties": {
+                  "selectorId": {
+                    "type": "string",
+                    "description": "The id of a selector."
+                  },
+                  "regex": {
+                    "type": "string",
+                    "description": "A regex for filtering the selector data."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "../definitions.schema.json#/definitions/commonWidgetSource"
+              },
+              {
+                "$ref": "../definitions.schema.json#/definitions/selectionWidgetSource"
+              }
+            ]
+          }
+        },
+        "download": {
+          "$ref": "../definitions.schema.json#/definitions/download",
+          "default": true
+        },
+        "unit": {
+          "description": "The unit of data displayed next to the Y axis. Using '%' will multiply the data value by 100.",
+          "type": "string"
+        },
+        "logarithmic": {
+          "description": "Whether the y-axis should use a logarithmic scale",
+          "type": "boolean",
+          "default": false
+        },
+        "autoFormat": {
+          "description": "Whether to automatically format the data. If true, the data is formatted to 4 significant digits with SI-prefix and special formatting for certain units.",
+          "type": "boolean",
+          "default": true
+        },
+        "startFromZero": {
+          "description": "Whether to have the y-axis to start from zero or not.",
+          "type": "boolean",
+          "default": true
+        },
+        "dataFormat": {
+          "description": "The data format of the y-axis, tooltip and values table as a d3 format specifier. If not set, the data will be unformatted or automatically formatted when autoFormat is set to true.",
+          "type": "string"
+        },
+        "thresholds": {
+          "$ref": "../definitions.schema.json#/definitions/thresholds"
+        },
+        "maxLines": {
+          "description": "The maximum number of lines to be displayed in the chart",
+          "type": "integer",
+          "minimum": 1
+        },
+        "showFilter": {
+          "description": "Show data for specific node types in one dashboard according to the filters. example: { 'privateNetwork': ['ROUTER6000'] }",
+          "type": "object",
+          "properties": {
+            "privateNetwork": {
+              "description": "For Private Network dashboard, the NodeType to filter",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "nodeNameVariableUpdate": {
+          "description": "Whether update nodeNameVariable name",
+          "type": "object",
+          "properties": {
+            "nodeNameVariableName": {
+              "description": "For Private Network dashboard, use variable name",
+              "type": "string"
+            },
+            "nodeType": {
+              "description": "For Private Network dashboard, use nodeType filter selectNode",
+              "type": "string"
+            }
+          }
+        },
+        "rightPanelContent": {
+          "description": "Control features located in the widget's right panel",
+          "type": "object",
+          "properties": {
+            "features": {
+              "type": "array",
+              "description": "Which right panel features to enable",
+              "items": {
+                "type": "string",
+                "enum": ["settings", "valuesTable", "alertRules", "promql"]
+              },
+              "default": ["settings", "valuesTable"]
+            },
+            "openByDefault": {
+              "type": "string",
+              "description": "Set the right panel to be open by default and display this feature",
+              "enum": [
+                "none",
+                "settings",
+                "valuesTable",
+                "alertRules",
+                "promql"
+              ],
+              "default": "none"
+            },
+            "width": {
+              "type": "integer",
+              "description": "The width of the right panel in pixels. If not set, the width is decided by the right panel feature with the widest default size."
+            },
+            "defaultOptions": {
+              "description": "Default options for a chart",
+              "type": "object",
+              "properties": {
+                "showHorizontalGridlines": {
+                  "type": "boolean",
+                  "description": "Whether to show horizontal grid lines."
+                },
+                "showVerticalGridlines": {
+                  "type": "boolean",
+                  "description": "Whether to show vertical grid lines."
+                },
+                "showMarkers": {
+                  "type": "boolean",
+                  "description": "Whether to show data markers."
+                },
+                "startFromZero": {
+                  "type": "boolean",
+                  "description": "Whether to have the y-axis to start from zero or scale automatically."
+                },
+                "lineWidth": {
+                  "type": "integer",
+                  "description": "The line width of line chart. Available values: 1 (Thin), 2 (Normal) and 3 (Thick)."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

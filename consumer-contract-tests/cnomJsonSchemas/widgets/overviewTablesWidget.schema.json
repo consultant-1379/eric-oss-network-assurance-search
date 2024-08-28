@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/overviewTablesWidget.schema.json",
+  "title": "Tables widget",
+  "description": "For internal use only. A widget that displays information in tabular format.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "tabs": {
+          "description": "Replace the title and sub title with a list of tabs",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "description": "The title of each tab",
+                "type": "string",
+                "default": ""
+              },
+              "value": {
+                "description": "The clicked event detail for each tab",
+                "type": "string",
+                "default": ""
+              },
+              "selected": {
+                "description": "Whether the tab is selected",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        },
+        "widgetType": {
+          "enum": ["overviewTables"]
+        },
+        "showTimestamp": {
+          "description": "Whether to display the timestamp in the footer. The timestamp indicates when the data in the widget were last updated.",
+          "type": "boolean",
+          "default": false
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "usePagination": {
+          "description": "Whether to show the pagination bar. Defaults to true. Set to false will always display all data in a page.",
+          "type": "boolean",
+          "default": true
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "../definitions.schema.json#/definitions/commonWidgetSource"
+              },
+              {
+                "$ref": "../definitions.schema.json#/definitions/selectionWidgetSource"
+              }
+            ]
+          }
+        },
+        "download": {
+          "$ref": "../definitions.schema.json#/definitions/download",
+          "default": true
+        },
+        "noHeader": {
+          "description": "If table should be rendered without a header.",
+          "type": "boolean",
+          "default": false
+        },
+        "infoTooltip": {
+          "description": "Show A tooltip message over an info icon.",
+          "type": "string",
+          "default": ""
+        },
+        "filterable": {
+          "description": "Whether frontend filter should be enabled. If filter is enabled, It allows to filter based on columns.",
+          "type": "boolean",
+          "default": true
+        },
+        "filterColumn": {
+          "description": "Default column to filter on.",
+          "type": "string"
+        },
+        "filterAll": {
+          "description": "Whether enable filter on all filterable columns.",
+          "type": "boolean",
+          "default": true
+        },
+        "sortMode": {
+          "description": "Whether to sort in ascending or descending order. Allowed values are: 'asc', 'desc'.",
+          "type": "string",
+          "enum": ["asc", "desc"],
+          "default": "asc"
+        },
+        "sortAttr": {
+          "description": "Which column to sort on. Defaults to first sortable column.",
+          "type": "string"
+        },
+        "resizable": {
+          "description": "Whether table columns should be resizable.",
+          "type": "boolean",
+          "default": false
+        },
+        "identityColumn": {
+          "description": "A unique identifier for each row. It is used to persist state across data updates. If a unique identifier is not present, the row is omitted while data updates. If this field is not present, use the first column.",
+          "type": "string"
+        },
+        "defaultPageSize": {
+          "description": "Default page size to the tables pagination. Defaults to 20 if no value given. Min 5, Max 2000.",
+          "type": "number"
+        },
+        "dynamicPageSize": {
+          "description": "Whether page size can be dynamically changed with dropdown.",
+          "type": "boolean",
+          "default": true
+        },
+        "multiSelect": {
+          "description": "Whether to allow multi-selection",
+          "type": "boolean",
+          "default": false
+        },
+        "columns": {
+          "description": "The tables' columns.",
+          "type": "array",
+          "items": {
+            "description": "The table columns",
+            "type": "array",
+            "items": {
+              "description": "The table columns",
+              "type": "object",
+              "required": ["heading"],
+              "additionalProperties": false,
+              "properties": {
+                "heading": {
+                  "description": "The column's heading. Cannot be any of: 'selected', 'identityValue'",
+                  "type": "string",
+                  "not": {
+                    "enum": ["selected", "identityValue"]
+                  }
+                },
+                "width": {
+                  "description": "The column's width.",
+                  "type": "string"
+                },
+                "sortable": {
+                  "description": "Whether column should be sortable.",
+                  "type": "boolean",
+                  "default": true
+                },
+                "filterable": {
+                  "description": "Whether this column filter should be enabled.",
+                  "type": "boolean",
+                  "default": true
+                },
+                "wrappable": {
+                  "description": "Whether column cell content should be wrappable.",
+                  "type": "boolean",
+                  "default": false
+                },
+                "display": {
+                  "description": "Whether column should be visible.",
+                  "type": "string",
+                  "enum": ["visible", "hidden", "none"]
+                },
+                "source": {
+                  "description": "The column's source.",
+                  "type": "string"
+                },
+                "label": {
+                  "description": "The column's label. Cannot be any of: 'selected', 'identityValue'",
+                  "type": "string",
+                  "not": {
+                    "enum": ["selected", "identityValue"]
+                  }
+                },
+                "align": {
+                  "type": "string",
+                  "enum": ["left", "center", "right"],
+                  "default": "left"
+                },
+                "formatter": {
+                  "description": "The column's formatter.",
+                  "type": "string"
+                },
+                "formatterOptions": {
+                  "description": "The column's formatter options."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

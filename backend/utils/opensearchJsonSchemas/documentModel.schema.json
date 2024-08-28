@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nas.ericsson.com/schemas/opensearchDocumentModel.schema.json",
+  "title": "Opensearch Document Model Schema",
+  "description": "The schema for the Opensearch documents which are contained within the response object coming from Opensearch after a successful request has been made.",
+  "type": "object",
+  "properties": {
+    "_index": {
+      "type": "string"
+    },
+    "_id": {
+      "type": "string"
+    },
+    "_source": {
+      "$ref": "https://nas.ericsson.com/schemas/opensearchDocumentSourceModel.schema.json"
+    }
+  },
+  "required": ["_index", "_id", "_source"]
+}

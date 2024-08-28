@@ -1,0 +1,776 @@
+{
+  "fullContexts": [
+    "cellId_managedElement_nssi_plmnId_qos_snssai_tac",
+    "cellId_managedElement_nssi_plmnId_snssai_tac",
+    "cellId_managedElement_nssi_qos_tac",
+    "cellId_managedElement_nssi_tac",
+    "cellId_managedElement_tac",
+    "managedElement",
+    "managedElement_nssi",
+    "managedElement_nssi_plmnId_qos_snssai",
+    "managedElement_nssi_plmnId_snssai",
+    "managedElement_nssi_qos",
+    "nf",
+    "nf_snssai",
+    "snssai",
+    "nssi",
+    "nssi_plmnId_qos_snssai",
+    "nssi_plmnId_qos_snssai_tac",
+    "nssi_plmnId_snssai",
+    "nssi_plmnId_snssai_tac",
+    "nssi_qos",
+    "nssi_qos_tac",
+    "nssi_tac",
+    "plmnId_qos_snssai",
+    "plmnId_snssai",
+    "qos",
+    "tac",
+    "site",
+    "site_nssi",
+    "plmnId_snssai_site",
+    "plmnId_snssai_nssi",
+    "plmnId_snssai_nssi_nf",
+    "plmnId_snssai_nssi_site_nf"
+  ],
+  "contextValues": {
+    "cellId": ["112", "334", "556", "217", "999", "111", "13004", "1290", "123897"],
+    "managedElement": [
+      "me-1-id",
+      "me-2-id",
+      "me-3-id",
+      "me-4-id",
+      "me-5-id",
+      "me-6-id",
+      "me-7-id",
+      "me-8-id",
+      "me-9-id",
+      "me-10-id",
+      "me-11-id",
+      "me-12-id"
+    ],
+    "nf": ["AMF_BC", "AMF_ON1", "AMF_ON2"],
+    "nssi": [
+      "MMSharedSlice_1_NSSI",
+      "macNsiDedicated20230728x1543_qosh96mac",
+      "MMPSharedSlice_NSSI",
+      "macNsiDedicated20230728x1543_corNssiService"
+    ],
+    "plmnId": [
+      "302-320",
+      "302-720",
+      "302-820",
+      "302-490",
+      "302-491",
+      "302-221",
+      "302-222",
+      "302-860",
+      "302-220",
+      "302-880",
+      "302-610",
+      "302-690"
+    ],
+    "qos": [
+      1, 2, 3, 4, 65, 66, 67, 71, 72, 73, 74, 76, 5, 6, 7, 8, 9, 69, 70, 79, 80, 82, 83, 84, 85, 86
+    ],
+    "snssai": [
+      "1-1000",
+      "1-2000",
+      "1-3000",
+      "1-4000",
+      "2-1000",
+      "2-2000",
+      "2-3000",
+      "2-4000",
+      "3-1000",
+      "3-2000",
+      "3-3000",
+      "3-4000",
+      "4-1000",
+      "4-2000",
+      "4-3000",
+      "4-4000",
+      "1-1001",
+      "1-2001",
+      "1-3001",
+      "1-4001",
+      "2-1001",
+      "2-2001",
+      "2-3001",
+      "2-4001",
+      "3-1001",
+      "3-2001",
+      "3-3001",
+      "3-4001",
+      "4-1001",
+      "4-2001",
+      "4-3001",
+      "4-4001",
+      "1-1002",
+      "1-2002",
+      "1-3002",
+      "1-4002",
+      "2-1002",
+      "2-2002",
+      "2-3002",
+      "2-4002",
+      "3-1002",
+      "3-2002",
+      "3-3002",
+      "3-4002",
+      "4-1002",
+      "4-2002",
+      "4-3002",
+      "4-4002"
+    ],
+    "tac": [705, 343, 519, 647, 905, 226, 437, 548, 742, 289, 365, 416, 683, 753, 807, 249, 613],
+    "site": [
+      "Site 1",
+      "Site 2",
+      "Site 3",
+      "Site 4",
+      "Site 5",
+      "Site 6",
+      "Site 7",
+      "Site 8",
+      "Site 9",
+      "Site 10",
+      "Site 11",
+      "Site 12",
+      "Site 13",
+      "Site 14",
+      "Site 15",
+      "Site 16",
+      "Site 17",
+      "Site 18",
+      "Site 19",
+      "Site 20"
+    ]
+  },
+  "contextDetails": {
+    "cellId": {
+      "name": "cellId",
+      "displayName": "Cell ID",
+      "documentName": "c_cellId",
+      "description": "Cell Identifier"
+    },
+    "managedElement": {
+      "name": "managedElement",
+      "displayName": "Managed Element",
+      "documentName": "c_managedElement",
+      "description": "Managed Element"
+    },
+    "nf": {
+      "name": "nf",
+      "displayName": "NF",
+      "documentName": "c_nf",
+      "description": "Network Function"
+    },
+    "nssi": {
+      "name": "nssi",
+      "displayName": "NSSI",
+      "documentName": "c_nssi",
+      "description": "Network Slice Subnet Instance"
+    },
+    "plmnId": {
+      "name": "plmnId",
+      "displayName": "PLMN ID",
+      "documentName": "c_plmnId",
+      "description": "Public Land Mobile Network Identifier"
+    },
+    "qos": {
+      "name": "qos",
+      "displayName": "QoS",
+      "documentName": "c_qos",
+      "description": "5G Quality of Service Identifier"
+    },
+    "snssai": {
+      "name": "snssai",
+      "displayName": "S-NSSAI",
+      "documentName": "c_snssai",
+      "description": "Single - Network Slice Selection Assistance Information"
+    },
+    "tac": {
+      "name": "tac",
+      "displayName": "TAC",
+      "documentName": "c_tac",
+      "description": "Tracking Area Code"
+    },
+    "site": {
+      "name": "site",
+      "displayName": "Site",
+      "documentName": "c_site",
+      "description": "Site"
+    }
+  },
+  "fullContextMetrics": {
+    "cellId_managedElement_nssi_plmnId_qos_snssai_tac": [
+      "vd_cellId_managedElement_nssi_plmnId_qos_snssai_tac_PartialDRBAccessibility",
+      "vd_cellId_managedElement_nssi_plmnId_qos_snssai_tac_DLLat_gNB_DU",
+      "vd_cellId_managedElement_nssi_plmnId_qos_snssai_tac_DLDelay_GnbDu",
+      "vd_cellId_managedElement_nssi_plmnId_qos_snssai_tac_DlUeThroughput"
+    ],
+    "cellId_managedElement_nssi_plmnId_snssai_tac": [
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_5GSEPHOSR",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_DLDelay_GnbDu",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_DLLat_gNB_DU",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_PartialDRBAccessibility",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_DlUeThroughput",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_GRANGOSR",
+      "vd_cellId_managedElement_nssi_plmnId_snssai_tac_UlUeThroughput"
+    ],
+    "cellId_managedElement_nssi_qos_tac": [
+      "vd_cellId_managedElement_nssi_qos_tac_DLDelay_GnbDu",
+      "vd_cellId_managedElement_nssi_qos_tac_DLLat_gNB_DU",
+      "vd_cellId_managedElement_nssi_qos_tac_DlUeThroughput",
+      "vd_cellId_managedElement_nssi_qos_tac_PartialDRBAccessibility"
+    ],
+    "cellId_managedElement_nssi_tac": [
+      "vd_cellId_managedElement_nssi_tac_PartialDRBAccessibility",
+      "vd_cellId_managedElement_nssi_tac_DLLat_gNB_DU",
+      "vd_cellId_managedElement_nssi_tac_DLDelay_GnbDu",
+      "vd_cellId_managedElement_nssi_tac_DlUeThroughput",
+      "vd_cellId_managedElement_nssi_tac_UlUeThroughput",
+      "vd_cellId_managedElement_nssi_tac_GRANGOSR",
+      "vd_cellId_managedElement_nssi_tac_5GSEPHOSR"
+    ],
+    "cellId_managedElement_tac": [
+      "vd_cellId_managedElement_tac_PartialDRBAccessibility",
+      "vd_cellId_managedElement_tac_DLLat_gNB_DU",
+      "vd_cellId_managedElement_tac_DLDelay_GnbDu",
+      "vd_cellId_managedElement_tac_DlUeThroughput",
+      "vd_cellId_managedElement_tac_UlUeThroughput",
+      "vd_cellId_managedElement_tac_GRANGOSR",
+      "vd_cellId_managedElement_tac_5GSEPHOSR"
+    ],
+    "managedElement": [
+      "vd_managedElement_PartialDRBAccessibility",
+      "vd_managedElement_DLLat_gNB_DU",
+      "vd_managedElement_DLDelay_GnbDu",
+      "vd_managedElement_DlUeThroughput",
+      "vd_managedElement_UlUeThroughput",
+      "vd_managedElement_GRANGOSR",
+      "vd_managedElement_5GSEPHOSR"
+    ],
+    "managedElement_nssi": [
+      "vd_managedElement_nssi_PartialDRBAccessibility",
+      "vd_managedElement_nssi_DLLat_gNB_DU",
+      "vd_managedElement_nssi_DLDelay_GnbDu",
+      "vd_managedElement_nssi_DlUeThroughput",
+      "vd_managedElement_nssi_UlUeThroughput",
+      "vd_managedElement_nssi_GRANGOSR",
+      "vd_managedElement_nssi_5GSEPHOSR"
+    ],
+    "managedElement_nssi_plmnId_qos_snssai": [
+      "vd_managedElement_nssi_plmnId_qos_snssai_DLLat_gNB_DU",
+      "vd_managedElement_nssi_plmnId_qos_snssai_DLDelay_GnbDu",
+      "vd_managedElement_nssi_plmnId_qos_snssai_DlUeThroughput",
+      "vd_managedElement_nssi_plmnId_qos_snssai_PartialDRBAccessibility"
+    ],
+    "managedElement_nssi_plmnId_snssai": [
+      "vd_managedElement_nssi_plmnId_snssai_PartialDRBAccessibility",
+      "vd_managedElement_nssi_plmnId_snssai_DLLat_gNB_DU",
+      "vd_managedElement_nssi_plmnId_snssai_DLDelay_GnbDu",
+      "vd_managedElement_nssi_plmnId_snssai_DlUeThroughput",
+      "vd_managedElement_nssi_plmnId_snssai_UlUeThroughput",
+      "vd_managedElement_nssi_plmnId_snssai_GRANGOSR",
+      "vd_managedElement_nssi_plmnId_snssai_5GSEPHOSR"
+    ],
+    "managedElement_nssi_qos": [
+      "vd_managedElement_nssi_qos_PartialDRBAccessibility",
+      "vd_managedElement_nssi_qos_DLLat_gNB_DU",
+      "vd_managedElement_nssi_qos_DLDelay_GnbDu",
+      "vd_managedElement_nssi_qos_DlUeThroughput"
+    ],
+    "nf": [
+      "vi_nf_AMFMeanRegNbr",
+      "vd_nf_PDUSessionEstSR",
+      "vd_nf_PDUSessModSR",
+      "vi_nf_AMFMaxRegNbr",
+      "vd_nf_UTSNSI",
+      "vd_nf_DTSNSI",
+      "vd_nf_UGTPTN",
+      "vd_nf_DGTPTN",
+      "vd_nf_PDUSesMeanNbr",
+      "vi_nf_PDUSesMaxNbr",
+      "vi_nf_ULIpv4PacketsDr",
+      "vi_nf_DLIpv4PacketsDr",
+      "vi_nf_ULIpv6PacketsDr",
+      "vi_nf_DLIpv6PacketsDr",
+      "vi_nf_DLUnstrPacketsDr",
+      "vi_nf_ULUnstrPacketsDr",
+      "vd_nf_PFCPSessEstFR",
+      "vd_nf_PFCPSessModFR"
+    ],
+    "nf_snssai": [
+      "vi_nf_snssai_AMFMeanRegNbr",
+      "vd_nf_snssai_PDUSessionEstSR",
+      "vd_nf_snssai_PDUSessModSR",
+      "vi_nf_snssai_AMFMaxRegNbr",
+      "vd_nf_snssai_UTSNSI",
+      "vd_nf_snssai_DTSNSI",
+      "vd_nf_snssai_PDUSesMeanNbr",
+      "vi_nf_snssai_PDUSesMaxNbr",
+      "vi_nf_snssai_ULIpv4PacketsDr",
+      "vi_nf_snssai_DLIpv4PacketsDr",
+      "vi_nf_snssai_ULIpv6PacketsDr",
+      "vi_nf_snssai_DLIpv6PacketsDr",
+      "vi_nf_snssai_DLUnstrPacketsDr",
+      "vi_nf_snssai_ULUnstrPacketsDr",
+      "vd_nf_snssai_PFCPSessEstFR",
+      "vd_nf_snssai_PFCPSessModFR"
+    ],
+    "snssai": [
+      "vi_snssai_AMFMeanRegNbr",
+      "vd_snssai_PDUSessionEstSR",
+      "vd_snssai_PDUSessModSR",
+      "vi_snssai_AMFMaxRegNbr",
+      "vd_snssai_UTSNSI",
+      "vd_snssai_DTSNSI",
+      "vd_snssai_PDUSesMeanNbr",
+      "vi_snssai_PDUSesMaxNbr",
+      "vi_snssai_ULIpv4PacketsDr",
+      "vi_snssai_DLIpv4PacketsDr",
+      "vi_snssai_ULIpv6PacketsDr",
+      "vi_snssai_DLIpv6PacketsDr",
+      "vi_snssai_DLUnstrPacketsDr",
+      "vi_snssai_ULUnstrPacketsDr",
+      "vd_snssai_PFCPSessEstFR",
+      "vd_snssai_PFCPSessModFR"
+    ],
+    "nssi": [
+      "vd_nssi_PartialDRBAccessibility",
+      "vd_nssi_DLLat_gNB_DU",
+      "vd_nssi_DLDelay_GnbDu",
+      "vd_nssi_DlUeThroughput",
+      "vd_nssi_UlUeThroughput",
+      "vd_nssi_GRANGOSR",
+      "vd_nssi_5GSEPHOSR",
+      "vi_nssi_AMFMeanRegNbr",
+      "vd_nssi_PDUSessionEstSR",
+      "vd_nssi_PDUSessModSR",
+      "vi_nssi_AMFMaxRegNbr",
+      "vd_nssi_UTSNSI",
+      "vd_nssi_DTSNSI",
+      "vd_nssi_DGTPTN",
+      "vd_nssi_UGTPTN",
+      "vd_nssi_PDUSesMeanNbr",
+      "vi_nssi_PDUSesMaxNbr",
+      "vi_nssi_ULIpv4PacketsDr",
+      "vi_nssi_DLIpv4PacketsDr",
+      "vi_nssi_ULIpv6PacketsDr",
+      "vi_nssi_DLIpv6PacketsDr",
+      "vd_nssi_PFCPSessEstFR",
+      "vd_nssi_PFCPSessModFR"
+    ],
+    "nssi_plmnId_qos_snssai": [
+      "vd_nssi_plmnId_qos_snssai_PartialDRBAccessibility",
+      "vd_nssi_plmnId_qos_snssai_DLLat_gNB_DU",
+      "vd_nssi_plmnId_qos_snssai_DLDelay_GnbDu",
+      "vd_nssi_plmnId_qos_snssai_DlUeThroughput"
+    ],
+    "nssi_plmnId_qos_snssai_tac": [
+      "vd_nssi_plmnId_qos_snssai_tac_PartialDRBAccessibility",
+      "vd_nssi_plmnId_qos_snssai_tac_DLLat_gNB_DU",
+      "vd_nssi_plmnId_qos_snssai_tac_DLDelay_GnbDu",
+      "vd_nssi_plmnId_qos_snssai_tac_DlUeThroughput"
+    ],
+    "nssi_plmnId_snssai": [
+      "vd_nssi_plmnId_snssai_PartialDRBAccessibility",
+      "vd_nssi_plmnId_snssai_DLLat_gNB_DU",
+      "vd_nssi_plmnId_snssai_DLDelay_GnbDu",
+      "vd_nssi_plmnId_snssai_DlUeThroughput",
+      "vd_nssi_plmnId_snssai_UlUeThroughput",
+      "vd_nssi_plmnId_snssai_GRANGOSR",
+      "vd_nssi_plmnId_snssai_5GSEPHOSR"
+    ],
+    "nssi_plmnId_snssai_tac": [
+      "vd_nssi_plmnId_snssai_tac_PartialDRBAccessibility",
+      "vd_nssi_plmnId_snssai_tac_DLLat_gNB_DU",
+      "vd_nssi_plmnId_snssai_tac_DLDelay_GnbDu",
+      "vd_nssi_plmnId_snssai_tac_DlUeThroughput",
+      "vd_nssi_plmnId_snssai_tac_UlUeThroughput",
+      "vd_nssi_plmnId_snssai_tac_GRANGOSR",
+      "vd_nssi_plmnId_snssai_tac_5GSEPHOSR"
+    ],
+    "nssi_qos": [
+      "vd_nssi_qos_PartialDRBAccessibility",
+      "vd_nssi_qos_DLLat_gNB_DU",
+      "vd_nssi_qos_DLDelay_GnbDu",
+      "vd_nssi_qos_DlUeThroughput"
+    ],
+    "nssi_qos_tac": [
+      "vd_nssi_qos_tac_PartialDRBAccessibility",
+      "vd_nssi_qos_tac_DLLat_gNB_DU",
+      "vd_nssi_qos_tac_DLDelay_GnbDu",
+      "vd_nssi_qos_tac_DlUeThroughput"
+    ],
+    "nssi_tac": [
+      "vd_nssi_tac_PartialDRBAccessibility",
+      "vd_nssi_tac_DLLat_gNB_DU",
+      "vd_nssi_tac_DLDelay_GnbDu",
+      "vd_nssi_tac_DlUeThroughput",
+      "vd_nssi_tac_UlUeThroughput",
+      "vd_nssi_tac_GRANGOSR",
+      "vd_nssi_tac_5GSEPHOSR"
+    ],
+    "plmnId_qos_snssai": [
+      "vd_plmnId_qos_snssai_PartialDRBAccessibility",
+      "vd_plmnId_qos_snssai_DLLat_gNB_DU",
+      "vd_plmnId_qos_snssai_DLDelay_GnbDu",
+      "vd_plmnId_qos_snssai_DlUeThroughput"
+    ],
+    "plmnId_snssai": [
+      "vd_plmnId_snssai_PartialDRBAccessibility",
+      "vd_plmnId_snssai_DLLat_gNB_DU",
+      "vd_plmnId_snssai_DLDelay_GnbDu",
+      "vd_plmnId_snssai_DlUeThroughput",
+      "vd_plmnId_snssai_UlUeThroughput",
+      "vd_plmnId_snssai_GRANGOSR",
+      "vd_plmnId_snssai_5GSEPHOSR",
+      "vi_plmnId_snssai_AMFMeanRegNbr",
+      "vd_plmnId_snssai_PDUSessionEstSR",
+      "vd_plmnId_snssai_PDUSessModSR",
+      "vi_plmnId_snssai_AMFMaxRegNbr",
+      "vd_plmnId_snssai_UTSNSI",
+      "vd_plmnId_snssai_DTSNSI",
+      "vd_plmnId_snssai_PDUSesMeanNbr",
+      "vi_plmnId_snssai_PDUSesMaxNbr",
+      "vi_plmnId_snssai_ULIpv4PacketsDr",
+      "vi_plmnId_snssai_ULIpv6PacketsDr",
+      "vi_plmnId_snssai_DLIpv6PacketsDr",
+      "vi_plmnId_snssai_DLUnstrPacketsDr",
+      "vi_plmnId_snssai_ULUnstrPacketsDr",
+      "vd_plmnId_snssai_PFCPSessEstFR",
+      "vd_plmnId_snssai_PFCPSessModFR"
+    ],
+    "qos": [
+      "vd_qos_PartialDRBAccessibility",
+      "vd_qos_DLLat_gNB_DU",
+      "vd_qos_DLDelay_GnbDu",
+      "vd_qos_DlUeThroughput"
+    ],
+    "tac": [
+      "vd_tac_PartialDRBAccessibility",
+      "vd_tac_DLLat_gNB_DU",
+      "vd_tac_DLDelay_GnbDu",
+      "vd_tac_DlUeThroughput",
+      "vd_tac_UlUeThroughput",
+      "vd_tac_GRANGOSR",
+      "vd_tac_5GSEPHOSR"
+    ],
+    "site": [
+      "vi_site_AMFMeanRegNbr",
+      "vd_site_PDUSessionEstSR",
+      "vd_site_PDUSessModSR",
+      "vi_site_AMFMaxRegNbr",
+      "vd_site_UTSNSI",
+      "vd_site_DTSNSI",
+      "vd_site_UGTPTN",
+      "vd_site_DGTPTN",
+      "vd_site_PDUSesMeanNbr",
+      "vi_site_PDUSesMaxNbr",
+      "vi_site_ULIpv4PacketsDr",
+      "vi_site_DLIpv4PacketsDr",
+      "vi_site_ULIpv6PacketsDr",
+      "vi_site_DLIpv6PacketsDr",
+      "vi_site_DLUnstrPacketsDr",
+      "vi_site_ULUnstrPacketsDr",
+      "vd_site_PFCPSessEstFR",
+      "vd_site_PFCPSessModFR"
+    ],
+    "site_nssi": [
+      "vi_site_nssi_AMFMeanRegNbr",
+      "vd_site_nssi_PDUSessionEstSR",
+      "vd_site_nssi_PDUSessModSR",
+      "vi_site_nssi_AMFMaxRegNbr",
+      "vd_site_nssi_UTSNSI",
+      "vd_site_nssi_DTSNSI",
+      "vd_site_nssi_UGTPTN",
+      "vd_site_nssi_DGTPTN",
+      "vd_site_nssi_PDUSesMeanNbr",
+      "vi_site_nssi_PDUSesMaxNbr",
+      "vi_site_nssi_ULIpv4PacketsDr",
+      "vi_site_nssi_DLIpv4PacketsDr",
+      "vi_site_nssi_ULIpv6PacketsDr",
+      "vi_site_nssi_DLIpv6PacketsDr",
+      "vi_site_nssi_DLUnstrPacketsDr",
+      "vi_site_nssi_ULUnstrPacketsDr",
+      "vd_site_nssi_PFCPSessEstFR",
+      "vd_site_nssi_PFCPSessModFR"
+    ],
+    "plmnId_snssai_site": [
+      "vi_plmnId_snssai_site_AMFMeanRegNbr",
+      "vd_plmnId_snssai_site_PDUSessionEstSR",
+      "vd_plmnId_snssai_site_PDUSessModSR",
+      "vi_plmnId_snssai_site_AMFMaxRegNbr",
+      "vd_plmnId_snssai_site_UTSNSI",
+      "vd_plmnId_snssai_site_DTSNSI",
+      "vd_plmnId_snssai_site_PDUSesMeanNbr",
+      "vi_plmnId_snssai_site_PDUSesMaxNbr",
+      "vi_plmnId_snssai_site_ULIpv4PacketsDr",
+      "vi_plmnId_snssai_site_DLIpv4PacketsDr",
+      "vi_plmnId_snssai_site_ULIpv6PacketsDr",
+      "vi_plmnId_snssai_site_DLIpv6PacketsDr",
+      "vi_plmnId_snssai_site_DLUnstrPacketsDr",
+      "vi_plmnId_snssai_site_ULUnstrPacketsDr",
+      "vd_plmnId_snssai_site_PFCPSessEstFR",
+      "vd_plmnId_snssai_site_PFCPSessModFR"
+    ],
+    "plmnId_snssai_nssi": [
+      "vi_plmnId_snssai_nssi_AMFMeanRegNbr",
+      "vd_plmnId_snssai_nssi_PDUSessionEstSR",
+      "vd_plmnId_snssai_nssi_PDUSessModSR",
+      "vi_plmnId_snssai_nssi_AMFMaxRegNbr",
+      "vd_plmnId_snssai_nssi_UTSNSI",
+      "vd_plmnId_snssai_nssi_DTSNSI",
+      "vd_plmnId_snssai_nssi_PDUSesMeanNbr",
+      "vi_plmnId_snssai_nssi_PDUSesMaxNbr",
+      "vi_plmnId_snssai_nssi_ULIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_DLIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_ULIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_DLIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_DLUnstrPacketsDr",
+      "vi_plmnId_snssai_nssi_ULUnstrPacketsDr",
+      "vd_plmnId_snssai_nssi_PFCPSessEstFR",
+      "vd_plmnId_snssai_nssi_PFCPSessModFR"
+    ],
+    "plmnId_snssai_nssi_nf": [
+      "vi_plmnId_snssai_nssi_nf_AMFMeanRegNbr",
+      "vd_plmnId_snssai_nssi_nf_PDUSessionEstSR",
+      "vd_plmnId_snssai_nssi_nf_PDUSessModSR",
+      "vi_plmnId_snssai_nssi_nf_AMFMaxRegNbr",
+      "vd_plmnId_snssai_nssi_nf_UTSNSI",
+      "vd_plmnId_snssai_nssi_nf_DTSNSI",
+      "vd_plmnId_snssai_nssi_nf_PDUSesMeanNbr",
+      "vi_plmnId_snssai_nssi_nf_PDUSesMaxNbr",
+      "vi_plmnId_snssai_nssi_nf_ULIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_nf_DLIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_nf_ULIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_nf_DLIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_nf_DLUnstrPacketsDr",
+      "vi_plmnId_snssai_nssi_nf_ULUnstrPacketsDr",
+      "vd_plmnId_snssai_nssi_nf_PFCPSessEstFR",
+      "vd_plmnId_snssai_nssi_nf_PFCPSessModFR"
+    ],
+    "plmnId_snssai_nssi_site_nf": [
+      "vi_plmnId_snssai_nssi_site_nf_AMFMeanRegNbr",
+      "vd_plmnId_snssai_nssi_site_nf_PDUSessionEstSR",
+      "vd_plmnId_snssai_nssi_site_nf_PDUSessModSR",
+      "vi_plmnId_snssai_nssi_site_nf_AMFMaxRegNbr",
+      "vd_plmnId_snssai_nssi_site_nf_UTSNSI",
+      "vd_plmnId_snssai_nssi_site_nf_DTSNSI",
+      "vd_plmnId_snssai_nssi_site_nf_PDUSesMeanNbr",
+      "vi_plmnId_snssai_nssi_site_nf_PDUSesMaxNbr",
+      "vi_plmnId_snssai_nssi_site_nf_ULIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_site_nf_DLIpv4PacketsDr",
+      "vi_plmnId_snssai_nssi_site_nf_ULIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_site_nf_DLIpv6PacketsDr",
+      "vi_plmnId_snssai_nssi_site_nf_DLUnstrPacketsDr",
+      "vi_plmnId_snssai_nssi_site_nf_ULUnstrPacketsDr",
+      "vd_plmnId_snssai_nssi_site_nf_PFCPSessEstFR",
+      "vd_plmnId_snssai_nssi_site_nf_PFCPSessModFR"
+    ]
+  },
+  "metrics": {
+    "vi_AMFMeanRegNbr": {
+      "name": "AMFMeanRegNbr",
+      "unit": "subscribers",
+      "displayName": "AMFMeanRegNbr",
+      "type": "integer",
+      "description": "Mean number of subscribers registered to a network slice instance measured at the AMF ",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f4"
+    },
+    "vd_PDUSessionEstSR": {
+      "name": "PDUSessionEstSR",
+      "unit": "successful requests",
+      "displayName": "PDUSessionEstSR",
+      "type": "float",
+      "description": "Rate of successful PDU session establishment requests for an SMF related to one network slice (S-NSSAI)",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f5"
+    },
+    "vd_PDUSessModSR": {
+      "name": "PDUSessModSR",
+      "unit": "successful modifications",
+      "displayName": "PDUSessModSR",
+      "type": "float",
+      "description": "Rate of successful PDU session modifications",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f6"
+    },
+    "vi_AMFMaxRegNbr": {
+      "name": "AMFMaxRegNbr",
+      "unit": "subscribers",
+      "displayName": "AMFMaxRegNbr",
+      "type": "integer",
+      "description": "Maximum number of subscribers registered to a network slice at the AMF",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f7"
+    },
+    "vd_UTSNSI": {
+      "name": "UTSNSI",
+      "unit": "bits/second",
+      "displayName": "UTSNSI",
+      "type": "float",
+      "description": "Upstream throughput of one single network slice",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f8"
+    },
+    "vd_DTSNSI": {
+      "name": "DTSNSI",
+      "unit": "bits/second",
+      "displayName": "DTSNSI",
+      "type": "float",
+      "description": "Downstream throughput of one single network slice",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33f9"
+    },
+    "vd_UGTPTN": {
+      "name": "UGTPTN",
+      "unit": "bits/second",
+      "displayName": "UGTPTN",
+      "type": "float",
+      "description": "Upstream throughput at the N3 interface",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g1"
+    },
+    "vd_DGTPTN": {
+      "name": "DGTPTN",
+      "unit": "bits/second",
+      "displayName": "DGTPTN",
+      "type": "float",
+      "description": "Downstream throughput at the N3 interface",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g2"
+    },
+    "vd_PDUSesMeanNbr": {
+      "name": "PDUSesMeanNbr",
+      "unit": "sessions",
+      "displayName": "PDUSesMeanNbr",
+      "type": "float",
+      "description": "Mean number of PDU sessions of network and network slice instance",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g3"
+    },
+    "vi_PDUSesMaxNbr": {
+      "name": "PDUSesMaxNbr",
+      "unit": "sessions",
+      "displayName": "PDUSesMaxNbr",
+      "type": "integer",
+      "description": "Maximum number of PDU sessions of network and network slice instance",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g4"
+    },
+    "vi_ULIpv4PacketsDr": {
+      "name": "ULIpv4PacketsDr",
+      "unit": "packets",
+      "displayName": "ULIpv4PacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming uplink IPv4 payload packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g5"
+    },
+    "vi_DLIpv4PacketsDr": {
+      "name": "DLIpv4PacketsDr",
+      "unit": "packets",
+      "displayName": "DLIpv4PacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming downlink IPv4 packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g6"
+    },
+    "vi_ULIpv6PacketsDr": {
+      "name": "ULIpv6PacketsDr",
+      "unit": "packets",
+      "displayName": "ULIpv6PacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming uplink IPv6 payload packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g7"
+    },
+    "vi_DLIpv6PacketsDr": {
+      "name": "DLIpv6PacketsDr",
+      "unit": "packets",
+      "displayName": "DLIpv6PacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming downlink IPv6 packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g8"
+    },
+    "vi_DLUnstrPacketsDr": {
+      "name": "DLUnstrPacketsDr",
+      "unit": "packets",
+      "displayName": "DLUnstrPacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming downlink non-IP payload packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33g9"
+    },
+    "vi_ULUnstrPacketsDr": {
+      "name": "ULUnstrPacketsDr",
+      "unit": "packets",
+      "displayName": "ULUnstrPacketsDr",
+      "type": "integer",
+      "description": "Total number of dropped incoming uplink non-IP payload packets",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h1"
+    },
+    "vd_PFCPSessEstFR": {
+      "name": "PFCPSessEstFR",
+      "unit": "failures",
+      "displayName": "PFCPSessEstFR",
+      "type": "float",
+      "description": "Failure rate for PFCP session establishment in the UPF",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h2"
+    },
+    "vd_PFCPSessModFR": {
+      "name": "PFCPSessModFR",
+      "unit": "failures",
+      "displayName": "PFCPSessModFR",
+      "type": "float",
+      "description": "Failure rate for PFCP session modifications in the UPF",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h3"
+    },
+    "vd_PartialDRBAccessibility": {
+      "name": "PartialDRBAccessibility",
+      "unit": "successes",
+      "displayName": "Partial DRB Accessibility",
+      "type": "float",
+      "description": "The Data Radio Bearer (DRB) setup success rate, including the success rate for setting up Radio Resource Control (RRC) connection and Next Generation (NG) signaling connection",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h4"
+    },
+    "vd_DLLat_gNB_DU": {
+      "name": "DLLat_gNB_DU",
+      "unit": "milliseconds",
+      "displayName": "DLLat_gNB_DU",
+      "type": "float",
+      "description": "The gNodeB-Distributed unit (gNB_DU) part of the packet transmission latency experienced by an end-user. It is used to evaluate the gNB latency contribution to the total packet latency",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h5"
+    },
+    "vd_DLDelay_GnbDu": {
+      "name": "DLDelay_GnbDu",
+      "unit": "milliseconds",
+      "displayName": "DLDelay_GnbDu",
+      "type": "float",
+      "description": "The average packet transmission delay through RAN to the UE. It is used to evaluate delay performance of NG-RAN in downlink for a network slice subnet",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h6"
+    },
+    "vd_DlUeThroughput": {
+      "name": "DlUeThroughput",
+      "unit": "bits/second",
+      "displayName": "DlUeThroughput",
+      "type": "float",
+      "description": "The average downlink RAN UE throughput for a NRCellDU",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h7"
+    },
+    "vd_UlUeThroughput": {
+      "name": "UlUeThroughput",
+      "unit": "bits/second",
+      "displayName": "UlUeThroughput",
+      "type": "float",
+      "description": "The average uplink RAN UE throughput for a NRCellDU",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h8"
+    },
+    "vd_GRANGOSR": {
+      "name": "GRANGOSR",
+      "unit": "successes",
+      "displayName": "GRANGOSR",
+      "type": "float",
+      "description": "Identifies how often a handover within NR-RAN is successful; whether the handover was made due to bad coverage or for any other reason",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h9"
+    },
+    "vd_5GSEPHOSR": {
+      "name": "5GSEPHOSR",
+      "unit": "successes",
+      "displayName": "5GSEPHOSR",
+      "type": "float",
+      "description": "5GS to EPS handover success rate as a percentage",
+      "csacKey": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33m0"
+    }
+  }
+}

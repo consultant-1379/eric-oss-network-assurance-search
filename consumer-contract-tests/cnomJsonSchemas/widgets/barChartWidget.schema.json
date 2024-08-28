@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/barChartWidget.schema.json",
+  "title": "Bar chart widget",
+  "description": "A widget that displays information in bar chart format.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "barChart"
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "sources": true,
+        "filterInactiveNodes": {
+          "description": "Whether to show the data of those inactive nodes.",
+          "type": "boolean",
+          "default": false
+        },
+        "unit": {
+          "description": "A unit label for the bar chart.",
+          "type": "string"
+        },
+        "orientation": {
+          "description": "Which direction the bars go in. The grouped orientations require special data sources.",
+          "type": "string",
+          "default": "horizontal",
+          "enum": ["horizontal", "vertical", "verticalGroup", "horizontalGroup"]
+        },
+        "thresholds": {
+          "$ref": "../definitions.schema.json#/definitions/thresholds"
+        },
+        "useTimeRange": {
+          "description": "Whether use the selected time range from the Time Picker when fetching data to the bar chart.",
+          "type": "boolean",
+          "default": true
+        },
+        "showTimestamp": {
+          "description": "Whether to display the timestamp in the footer. The timestamp indicates when the data in the widget were last updated.",
+          "type": "boolean",
+          "default": false
+        },
+        "dataFormat": {
+          "description": "The data format of the x or y axis as a d3 format specifier. If not set, the data will be unformatted or automatically formatted when autoFormat is set to true.",
+          "type": "string"
+        },
+        "autoFormat": {
+          "description": "Whether to automatically format the data. If true, the data is formatted to 4 significant digits with SI-prefix and special formatting for certain units.",
+          "type": "boolean",
+          "default": true
+        },
+        "colors": {
+          "description": "The colors of lines in bar chart. When the length of colors is equal to barchart length,color will be displayed in order according to colors.If less than, when the color in colors array are used up, they will be used again from the first element of colors array",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "color-data-1",
+              "color-data-2",
+              "color-data-3",
+              "color-data-4",
+              "color-data-5",
+              "color-data-6",
+              "color-data-7",
+              "color-data-8",
+              "color-data-9",
+              "color-data-10",
+              "color-data-11",
+              "color-data-12",
+              "color-data-13",
+              "color-data-14",
+              "color-data-15",
+              "color-data-16",
+              "color-data-17",
+              "color-data-18",
+              "color-data-19",
+              "color-data-20"
+            ]
+          }
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

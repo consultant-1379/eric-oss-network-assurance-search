@@ -1,0 +1,690 @@
+#!/usr/bin/env groovy
+
+def defaultBobImage = 'armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob.2.0:1.7.0-55'
+def bob_dockerized = new BobCommand().bobImage(defaultBobImage).envVars([
+        HOME                      : '${HOME}',
+        KUBECONFIG                : '${KUBECONFIG}',
+        K8S_NAMESPACE             : '${K8S_NAMESPACE}',
+        SONAR_HOST_URL            : '${SONAR_HOST_URL}',
+        SONAR_AUTH_TOKEN          : '${SONAR_AUTH_TOKEN}',
+        SONAR_BRANCH_NAME         : 'Publish',
+        XRAY_USER                 : '${CREDENTIALS_XRAY_SELI_ARTIFACTORY_USR}',
+        XRAY_APIKEY               : '${CREDENTIALS_XRAY_SELI_ARTIFACTORY_PSW}',
+        VHUB_API_TOKEN            : '${VHUB_API_TOKEN}',
+        ADP_PORTAL_API_KEY        : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtc2lkIjoiNjM2YmNiMjkyNjBkMGQwMDkwMmUzYThjIiwiaW52YWxfc2VjcmV0IjoieGgzbXc1a3diciJ9.W45h25vEqKGdr7j_SsR3N6fBSl_dLNpJmO9B1wOjSfM',
+        SELI_ARTIFACTORY_REPO_USER: '${CREDENTIALS_SELI_ARTIFACTORY_USR}',
+        SELI_ARTIFACTORY_REPO_PASS: '${CREDENTIALS_SELI_ARTIFACTORY_PSW}',
+        SERO_ARTIFACTORY_REPO_USER: '${CREDENTIALS_SERO_ARTIFACTORY_USR}',
+        SERO_ARTIFACTORY_REPO_PASS: '${CREDENTIALS_SERO_ARTIFACTORY_PSW}',
+        FOSSA_API_KEY             : '${CREDENTIALS_FOSSA_API_KEY}',
+        BAZAAR_TOKEN              : '${CREDENTIALS_BAZAAR}',
+        ERIDOC_USERNAME           : '${ERIDOC_CREDENTIALS_USR}',
+        ERIDOC_PASSWORD           : '${ERIDOC_CREDENTIALS_PSW}',
+        GERRIT_CHANGE_URL         : '${GERRIT_CHANGE_URL}',
+        GERRIT_CHANGE_OWNER       : '${GERRIT_CHANGE_OWNER}'
+]).needDockerSocket(true).toString()
+def bob = 'python3 bob/bob2.0/bob.py -r ruleset2.0.yaml'
+def bob_mimer = 'python3 bob/bob2.0/bob.py -r ruleset2.0.mimer.yaml'
+
+def LOCKABLE_RESOURCE_LABEL = "kaas"
+
+pipeline {
+    agent {
+        node {
+            label NODE_LABEL
+        }
+    }
+
+    options {
+        timestamps()
+        ansiColor('xterm')
+        timeout(time: 2, unit: 'HOURS')
+        buildDiscarder(logRotator(numToKeepStr: '50', artifactNumToKeepStr: '50'))
+    }
+
+    environment {
+        RELEASE = "true"
+        VHUB_API_TOKEN = credentials('vhub-api-key-id')
+        CREDENTIALS_SELI_ARTIFACTORY = credentials('SELI_ARTIFACTORY')
+        CREDENTIALS_SERO_ARTIFACTORY = credentials('SERO_ARTIFACTORY')
+        CREDENTIALS_XRAY_SELI_ARTIFACTORY = credentials('XRAY_SELI_ARTIFACTORY')
+        CREDENTIALS_FOSSA_API_KEY = credentials('FOSSA_API_token')
+        CREDENTIALS_BAZAAR = credentials('BAZAAR_token')
+        KUBECONFIG = "${WORKSPACE}/.kube/config"
+        FOSSA_ENABLED = "true"
+        HADOLINT_ENABLED = "true"
+        KUBEHUNTER_ENABLED = "true"
+        KUBEAUDIT_ENABLED = "true"
+        KUBESEC_ENABLED = "true"
+        TRIVY_ENABLED = "true"
+        XRAY_ENABLED = "true"
+        ANCHORE_ENABLED = "true"
+        NMAP_ENABLED = "true"
+        CISCAT_ENABLED = "true"
+        ZAP_ENABLED = "true"
+        ERIDOC_CREDENTIALS = credentials('eridoc-user')
+        SONAR_AUTH_TOKEN = "75eb63cf68f573993738125c63bc38ccedacd868"
+        PUSH_VERSION_PREFIX_FILE  = "true"
+    }
+
+    stages {
+
+        stage('Prepare') {
+            steps {
+                checkout([
+                        $class           : 'GitSCM',
+                        branches         : [
+                                [
+                                        name: "master"
+                                ]
+                        ],
+                        extensions       : [
+                                [
+                                        $class: 'CleanBeforeCheckout'
+                                ],
+                                [
+                                        $class: 'WipeWorkspace'
+                                ],
+                                [
+                                        $class             : 'SubmoduleOption',
+                                        disableSubmodules  : false,
+                                        parentCredentials  : true,
+                                        recursiveSubmodules: true,
+                                        reference          : '',
+                                        trackingSubmodules : false
+                                ]
+                        ],
+                        userRemoteConfigs: [
+                                [
+                                        url: '${GERRIT_CENTRAL}/OSS/com.ericsson.oss.air/eric-oss-network-assurance-search'
+                                ]
+                        ]
+                ])
+            }
+        }
+
+        stage('Clean') {
+            steps {
+                sh "${bob_dockerized} clean"
+            }
+        }
+
+        stage('Init') {
+            parallel {
+                stage('Set Bob variables') {
+                    steps {
+                        script {
+                            sh "${bob_dockerized} init-drop"
+                            sh "./docker/automatic-cbo-update.sh"
+                            sh "${bob_mimer} mimer-init"
+                            archiveArtifacts 'artifact.properties'
+                            authorName = sh(returnStdout: true, script: 'git show -s --pretty=%an')
+                            currentBuild.displayName = currentBuild.displayName + ' / ' + authorName
+                        }
+                    }
+                }
+                stage('Install dependencies') {
+                    steps {
+                        sh "${bob_dockerized} install-dependencies"
+                    }
+                }
+            }
+        }
+
+        stage('Main Stage') {
+            failFast true
+            parallel {
+                stage('Lint') {
+                    steps {
+                        retry(2) {
+                            sh "${bob_dockerized} lint"
+                        }
+                    }
+                }
+
+                stage('Image & Package') {
+                    stages {
+                        stage('Image') {
+                            steps {
+                                retry(3) {
+                                    ansiColor('xterm') {
+                                        sh "chmod +x ./healthcheck.sh"
+                                        sh "${bob_dockerized} image"
+                                    }
+                                }
+                            }
+                        }
+
+                        stage('Package') {
+                            steps {
+                                retry(3) {
+                                    withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                                        ansiColor('xterm') {
+                                            sh "${bob_dockerized} package"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                stage('FOSS, Licenses, & Documentation') {
+                    stages {
+                        stage('FOSSA Analyze') {
+                            steps {
+                                withCredentials([string(credentialsId: 'FOSSA_API_token', variable: 'FOSSA_API_KEY')]) {
+                                    sh "${bob} fossa-analyze"
+                                }
+                            }
+                        }
+                        stage('FOSSA Fetch Report') {
+                            steps {
+                                withCredentials([string(credentialsId: 'FOSSA_API_token', variable: 'FOSSA_API_KEY')]) {
+                                    sh "${bob} fossa-scan-status-check"
+                                    sh "sleep 2m 0s"
+                                    sh "${bob} fetch-fossa-report-attribution"
+                                    archiveArtifacts '*fossa-report.json'
+                                }
+                            }
+                        }
+                        stage('FOSSA Dependency Validate') {
+                            when {
+                                expression { env.FOSSA_ENABLED == "true" }
+                            }
+                            steps {
+                                withCredentials([string(credentialsId: 'FOSSA_API_token', variable: 'FOSSA_API_KEY')]) {
+                                    sh "${bob} dependency-validate"
+                                }
+                            }
+                        }
+
+                        stage('License Agreement Generate') {
+                            when {
+                                expression { env.FOSSA_ENABLED == "true" }
+                            }
+                            steps {
+                                sh "${bob} license-agreement-generate"
+                                archiveArtifacts 'config/license-agreement.json'
+                            }
+                        }
+
+                        stage('License Agreement Validate') {
+                            when {
+                                expression { env.FOSSA_ENABLED == "true" }
+                            }
+                            steps {
+                                sh "${bob} license-agreement-validate"
+                            }
+                        }
+
+                        stage('License Agreement doc generate') {
+                            when {
+                                expression { env.FOSSA_ENABLED == "true" }
+                            }
+                            steps {
+                                sh "${bob} license-agreement-doc-generate"
+                                archiveArtifacts 'doc/license-agreement-doc.md'
+                            }
+                        }
+
+                        stage('Upload License Agreement') {
+                            steps {
+                                withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                                    sh "${bob} upload-license-agreement-json"
+                                }
+                            }
+                        }
+                    }
+                }
+
+                stage('Unit Tests & SonarQube Analysis') {
+                    stages {
+                        stage('Frontend Unit Tests') {
+                            steps {
+                                retry(2) {
+                                    withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                                        ansiColor('xterm') {
+                                            sh "${bob_dockerized} test-unit"
+                                            archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend/coverage/**/**.*'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        stage('Backend Unit Tests') {
+                            steps {
+                                retry(2) {
+                                    withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                                        ansiColor('xterm') {
+                                            sh "${bob_dockerized} test-ws"
+                                            archiveArtifacts allowEmptyArchive: true, artifacts: 'backend/test/reports/**/**/**.*'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        stage('SonarQube Analysis & Quality Gate') {
+                            steps {
+                                retry(2) {
+                                    withSonarQubeEnv("${env.SQ_SERVER}") {
+                                        ansiColor('xterm') {
+                                            sh "${bob_dockerized} sonar-scanner-ui-release"
+                                            sh "${bob_dockerized} sonar-gate-check"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        stage('Contract Tests') {
+                            steps {
+                                retry(2) {
+                                    withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                                        ansiColor('xterm') {
+                                            sh "${bob_dockerized} test-contract"
+                                            archiveArtifacts allowEmptyArchive: true, artifacts: 'consumer-contract-tests/reports/**/**.*'
+                                            archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend/coverage/consumer-contract-tests/**/**.*'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('K8S Resource Lock') {
+            options {
+                lock(label: LOCKABLE_RESOURCE_LABEL, variable: 'RESOURCE_NAME', quantity: 1)
+            }
+            environment {
+                K8S_CLUSTER_ID = sh(script: "echo \${RESOURCE_NAME} | cut -d'_' -f1", returnStdout: true).trim()
+                K8S_NAMESPACE = sh(script: "echo \${RESOURCE_NAME} | cut -d',' -f1 | cut -d'_' -f2", returnStdout: true).trim()
+            }
+            stages {
+                stage('Helm Install') {
+                    steps {
+                        echo "Inject kubernetes config file (${env.K8S_CLUSTER_ID}) based on the Lockable Resource name: ${env.RESOURCE_NAME}"
+                        configFileProvider([configFile(fileId: "${env.K8S_CLUSTER_ID}", targetLocation: "${env.KUBECONFIG}")]) {}
+                        echo "The namespace (${env.K8S_NAMESPACE}) is reserved and locked based on the Lockable Resource name: ${env.RESOURCE_NAME}"
+                        sh "${bob_dockerized} helm-dry-run"
+                        sh "${bob_dockerized} create-namespace"
+                        script {
+                            if (env.HELM_UPGRADE == "true") {
+                                echo "HELM_UPGRADE is set to true:"
+                                sh "${bob_dockerized} helm-upgrade"
+                            } else {
+                                echo "HELM_UPGRADE is NOT set to true:"
+                                sh "${bob_dockerized} helm-install"
+                            }
+                        }
+
+                        sh "${bob_dockerized} healthcheck"
+                    }
+                    post {
+                        always {
+                            sh "${bob_dockerized} kaas-info || true"
+                            archiveArtifacts allowEmptyArchive: true, artifacts: 'build/kaas-info.log'
+                        }
+                        unsuccessful {
+                            sh "${bob_dockerized} collect-k8s-logs || true"
+                            archiveArtifacts allowEmptyArchive: true, artifacts: "k8s-logs/*"
+                            sh "${bob_dockerized} delete-namespace"
+                        }
+                    }
+                }
+                stage('K8S Test') {
+                    steps {
+                        sh "${bob_dockerized} helm-test"
+                    }
+                }
+                stage('Vulnerability Analysis') {
+                    environment {
+                        K8S_CLUSTER_ID = sh(script: "echo \${RESOURCE_NAME} | cut -d'_' -f1", returnStdout: true).trim()
+                        K8S_NAMESPACE = sh(script: "echo \${RESOURCE_NAME} | cut -d',' -f1 | cut -d'_' -f2", returnStdout: true).trim()
+                    }                    
+                    steps {
+                        parallel(
+                            "Anchore-Grype": {
+                                script {
+                                    if (env.ANCHORE_ENABLED == "true") {
+                                        sh "${bob_dockerized} grype-scan"
+                                        archiveArtifacts 'build/va-reports/anchore-reports/**.*'
+                                    }
+                                }
+                            },
+                            "CIS-CAT": {
+                                script {
+                                    if (env.CISCAT_ENABLED == "true") {
+                                        sh "${bob_dockerized} cis-cat-scan"
+                                    } else {
+                                        sh "${bob_dockerized} cis-cat-scan:create-report-folder"
+                                        echo "stage CIS-CAT skipped"
+                                    }
+                                    archiveArtifacts allowEmptyArchive: true, artifacts: "build/va-reports/ciscat-reports/**/*.*"
+                                }
+                            },
+                            "Hadolint": {
+                                script {
+                                    if (env.HADOLINT_ENABLED == "true") {
+                                        sh "${bob_dockerized} hadolint-scan"
+                                        echo "Evaluating Hadolint Scan Resultcodes..."
+                                        sh "${bob_dockerized} evaluate-hadolint-design-rule-check-resultcodes"
+                                        archiveArtifacts "build/va-reports/hadolint-reports/**.*"
+                                    }
+                                }
+                            },
+                            "KubeAudit": {
+                                script {
+                                    if (env.KUBEAUDIT_ENABLED == "true") {
+                                        sh "${bob_dockerized} kubeaudit-scan"
+                                        archiveArtifacts "build/va-reports/kubeaudit-reports/**/*"
+                                    }
+                                }
+                            },
+                            "KubeHunter": {
+                                script {
+                                    if (env.KUBEHUNTER_ENABLED == "true") {
+                                        configFileProvider([configFile(fileId: "${K8S_CLUSTER_ID}", targetLocation: "${env.KUBECONFIG}")]) {}
+                                        sh 'echo "System: [$system]"'
+                                        sh 'echo "Kubeconfig: [$KUBECONFIG]"'
+                                        sh "${bob_dockerized} kubehunter-scan"
+                                        archiveArtifacts "build/va-reports/kubehunter-reports/**/*"
+                                    }
+                                }
+                            },
+                            "KubeSec": {
+                                script {
+                                    if (env.KUBESEC_ENABLED == "true") {
+                                        sh "${bob_dockerized} kubesec-scan"
+                                        archiveArtifacts 'build/va-reports/kubesec-reports/*'
+                                    }
+                                }
+                            },
+                            "NMAP Unicorn": {
+                                script {
+                                    withCredentials([usernamePassword(credentialsId: 'SERO_ARTIFACTORY', usernameVariable: 'SERO_ARTIFACTORY_REPO_USER', passwordVariable: 'SERO_ARTIFACTORY_REPO_PASS')]){
+                                        if (env.NMAP_ENABLED == "true") {
+                                            configFileProvider([configFile(fileId: "${K8S_CLUSTER_ID}", targetLocation: "${env.KUBECONFIG}")]) {}
+                                            sh "${bob_dockerized} nmap-port-scanning"
+                                            archiveArtifacts "build/va-reports/nmap-reports/**/**.*"
+                                        }else{
+                                            echo "stage NMAP Unicorn skipped"
+                                        }
+                                    }
+                                }
+                            },
+                            "Trivy": {
+                                script {
+                                    if (env.TRIVY_ENABLED == "true") {
+                                        sh "${bob_dockerized} trivy-scan"
+                                        archiveArtifacts 'build/va-reports/trivy-reports/**.*'
+                                        archiveArtifacts 'trivy_metadata.properties'
+                                    }
+                                }
+                            },
+                            "X-Ray": {
+                                script {
+                                    if (env.XRAY_ENABLED == "true") {
+                                        sleep(60)
+                                        sh "${bob_dockerized} fetch-xray-report"
+                                        archiveArtifacts 'build/va-reports/xray-reports/xray_report.json'
+                                        archiveArtifacts 'build/va-reports/xray-reports/raw_xray_report.json'
+                                    }
+                                }
+                            },
+                            "ZAP": {
+                                script {
+                                    if (env.ZAP_ENABLED == "true") {
+                                        withCredentials([usernamePassword(credentialsId: 'SERO_ARTIFACTORY', usernameVariable: 'SERO_ARTIFACTORY_REPO_USER', passwordVariable: 'SERO_ARTIFACTORY_REPO_PASS')]) {
+                                            sh "${bob} zap-scan"
+                                        }
+                                    } else {
+                                        sh "${bob} zap-scan:create-report-folder"
+                                        echo "stage ZAP skipped"
+                                    }
+                                    archiveArtifacts allowEmptyArchive: true, artifacts: "build/va-reports/zap-reports/**/**.*"
+                                }
+                            }
+                        )
+                    }
+                    post {
+                        unsuccessful {
+                            sh "${bob_dockerized} collect-k8s-logs || true"
+                            archiveArtifacts allowEmptyArchive: true, artifacts: 'k8s-logs/**/*.*'
+                        }
+                        cleanup {
+                            sh "${bob_dockerized} delete-namespace"
+                            sh "${bob_dockerized} cleanup-anchore-trivy-images"
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Generate') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                    ansiColor('xterm') {
+                        sh "${bob_dockerized} generate-docs"
+                    }
+                }
+            }
+        }
+
+        stage('Upload Versioned Marketplace Documentation') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'SELI_ARTIFACTORY', usernameVariable: 'SELI_ARTIFACTORY_REPO_USER', passwordVariable: 'SELI_ARTIFACTORY_REPO_PASS')]) {
+                    script {
+                        echo "Marketplace upload"
+                        sh "${bob_dockerized} marketplace-upload-release"
+                        sh "${bob_dockerized} marketplace-upload-refresh"
+                    }
+                }
+            }
+        }
+
+        stage('Generate Vulnerability report V2.0') {
+            steps {
+                sh "${bob_dockerized} generate-VA-report-V2:upload"
+                archiveArtifacts 'build/va-reports/**_Vulnerability_Report_2.0.md'
+            }
+        }
+//        stage('Upload documents to Eridoc'){
+//            steps {
+//                withCredentials([usernamePassword(credentialsId: 'eridoc-user', usernameVariable: 'ERIDOC_USERNAME', passwordVariable: 'ERIDOC_PASSWORD')]) {
+//                    sh "${bob} eridoc-upload"
+//                    sh "${bob} eridoc-approve"
+//                    sh "${bob_mimer} generate-prod-structure-documents-yaml"
+//                    archiveArtifacts allowEmptyArchive: true, artifacts: 'build/documents.yaml'
+//                }
+//            }
+//        }
+        stage('Publish') {
+            steps {
+                sh "${bob_dockerized} publish"
+                withCredentials([usernamePassword(credentialsId: 'GERRIT_PASSWORD', usernameVariable: 'GERRIT_USERNAME', passwordVariable: 'GERRIT_PASSWORD')]) {
+                    sh "git checkout master"
+                    sh "${bob} create-git-tag"
+                    sh "git pull"
+                }
+            }
+            post {
+                cleanup {
+                    sh "${bob_dockerized} delete-images"
+                }
+            }
+        }
+        stage('Push plus git-tag') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'GERRIT_PASSWORD', usernameVariable: 'GERRIT_USERNAME', passwordVariable: 'GERRIT_PASSWORD')]) {
+                    sh "${bob_mimer} create-plus-git-tag"
+                    sh "git pull"
+                }
+            }
+        }
+    }
+    post {
+        success {
+            withCredentials([usernamePassword(credentialsId: 'GERRIT_PASSWORD',
+                    usernameVariable: 'GERRIT_USERNAME', passwordVariable: 'GERRIT_PASSWORD')])
+                    {
+                        bumpVersion()
+                    }
+            script {
+                sh "${bob_dockerized} helm-chart-check-report-warnings"
+                sendHelmDRWarningEmail()
+                modifyBuildDescription()
+            }
+        }
+        always {
+            publishHTML(target: [
+                    allowMissing         : false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll              : true,
+                    reportDir            : ".bob/check-charts/",
+                    reportFiles          : 'design-rule-check-report.html',
+                    reportName           : "Helm Design Rule Chart Check"
+            ])
+            publishHTML(target: [
+                    allowMissing         : false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll              : true,
+                    reportDir            : ".bob/check-image/",
+                    reportFiles          : 'image-design-rule-check-report.html',
+                    reportName           : "Helm Design Rule Image Check"
+            ])
+//            publishHTML (target: [
+//                allowMissing: false,
+//                alwaysLinkToLastBuild: false,
+//                keepAll: true,
+//                reportDir: "topology-ui/coverage/lcov-report/",
+//                reportFiles: 'index.html',
+//                reportName: "Test Coverage"
+//            ])
+//            archiveArtifacts 'topology-ui/coverage/lcov-report/index.html'
+            archiveArtifacts '.bob/check-image/image-design-rule-check-report.html'
+            archiveArtifacts '.bob/check-charts/design-rule-check-report.html'
+            archiveArtifacts allowEmptyArchive: true, artifacts: 'ruleset2.0.yaml, ci/Drop.jenkinsfile'
+            sh "${bob_dockerized} delete-builder-images"
+        }
+        failure {
+            sendBuildFailureEmail()
+        }
+    }
+}
+
+
+def modifyBuildDescription() {
+    def CHART_NAME = "eric-oss-network-assurance-search"
+    def DOCKER_IMAGE_NAME = "eric-oss-network-assurance-search"
+    def VERSION = readFile('.bob/var.version').trim()
+    def CHART_DOWNLOAD_LINK = "https://arm.seli.gic.ericsson.se/artifactory/proj-eric-oss-drop-helm/${CHART_NAME}/${CHART_NAME}-${VERSION}.tgz"
+    def DOCKER_IMAGE_DOWNLOAD_LINK = "https://armdocker.rnd.ericsson.se/artifactory/docker-v2-global-local/proj-eric-oss-drop/${CHART_NAME}/${VERSION}/"
+    currentBuild.description = "Helm Chart: <a href=${CHART_DOWNLOAD_LINK}>${CHART_NAME}-${VERSION}.tgz</a><br>Docker Image: <a href=${DOCKER_IMAGE_DOWNLOAD_LINK}>${DOCKER_IMAGE_NAME}-${VERSION}</a><br>Gerrit: <a href=${env.GERRIT_CHANGE_URL}>${env.GERRIT_CHANGE_URL}</a><br>"
+}
+
+def bumpVersion() {
+    env.oldPatchVersionPrefix = readFile "VERSION_PREFIX"
+    env.VERSION_PREFIX_CURRENT = env.oldPatchVersionPrefix.trim()
+    sh 'docker run --rm -v $PWD/VERSION_PREFIX:/app/VERSION -w /app --user $(id -u):$(id -g) armdocker.rnd.ericsson.se/proj-eric-oss-drop/utilities/bump minor'
+    env.newPatchVersionPrefix = readFile "VERSION_PREFIX"
+    env.VERSION_PREFIX_UPDATED = env.newPatchVersionPrefix.trim()
+    if (env.PUSH_VERSION_PREFIX_FILE == "true") {
+        echo "VERSION_PREFIX has been bumped from ${VERSION_PREFIX_CURRENT} to ${VERSION_PREFIX_UPDATED}"
+        sh """
+            git add VERSION_PREFIX
+            git commit -m "[ci-skip] Automatically updating VERSION_PREFIX to ${VERSION_PREFIX_UPDATED}"
+            git push origin HEAD:master
+        """
+    }
+}
+
+def sendHelmDRWarningEmail() {
+    def val = readFile '.bob/var.helm-chart-check-report-warnings'
+    if (val.trim().equals("true")) {
+        echo "WARNING: One or more Helm Design Rules have a WARNING state. Review the Archived Helm Design Rule Check Report: design-rule-check-report.html"
+        manager.addWarningBadge("One or more Helm Design Rules have a WARNING state. Review the Archived Helm Design Rule Check Report: design-rule-check-report.html")
+        echo "Sending an email to Helm Design Rule Check distribution list: ${env.HELM_DR_CHECK_DISTRIBUTION_LIST}"
+        try {
+            mail to: "${env.HELM_DR_CHECK_DISTRIBUTION_LIST},04626b2f.ericsson.onmicrosoft.com@amer.teams.ms",
+                    from: "jenkins-noreply@ericsson.com",
+                    bcc: "${env.GERRIT_PATCHSET_UPLOADER_EMAIL}",
+                    subject: "${env.JOB_NAME}: One or more Helm Design Rules have a WARNING state. Review the Archived Helm Design Rule Check Report: design-rule-check-report.html",
+                    body: "One or more Helm Design Rules have a WARNING state. <br><br>" +
+                            "Please review Gerrit and the Helm Design Rule Check Report: design-rule-check-report.html: <br><br>" +
+                            "&nbsp;&nbsp;<b>Gerrit master branch:</b> https://gerrit-gamma.gic.ericsson.se/gitweb?p=${env.GERRIT_PROJECT}.git;a=shortlog;h=refs/heads/master <br>" +
+                            "&nbsp;&nbsp;<b>Helm Design Rule Check Report:</b> ${env.BUILD_URL}artifact/.bob/check-charts/design-rule-check-report.html <br><br>" +
+                            "For more information on the Design Rules and ADP handling process please see: <br>" +
+                            "&nbsp;&nbsp; - <a href='https://confluence.lmera.ericsson.se/display/AA/Helm+Chart+Design+Rules+and+Guidelines'>Helm Design Rule Guide</a><br>" +
+                            "&nbsp;&nbsp; - <a href='https://confluence.lmera.ericsson.se/display/ACD/Design+Rule+Checker+-+How+DRs+are+checked'>More Details on Design Rule Checker</a><br>" +
+                            "&nbsp;&nbsp; - <a href='https://confluence.lmera.ericsson.se/display/AA/General+Helm+Chart+Structure'>General Helm Chart Structure</a><br><br>" +
+                            "<b>Note:</b> This mail was automatically sent as part of the following Jenkins job: ${env.BUILD_URL}",
+                    mimeType: 'text/html'
+        }
+        catch (Exception e) {
+            echo "Email notification was not sent."
+            print e
+        }
+    }
+}
+
+def sendBuildFailureEmail() {
+    try {
+        mail to: "${env.HELM_DR_CHECK_DISTRIBUTION_LIST},04626b2f.ericsson.onmicrosoft.com@amer.teams.ms",
+                from: "jenkins-noreply@ericsson.com",
+                bcc: "${env.GERRIT_PATCHSET_UPLOADER_EMAIL}",
+                subject: "Failed CI ${env.JOB_NAME}: ${env.GERRIT_CHANGE_SUBJECT}",
+                body: "Failure on ${env.BUILD_URL}. <br><br>" +
+                        "Please review ${env.GERRIT_CHANGE_SUBJECT} ${env.GERRIT_CHANGE_URL}.<br><br>" +
+                        "Please go to the teams channel <a href=\"https://teams.microsoft.com/l/channel/19%3a176eaa9a276c4d789f3e285a3ac1dc00%40thread.tacv2/CI%2520Failures?groupId=35653bd7-e9f4-4c6a-aef2-29ca4de21a96&tenantId=92e84ceb-fbfd-47ab-be52-080c6b87953f\"> to discuss the change.",
+                mimeType: 'text/html'
+    }
+    catch (Exception e) {
+        echo "Email notification was not sent."
+        print e
+    }
+}
+
+
+// More about @Builder: http://mrhaki.blogspot.com/2014/05/groovy-goodness-use-builder-ast.html
+import groovy.transform.builder.Builder
+import groovy.transform.builder.SimpleStrategy
+
+@Builder(builderStrategy = SimpleStrategy, prefix = '')
+class BobCommand {
+    def bobImage = 'bob.2.0:latest'
+    def envVars = [:]
+    def needDockerSocket = false
+
+    String toString() {
+        def env = envVars
+                .collect({ entry -> "-e ${entry.key}=\"${entry.value}\"" })
+                .join(' ')
+        def cmd = """\
+            |docker run
+            |--init
+            |--rm
+            |--workdir \${PWD}
+            |--user \$(id -u):\$(id -g)
+            |-v \${PWD}:\${PWD}
+            |-v /etc/group:/etc/group:ro
+            |-v /etc/passwd:/etc/passwd:ro
+            |-v /proj/mvn/:/proj/mvn
+            |-v \${HOME}:\${HOME}
+            |${needDockerSocket ? '-v /var/run/docker.sock:/var/run/docker.sock' : ''}
+            |${env}
+            |\$(for group in \$(id -G); do printf ' --group-add %s' "\$group"; done)
+            |--group-add \$(stat -c '%g' /var/run/docker.sock)
+            |${bobImage}
+            |"""
+        return cmd
+                .stripMargin()           // remove indentation
+                .replace('\n', ' ')      // join lines
+                .replaceAll(/[ ]+/, ' ') // replace multiple spaces by one
+    }
+}

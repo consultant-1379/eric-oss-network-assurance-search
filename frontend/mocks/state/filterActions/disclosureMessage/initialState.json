@@ -1,0 +1,181 @@
+{
+  "browsers": [
+    {
+      "id": "c7f14b2f-8fa8-4324-bb94-214acc570743",
+      "title": "Metric Browser",
+      "filters": [
+        {
+          "label": "AMF Mean Reg Nbr  In Range 0 - 100",
+          "name": "vi_Site_AMFMeanRegNbr",
+          "type": {
+            "id": "vi_Site_AMFMeanRegNbr",
+            "name": "AMF Mean Reg Nbr",
+            "valueType": "integer",
+            "description": "AMFMeanRegNbr Description",
+            "unit": "errors/minute",
+            "dataType": "metricType"
+          },
+          "value": {
+            "from": 0,
+            "to": 100,
+            "not": false,
+            "operation": "inr"
+          },
+          "filterCategory": "metric",
+          "selected": true
+        }
+      ],
+      "loading": false,
+      "match": "",
+      "data": {
+        "total": 1,
+        "numpages": 1,
+        "numentries": 20,
+        "currentpage": 1,
+        "tableData": [
+          {
+            "c_Site": "BC",
+            "vi_Site_AMFMeanRegNbr": 60,
+            "vi_Site_AMFMeanRegNbr2": 60,
+            "vi_Site_AMFMeanRegNbr3": 60,
+            "metadata": {
+              "contextName": "My Site",
+              "context": {
+                "type": {
+                  "id": "Site",
+                  "contextFields": [
+                    {
+                      "id": "Site"
+                    }
+                  ]
+                },
+                "contextFields": [
+                  {
+                    "id": "Site_BC",
+                    "type": {
+                      "id": "c_Site"
+                    },
+                    "name": "BC"
+                  }
+                ]
+              },
+              "metrics": [
+                {
+                  "id": "vi_Site_AMFMeanRegNbr",
+                  "name": "AMF Mean Reg Nbr",
+                  "description": "AMFMeanRegNbr Description",
+                  "value": 60,
+                  "valueType": "integer",
+                  "unit": "errors/minute"
+                }
+              ]
+            }
+          }
+        ],
+        "sort": {
+          "sortBy": {
+            "id": "c_Site"
+          },
+          "sortOrder": "asc"
+        }
+      },
+      "active": true,
+      "context": {
+        "contextType": {
+          "id": "Site",
+          "contextFields": [
+            {
+              "id": "c_Site",
+              "name": "My Site",
+              "description": "Site",
+              "dataType": "entityType"
+            }
+          ]
+        },
+        "relations": [],
+        "metricTypes": [
+          {
+            "id": "vi_Site_AMFMeanRegNbr",
+            "name": "AMF Mean Reg Nbr",
+            "valueType": "integer",
+            "description": "AMFMeanRegNbr Description",
+            "unit": "errors/minute",
+            "dataType": "metricType"
+          }
+        ],
+        "filterCategories": [
+          {
+            "type": "context",
+            "title": "KPI Context Filters",
+            "selection": "checkbox",
+            "fields": [
+              {
+                "label": "My Site",
+                "name": "c_Site",
+                "filterCategory": "context",
+                "type": {
+                  "id": "c_Site",
+                  "name": "My Site",
+                  "description": "Site",
+                  "dataType": "entityType",
+                  "valueType": "string"
+                }
+              }
+            ],
+            "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+          },
+          {
+            "type": "metric",
+            "title": "KPI Filters",
+            "selection": "radio",
+            "fields": [
+              {
+                "label": "AMF Mean Reg Nbr",
+                "name": "vi_Site_AMFMeanRegNbr",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_Site_AMFMeanRegNbr",
+                  "name": "AMF Mean Reg Nbr",
+                  "valueType": "integer",
+                  "description": "AMFMeanRegNbr Description",
+                  "unit": "errors/minute",
+                  "dataType": "metricType"
+                }
+              }
+            ],
+            "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+          }
+        ],
+        "name": "My Site",
+        "columns": [
+          {
+            "title": "My Site",
+            "attribute": "c_Site",
+            "sortable": true,
+            "additionalInfo": "Site",
+            "width": "300px",
+            "sort": "asc"
+          },
+          {
+            "title": "AMF Mean Reg Nbr (errors/minute)",
+            "attribute": "vi_Site_AMFMeanRegNbr",
+            "valueType": "integer",
+            "sortable": true,
+            "additionalInfo": "AMFMeanRegNbr Description",
+            "width": "300px",
+            "sortNotificationInfo": "AMF Mean Reg Nbr",
+            "sort": null
+          }
+        ],
+        "index": "soa",
+        "id": "Site"
+      },
+      "payload": {
+        "sortBy": {
+          "id": "c_Site"
+        },
+        "sortOrder": "asc"
+      }
+    }
+  ]
+}

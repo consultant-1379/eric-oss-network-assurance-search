@@ -1,0 +1,28 @@
+accept:
+  name: Accept
+  in: header
+  schema:
+    enum:
+      - 'application/json'
+    type: string
+accept-version:
+  name: Accept-Version
+  in: header
+  schema:
+    enum:
+      - 'version=public/v1'
+    type: string
+content-type:
+  name: Content-Type
+  in: header
+  schema:
+    enum:
+      - 'application/json'
+    type: string
+index:
+  name: index
+  in: path
+  description: Specify an effective index
+  required: true
+  schema:
+    type: string

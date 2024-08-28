@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "serviceHelmChartName": "eric-oss-network-assurance-search",
+    "usedSchemaVersion": "1.0",
+    "fileVersion": "1.0",
+    "dateEdited": "2022-05-31"
+  },
+  "internalPorts": [
+    {
+      "serviceInterfaceName": "Network Assurance Search Pod HTTP Server",
+      "protocol": "HTTP/HTTPS",
+      "ipAddressType": "",
+      "port": 3000,
+      "transportProtocol": "TCP",
+      "ipVersion": ["IPv4", "IPv6"],
+      "comment": "Main Pod port"
+    },
+    {
+      "serviceInterfaceName": "Network Assurance Search Service HTTP Server",
+      "protocol": "HTTP/HTTPS",
+      "ipAddressType": "",
+      "port": {
+        "helmParameter": "service.port"
+      },
+      "transportProtocol": "TCP",
+      "ipVersion": ["IPv4", "IPv6"],
+      "comment": "Main Service port"
+    },
+    {
+      "serviceInterfaceName": "Authentication Proxy Sidecar Pod OAuth2 Server",
+      "protocol": "HTTP/HTTPS",
+      "ipAddressType": "",
+      "port": {
+        "helmParameter": "authorizationProxy.port"
+      },
+      "transportProtocol": "TCP",
+      "ipVersion": ["IPv4", "IPv6"],
+      "comment": "Authentication Proxy sidecar main pod port"
+    },
+    {
+      "serviceInterfaceName": "Authentication Proxy Sidecar Service OAuth2 Server",
+      "protocol": "HTTP/HTTPS",
+      "ipAddressType": "",
+      "port": 8080,
+      "transportProtocol": "TCP",
+      "ipVersion": ["IPv4", "IPv6"],
+      "comment": "Authentication Proxy sidecar main service port"
+    }
+  ],
+  "externalPorts": []
+}

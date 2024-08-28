@@ -1,0 +1,30 @@
+ui:
+  get:
+    tags:
+      - Static Response
+    summary: Frontend Route
+    description: Endpoint that responds with 200. Used for service aggregation purposes.
+    operationId: getUiServiceAggregation
+    responses:
+      '200':
+        description: OK
+      default:
+        $ref: '../responses/UnexpectedError.yaml'
+uiConfig:
+  get:
+    tags:
+      - IF.GUI.INTERNAL.REST
+    summary: API for internal configs
+    description: Endpoint to provide the current ui-config JSON to the UI. The config is constructed from the helm values. Used for service aggregation purposes.
+    operationId: getUiConfigServiceAggregation
+    responses:
+      '200':
+        $ref: '../responses/UiConfigResponse.yaml'
+      '400':
+        $ref: '../responses/BadRequest.yaml'
+      '401':
+        $ref: '../responses/Unauthorized.yaml'
+      '503':
+        $ref: '../responses/ServiceUnavailable.yaml'
+      default:
+        $ref: '../responses/UnexpectedError.yaml'

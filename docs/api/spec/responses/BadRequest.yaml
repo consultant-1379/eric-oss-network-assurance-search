@@ -1,0 +1,10 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'
+    example:
+      {
+        "code": 400,
+        "message": "Bad Request"
+      }

@@ -1,0 +1,21 @@
+[
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "FOO",
+      "contextFields": [
+        {
+          "id": "Doc NSSI",
+          "name": "NSSI",
+          "description": "NSSI"
+        },
+        {
+          "id": "Doc NF",
+          "name": "NF",
+          "description": "NF"
+        }
+      ],
+      "name": "FOO"
+    }
+  }
+]

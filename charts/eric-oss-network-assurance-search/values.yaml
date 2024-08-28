@@ -1,0 +1,182 @@
+labels: {}
+
+productInfo:
+  rstate: RSTATE
+
+imageCredentials:
+  assurancesearch:
+    repoPath: # see default in eric-product-info.yaml
+    registry:
+      url: # see default in eric-product-info.yaml
+  # secret must be manually created in the namespace, no default value
+  pullSecret:
+
+podDisruptionBudget:
+  minAvailable: 1
+
+tolerations: []
+topologySpreadConstraints: []
+
+metrics:
+  enabled: true
+configuration:
+  dependencies:
+    prometheus:
+      appName: eric-oss-network-assurance-search
+
+service:
+  type: ClusterIP
+  port:
+    http: 3000
+    # Will be used if tls enabled
+    https: 3443
+  endpoints:
+    http:
+      tls:
+        # Currently it is not supported to use https without enforcing it.
+        enforced: required
+        verifyClientCertificate: optional
+  labels:
+    # Below two label are for BAM GUI, to show service assurance in BAM GUI portal
+    ui.ericsson.com/part-of: bss-oam-gui
+    ui.ericsson.com/meta-config: eric-service-assurance-gui-bam-config
+  annotations:
+    # Below two label are for BAM GUI, to show service assurance in BAM GUI portal
+    ui.ericsson.com/discovery-services: eric-bss-gui-aggregator
+    ui.ericsson.com/proxy: eric-service-assurance-httpproxy
+
+replicaCount: 2
+
+## Using RollingUpdate, specify the update strategy for statefulset
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    partition: 0
+    maxUnavailable: 25%
+    maxSurge: 25%
+
+resources:
+  assurancesearch:
+    limits:
+      cpu: 2000m
+      memory: 256Mi
+    requests:
+      cpu: 500m
+      memory: 256Mi
+
+affinity:
+  podAntiAffinity: "soft"
+  topologyKey: "kubernetes.io/hostname"
+
+probes:
+  assurancesearch:
+    livenessProbe:
+      httpGet:
+        path: /status
+        port: 3000
+      initialDelaySeconds: 300
+      periodSeconds: 5
+      timeoutSeconds: 2
+      failureThreshold: 3
+    readinessProbe:
+      httpGet:
+        path: /status
+        port: 3000
+      initialDelaySeconds: 30
+      periodSeconds: 5
+      timeoutSeconds: 2
+      failureThreshold: 3
+
+podPriority:
+  assurancesearch:
+    priorityClassName: ""
+
+appArmorProfile:
+  # The setting applies to all container when the container name is omitted.
+  type: "" # { choice='Unconfined, runtime/default, Localhost, "" ' } [ default="" ]
+  localhostProfile: # profiles/apparmorprofile.json # @conditional: apparmorProfile.type= 'localhost'
+  # The setting could be applied to a specific container if specified as the example below
+  # assurancesearch:
+  #  type: runtime/default # { choice='unconfined, runtime/default, localhost, "" '  } [ default="runtime/default" ]
+  #  localhostProfile: # profiles/apparmorprofile.json # @conditional: apparmorProfile.assurancesearch.type= 'localhost'
+
+seccompProfile:
+  # The setting applies to all container when the container name is omitted.
+  type: "" # { choice='Unconfined, RuntimeDefault, Localhost, "" ' } [ default="" ]
+  localhostProfile: # profiles/seccompprofile.json # @conditional: seccompProfile.assurancesearch.type= 'Localhost'
+  # The setting could be applied to a specific container if specified as the example below
+  # assurancesearch:
+  #   type: RuntimeDefault # { choice='Unconfined, RuntimeDefault, Localhost, "" ' } [ default="RuntimeDefault" ]
+  #   localhostProfile: # profiles/seccompprofile.json # @conditional: seccompProfile.assurancesearch.type= 'Localhost'
+
+terminationGracePeriodSeconds: 30
+
+frontendRoutePrefix: ""
+exponentialBackoffRetryAttempts: 6
+
+annotations: {}
+
+# At service level the NetworkPolicy can be denied to be created.
+# The object to be created the setting below is not enough, the global.networkPolicy.enabled should also be set to true
+networkPolicy:
+  enabled: true
+
+# Values for customizing backend-config.json at deployment time.
+config:
+  logging:
+    defaultLogLevel: info
+    enabled: true
+    syslog:
+      syslogHost: eric-log-transformer
+      syslogFacility: local0
+  faultHandler:
+    enabled: true
+  httpClient:
+    enabled: true
+    commonClientCaSecret: "eric-bos-esoa-common-client-ca-secret"
+
+# Default search engine url
+searchEngineUrl: http://eric-data-search-engine:9200
+victoriaMetricsUrl: http://eric-oss-assurance-analytics:9200
+
+# Default Indexer Microservice url
+indexerUrl: http://eric-oss-assurance-indexer:8080
+csacUrl: http://eric-oss-core-slice-assurance-cfg:8080
+
+#default authn config
+authn:
+  host: http://localhost
+  port: #empty , can be set if required.
+  path: /sec/authn/v1/logout
+
+cnom: # These values are used for development purposes
+  host: http://localhost
+  port: 8081
+  path: /?embedded=true#service-assurance-viewer
+
+# CNOM data source configuration (fake|pmStatsQueryService)
+cnomDataSourceType: pmStatsQueryService # This value is used for development purposes
+# Route Example
+# apiGatewayRoute:
+# serviceName: http://eric-oss-network-assurance-search
+# credentials:
+#   name: eric-oss-system-user-secret
+#   userKey: system-user
+#   pwdKey: system-user-pwd
+# routes:
+#   - id: topology-ui
+#     url: https://so.ceo2.hahn149.rnd.gic.ericsson.se/
+#     hosts:
+#       - so.ceo2.hahn149.rnd.gic.ericsson.se
+#       - gas.ceo2.hahn149.rnd.gic.ericsson.se
+#     tag: -i
+#     path: /ui/**
+
+# Default logging streamingMethod
+# Can be one of the following:
+#   direct: Direct streaming to syslog to be streamed to Log Transformer.
+#   indirect: Stdout to infrastructure logging framework, console log.
+#   dual: Stdout to infrastructure logging framework and direct streaming to Log Aggregator.
+#   null - null or absent parameter the streaming method is determined by global.log.streamingMethod (Default: direct)
+log:
+  streamingMethod: null

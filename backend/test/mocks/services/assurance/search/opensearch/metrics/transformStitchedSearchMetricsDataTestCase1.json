@@ -1,0 +1,425 @@
+[
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_1A1",
+          "name": "1A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_AMF_BC",
+          "name": "AMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_AMFMeanRegNbr"
+        },
+        "value": 10,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_PDUSessionEstSR"
+        },
+        "value": 30,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_smfModificationCmdRcvd"
+        },
+        "value": 20,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_sessionModificationReqRcvd"
+        },
+        "value": 10,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_ulIpv6DropPackets"
+        },
+        "value": 56,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_dlUnstrDropPackets"
+        },
+        "value": 88,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_2A1",
+          "name": "2A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_SMF_BC",
+          "name": "SMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_AMFMeanRegNbr"
+        },
+        "value": 40,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_PDUSessionEstSR"
+        },
+        "value": 71,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_smfModificationCmdRcvd"
+        },
+        "value": 45,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_sessionModificationReqRcvd"
+        },
+        "value": 30,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_ulIpv6DropPackets"
+        },
+        "value": 67,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_dlUnstrDropPackets"
+        },
+        "value": 14,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_3A1",
+          "name": "3A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_SMF_BC",
+          "name": "SMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_AMFMeanRegNbr"
+        },
+        "value": 70,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_PDUSessionEstSR"
+        },
+        "value": 90,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_smfModificationCmdRcvd"
+        },
+        "value": 32,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_sessionModificationReqRcvd"
+        },
+        "value": 69,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_ulIpv6DropPackets"
+        },
+        "value": 157,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh"
+          }
+        ]
+      },
+      {
+        "type": {
+          "id": "vi_NF_SNSSAI_dlUnstrDropPackets"
+        },
+        "value": 147,
+        "beginTimestamp": 1676241825,
+        "endTimestamp": 1676242825,
+        "metadata": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_simple_snssai_mofdn_15"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii"
+          }
+        ]
+      }
+    ]
+  }
+]

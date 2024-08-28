@@ -1,0 +1,11 @@
+description: Method Not Allowed - the method is not supported
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'
+    example:
+      {
+        "code": 405,
+        "message": "Method Not Allowed"
+      }
+

@@ -1,0 +1,12 @@
+type: object
+description: a relation to a context
+required:
+  - contextType
+  - count
+properties:
+  contextType:
+    $ref: '../schemas/ContextType.yaml'
+  count:
+    type: integer
+    description: count for a context type
+    example: 42

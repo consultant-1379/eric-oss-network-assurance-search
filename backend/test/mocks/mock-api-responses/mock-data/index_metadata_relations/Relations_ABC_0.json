@@ -1,0 +1,54 @@
+[
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "ContextA-ContextB-ContextC",
+      "contextFields": [
+        {
+          "id": "Doc A",
+          "name": "ContextA",
+          "description": "ContextA"
+        },
+        {
+          "id": "Doc B",
+          "name": "ContextB",
+          "description": "ContextB"
+        },
+        {
+          "id": "Doc C",
+          "name": "ContextC",
+          "description": "ContextC"
+        }
+      ],
+      "name": "ContextA-ContextB-ContextC"
+    }
+  },
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "ContextB",
+      "contextFields": [
+        {
+          "id": "Doc B",
+          "name": "ContextB",
+          "description": "ContextB"
+        }
+      ],
+      "name": "ContextB"
+    }
+  },
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "ContextC",
+      "contextFields": [
+        {
+          "id": "Doc C",
+          "name": "ContextC",
+          "description": "ContextC"
+        }
+      ],
+      "name": "ContextC"
+    }
+  }
+]

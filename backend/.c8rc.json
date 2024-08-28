@@ -1,0 +1,22 @@
+{
+  "reporter": ["lcov", "text"],
+  "report-dir": "test/reports/coverage",
+  "exclude": [
+    "test/**/*",
+    "scripts/**/*",
+    "bin/**/*",
+    "services/k8sQueryService.js",
+    "services/configQueryService.js",
+    "utils/k8sServiceUtil.js",
+    "utils/helpContentUtil.js",
+    "utils/waitUtil.js",
+    "utils/errorHandler.js",
+    "utils/NetworkUtil.js",
+    "utils/ModelUtil.js",
+    "utils/openSearchConnectionUtil.js",
+    "test/mocks/**",
+    "test_js/allure-report/**/*",
+    ".scannerwork/**",
+    "model/*"
+  ]
+}

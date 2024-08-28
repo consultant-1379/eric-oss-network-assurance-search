@@ -1,0 +1,1 @@
+{"request": {"urlPath": "/v1/indexer-info/spec/fullcontexts", "method": "GET", "headers": {"Content-Type": {"equalTo": "application/json"}}, "queryParameters": {"searchEngineIndexName": {"equalTo": "soa"}}}, "response": {"status": 200, "bodyFileName": "../__files/v1/indexer-info/spec/fullcontexts/soa.json"}}

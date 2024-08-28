@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  # Network Assurance Search Microservice
+  network-assurance-search:
+    restart: always
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.dev
+      args:
+        - DEV=true
+    environment:
+      SEARCH_ENGINE_URL: 'http://host.docker.internal:9200'
+      INDEXER_URL: 'http://host.docker.internal:8181'
+    volumes:
+      - ../frontend:/nas/frontend
+      - ../backend:/nas/backend
+    networks:
+      - standalone-network
+    ports:
+      - '3000:3000'
+
+networks:
+  standalone-network:
+    driver: bridge

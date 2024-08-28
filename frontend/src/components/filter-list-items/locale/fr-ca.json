@@ -1,0 +1,21 @@
+{
+  "ARIA_ICON_CONTAINER_LABEL": "Conteneur d'icônes pour modifier et supprimer des icônes",
+  "ARIA_EDIT_ICON_LABEL": "Modifier l'élément",
+  "ARIA_EDIT_ICON_IMG_ALT": "Icône crayon",
+  "EDIT_ICON_TOOLTIP_MSG": "Modifier",
+  "ARIA_REMOVE_ICON_LABEL": "Supprimer l'élément",
+  "ARIA_REMOVE_ICON_IMG_ALT": "Icône de la corbeille",
+  "REMOVE_ICON_TOOLTIP_MSG": "Supprimer",
+  "FILTER_ITEM": "élément de filtre",
+  "NO_FILTERS_APPLIED": "Aucun filtre appliqué",
+  "OPERATOR_LABEL_EQUAL": "Égal à",
+  "OPERATOR_LABEL_NOT_EQUAL": "Pas égal à",
+  "OPERATOR_LABEL_GREATER_THEN_EQUAL": "Supérieur ou égal à",
+  "OPERATOR_LABEL_LESS_THAN_EQUAL": "Inférieur ou égal à",
+  "OPERATOR_LABEL_NOT_RANGE": "Hors gamme",
+  "OPERATOR_LABEL_RANGE": "Dans la plage",
+  "OPERATOR_LABEL_NOT": "Ne correspond pas",
+  "OPERATOR_LABEL_MATCH": "Correspond",
+  "OPERATOR_LABEL_DOESNT_MATCH": "Ne correspond pas",
+  "UNKNOWN_LABEL": "Inconnu"
+}

@@ -1,0 +1,22 @@
+{
+  "modules": [
+    {
+      "name": "e-custom-user-settings-panel",
+      "version": "1.0.0",
+      "path": "/src/panels/custom-user-settings-panel",
+      "main": "custom-user-settings-panel.js"
+    },
+    {
+      "name": "settings-plugin",
+      "version": "1.0.0",
+      "path": "/src/plugins/settings-plugin/src",
+      "main": "settings-plugin.js"
+    },
+    {
+      "name": "network-assurance-dashboard",
+      "version": "1.0.0",
+      "path": "/src/apps/network-assurance-dashboard",
+      "main": "network-assurance-dashboard.js"
+    }
+  ]
+}

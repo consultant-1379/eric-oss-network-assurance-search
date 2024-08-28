@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "2-2002",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-4001",
+          "vi_AMFMeanRegNbr": "84"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "1-4002",
+          "vi_AMFMeanRegNbr": "93"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "3-2002",
+          "vi_AMFMeanRegNbr": "97"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON2",
+          "snssai": "1-4000",
+          "vi_AMFMeanRegNbr": "107"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "3-3002",
+          "vi_AMFMeanRegNbr": "109"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-4000",
+          "vi_AMFMeanRegNbr": "113"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "3-3001",
+          "vi_AMFMeanRegNbr": "114"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_ON1",
+          "snssai": "4-3002",
+          "vi_AMFMeanRegNbr": "116"
+        },
+        "value": [1715829779, "1"]
+      },
+      {
+        "metric": {
+          "context": "nf,snssai",
+          "instance": "corvus-data-generator:9000",
+          "job": "corvus-data-generator",
+          "nf": "AMF_BC",
+          "snssai": "4-2000",
+          "vi_AMFMeanRegNbr": "119"
+        },
+        "value": [1715829779, "1"]
+      }
+    ]
+  },
+  "stats": {
+    "seriesFetched": "136",
+    "executionTimeMsec": 3
+  }
+}

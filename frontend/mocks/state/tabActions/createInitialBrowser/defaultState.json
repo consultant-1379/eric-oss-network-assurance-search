@@ -1,0 +1,35 @@
+{
+  "version": "1.0.2",
+  "settings": {},
+  "browsers": [],
+  "contexts": [
+    {
+      "relationActions": [],
+      "columns": [
+        {
+          "attribute": "col1",
+          "title": "col1",
+          "contextType": { "contextFields": [{ "id": "col1" }] }
+        }
+      ]
+    }
+  ],
+  "onboardingHelp": { "appHelp": true, "filterHelp": true, "browserHelp": true },
+  "filterCategories": [
+    {
+      "type": "context",
+      "title": "Context Filters",
+      "selection": "checkbox",
+      "fields": [],
+      "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+    },
+    {
+      "type": "metric",
+      "title": "KPI Filters",
+      "selection": "radio",
+      "fields": [],
+      "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+    }
+  ],
+  "postgresSchemaName": "kpi"
+}

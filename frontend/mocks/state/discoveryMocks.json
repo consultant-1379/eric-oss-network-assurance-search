@@ -1,0 +1,861 @@
+{
+  "contexts": [
+    {
+      "contextType": {
+        "id": "NF_Site",
+        "contextFields": [
+          {
+            "id": "c_Site",
+            "name": "My Site",
+            "description": "Site",
+            "dataType": "entityType"
+          },
+          {
+            "id": "c_NF",
+            "name": "My NF",
+            "description": "New Finger",
+            "dataType": "entityType"
+          }
+        ]
+      },
+      "relations": [
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "NF_NSI",
+            "contextFields": [
+              {
+                "id": "c_NSI",
+                "name": "My NSI",
+                "description": "No Sharks Inside",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_NF",
+                "name": "My NF",
+                "description": "New Finger",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My NSI & My NF"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "NF_SNSSAI",
+            "contextFields": [
+              {
+                "id": "c_SNSSAI",
+                "name": "My SNSSAI",
+                "description": "Soup Network Slice Selection Assistance Information",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_NF",
+                "name": "My NF",
+                "description": "New Finger",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My SNSSAI & My NF"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "NF",
+            "contextFields": [
+              {
+                "id": "c_NF",
+                "name": "My NF",
+                "description": "New Finger",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My NF"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "NSI_Site",
+            "contextFields": [
+              {
+                "id": "c_Site",
+                "name": "My Site",
+                "description": "Site",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_NSI",
+                "name": "My NSI",
+                "description": "No Sharks Inside",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My Site & My NSI"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "Site_SNSSAI",
+            "contextFields": [
+              {
+                "id": "c_Site",
+                "name": "My Site",
+                "description": "Site",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_SNSSAI",
+                "name": "My SNSSAI",
+                "description": "Soup Network Slice Selection Assistance Information",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My Site & My SNSSAI"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "Site",
+            "contextFields": [
+              {
+                "id": "c_Site",
+                "name": "My Site",
+                "description": "Site",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My Site"
+          }
+        }
+      ],
+      "metricTypes": [
+        {
+          "id": "vi_NF_Site_AMFMeanRegNbr",
+          "name": "AMF Mean Reg Nbr",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_Site_AMFMeanRegNbr2",
+          "name": "AMF Mean Reg Nbr 2",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr2 Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_Site_AMFMeanRegNbr3",
+          "name": "AMF Mean Reg Nbr 3",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr3 Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_Site_PDUSessionEstSR",
+          "name": "PDU Session Est SR",
+          "valueType": "integer",
+          "description": "PDUSessionEstSR Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_Site_SessionModificationReqRcvd",
+          "name": "Session Modification Req Rcvd",
+          "valueType": "integer",
+          "description": "SessionModificationReqRcvd Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        }
+      ],
+      "relationActions": [
+        {
+          "label": "My NSI & My NF",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "NF_NSI",
+              "contextFields": [
+                {
+                  "id": "c_NSI",
+                  "name": "My NSI",
+                  "description": "No Sharks Inside",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_NF",
+                  "name": "My NF",
+                  "description": "New Finger",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My NSI & My NF"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My SNSSAI & My NF",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "NF_SNSSAI",
+              "contextFields": [
+                {
+                  "id": "c_SNSSAI",
+                  "name": "My SNSSAI",
+                  "description": "Soup Network Slice Selection Assistance Information",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_NF",
+                  "name": "My NF",
+                  "description": "New Finger",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My SNSSAI & My NF"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My NF",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "NF",
+              "contextFields": [
+                {
+                  "id": "c_NF",
+                  "name": "My NF",
+                  "description": "New Finger",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My NF"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My Site & My NSI",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "NSI_Site",
+              "contextFields": [
+                {
+                  "id": "c_Site",
+                  "name": "My Site",
+                  "description": "Site",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_NSI",
+                  "name": "My NSI",
+                  "description": "No Sharks Inside",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My Site & My NSI"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My Site & My SNSSAI",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "Site_SNSSAI",
+              "contextFields": [
+                {
+                  "id": "c_Site",
+                  "name": "My Site",
+                  "description": "Site",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_SNSSAI",
+                  "name": "My SNSSAI",
+                  "description": "Soup Network Slice Selection Assistance Information",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My Site & My SNSSAI"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My Site",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "Site",
+              "contextFields": [
+                {
+                  "id": "c_Site",
+                  "name": "My Site",
+                  "description": "Site",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My Site"
+            }
+          },
+          "facetCounts": {}
+        }
+      ],
+      "filterCategories": [
+        {
+          "type": "context",
+          "title": "KPI Context Filters",
+          "selection": "checkbox",
+          "fields": [
+            {
+              "label": "My Site",
+              "name": "c_Site",
+              "filterCategory": "context",
+              "type": {
+                "id": "c_Site",
+                "name": "My Site",
+                "description": "Site",
+                "dataType": "entityType",
+                "valueType": "string"
+              }
+            },
+            {
+              "label": "My NF",
+              "name": "c_NF",
+              "filterCategory": "context",
+              "type": {
+                "id": "c_NF",
+                "name": "My NF",
+                "description": "New Finger",
+                "dataType": "entityType",
+                "valueType": "string"
+              }
+            }
+          ],
+          "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+        },
+        {
+          "type": "metric",
+          "title": "KPI Filters",
+          "selection": "radio",
+          "fields": [
+            {
+              "label": "AMF Mean Reg Nbr",
+              "name": "vi_NF_Site_AMFMeanRegNbr",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_Site_AMFMeanRegNbr",
+                "name": "AMF Mean Reg Nbr",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "AMF Mean Reg Nbr 2",
+              "name": "vi_NF_Site_AMFMeanRegNbr2",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_Site_AMFMeanRegNbr2",
+                "name": "AMF Mean Reg Nbr 2",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr2 Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "AMF Mean Reg Nbr 3",
+              "name": "vi_NF_Site_AMFMeanRegNbr3",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_Site_AMFMeanRegNbr3",
+                "name": "AMF Mean Reg Nbr 3",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr3 Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "PDU Session Est SR",
+              "name": "vi_NF_Site_PDUSessionEstSR",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_Site_PDUSessionEstSR",
+                "name": "PDU Session Est SR",
+                "valueType": "integer",
+                "description": "PDUSessionEstSR Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "Session Modification Req Rcvd",
+              "name": "vi_NF_Site_SessionModificationReqRcvd",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_Site_SessionModificationReqRcvd",
+                "name": "Session Modification Req Rcvd",
+                "valueType": "integer",
+                "description": "SessionModificationReqRcvd Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            }
+          ],
+          "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+        }
+      ],
+      "name": "My Site & My NF",
+      "columns": [
+        {
+          "title": "My Site",
+          "name": "My Site",
+          "attribute": "c_Site",
+          "valueType": "string",
+          "sortable": true,
+          "additionalInfo": "Site",
+          "width": "9em",
+          "mandatory": true,
+          "type": {
+            "id": "c_Site",
+            "name": "My Site",
+            "description": "Site",
+            "dataType": "entityType"
+          }
+        },
+        {
+          "title": "My NF",
+          "name": "My NF",
+          "attribute": "c_NF",
+          "valueType": "string",
+          "sortable": true,
+          "additionalInfo": "New Finger",
+          "width": "7em",
+          "mandatory": true,
+          "type": {
+            "id": "c_NF",
+            "name": "My NF",
+            "description": "New Finger",
+            "dataType": "entityType"
+          }
+        },
+        {
+          "title": "AMF Mean Reg Nbr (errors/minute)",
+          "name": "AMF Mean Reg Nbr",
+          "attribute": "vi_NF_Site_AMFMeanRegNbr",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr Description",
+          "width": "13em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 2 (errors/minute)",
+          "name": "AMF Mean Reg Nbr 2",
+          "attribute": "vi_NF_Site_AMFMeanRegNbr2",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr2 Description",
+          "width": "15em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 2"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 3 (errors/minute)",
+          "name": "AMF Mean Reg Nbr 3",
+          "attribute": "vi_NF_Site_AMFMeanRegNbr3",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr3 Description",
+          "width": "15em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 3"
+        },
+        {
+          "title": "PDU Session Est SR (errors/minute)",
+          "name": "PDU Session Est SR",
+          "attribute": "vi_NF_Site_PDUSessionEstSR",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "PDUSessionEstSR Description",
+          "width": "15em",
+          "sortNotificationInfo": "PDU Session Est SR"
+        },
+        {
+          "title": "Session Modification Req Rcvd (errors/minute)",
+          "name": "Session Modification Req Rcvd",
+          "attribute": "vi_NF_Site_SessionModificationReqRcvd",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "SessionModificationReqRcvd Description",
+          "width": "26em",
+          "sortNotificationInfo": "Session Modification Req Rcvd"
+        }
+      ],
+      "index": "soa"
+    },
+    {
+      "columns": [
+        {
+          "title": "My SNSSAI",
+          "name": "My SNSSAI",
+          "attribute": "c_SNSSAI",
+          "valueType": "string",
+          "sortable": true,
+          "additionalInfo": "Soup Network Slice Selection Assistance Information",
+          "width": "11em",
+          "mandatory": true,
+          "type": {
+            "id": "c_SNSSAI",
+            "name": "My SNSSAI",
+            "description": "Soup Network Slice Selection Assistance Information",
+            "dataType": "entityType"
+          }
+        },
+        {
+          "title": "AMF Mean Reg Nbr (errors/minute)",
+          "name": "AMF Mean Reg Nbr",
+          "attribute": "vi_SNSSAI_AMFMeanRegNbr",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr Description",
+          "width": "13em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 2 (errors/minute)",
+          "name": "AMF Mean Reg Nbr 2",
+          "attribute": "vi_SNSSAI_AMFMeanRegNbr2",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr2 Description",
+          "width": "15em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 2"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 3 (errors/minute)",
+          "name": "AMF Mean Reg Nbr 3",
+          "attribute": "vi_SNSSAI_AMFMeanRegNbr3",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr3 Description",
+          "width": "15em",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 3"
+        },
+        {
+          "title": "Smf Modification Cmd Rcvd (errors/minute)",
+          "name": "Smf Modification Cmd Rcvd",
+          "attribute": "vi_NF_SmfModificationCmdRcvd",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "SmfModificationCmdRcvd Description",
+          "width": "22em",
+          "sortNotificationInfo": "Smf Modification Cmd Rcvd"
+        },
+        {
+          "title": "Dl Unstr Drop Packets (errors/minute)",
+          "name": "Dl Unstr Drop Packets",
+          "attribute": "vi_NF_dlUnstrDropPackets",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "DlUnstrDropPackets Description",
+          "width": "18em",
+          "sortNotificationInfo": "Dl Unstr Drop Packets"
+        },
+        {
+          "title": "Ul Ipv 6Drop Packets (errors/minute)",
+          "name": "Ul Ipv 6Drop Packets",
+          "attribute": "vd_NF_UlIpv6DropPackets",
+          "valueType": "float",
+          "sortable": true,
+          "additionalInfo": "UlIpv6DropPackets Description",
+          "width": "17em",
+          "sortNotificationInfo": "Ul Ipv 6Drop Packets"
+        }
+      ],
+      "contextType": {
+        "contextFields": [
+          {
+            "id": "c_SNSSAI",
+            "name": "My SNSSAI",
+            "description": "Soup Network Slice Selection Assistance Information",
+            "dataType": "entityType"
+          }
+        ],
+        "id": "SNSSAI"
+      },
+      "filterCategories": [
+        {
+          "type": "context",
+          "title": "KPI Context Filters",
+          "selection": "checkbox",
+          "fields": [
+            {
+              "label": "My SNSSAI",
+              "name": "c_SNSSAI",
+              "filterCategory": "context",
+              "type": {
+                "id": "c_SNSSAI",
+                "name": "My SNSSAI",
+                "description": "Soup Network Slice Selection Assistance Information",
+                "dataType": "entityType",
+                "valueType": "string"
+              }
+            }
+          ],
+          "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+        },
+        {
+          "type": "metric",
+          "title": "KPI Filters",
+          "selection": "radio",
+          "fields": [
+            {
+              "label": "AMF Mean Reg Nbr",
+              "name": "vi_SNSSAI_AMFMeanRegNbr",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_SNSSAI_AMFMeanRegNbr",
+                "name": "AMF Mean Reg Nbr",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "AMF Mean Reg Nbr 2",
+              "name": "vi_SNSSAI_AMFMeanRegNbr2",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_SNSSAI_AMFMeanRegNbr2",
+                "name": "AMF Mean Reg Nbr 2",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr2 Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "AMF Mean Reg Nbr 3",
+              "name": "vi_SNSSAI_AMFMeanRegNbr3",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_SNSSAI_AMFMeanRegNbr3",
+                "name": "AMF Mean Reg Nbr 3",
+                "valueType": "integer",
+                "description": "AMFMeanRegNbr3 Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "Smf Modification Cmd Rcvd",
+              "name": "vi_NF_SmfModificationCmdRcvd",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_SmfModificationCmdRcvd",
+                "name": "Smf Modification Cmd Rcvd",
+                "valueType": "integer",
+                "description": "SmfModificationCmdRcvd Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "Dl Unstr Drop Packets",
+              "name": "vi_NF_dlUnstrDropPackets",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vi_NF_dlUnstrDropPackets",
+                "name": "Dl Unstr Drop Packets",
+                "valueType": "integer",
+                "description": "DlUnstrDropPackets Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            },
+            {
+              "label": "Ul Ipv 6Drop Packets",
+              "name": "vd_NF_UlIpv6DropPackets",
+              "filterCategory": "metric",
+              "type": {
+                "id": "vd_NF_UlIpv6DropPackets",
+                "name": "Ul Ipv 6Drop Packets",
+                "valueType": "float",
+                "description": "UlIpv6DropPackets Description",
+                "unit": "errors/minute",
+                "dataType": "metricType"
+              }
+            }
+          ],
+          "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+        }
+      ],
+      "index": "soa",
+      "metricTypes": [
+        {
+          "id": "vi_SNSSAI_AMFMeanRegNbr",
+          "name": "AMF Mean Reg Nbr",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_SNSSAI_AMFMeanRegNbr2",
+          "name": "AMF Mean Reg Nbr 2",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr2 Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_SNSSAI_AMFMeanRegNbr3",
+          "name": "AMF Mean Reg Nbr 3",
+          "valueType": "integer",
+          "description": "AMFMeanRegNbr3 Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_SmfModificationCmdRcvd",
+          "name": "Smf Modification Cmd Rcvd",
+          "valueType": "integer",
+          "description": "SmfModificationCmdRcvd Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vi_NF_dlUnstrDropPackets",
+          "name": "Dl Unstr Drop Packets",
+          "valueType": "integer",
+          "description": "DlUnstrDropPackets Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        },
+        {
+          "id": "vd_NF_UlIpv6DropPackets",
+          "name": "Ul Ipv 6Drop Packets",
+          "valueType": "float",
+          "description": "UlIpv6DropPackets Description",
+          "unit": "errors/minute",
+          "dataType": "metricType"
+        }
+      ],
+      "name": "My SNSSAI",
+      "relationActions": [
+        {
+          "label": "My SNSSAI & My NF",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "NF_SNSSAI",
+              "contextFields": [
+                {
+                  "id": "c_SNSSAI",
+                  "name": "My SNSSAI",
+                  "description": "Soup Network Slice Selection Assistance Information",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_NF",
+                  "name": "My NF",
+                  "description": "New Finger",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My SNSSAI & My NF"
+            }
+          },
+          "facetCounts": {}
+        },
+        {
+          "label": "My Site & My SNSSAI",
+          "data": {
+            "operation": "open-tab",
+            "context": {
+              "id": "Site_SNSSAI",
+              "contextFields": [
+                {
+                  "id": "c_Site",
+                  "name": "My Site",
+                  "description": "Site",
+                  "dataType": "entityType"
+                },
+                {
+                  "id": "c_SNSSAI",
+                  "name": "My SNSSAI",
+                  "description": "Soup Network Slice Selection Assistance Information",
+                  "dataType": "entityType"
+                }
+              ],
+              "name": "My Site & My SNSSAI"
+            }
+          },
+          "facetCounts": {}
+        }
+      ],
+      "relations": [
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "NF_SNSSAI",
+            "contextFields": [
+              {
+                "id": "c_SNSSAI",
+                "name": "My SNSSAI",
+                "description": "Soup Network Slice Selection Assistance Information",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_NF",
+                "name": "My NF",
+                "description": "New Finger",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My SNSSAI & My NF"
+          }
+        },
+        {
+          "relationType": "RELATED_TO",
+          "related": {
+            "id": "Site_SNSSAI",
+            "contextFields": [
+              {
+                "id": "c_Site",
+                "name": "My Site",
+                "description": "Site",
+                "dataType": "entityType"
+              },
+              {
+                "id": "c_SNSSAI",
+                "name": "My SNSSAI",
+                "description": "Soup Network Slice Selection Assistance Information",
+                "dataType": "entityType"
+              }
+            ],
+            "name": "My Site & My SNSSAI"
+          }
+        }
+      ]
+    }
+  ]
+}

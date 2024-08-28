@@ -1,0 +1,13 @@
+{
+  "CLOSE_TAB": "Close tab",
+  "LABEL_FOR": "KPIs for",
+  "METRIC_BROWSER_LABEL": "Browse a table of metrics for ",
+  "ACTIVE_FILTERS": "Filtering for: ",
+  "NO_ACTIVE_FILTERS": "No filters are currently applied.",
+  "UPDATE_TAB_LABEL": "Done",
+  "EDIT_TAB_LABEL": "Edit Context tab name",
+  "ERROR_TAB_LABEL": "Error",
+  "CONTEXT_TAB_HELP": "You can view the most recently computed rollup of KPIs for different characteristics (ie. SNSSAI, TAC, et.), these are called 'Contexts'. Contexts allow you to investigate the health of your network by selecting the scope of computation for KPIs. Contexts will open as customizable tabs in the Service Assurance Dashboard. Each Context tab below is associated with a table for KPI rollups based on different network characteristics. Any changes made to a tab will be persisted for you in this browser on this computer for the next time you come back, as long as the Context tab in the application hasn't been closed. If your browser's storage is cleared then you will lose your changes. You can open a new Context by clicking 'Open Context'. ",
+  "CONTEXT_TABS_LABEL": "Opened Contexts",
+  "ADD_CONTEXT_BUTTON": "Open Context"
+}

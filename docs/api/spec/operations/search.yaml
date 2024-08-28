@@ -1,0 +1,472 @@
+related-contexts-facets:
+  get:
+    tags:
+      - search
+    summary: Returns a facet counts for related contexts
+    description: Retrieves related facet counts for given context types
+    operationId: searchContextFacets
+    parameters:
+      - $ref: "../operations/parameters.yaml#/index"
+      - name: contextId
+        in: query
+        required: true
+        description: The context ID used to find relations
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/Context.yaml"
+        example:
+          {
+            "contextFields":
+              [
+                {
+                  "id": "1234",
+                  "name": "SNSSAI 1234",
+                  "description": "Instance of SNSSAI 1234",
+                  "type":
+                    {
+                      "id": "c_SNSSAI",
+                      "description": "Network Slice Selection Assistance Information",
+                    },
+                },
+                {
+                  "id": "NSI_4321",
+                  "name": "NSI 4321",
+                  "description": "Instance of NSI 4321",
+                  "type":
+                    {
+                      "id": "c_NSI",
+                      "description": "Network Slice Instance",
+                    },
+                },
+              ],
+            "id": "SNSSAI_NSI",
+            "name": "SNSSAI & NSI Context",
+            "type":
+              {
+                "id": "SNSSAI_NSI",
+                "contextFields": [
+                  {
+                    "id": "c_NSI",
+                  },
+                  {
+                    "id": "c_SNSSAI",
+                  }
+                ],
+              },
+          }
+      - name: contextTypeId
+        in: query
+        required: true
+        description: a context type used for searching
+        schema:
+          $ref: "../schemas/ContextTypeId.yaml"
+        example: "SNSSAI_NF"
+    responses:
+      "200":
+        description: OK - search results
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/ContextFacet.yaml"
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"
+
+search-metrics:
+  get:
+    tags:
+      - search
+    summary: Returns a list of KPIs
+    description: Retrieves list of KPIs matching search criteria
+    operationId: searchMetricsByQuery
+    parameters:
+      # These headers parameters required by the API linter but
+      # conflicting with some of our tools. Temporary disabled.
+      #      - $ref: '../operations/parameters.yaml#/accept'
+      #      - $ref: '../operations/parameters.yaml#/accept-version'
+      #      - $ref: '../operations/parameters.yaml#/content-type'
+      - $ref: "../operations/parameters.yaml#/index"
+      - name: contextTypeId
+        in: query
+        required: true
+        description: a context type used for searching
+        schema:
+          $ref: "../schemas/ContextTypeId.yaml"
+        example: "SNSSAI_NF"
+      - name: metricTypes
+        in: query
+        required: true
+        description: Names of metrics to return
+        content:
+          application/json:
+            schema:
+              type: array
+              description: list of types
+              items:
+                $ref: "../schemas/MetricType.yaml"
+        example: [
+          {
+            "id":"vi_SNSSAI_NF_SessionModificationReqRcvd",
+            "name":"Session Modification Req Rcvd",
+            "unit": "errors/minute",
+            "valueType": "integer",
+            "description": "Session Modification Request Received"
+          },
+          {
+            "id": "vd_SNSSAI_NF_DlUnstrDropPackets",
+            "name":"DlUnstr Drop Packets",
+            "unit": "errors/minute",
+            "valueType": "float",
+            "description": "Dropped Packets"
+          }
+        ]
+      - name: filters
+        in: query
+        required: false
+        description: Filter the query with numeric, facet and/or tag filters.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "../schemas/MetricFilter.yaml"
+                  - $ref: "../schemas/EntityFilter.yaml"
+        example:
+          [
+            {
+              "type": "metric",
+              "not": false,
+              "metricType": {
+                "id": "vi_SNSSAI_NF_PDUSessionEstSR",
+                "name": "PDU Session Est SR",
+                "valueType": "integer",
+                "description": "PDUSessionEstSR Description",
+                "unit": "errors/minute"
+              },
+              "from": 10,
+              "to": 32.454
+            },
+            {
+              "type": "entity",
+              "not": true,
+              "entityType": {
+                "id": "c_SNSSAI",
+              },
+              "searchPattern": "N*",
+            },
+          ]
+      - name: sortBy
+        in: query
+        required: false
+        description: column name to be sorted on.
+        schema:
+          $ref: "../schemas/SortBy.yaml"
+        example:
+          {
+            "id": "vi_SNSSAI_NF_sessionModificationReqRcvd",
+          }
+      - name: sortOrder
+        in: query
+        required: false
+        description: sort order
+        schema:
+          $ref: "../schemas/SortOrder.yaml"
+        example: "asc"
+      - name: offset
+        in: query
+        required: false
+        description: Specify the offset of the first hit to return.
+        schema:
+          $ref: "../schemas/PageOffset.yaml"
+        example: 42
+      - name: length
+        in: query
+        required: false
+        description: Set the number of hits to retrieve (used only with offset).
+        schema:
+          $ref: "../schemas/PageLength.yaml"
+        example: 42
+    responses:
+      "200":
+        description: OK - search results
+        content:
+          application/json:
+            schema:
+              type: object
+              description: key performance metric (KPI)
+              required:
+                - offset
+                - length
+                - total
+                - results
+              properties:
+                offset:
+                  $ref: "../schemas/PageOffset.yaml"
+                length:
+                  $ref: "../schemas/PageLength.yaml"
+                total:
+                  $ref: "../schemas/PageTotal.yaml"
+                results:
+                  type: array
+                  items:
+                    type: object
+                    description: represents a single search result
+                    properties:
+                      context:
+                        $ref: "../schemas/Context.yaml"
+                      metrics:
+                        type: array
+                        items:
+                          $ref: "../schemas/Metric.yaml"
+            example:
+              {
+                "length": 1,
+                "offset": 0,
+                "total": 42,
+                "results":
+                  [
+                    {
+                      "context":
+                        {
+                          "contextFields":
+                            [
+                              {
+                                "description": "Instance of SNSSAI 1234",
+                                "id": "1234",
+                                "name": "SNSSAI 1234",
+                                "type":
+                                  {
+                                    "id": "c_SNSSAI",
+                                    "description": "Network Slice Selection Assistance Information"
+                                  },
+                              },
+                              {
+                                "description": "Instance of NSI 4321",
+                                "id": "NSI_4321",
+                                "name": "NSI 4321",
+                                "type":
+                                  {
+                                    "id": "c_NSI",
+                                    "description": "Network Slice Instance"
+                                  },
+                              },
+                            ],
+                          "id": "SNSSAI_NSI",
+                          "name": "SNSSAI & NSI Context",
+                          "type":
+                            {
+                              "id": "SNSSAI_NSI",
+                              "contextFields":
+                                [
+                                  {
+                                    "id": "c_NSI",
+                                  },
+                                  {
+                                    "id": "c_SNSSAI",
+                                  }
+                                ],
+                            },
+                        },
+                      "metrics":
+                        [
+                          {
+                            "type":
+                              {
+                                "id": "vi_SNSSAI_NSI_DlUnstrDropPackets",
+                                "name":"Dl Unstr Drop Packets",
+                                "description": "Dropped Packets",
+                                "unit":"errors/minute",
+                                "valueType":"integer"
+                              },
+                            "id": "MID_12342",
+                            "beginTimestamp": 1513520073,
+                            "endTimestamp": 1513520173,
+                            "value": -8618.52,
+                          },
+                          {
+                            "type":
+                              {
+                                "id": "vi_SNSSAI_NSI_SessionModificationReqRcvd",
+                                "name":"Session Modification Req Rcvd",
+                                "description": "Session Modification Request Received",
+                                "unit":"errors/minute",
+                                "valueType": "integer",
+                              },
+                            "beginTimestamp": 1513520073,
+                            "endTimestamp": 1513520173,
+                            "value": 3379.882952,
+                          },
+                          {
+                            "type":
+                              {
+                                "id": "vi_SNSSAI_NSI_PDUSessionEstSR",
+                                "name":"PDU Session Est SR",
+                                "description": "PDU Session",
+                                "unit":"errors/minute",
+                                "valueType": "integer",
+                              },
+                            "beginTimestamp": 1513520073,
+                            "endTimestamp": 1513520173,
+                            "value": 16948.1818,
+                          },
+                        ],
+                    },
+                  ],
+              }
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"
+
+search-contexts:
+  get:
+    tags:
+      - search
+    summary: Returns a list of context fields
+    description: Retrieves list of context fields matching search criteria. Query supports wildcard (*|?) characters.
+    operationId: getContextFieldsByQuery
+    parameters:
+      # These headers parameters required by the API linter but
+      # conflicting with some of our tools. Temporary disabled.
+      #      - $ref: '../operations/parameters.yaml#/accept'
+      #      - $ref: '../operations/parameters.yaml#/accept-version'
+      #      - $ref: '../operations/parameters.yaml#/content-type'
+      - $ref: "../operations/parameters.yaml#/index"
+      - name: filters
+        in: query
+        required: true
+        description: Filters for finding contexts
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/EntityFilter.yaml"
+      - name: contextTypeId
+        in: query
+        required: false
+        description: a full context type used to narrow scope of context search
+        schema:
+          $ref: "../schemas/ContextTypeId.yaml"
+      - name: sortBy
+        in: query
+        required: false
+        description: column name to be sorted on.
+        schema:
+          $ref: "../schemas/SortBy.yaml"
+        example: { "id": "vi_NSSAI_NSI_PDUSessionEstSR" }
+      - name: sortOrder
+        in: query
+        required: false
+        description: sort order
+        schema:
+          $ref: "../schemas/SortOrder.yaml"
+        example: "asc"
+      - name: offset
+        in: query
+        required: false
+        description: Specify the offset of the first hit to return.
+        schema:
+          $ref: "../schemas/PageOffset.yaml"
+        example: 42
+      - name: length
+        in: query
+        required: false
+        description: Set the number of hits to retrieve (used only with offset).
+        schema:
+          $ref: "../schemas/PageLength.yaml"
+        example: 42
+    responses:
+      "200":
+        description: OK - matching contexts
+        content:
+          application/json:
+            schema:
+              type: object
+              description: matching contexts
+              required:
+                - offset
+                - length
+                - total
+                - results
+              properties:
+                offset:
+                  $ref: "../schemas/PageOffset.yaml"
+                length:
+                  $ref: "../schemas/PageLength.yaml"
+                total:
+                  $ref: "../schemas/PageTotal.yaml"
+                results:
+                  type: array
+                  items:
+                    $ref: "../schemas/Context.yaml"
+            example:
+              {
+                "length": 1,
+                "offset": 0,
+                "total": 42,
+                "results":
+                  [
+                    {
+                      "contextFields":
+                        [
+                          {
+                            "description": "Instance of SNSSAI 1234",
+                            "id": "1234",
+                            "name": "SNSSAI 1234",
+                            "type":
+                              {
+                                "id": "c_SNSSAI",
+                                "description": "Network Slice Selection Assistance Information"
+                              },
+                          },
+                          {
+                            "description": "Instance of NSI 4321",
+                            "id": "NSI_4321",
+                            "name": "NSI 4321",
+                            "type":
+                              {
+                                "id": "c_NSI",
+                                "description": "Network Slice Instance"
+                              },
+                          },
+                        ],
+                      "id": "NSSAI_NSI",
+                      "name": "SNSSAI & NSI Context",
+                      "type":
+                        {
+                          "id": "NSSAI_NSI",
+                          "contextFields":
+                            [
+                              {
+                                "id": "c_NSI",
+                              },
+                              {
+                                "id": "c_SNSSAI",
+                              }
+                            ],
+                        },
+                    },
+                  ],
+              }
+      "400":
+        $ref: "../responses/BadRequest.yaml"
+      "401":
+        $ref: "../responses/Unauthorized.yaml"
+      "503":
+        $ref: "../responses/ServiceUnavailable.yaml"
+      default:
+        $ref: "../responses/UnexpectedError.yaml"

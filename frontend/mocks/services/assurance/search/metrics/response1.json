@@ -1,0 +1,874 @@
+{
+  "results": [
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    },
+    {
+      "context": {
+        "name": "SNSSAI_NF",
+        "contextFields": [
+          {
+            "type": {
+              "id": "SNSSAI"
+            },
+            "name": 0
+          },
+          {
+            "type": {
+              "id": "NF"
+            },
+            "name": 1
+          }
+        ]
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_AMFMeanRegNbr"
+          },
+          "name": "vi_AMFMeanRegNbr",
+          "value": 0,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_PDUSessionEstSR"
+          },
+          "name": "vi_PDUSessionEstSR",
+          "value": 1,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_smfModificationCmdRcvd"
+          },
+          "name": "vi_smfModificationCmdRcvd",
+          "value": 2,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_sessionModificationReqRcvd"
+          },
+          "name": "vi_sessionModificationReqRcvd",
+          "value": 3,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_ulIpv6DropPackets"
+          },
+          "name": "vi_ulIpv6DropPackets",
+          "value": 4,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        },
+        {
+          "type": {
+            "id": "vi_dlUnstrDropPackets"
+          },
+          "name": "vi_dlUnstrDropPackets",
+          "value": 5,
+          "metadata": {
+            "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+            "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "version": "1.0.0",
+  "settings": {},
+  "browsers": [
+    {
+      "id": "e30a4509-9d0d-4b68-ba47-8f0b7a39ba71",
+      "title": "Metric Browser",
+      "filters": [],
+      "settings": { "autoRefresh": false, "rowHeight": "compact" },
+      "loading": false,
+      "match": "",
+      "browserError": null,
+      "fetchError": null,
+      "data": {
+        "tableData": [],
+        "sort": {}
+      },
+      "active": false,
+      "context": {
+        "name": "NSSAI & NSI",
+        "contextType": {
+          "id": "NSSAI_NSI",
+          "contextFields": [
+            {
+              "id": "NSSAI",
+              "description": "Network Slice Selection Assistance Information"
+            },
+            {
+              "id": "NSI",
+              "description": "Network Slice Instance"
+            }
+          ],
+          "name": "NSSAI & NSI"
+        },
+        "relations": [
+          {
+            "data": {
+              "context": {
+                "contextFields": [
+                  {
+                    "dataType": "entityType",
+                    "description": "Instance of NSSAI 1234",
+                    "id": "NSSAI_1234",
+                    "name": "NSSAI 1234"
+                  },
+                  {
+                    "dataType": "entityType",
+                    "description": "Instance of NSI 4321",
+                    "id": "NSI_4321",
+                    "name": "NSI 4321"
+                  }
+                ],
+                "id": "CID_1234",
+                "name": "NSSAI & NSI Context"
+              },
+              "operation": "open-tab"
+            },
+            "facetCounts": {},
+            "label": "NSSAI & NSI Context"
+          }
+        ],
+        "metricTypes": [
+          {
+            "id": "vi_sessionModificationReqRcvd",
+            "valueType": "integer",
+            "description": "Session Modification Request Received"
+          },
+          {
+            "id": "vi_dlUnstrDropPackets",
+            "valueType": "integer",
+            "description": "Dropped Packets"
+          }
+        ],
+        "filterCategories": [
+          {
+            "type": "context",
+            "title": "KPI Context Filters",
+            "selection": "checkbox",
+            "fields": [
+              {
+                "label": "NSSAI",
+                "name": "NSSAI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSSAI",
+                  "description": "Network Slice Selection Assistance Information",
+                  "valueType": "string"
+                }
+              },
+              {
+                "label": "NSI",
+                "name": "NSI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSI",
+                  "description": "Network Slice Instance",
+                  "valueType": "string"
+                }
+              }
+            ],
+            "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+          },
+          {
+            "type": "metric",
+            "title": "KPI Filters",
+            "selection": "radio",
+            "fields": [
+              {
+                "label": "vi_sessionModificationReqRcvd",
+                "name": "vi_sessionModificationReqRcvd",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_sessionModificationReqRcvd",
+                  "valueType": "integer",
+                  "description": "Session Modification Request Received"
+                }
+              },
+              {
+                "label": "vi_dlUnstrDropPackets",
+                "name": "vi_dlUnstrDropPackets",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_dlUnstrDropPackets",
+                  "valueType": "integer",
+                  "description": "Dropped Packets"
+                }
+              }
+            ],
+            "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+          }
+        ],
+        "columns": [
+          {
+            "title": "NSSAI",
+            "attribute": "NSSAI",
+            "mandatory": true,
+            "sortable": true,
+            "additionalInfo": "Network Slice Selection Assistance Information",
+            "width": "300px"
+          },
+          {
+            "title": "NSI",
+            "attribute": "NSI",
+            "mandatory": true,
+            "sortable": true,
+            "additionalInfo": "Network Slice Instance",
+            "width": "300px"
+          },
+          {
+            "title": "vi_sessionModificationReqRcvd",
+            "attribute": "vi_sessionModificationReqRcvd",
+            "valueType": "integer",
+            "sortable": true,
+            "additionalInfo": "Session Modification Request Received",
+            "width": "300px"
+          },
+          {
+            "title": "vi_dlUnstrDropPackets",
+            "attribute": "vi_dlUnstrDropPackets",
+            "valueType": "integer",
+            "sortable": true,
+            "additionalInfo": "Dropped Packets",
+            "width": "300px"
+          }
+        ],
+        "index": "ran"
+      },
+      "historicalDashboardData": {
+        "historicalDashboardModel": {},
+        "showHistoricalDashboard": false
+      }
+    },
+    {
+      "id": "1",
+      "title": "Metric Browser",
+      "filters": [],
+      "settings": { "autoRefresh": false, "rowHeight": "compact" },
+      "loading": false,
+      "match": "",
+      "browserError": null,
+      "fetchError": null,
+      "data": {
+        "tableData": [],
+        "sort": {}
+      },
+      "active": true,
+      "context": {
+        "name": "NSSAI & NSI",
+        "contextType": {
+          "id": "NSSAI_NSI",
+          "contextFields": [
+            {
+              "id": "NSSAI",
+              "description": "Network Slice Selection Assistance Information"
+            },
+            {
+              "id": "NSI",
+              "description": "Network Slice Instance"
+            }
+          ],
+          "name": "NSSAI & NSI"
+        },
+        "relations": [
+          {
+            "data": {
+              "context": {
+                "contextFields": [
+                  {
+                    "dataType": "entityType",
+                    "description": "Instance of NSSAI 1234",
+                    "id": "NSSAI_1234",
+                    "name": "NSSAI 1234"
+                  },
+                  {
+                    "dataType": "entityType",
+                    "description": "Instance of NSI 4321",
+                    "id": "NSI_4321",
+                    "name": "NSI 4321"
+                  }
+                ],
+                "id": "CID_1234",
+                "name": "NSSAI & NSI Context"
+              },
+              "operation": "open-tab"
+            },
+            "facetCounts": {},
+            "label": "NSSAI & NSI Context"
+          }
+        ],
+        "metricTypes": [
+          {
+            "id": "vi_sessionModificationReqRcvd",
+            "valueType": "integer",
+            "description": "Session Modification Request Received"
+          },
+          {
+            "id": "vi_dlUnstrDropPackets",
+            "valueType": "integer",
+            "description": "Dropped Packets"
+          }
+        ],
+        "filterCategories": [
+          {
+            "type": "context",
+            "title": "KPI Context Filters",
+            "selection": "checkbox",
+            "fields": [
+              {
+                "label": "NSSAI",
+                "name": "NSSAI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSSAI",
+                  "description": "Network Slice Selection Assistance Information",
+                  "valueType": "string"
+                }
+              },
+              {
+                "label": "NSI",
+                "name": "NSI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSI",
+                  "description": "Network Slice Instance",
+                  "valueType": "string"
+                }
+              }
+            ],
+            "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+          },
+          {
+            "type": "metric",
+            "title": "KPI Filters",
+            "selection": "radio",
+            "fields": [
+              {
+                "label": "vi_sessionModificationReqRcvd",
+                "name": "vi_sessionModificationReqRcvd",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_sessionModificationReqRcvd",
+                  "valueType": "integer",
+                  "description": "Session Modification Request Received"
+                }
+              },
+              {
+                "label": "vi_dlUnstrDropPackets",
+                "name": "vi_dlUnstrDropPackets",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_dlUnstrDropPackets",
+                  "valueType": "integer",
+                  "description": "Dropped Packets"
+                }
+              }
+            ],
+            "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+          }
+        ],
+        "columns": [
+          {
+            "title": "NSSAI",
+            "attribute": "NSSAI",
+            "mandatory": true,
+            "sortable": true,
+            "additionalInfo": "Network Slice Selection Assistance Information",
+            "width": "300px"
+          },
+          {
+            "title": "NSI",
+            "attribute": "NSI",
+            "mandatory": true,
+            "sortable": true,
+            "additionalInfo": "Network Slice Instance",
+            "width": "300px"
+          },
+          {
+            "title": "vi_sessionModificationReqRcvd",
+            "attribute": "vi_sessionModificationReqRcvd",
+            "valueType": "integer",
+            "sortable": true,
+            "additionalInfo": "Session Modification Request Received",
+            "width": "300px"
+          },
+          {
+            "title": "vi_dlUnstrDropPackets",
+            "attribute": "vi_dlUnstrDropPackets",
+            "valueType": "integer",
+            "sortable": true,
+            "additionalInfo": "Dropped Packets",
+            "width": "300px"
+          }
+        ],
+        "index": "ran"
+      },
+      "historicalDashboardData": {
+        "historicalDashboardModel": {},
+        "showHistoricalDashboard": false
+      }
+    }
+  ],
+  "filterCategories": [
+    {
+      "type": "context",
+      "title": "KPI Context Filters",
+      "selection": "checkbox",
+      "fields": [],
+      "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+    },
+    {
+      "type": "metric",
+      "title": "KPI Filters",
+      "selection": "radio",
+      "fields": [],
+      "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+    }
+  ],
+  "loading": false,
+  "indices": [
+    {
+      "name": "ran",
+      "description": "Radio Access Network (RAN)"
+    },
+    {
+      "name": "soa",
+      "description": "Some description"
+    }
+  ],
+  "contexts": [
+    {
+      "contextType": {
+        "id": "A",
+        "contextFields": [],
+        "name": "A"
+      },
+      "relations": [],
+      "metricTypes": [],
+      "filterCategories": [],
+      "name": "A",
+      "columns": [],
+      "index": "ran"
+    },
+    {
+      "contextType": {
+        "id": "B",
+        "contextFields": [],
+        "name": "B"
+      },
+      "relations": [],
+      "metricTypes": [],
+      "filterCategories": [],
+      "name": "B",
+      "columns": [],
+      "index": "core"
+    },
+    {
+      "contextType": {
+        "id": "C",
+        "contextFields": [],
+        "name": "C"
+      },
+      "relations": [],
+      "metricTypes": [],
+      "filterCategories": [],
+      "name": "C",
+      "columns": [],
+      "index": "ran"
+    },
+    {
+      "contextType": {
+        "id": "D",
+        "contextFields": [],
+        "name": "D"
+      },
+      "relations": [],
+      "metricTypes": [],
+      "filterCategories": [],
+      "name": "D",
+      "columns": [],
+      "index": "core"
+    }
+  ],
+  "discoveryCompleted": true,
+  "systemStateReady": true
+}

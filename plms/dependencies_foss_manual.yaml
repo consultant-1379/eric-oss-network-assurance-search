@@ -1,0 +1,910 @@
+modelVersion: '3.0'
+dependencies:
+- ID: '@floating-ui/core+1.5.3'
+  additional_info:
+    fossa-attribution:
+      Description: 'Positioning library for floating elements: tooltips, popovers,
+        dropdowns, and more'
+      Package: '@floating-ui/core'
+      Source: npm
+      Version: 1.5.3
+      Hash: ''
+      licenses:
+      - MIT
+      Title: '@floating-ui/core'
+      DownloadURL: https://registry.npmjs.org/@floating-ui/core/-/core-1.5.3.tgz
+  bazaar:
+    register: 'no'
+    prim: 25/CTX1022952
+    community_link: https://github.com/floating-ui/
+    community_name: https://github.com/floating-ui/
+    community_url: https://github.com/floating-ui/
+    component_comment: ''
+    component_highlevel_description: A low-level toolkit to create floating elements.
+      Tooltips, popovers, dropdowns, and more
+    component_name: floating-ui
+    component_platform: linux
+    component_programing_language: TypeScript
+    component_version: UTILS@0.2.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/floating-ui/floating-ui/archive/refs/tags/@floating-ui/utils@0.2.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1076595&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Undefined
+    crypto: No Encryption
+    programming_language: TypeScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: '@floating-ui/core'
+    target_sw: linux
+    vendor: npm
+    version: 1.5.3
+    web_url: https://www.npmjs.com/package/@floating-ui/core
+  licenses:
+  - MIT
+  name: '@floating-ui/core'
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.5.3
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1022952
+    product_version_label: '@floating-ui/core@1.5.3'
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: '@floating-ui/dom+1.5.4'
+  additional_info:
+    fossa-attribution:
+      Description: Floating UI for the web
+      Package: '@floating-ui/dom'
+      Source: npm
+      Version: 1.5.4
+      Hash: ''
+      licenses:
+      - MIT
+      Title: '@floating-ui/dom'
+      DownloadURL: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.5.4.tgz
+  bazaar:
+    register: 'no'
+    prim: 25/CTX1022952
+    community_link: https://github.com/floating-ui/
+    community_name: https://github.com/floating-ui/
+    community_url: https://github.com/floating-ui/
+    component_comment: ''
+    component_highlevel_description: A low-level toolkit to create floating elements.
+      Tooltips, popovers, dropdowns, and more
+    component_name: floating-ui
+    component_platform: linux
+    component_programing_language: TypeScript
+    component_version: UTILS@0.2.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/floating-ui/floating-ui/archive/refs/tags/@floating-ui/utils@0.2.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1076595&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Undefined
+    crypto: No Encryption
+    programming_language: TypeScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: '@floating-ui/dom'
+    target_sw: linux
+    vendor: npm
+    version: 1.5.4
+    web_url: https://www.npmjs.com/package/@floating-ui/dom
+  licenses:
+  - MIT
+  name: '@floating-ui/dom'
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.5.4
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1022952
+    product_version_label: '@floating-ui/dom@1.5.4'
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: '@opensearch-project/opensearch+2.4.0'
+  additional_info:
+    fossa-attribution:
+      Description: Node.js Client for OpenSearch
+      Package: '@opensearch-project/opensearch'
+      Source: npm
+      Version: 2.4.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: '@opensearch-project/opensearch'
+      DownloadURL: https://github.com/opensearch-project/opensearch-js/archive/2.4.0.tar.gz
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1036844
+    community_link: https://github.com/opensearch-project/opensearch-js
+    community_name: https://github.com/opensearch-project/opensearch-js
+    community_url: https://github.com/opensearch-project/opensearch-js
+    component_comment: ''
+    component_highlevel_description: Node.js Client for OpenSearch
+    component_name: opensearch-js
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 2.4.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/opensearch-project/opensearch-js/archive/2.4.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1073888&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: '@opensearch-project/opensearch'
+    target_sw: linux
+    vendor: npm
+    version: 2.4.0
+    web_url: https://www.npmjs.com/package/@opensearch-project/opensearch
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - ISC
+  - MIT
+  name: '@opensearch-project/opensearch'
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.4.0
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1036844
+    product_version_label: 2.4.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: '@webcomponents/scoped-custom-element-registry+0.0.9'
+  additional_info:
+    fossa-attribution:
+      Description: Scoped CustomElementRegistry Polyfill
+      Package: '@webcomponents/scoped-custom-element-registry'
+      Source: npm
+      Version: 0.0.9
+      Hash: ''
+      licenses:
+      - BSD-3-Clause
+      Title: '@webcomponents/scoped-custom-element-registry'
+      DownloadURL: https://registry.npmjs.org/@webcomponents/scoped-custom-element-registry/-/scoped-custom-element-registry-0.0.9.tgz
+  bazaar:
+    register: 'no'
+    prim: 8/CTX1031683
+    community_link: https://github.com/webcomponents/polyfills
+    community_name: https://github.com/webcomponents/polyfills
+    community_url: https://github.com/webcomponents/polyfills
+    component_comment: ''
+    component_highlevel_description: The Web Components polyfills are a suite of JavaScript
+      libraries that implement Web Components APIs for browsers that don't have built-in
+      support.
+    component_name: Web Components Polyfills
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: REGISTRY0.0.9
+    licenses:
+    - FAL1159003/2 (BSD 3-Clause "New" or "Revised" License (BSD-3-Cla)
+    src_download_link: https://github.com/webcomponents/polyfills/archive/@webcomponents/scoped-custom-element-registry@0.0.9.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1042818&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: '@webcomponents/scoped-custom-element-registry'
+    target_sw: linux
+    vendor: npm
+    version: 0.0.9
+    web_url: https://www.npmjs.com/package/@webcomponents/scoped-custom-element-registry
+  licenses:
+  - BSD-3-Clause
+  name: '@webcomponents/scoped-custom-element-registry'
+  primary:
+  - this
+  selected_licenses:
+  - BSD-3-Clause
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.0.9
+  mimer:
+    product_number: CTX1031683
+    product_version_label: '@webcomponents/scoped-custom-element-registry@0.0.9'
+    primary: 'True'
+    linking: MANDATORY_FOR_MIMER
+    selected_licenses:
+    - BSD-3-Clause
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+- ID: dayjs+1.11.7
+  additional_info:
+    fossa-attribution:
+      Description: '2KB immutable date time library alternative to Moment.js with
+        the same modern API '
+      Package: dayjs
+      Source: npm
+      Version: 1.11.7
+      Hash: ''
+      licenses:
+      - MIT
+      Title: dayjs
+      DownloadURL: https://registry.npmjs.org/dayjs/-/dayjs-1.11.7.tgz
+  bazaar:
+    register: 'no'
+    prim: 8/CTX1030826
+    community_link: https://github.com/iamkun/dayjs
+    community_name: https://github.com/iamkun/dayjs
+    community_url: https://github.com/iamkun/dayjs
+    component_comment: ''
+    component_highlevel_description: Day.js 2kB immutable date-time library alternative
+      to Moment.js with the same modern API
+    component_name: DAY.JS
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: V1.11.7
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/iamkun/dayjs/archive/v1.11.7.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: Low Community Activity.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1038428&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: China
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: dayjs
+    target_sw: linux
+    vendor: npm
+    version: 1.11.7
+    web_url: https://www.npmjs.com/package/dayjs
+  licenses:
+  - MIT
+  name: dayjs
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.11.7
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1030826
+    product_version_label: v1.11.7
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: express-prom-bundle+6.6.0
+  additional_info:
+    fossa-attribution:
+      Description: express middleware with popular prometheus metrics in one bundle
+      Package: express-prom-bundle
+      Source: npm
+      Version: 6.6.0
+      Hash: ''
+      licenses:
+      - MIT
+      Title: express-prom-bundle
+      DownloadURL: https://registry.npmjs.org/express-prom-bundle/-/express-prom-bundle-6.6.0.tgz
+  bazaar:
+    register: 'no'
+    prim: 3/CTX1033101
+    community_link: https://github.com/jochen-schweizer/express-prom-bundle
+    community_name: https://github.com/jochen-schweizer/express-prom-bundle
+    community_url: https://github.com/jochen-schweizer/express-prom-bundle
+    component_comment: ''
+    component_highlevel_description: express middleware with standard prometheus metrics
+      in one bundle
+    component_name: express-prom-bundle
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 6.6.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/jochen-schweizer/express-prom-bundle/archive/6.6.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Low Community Activity.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1046983&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Germany
+    crypto: 'NO'
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: express-prom-bundle
+    target_sw: linux
+    vendor: npm
+    version: 6.6.0
+    web_url: https://www.npmjs.com/package/express-prom-bundle
+  licenses:
+  - MIT
+  name: express-prom-bundle
+  primary:
+  - '@adp/pm-service'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.6.0
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1033101
+    product_version_label: 6.6.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+  alerts:
+  - '''express-prom-bundle'': Manual set stako_decision_reason: ''manual'' for stako:
+    ''ESW3'', team takes the risk!'
+  - 'Manual set stako_decision_reason: ''manual'' for stako: ''ESW3'', team takes
+    the risk!'
+- ID: has-proto+1.0.1
+  additional_info:
+    fossa-attribution:
+      Description: Does this environment have the ability to get the [[Prototype]]
+        of an object on creation with `__proto__`?
+      Package: has-proto
+      Source: npm
+      Version: 1.0.1
+      Hash: ''
+      licenses:
+      - MIT
+      Title: has-proto
+      DownloadURL: https://registry.npmjs.org/has-proto/-/has-proto-1.0.1.tgz
+  bazaar:
+    register: 'no'
+    prim: 1/CTX1037323
+    community_link: https://github.com/inspect-js/has-proto
+    community_name: https://github.com/inspect-js/has-proto
+    community_url: https://github.com/inspect-js/has-proto
+    component_comment: ''
+    component_highlevel_description: Does this environment have the ability to get
+      or set the [[Prototype]] of an object with `__proto__`?
+    component_name: has-proto
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: V1.0.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/inspect-js/has-proto/archive/v1.0.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1036358&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: has-proto
+    target_sw: linux
+    vendor: npm
+    version: 1.0.1
+    web_url: https://www.npmjs.com/package/has-proto
+  licenses:
+  - MIT
+  name: has-proto
+  primary:
+  - body-parser+1.20.0
+  - express+4.18.1
+  - qs+6.11.0
+  - superagent+8.0.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.1
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1037323
+    product_version_label: V1.0.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: nodejs-node+20.12.2
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1041107
+    community_link: https://nodejs.or
+    community_name: https://nodejs.or
+    community_url: https://nodejs.or
+    component_comment: ''
+    component_highlevel_description: Node.js is a JavaScript runtime built on Chrome's
+      V8 JavaScript engine.
+    component_name: Node.js
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: V20.12.2
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://nodejs.org/dist/v20.12.2/node-v20.12.2.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Low community activity
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1089382&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Undefined
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: Node.js
+    target_sw: linux
+    vendor: git
+    version: 20.12.2
+    web_url: https://github.com/nodejs/node
+  licenses:
+  - MIT
+  name: nodejs-node
+  primary:
+  - this
+  selected_licenses:
+  - MIT
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 20.12.2
+  mimer:
+    linking: Not Linked
+    product_number: CTX1041107
+    product_version_label: v20.12.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Node.js is an open-source, cross-platform, JavaScript runtime environment.
+      It executes JavaScript code outside of a browser.
+    primary: 'True'
+    selected_licenses:
+    - MIT
+  alerts:
+  - '''Node.js'': Manual set stako_decision_reason: ''manual'' for stako: ''ESW3'',
+    team takes the risk!'
+  - 'Manual set ''Node.js'':  stako_decision_reason: ''manual'' for stako: ''ESW3'',
+    team takes the risk!'
+- ID: oauth-sign+0.9.0
+  additional_info:
+    fossa-attribution:
+      Description: OAuth 1 signing. Formerly a vendor lib in mikeal/request, now a
+        standalone module.
+      Package: oauth-sign
+      Source: npm
+      Version: 0.9.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: oauth-sign
+      DownloadURL: https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1021141
+    community_link: https://github.com/request/oauth-sign
+    community_name: https://github.com/request/oauth-sign
+    community_url: https://github.com/request/oauth-sign
+    component_comment: ''
+    component_highlevel_description: OAuth 1 signing. Formerly a vendor lib in mikeal/request,
+      now a standalone module.
+    component_name: oauth-sign
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 0.9.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/request/oauth-sign/archive/v0.9.0.zip
+    stako_decision_reason: automatic
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=906662&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: oauth-sign
+    target_sw: linux
+    vendor: npm
+    version: 0.9.0
+    web_url: https://www.npmjs.com/package/oauth-sign
+  licenses:
+  - Apache-2.0
+  name: oauth-sign
+  primary:
+  - '@adp/kubernetes'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.9.0
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1021141
+    product_version_label: v0.9.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: prom-client+14.2.0
+  additional_info:
+    fossa-attribution:
+      Description: Client for prometheus
+      Package: prom-client
+      Source: npm
+      Version: 14.2.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: prom-client
+      DownloadURL: https://registry.npmjs.org/prom-client/-/prom-client-14.2.0.tgz
+  bazaar:
+    register: 'no'
+    prim: 8/CTX1027102
+    community_link: https://github.com/siimon/prom-client
+    community_name: https://github.com/siimon/prom-client
+    community_url: https://github.com/siimon/prom-client
+    component_comment: ''
+    component_highlevel_description: Prometheus client for node.js
+    component_name: prom-client
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: V14.2.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/siimon/prom-client/archive/v14.2.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Low Community Activity.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1058190&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Norway
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: prom-client
+    target_sw: linux
+    vendor: npm
+    version: 14.2.0
+    web_url: https://www.npmjs.com/package/prom-client
+  licenses:
+  - Apache-2.0
+  name: prom-client
+  primary:
+  - '@adp/pm-service'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 14.2.0
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1027102
+    product_version_label: v14.2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: statuses+2.0.1
+  additional_info:
+    fossa-attribution:
+      Description: HTTP status utility
+      Package: statuses
+      Source: npm
+      Version: 2.0.1
+      Hash: ''
+      licenses:
+      - MIT
+      Title: statuses
+      DownloadURL: https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1020489
+    community_link: https://github.com/jshttp/statuses
+    community_name: https://github.com/jshttp/statuses
+    community_url: https://github.com/jshttp/statuses
+    component_comment: ''
+    component_highlevel_description: HTTP status utility for node.
+    component_name: statuses
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 2.0.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/jshttp/statuses/archive/v2.0.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1006665&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: statuses
+    target_sw: linux
+    vendor: npm
+    version: 2.0.1
+    web_url: https://www.npmjs.com/package/statuses
+  licenses:
+  - MIT
+  name: statuses
+  primary:
+  - body-parser+1.20.0
+  - express+4.18.1
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.0.1
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1020489
+    product_version_label: v2.0.1
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: tar+6.1.14
+  additional_info:
+    fossa-attribution:
+      Description: tar for node
+      Package: tar
+      Source: npm
+      Version: 6.1.14
+      Hash: ''
+      licenses:
+      - ISC
+      Title: tar
+      DownloadURL: https://registry.npmjs.org/tar/-/tar-6.1.14.tgz
+  bazaar:
+    register: 'no'
+    prim: 12/CTX1024076
+    community_link: https://github.com/npm/node-tar
+    community_name: https://github.com/npm/node-tar
+    community_url: https://github.com/npm/node-tar
+    component_comment: ''
+    component_highlevel_description: tar for node
+    component_name: node-tar
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: V6.1.14
+    licenses:
+    - FAL1159116 (ISC License (ISC))
+    src_download_link: https://github.com/npm/node-tar/archive/v6.1.14.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: Product version is older than 54 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1046834&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: tar
+    target_sw: linux
+    vendor: npm
+    version: 6.1.14
+    web_url: https://www.npmjs.com/package/tar
+  licenses:
+  - ISC
+  name: tar
+  primary:
+  - '@adp/kubernetes'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.1.14
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1024076
+    product_version_label: 6.1.14
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: tini+0.19.0
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1025228
+    community_link: https://github.com/krallin/tini
+    community_name: https://github.com/krallin/tini
+    community_url: https://github.com/krallin/tini
+    component_comment: ''
+    component_highlevel_description: A tiny but valid `init` for containers
+    component_name: Tini
+    component_platform: linux
+    component_programing_language: C
+    component_version: 0.19.0
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/krallin/tini/archive/v0.19.0.zip
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=966826&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: France
+    crypto: No Encryption
+    programming_language: C
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: Tini
+    target_sw: linux
+    vendor: git
+    version: 0.19.0
+    web_url: https://github.com/krallin/tini
+  licenses:
+  - MIT
+  name: ''
+  primary:
+  - this
+  selected_licenses:
+  - MIT
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.19.0
+  mimer:
+    linking: Not Linked
+    product_number: CTX1025228
+    product_version_label: 0.19.0
+    selected_licenses:
+    - MIT
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: ws+7.5.9
+  additional_info:
+    fossa-attribution:
+      Description: Simple to use, blazing fast and thoroughly tested websocket client
+        and server for Node.js
+      Package: ws
+      Source: npm
+      Version: 7.5.9
+      Hash: ''
+      licenses:
+      - MIT
+      Title: ws
+      DownloadURL: https://registry.npmjs.org/ws/-/ws-7.5.9.tgz
+  bazaar:
+    register: 'no'
+    prim: 30/CTX1020391
+    community_link: https://github.com/websockets/ws
+    community_name: https://github.com/websockets/ws
+    community_url: https://github.com/websockets/ws
+    component_comment: ''
+    component_highlevel_description: Simple to use, blazing fast and thoroughly tested
+      WebSocket client and server for Node.js
+    component_name: ws,websockets
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 7.5.9
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://github.com/websockets/ws/archive/7.5.9.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1021910&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: Norway
+    crypto: 'NO'
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: ws
+    target_sw: linux
+    vendor: npm
+    version: 7.5.9
+    web_url: https://www.npmjs.com/package/ws
+  licenses:
+  - MIT
+  name: ws
+  primary:
+  - '@adp/kubernetes'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 7.5.9
+  mimer:
+    linking: MANDATORY_FOR_MIMER
+    product_number: CTX1020391
+    product_version_label: 7.5.9
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'

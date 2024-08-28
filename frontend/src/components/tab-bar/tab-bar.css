@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+eui-actionable-icon {
+  vertical-align: middle;
+}
+
+.tab-tooltip {
+  max-width: 600px;
+  text-overflow: wrap;
+}
+
+.tab-title-field {
+  margin-top: -7px;
+}
+
+eui-tabs {
+  padding: 5px 10px;
+}
+
+#contexts-label h4{
+  margin: 10px 0 2px 0;
+  padding-left: 10px;
+
+}
+
+#contexts-label eui-info-popup {
+  padding: 10px 5px 0;
+}
+
+#contexts-label {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+e-metric-browser {
+  background-color: var(--layer1, #EBEBEB);
+  padding: 5px 0px 0px 0px;
+  height: 99%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+}
+
+#context-help {
+  width: 300px;
+}
+
+#open-context {
+  padding-right: 3px;
+}

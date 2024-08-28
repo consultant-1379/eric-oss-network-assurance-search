@@ -1,0 +1,9 @@
+{
+  "MAX_LIMIT_MESSAGE": "You have reached the limit of applied filters ({{limit}}). \nDeselect any applied filter to resolve this issue.",
+  "FIND_FILTERS_LABEL": "Find Existing Filters",
+  "FIND_FILTERS_PLACEHOLDER": "Search for a filter...",
+  "NETWORK_FILTER_TOOLTIP_MESSAGE": "Context Filters apply to columns in the table that represent network entities or a function of a network entity. To create a Context Filter, select the 'Add' button. Using these filters focuses the measurement results on the entities and metrics that you are interested in monitoring. You can apply multiple Context Filters simultaneously. When you apply multiple Context Filters, the results displayed in the table will reflect matches to the value criteria of all applied filters. \n\nFor example, if there is one filter for Column A for '12*' and another filter for Column A for 'Doesn't match 123', the results in the table should be all the results for Column A where the values start with 12, excluding the results for Column A where the value is 123.",
+  "MEASUREMENT_FILTER_TOOLTIP_MESSAGE": "KPI Filters apply to columns in the table that represent metrics for a network entity or set of network entities in the table. \nYou can create a Measurement Filter for 6 different operations: 'In Range', 'Not In Range', 'Equal To', 'Not Equal To', 'Less Than', or 'Greater Than' the value configured for the metric column you specify. \nYou can only select one measurement filter at a time. Measurement filters are meant to help you configure filters that enable you to capture the status of your SLAs.",
+  "FILTER_TITLE_ADD": "Add Filter",
+  "FILTER_TITLE_EDIT": "Edit Filter"
+}

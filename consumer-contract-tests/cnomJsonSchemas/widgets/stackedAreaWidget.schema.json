@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/stackedAreaWidget.schema.json",
+  "title": "Stacked area widget",
+  "description": "A widget that displays multiple data series as graphics placed on top of each other.it allows you to monitor changes in value and proportion of each data series,relative to the total data represented.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "stackedArea"
+        },
+        "variables": true,
+        "maximizable": true,
+        "showWhen": true,
+        "placeholder": true,
+        "sources": true,
+        "download": {
+          "$ref": "../definitions.schema.json#/definitions/download",
+          "default": true
+        },
+        "unit": {
+          "description": "The unit of data displayed next to the Y axis. Using '%' will multiply the data value by 100.",
+          "type": "string"
+        },
+        "autoFormat": {
+          "description": "Whether to automatically format the data. If true, the line chart automatically selects the unit for the displayed data.",
+          "type": "boolean",
+          "default": true
+        },
+        "dataFormat": {
+          "description": "The data format of y axis and tooltip as a d3 format specifier. By default, the data format will be based on unit and data.",
+          "type": "string"
+        },
+        "maxLines": {
+          "description": "The maximum number of lines to be displayed in the chart",
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

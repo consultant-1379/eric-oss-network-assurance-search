@@ -1,0 +1,39 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 10,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "full_context": "NF_SNSSAI"
+            }
+          }
+        ],
+        "filter": {
+          "bool": {
+            "must": [
+              {
+                "range": {
+                  "vi_NF_SNSSAI_AMFMeanRegNbr": {
+                    "gte": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sort": [
+      {
+        "c_SNSSAI": {
+          "order": "asc",
+          "unmapped_type": "long"
+        }
+      }
+    ]
+  }
+}

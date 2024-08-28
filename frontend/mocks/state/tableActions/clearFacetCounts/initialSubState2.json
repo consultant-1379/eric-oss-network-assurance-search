@@ -1,0 +1,80 @@
+{
+  "loading": false,
+  "relationActions": [
+    {
+      "label": "NF & NSI",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_NSI",
+          "contextFields": [
+            {
+              "id": "c_NF",
+              "name": "NF",
+              "description": null,
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_NSI",
+              "name": "NSI",
+              "description": null,
+              "dataType": "entityType"
+            }
+          ],
+          "name": "NF & NSI"
+        }
+      },
+      "facetCounts": {}
+    },
+    {
+      "label": "NF & SNSSAI",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_SNSSAI",
+          "contextFields": [
+            {
+              "id": "c_NF",
+              "name": "NF",
+              "description": null,
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_SNSSAI",
+              "name": "SNSSAI",
+              "description": null,
+              "dataType": "entityType"
+            }
+          ],
+          "name": "NF & SNSSAI"
+        }
+      },
+      "facetCounts": {}
+    },
+    {
+      "label": "Site & NF",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_Site",
+          "contextFields": [
+            {
+              "id": "c_Site",
+              "name": "Site",
+              "description": null,
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_NF",
+              "name": "NF",
+              "description": null,
+              "dataType": "entityType"
+            }
+          ],
+          "name": "Site & NF"
+        }
+      },
+      "facetCounts": {}
+    }
+  ]
+}

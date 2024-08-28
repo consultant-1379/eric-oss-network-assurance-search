@@ -1,0 +1,70 @@
+[
+  {
+    "id": "vi_nf_MetricOne",
+    "name": "MetricOne",
+    "valueType": "integer",
+    "description": "Metric One",
+    "unit": "subscribers",
+    "dataType": "metricType",
+    "visualization": {
+      "category": ["category-1", "category-2"],
+      "query": "${metricName}{nf=~\"sn.*-4\"}",
+      "group1": ["family1"],
+      "group2": ["family2"],
+      "groups": {
+        "default": ["vi_nf_MetricOne"]
+      }
+    }
+  },
+  {
+    "id": "vi_nf_MetricTwo",
+    "name": "MetricTwo",
+    "valueType": "integer",
+    "description": "Metric Two",
+    "unit": "subscribers",
+    "dataType": "metricType",
+    "visualization": {
+      "category": ["category-3", "category-4"],
+      "query": "${metricName}{nf=~\"sn.*-4\"}",
+      "group1": ["family1"],
+      "group2": ["family2"],
+      "groups": {
+        "default": ["vi_nf_MetricTwo"]
+      }
+    }
+  },
+  {
+    "id": "vi_nf_MetricThree",
+    "name": "MetricThree",
+    "valueType": "integer",
+    "description": "Metric Three",
+    "unit": "subscribers",
+    "dataType": "metricType",
+    "visualization": {
+      "category": ["category-5", "category-6"],
+      "query": "${metricName}{nf=~\"sn.*-4\"}",
+      "group1": ["family1"],
+      "group2": ["family2"],
+      "groups": {
+        "default": ["vi_nf_MetricThree"]
+      }
+    }
+  },
+  {
+    "id": "vi_nf_MetricFour",
+    "name": "MetricFour",
+    "valueType": "integer",
+    "description": "Metric Four",
+    "unit": "subscribers",
+    "dataType": "metricType",
+    "visualization": {
+      "category": ["category-7", "category-8"],
+      "query": "${metricName}{nf=~\"sn.*-4\"}",
+      "group1": ["family1"],
+      "group2": ["family2"],
+      "groups": {
+        "default": ["vi_nf_MetricFour"]
+      }
+    }
+  }
+]

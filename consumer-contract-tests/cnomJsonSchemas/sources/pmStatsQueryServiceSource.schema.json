@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/sources/pmStatsQueryServiceSource.schema.json",
+  "title": "PM Stats Query Service source",
+  "description": "Data source interfacing with PM Stats Query Service - *alpha feature*",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_id": true,
+        "sourceType": {
+          "const": "pmStatsQueryService"
+        },
+        "address": {
+          "$ref": "../definitions.schema.json#/definitions/address"
+        },
+        "schema": {
+          "description": "The `schema` in the API path. See PM Status Query Service docs.",
+          "type": "string",
+          "default": "public"
+        },
+        "entitySet": {
+          "description": "The `entityset` in the API path. See PM Status Query Service docs.",
+          "type": "string"
+        },
+        "timestampField": {
+          "description": "The name of the timestamp field. The timestamp is used in a `$filter` query parameter to limit the query results to a specific time range.",
+          "type": "string",
+          "default": "aggregation_begin_time"
+        },
+        "queryParameters": {
+          "description": "Query parameters to append to the HTTP request. The query parameters will be URL encoded.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "examples": [
+            {
+              "$select": "*",
+              "$filter": "snssai eq '1:1' and mofdn eq 'AMF_NC'"
+            }
+          ]
+        },
+        "sourceFields": {
+          "description": "Display names (keys) for KPI names (values).",
+          "type": "object",
+          "examples": [
+            {
+              "One": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+              "Two": "csac_36c51f01_0740_45e4_b5a0_bcc8ebe56f7d"
+            }
+          ]
+        }
+      }
+    },
+    { "$ref": "./source.schema.json#/definitions/baseSourceSchema" }
+  ]
+}

@@ -1,0 +1,36 @@
+ui:
+  get:
+    tags:
+      - Static Content
+    summary: Frontend Route
+    description: Endpoint to serve static content like JS, CSS, images, etc for Frontend
+    operationId: getUi
+    responses:
+      '200':
+        description: OK - Static content
+      '400':
+        $ref: '../responses/BadRequest.yaml'
+      '401':
+        $ref: '../responses/Unauthorized.yaml'
+      '503':
+        $ref: '../responses/ServiceUnavailable.yaml'
+      default:
+        $ref: '../responses/UnexpectedError.yaml'
+configuration:
+  get:
+    tags:
+      - UI Configuration
+    summary: API for UI configuration
+    description: Endpoint to provide the current UI configuration. The configuration is constructed from the helm values.
+    operationId: getUiConfiguration
+    responses:
+      '200':
+        $ref: '../responses/UiConfigurationResponse.yaml'
+      '400':
+        $ref: '../responses/BadRequest.yaml'
+      '401':
+        $ref: '../responses/Unauthorized.yaml'
+      '503':
+        $ref: '../responses/ServiceUnavailable.yaml'
+      default:
+        $ref: '../responses/UnexpectedError.yaml'

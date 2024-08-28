@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Service Assurance Dashboard</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <script type="module">
+      import('@webcomponents/scoped-custom-element-registry');
+      import('es-module-shims');
+      // Import polyfill for firefox and safari
+      if (!window.URLPattern) {
+        import('urlpattern-polyfill');
+      }
+    </script>
+
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "@eui/container": "./libs/shared/@eui/container/index.js",
+          "@eui/theme": "./libs/shared/@eui/theme/index.js",
+          "e-custom-user-settings-panel": "./src/panels/custom-user-settings-panel/custom-user-settings-panel.js",
+          "settings-plugin": "./src/plugins/settings-plugin/src/settings-plugin.js",
+          "network-assurance-dashboard": "./src/apps/network-assurance-dashboard/network-assurance-dashboard.js"
+        }
+      }
+    </script>
+    <script type="module-shim">
+      import '@eui/container';
+      import { Theme, Icon } from '@eui/theme';
+      import { SystembarUserInfo } from './src/components/systembar-user-info/systembar-user-info.js';
+
+      Theme.register('eui-theme');
+      Icon.register('eui-icon');
+      SystembarUserInfo.register();
+    </script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <script>
+      const body = document.querySelector('body');
+      body.addEventListener('eui-theme-change', (event) => {
+        const theme = document.querySelector('eui-theme');
+        theme.theme = event.detail.theme;
+      });
+    </script>
+    <eui-theme theme="dark" font-path="./assets/fonts/"></eui-theme>
+    <eui-container default-app="service-assurance-dashboard">
+      <eui-plugins></eui-plugins>
+      <eui-icon name="econ" slot="system-left"></eui-icon>
+      <span slot="system-left">Ericsson</span>
+      <e-custom-menu-panel slot="app-navigation"></e-custom-menu-panel>
+      <eui-system-bar-actions>
+        <e-systembar-user-info></e-systembar-user-info>
+      </eui-system-bar-actions>
+    </eui-container>
+    <script>
+      // load the config files into the Container...
+      const loadConfig = async () => {
+        // fetch config.json (public config file)...
+        const getJSON = (response) => response.json();
+        const config = await fetch('./config.json').then(getJSON);
+        const euiContainer = document.querySelector('eui-container');
+        euiContainer.metaData = config;
+
+        const plugins = document.querySelector('eui-plugins');
+        plugins.pluginList = [{ name: 'settings-plugin' }];
+      };
+      loadConfig();
+    </script>
+  </body>
+</html>

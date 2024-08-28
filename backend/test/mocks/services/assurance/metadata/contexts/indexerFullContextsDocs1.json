@@ -1,0 +1,90 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "PN_SNSNSN",
+        "context": [
+          {
+            "name": "SNSNSN",
+            "displayName": "My SNSNSN",
+            "documentName": "c_SNSNSN",
+            "description": "Sauce Near Soup Never Sounds Normal"
+          },
+          {
+            "name": "PN",
+            "displayName": "Nationality",
+            "documentName": "c_PN",
+            "description": "Person Nationality"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF_NSI",
+        "context": [
+          {
+            "name": "nf",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "New Finger"
+          },
+          {
+            "name": "nsi",
+            "displayName": "My NSI",
+            "documentName": "c_NSI",
+            "description": "No Sharks Inside"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF_SNSSAI",
+        "context": [
+          {
+            "name": "nf",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "New Finger"
+          },
+          {
+            "name": "snssai",
+            "displayName": "My SNSSAI",
+            "documentName": "c_SNSSAI",
+            "description": "Soup Network Slice Selection Assistance Information"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "SNSSAI_NSI",
+        "context": [
+          {
+            "name": "snssai",
+            "displayName": "My SNSSAI",
+            "documentName": "c_SNSSAI",
+            "description": "Soup Network Slice Selection Assistance Information"
+          },
+          {
+            "name": "nsi",
+            "displayName": "My NSI",
+            "documentName": "c_NSI",
+            "description": "No Sharks Inside"
+          }
+        ]
+      }
+    ]
+  }
+]

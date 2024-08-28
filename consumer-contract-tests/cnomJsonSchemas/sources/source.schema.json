@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/sources/source.schema.json",
+  "title": "A source",
+  "description": "A source defines an API call, often to an external service, to fetch data. This data can then be displayed in a widget. The returned data is always an array of {label1: value1, label2: value2, ...}.",
+  "definitions": {
+    "baseSourceSchema": {
+      "type": "object",
+      "required": ["sourceType"],
+      "properties": {
+        "_id": {
+          "description": "A unique ID for the source.",
+          "$ref": "../definitions.schema.json#/definitions/_id"
+        },
+        "apiResponseSizeLimit": {
+          "description": "The maximum size in bytes that a response from an API the source uses is allowed to be. When an API returns a response larger than this value an error is instead logged on the backend. Setting this option reduces the likelihood of out of memory errors. Currently only supported by Alarm Viewer.",
+          "type": "number",
+          "minimum": 0
+        },
+        "sourceType": {
+          "description": "The type of source.",
+          "type": "string",
+          "enum": ["pmStatsQueryService"]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "required": ["sourceType"],
+        "properties": {
+          "sourceType": true
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "type": "object",
+              "properties": { "sourceType": { "const": "pmStatsQueryService" } }
+            },
+            "then": {
+              "$ref": "./pmStatsQueryServiceSource.schema.json"
+            }
+          }
+        ]
+      }
+    },
+    { "$ref": "#/definitions/baseSourceSchema" }
+  ]
+}

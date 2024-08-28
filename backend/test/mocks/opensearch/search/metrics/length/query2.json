@@ -1,0 +1,34 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 1000,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "full_context": "NF_SNSSAI"
+            }
+          }
+        ],
+        "should": [],
+        "minimum_should_match": 0,
+        "filter": {
+          "bool": {
+            "should": [
+              {
+                "range": {
+                  "vi_NF_SNSSAI_AMFMeanRegNbr": {
+                    "gte": 0
+                  }
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      }
+    }
+  }
+}

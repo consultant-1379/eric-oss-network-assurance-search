@@ -1,0 +1,46 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "managedElement",
+        "context": [
+          {
+            "name": "managedElement",
+            "displayName": "Managed Element",
+            "documentName": "c_managedElement",
+            "description": "Managed Elemenet"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "cellId_managedElement_tac",
+        "context": [
+          {
+            "name": "cellId",
+            "displayName": "Cell ID",
+            "documentName": "c_cellId",
+            "description": "Cell Identifier"
+          },
+          {
+            "name": "managedElement",
+            "displayName": "Managed Element",
+            "documentName": "c_managedElement",
+            "description": "Managed Elemenet"
+          },
+          {
+            "name": "tac",
+            "displayName": "TAC",
+            "documentName": "c_tac",
+            "description": "Tracking Area Code"
+          }
+        ]
+      }
+    ]
+  }
+]

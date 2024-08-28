@@ -1,0 +1,41 @@
+[
+  {
+    "Impact_on_Users_Deprecation": ["No User impact.", "No APIs were deprecated in this version."],
+    "Exemptions": ["No specific exemption is created for this release."],
+    "New_and_Updated_2PP_3PP": [],
+    "Repository_helm_link": [
+      {
+        "Title": "OSS Help Aggregator Service HELM",
+        "Folder_Link": "https://arm.seli.gic.ericsson.se/artifactory/proj-eea-released-helm/eric-oss-network-assurance-search",
+        "Chart_Name": "eric-oss-network-assurance-search"
+      }
+    ],
+    "Upgrade_Information": ["Upgrade is supported from the previous released version"],
+    "Marketplace": {
+      "service_url": "https://adp.ericsson.se/marketplace/eric-oss-network-assurance-search"
+    },
+    "PRA_Checklist": [
+      {
+        "document_number": "15311-FCP1322463",
+        "revision": "F"
+      }
+    ],
+    "SW_Library": [],
+    "Release_criteria_unfulfillments": [],
+    "CPI": [],
+    "API": [
+      {
+        "Title": "Interface Description",
+        "Document_Number": "1/15519-CAF101105/1",
+        "Document_Revision": "A",
+        "Support_Other": "EriDoc",
+        "Changes": []
+      }
+    ],
+    "Product_Description": [
+      "The Help Aggregator service contains the Help Portal web client (EUISDK) and its Node.js backend. The Help Portal displays the help content discovered by its backend. The Help Aggregator backend provides auto-discovery of deployed web apps in a K8S cluster, fetches help content which is then extracted and merged."
+    ],
+    "Reusable_Images": [],
+    "Unsupported_Upgrade_Rollback_Path": []
+  }
+]

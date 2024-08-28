@@ -1,0 +1,24 @@
+type: object
+description: network entity
+required:
+  - id
+  - type
+properties:
+  id:
+    type: string
+    description: entity ID
+    example: "SNSSAI_1234"
+  name:
+    type: string
+    description: entity name
+    example: "SNSSAI 1234"
+  type:
+    $ref: '../schemas/EntityType.yaml'
+    description: entity type
+    example: {
+        "id": "c_SNSSAI",
+      }
+  description:
+    type: string
+    description: entity description
+    example: "SNSSAI: 1234 is responsible for something"

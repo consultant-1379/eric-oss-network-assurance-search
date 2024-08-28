@@ -1,0 +1,23 @@
+type: object
+description: metric group
+required:
+  - name
+  - title
+properties:
+  name:
+    type: string
+    description: metric group name
+    example: "group1"
+  title:
+    type: string
+    description: metric group title which is displayed in the historical dashboard tab
+    example: "Panel 1"
+  sort:
+    type: string
+    description: the type of sorting
+    example: "alphabetical"
+  sortOrder:
+    type: string
+    description: the sorting order
+    example: "asc"
+example: { "name": "group1", "title": "Category 1", "sort": "alphabetical", "sortOrder": "asc" }

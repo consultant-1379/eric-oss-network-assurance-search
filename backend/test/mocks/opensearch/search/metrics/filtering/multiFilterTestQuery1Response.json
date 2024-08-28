@@ -1,0 +1,110 @@
+{
+  "took": 12,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 7,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_BC::SNSSAI:1:1::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1:1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 10
+        },
+        "sort": [10]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_BC::SNSSAI:1:2::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1:2",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 20
+        },
+        "sort": [20]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_BC::SNSSAI:2:1::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2:1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 30
+        },
+        "sort": [30]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_ON1::SNSSAI:2:1::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2:1",
+          "c_NF": "AMF_ON1",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 40
+        },
+        "sort": [40]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_ON1::SNSSAI:2:2::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2:2",
+          "c_NF": "AMF_ON1",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 50
+        },
+        "sort": [50]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_ON2::SNSSAI:2:1::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2:1",
+          "c_NF": "AMF_ON2",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 60
+        },
+        "sort": [60]
+      },
+      {
+        "_index": "soa",
+        "_id": "AMFMeanRegNbr@NF:AMF_ON2::SNSSAI:2:2::",
+        "_score": null,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2:2",
+          "c_NF": "AMF_ON2",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 70
+        },
+        "sort": [70]
+      }
+    ]
+  }
+}

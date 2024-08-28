@@ -1,0 +1,14 @@
+{
+  "APPLY_BUTTON": "Save",
+  "TITLE": "Table Settings",
+  "ROW_HEIGHT": "Row Height",
+  "ROW_HEIGHT_DEFAULT": "Normal",
+  "ROW_HEIGHT_COMPACT": "Compact (Default)",
+  "ROW_HEIGHT_TINY": "Tiny",
+  "COLS_SHOW_ALL": "Show All",
+  "COLS_HIDE_ALL": "Hide All",
+  "PIN_TOOLTIP": "Pin / Unpin Column",
+  "COL_VIS_TOOLTIP": "Hide / Show Column",
+  "COL_LABEL": "Columns",
+  "ROW_HEIGHT_LABEL": "Select..."
+}

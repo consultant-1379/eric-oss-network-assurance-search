@@ -1,0 +1,41 @@
+/* style goes here */
+.base-filter-list {
+  display: flex;
+  width: 100%;
+  min-height: 15px;
+  max-height: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.icons-container {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.icons {
+  display: none;
+  cursor: pointer;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.base-filter-list:hover .icons-container .icons {
+  display: inline-block;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 13em;
+}
+
+.radio-label {
+  padding-top: 5px;
+}
+
+#max_limit_msg {
+  white-space: pre-line;
+  display: flex;
+  align-items: center;
+}

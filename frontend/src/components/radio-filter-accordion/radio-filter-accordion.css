@@ -1,0 +1,26 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+#remove-all {
+  float: right;
+}
+
+#filters-controls {
+  padding: 8px 10px 8px 0px;
+  margin-bottom: 8px;
+}
+
+#disclosure-warning-message {
+  position: sticky;
+  display: inline-flex;
+  justify-content: flex-start;
+  line-height: 14px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+#icon-warning-message {
+  padding: 5px;
+}

@@ -1,0 +1,29 @@
+{
+  "serviceAggregationApi": {
+    "prefix": "/internal-api",
+    "routes": {
+      "config": "/uiConfig",
+      "ui": "/ui"
+    }
+  },
+  "internal": {
+    "prefix": "/ui",
+    "routes": {
+      "configuration": "/configuration"
+    }
+  },
+  "api": {
+    "prefix": "",
+    "routes": {
+      "searchMetrics": "/:index/search/metrics",
+      "searchContexts": "/:index/search/contexts",
+      "searchRelatedContextsFacets": "/:index/search/related-contexts-facets",
+      "metadataRelations": "/:index/metadata/relations",
+      "metadataContexts": "/:index/metadata/contexts",
+      "metadataMetrics": "/:index/metadata/metrics",
+      "metadataAll": "/:index/metadata",
+      "metadataIndexes": "/metadata/indexes",
+      "systemState": "/system/state"
+    }
+  }
+}

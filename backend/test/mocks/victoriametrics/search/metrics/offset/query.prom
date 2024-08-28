@@ -1,0 +1,10 @@
+with(
+  context_filter = {context=~"nf,snssai",},
+  k1 = last_over_time(vi_AMFMeanRegNbr{context_filter}[15m]),
+  count(l, k) = count_values without() (l, k),
+  c1 = count('vi_AMFMeanRegNbr',k1),
+  aggregated = c1,
+  limited = limit_offset(10, 1, aggregated)
+)(
+  sort_by_label_numeric(limited, 'vi_AMFMeanRegNbr')
+)

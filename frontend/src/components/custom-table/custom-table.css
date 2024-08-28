@@ -1,0 +1,21 @@
+.custom-table__cell {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: auto;
+  padding-right: var(--space-base, 8px);
+}
+
+.collection-period {
+  margin-top: 10px;
+}
+
+.collection-times {
+  list-style-type: none;
+  padding-left: 5px;
+  margin-top: 0px;
+}
+
+td {
+  z-index:1;
+}

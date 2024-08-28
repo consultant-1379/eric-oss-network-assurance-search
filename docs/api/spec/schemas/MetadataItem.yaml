@@ -1,0 +1,10 @@
+type: object
+description: key/value pair
+required:
+  - key
+  - value
+properties:
+  key:
+    type: string
+  value:
+    type: string

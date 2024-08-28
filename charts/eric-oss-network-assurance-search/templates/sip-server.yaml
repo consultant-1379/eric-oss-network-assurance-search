@@ -1,0 +1,25 @@
+{{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+apiVersion: siptls.sec.ericsson.com/v1
+kind: InternalCertificate
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}-server-cert
+  labels:
+  {{- include "eric-oss-network-assurance-search.helmK8s-labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+spec:
+  kubernetes:
+    generatedSecretName: {{ include "eric-oss-network-assurance-search.name" . }}-server-cert
+    certificateName: srvcert.pem
+    privateKeyName: srvprivkey.pem
+  certificate:
+    subject:
+      cn: {{ include "eric-oss-network-assurance-search.name" . }}
+    subjectAlternativeName:
+      dns:
+        - certified-scrape-target
+        - localhost
+    extendedKeyUsage:
+      tlsClientAuth: false
+      tlsServerAuth: true
+{{ end }}

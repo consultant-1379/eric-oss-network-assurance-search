@@ -1,0 +1,856 @@
+{
+  "hits": {
+    "hits": [
+      {
+        "_index": "kpi",
+        "_id": 1,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 30,
+          "startTime": 1320963210,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 2,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 20,
+          "startTime": 180057633,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 3,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 10,
+          "startTime": 175201496,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 4,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 56,
+          "startTime": 112774890,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 5,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "1A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 88,
+          "startTime": 136201753,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 6,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 71,
+          "startTime": 193201457,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 7,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 45,
+          "startTime": 198741023,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 8,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 30,
+          "startTime": 120478932,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 9,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 67,
+          "startTime": 130247159,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 10,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "2A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 14,
+          "startTime": 140875210,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 11,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "3A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 90,
+          "startTime": 132047852,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 12,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "3A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 32,
+          "startTime": 192014410,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 13,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "3A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 69,
+          "startTime": 175203698,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 14,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "3A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 157,
+          "startTime": 152014753,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 15,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "3A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 147,
+          "startTime": 162510478,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 16,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "4A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 20,
+          "startTime": 135210568,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 17,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "4A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 87,
+          "startTime": 142011103,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 18,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "4A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 84,
+          "startTime": 185201423,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 19,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "4A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 12,
+          "startTime": 123484561,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 20,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "4A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 65,
+          "startTime": 187420145,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 21,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "5A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 99,
+          "startTime": 185210321,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 22,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "5A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 67,
+          "startTime": 174102354,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 23,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "5A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 45,
+          "startTime": 185203210,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 24,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "5A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 20,
+          "startTime": 165899632,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 25,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "5A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 47,
+          "startTime": 147852369,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 26,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "6A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 34,
+          "startTime": 152223501,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 27,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "6A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 225,
+          "startTime": 169874526,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 28,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "6A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 235,
+          "startTime": 124105987,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 29,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "6A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 260,
+          "startTime": 132547896,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 30,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "6A1",
+          "c_NF": "AMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 77,
+          "startTime": 1777421058,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 31,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "7A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 330,
+          "startTime": 122354102,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 32,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "7A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 62,
+          "startTime": 178542359,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 33,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "7A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 120,
+          "startTime": 154102336,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 34,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "7A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 87,
+          "startTime": 147795320,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 35,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "7A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 120,
+          "startTime": 121456879,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 36,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "8A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 74,
+          "startTime": 185222154,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 37,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "8A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 20,
+          "startTime": 120478963,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 38,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "8A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 234,
+          "startTime": 185555690,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 39,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "8A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 66,
+          "startTime": 1325874102,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 40,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "8A1",
+          "c_NF": "SMF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 18,
+          "startTime": 189963264,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 41,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "9A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 87,
+          "startTime": 187754896,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 42,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "9A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 22,
+          "startTime": 133365874,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 43,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "9A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 45,
+          "startTime": 178423589,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 44,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "9A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 132,
+          "startTime": 125874789,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 45,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "9A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 48,
+          "startTime": 136989652,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 46,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "10A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_PDUSessionEstSR": 55,
+          "startTime": 187452369,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_eeeeeeeeeeee",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 47,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "10A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_smfModificationCmdRcvd": 69,
+          "startTime": 133365478,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_ffffffffffff",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 48,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "10A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_sessionModificationReqRcvd": 99,
+          "startTime": 188520193,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_gggggggggggg",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 49,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "10A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_ulIpv6DropPackets": 174,
+          "startTime": 185201478,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_hhhhhhhhhhhh",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "kpi",
+        "_id": 50,
+        "_score": 0.3020921,
+        "_source": {
+          "full_context": "NF_SNSSAI",
+          "context": ["SNSSAI", "NF"],
+          "c_SNSSAI": "10A1",
+          "c_NF": "UPF_BC",
+          "vi_NF_SNSSAI_dlUnstrDropPackets": 76,
+          "startTime": 196302587,
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_9a6ec349_5637_4c92_8bfd_iiiiiiiiiiii",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      }
+    ]
+  }
+}

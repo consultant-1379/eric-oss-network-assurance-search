@@ -1,0 +1,5 @@
+type: integer
+minimum: 0
+maximum: 100
+description: size of the page
+default: 10

@@ -1,0 +1,163 @@
+{{>licenseInfo}}
+
+{{#emitJSDoc}}/**
+* @module {{#invokerPackage}}{{.}}/{{/invokerPackage}}ModelUtil
+* @version {{projectVersion}}
+*/
+
+/**
+* Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
+* application to use this class directly - the *Api and model classes provide the public API for the service. The
+* contents of this file should be regarded as internal but are documented for completeness.
+* @alias module:{{#invokerPackage}}{{.}}/{{/invokerPackage}}ModelUtil
+* @class
+*/{{/emitJSDoc}}
+class ModelUtil {
+    {{#emitJSDoc}}/**
+    * Parses an ISO-8601 string representation or epoch representation of a date value.
+    * @param {String} str The date value as a string.
+    * @returns {Date} The parsed date object.
+    */{{/emitJSDoc}}
+    static parseDate(str) {
+        if (Number.isNaN(str)) {
+            return new Date(str.replace(/(\d)(T)(\d)/i, '$1 $3'));
+        }
+        return new Date(+str);
+    }
+
+    static defaultDataConversionCase(type, data) {
+        if (type === Object) {
+            // generic object, return directly
+            return data;
+        } else if (typeof type.constructFromObject === 'function') {
+            // for model type like User and enum class
+            return type.constructFromObject(data);
+        } else if (Array.isArray(type)) {
+            // for array type like: ['String']
+            var itemType = type[0];
+
+            return data.map((item) => {
+                return ModelUtil.convertToType(item, itemType);
+            });
+        } else if (typeof type === 'object') {
+            // for plain object type like: {'String': 'Integer'}
+            var keyType, valueType;
+            for (let k in type) {
+                if (Object.prototype.hasOwnProperty.call(type, k)) {
+                    keyType = k;
+                    valueType = type[k];
+                    break;
+                }
+            }
+
+            var result = {};
+            for (let k in data) {
+                if (Object.prototype.hasOwnProperty.call(data, k)) {
+                    var key = ModelUtil.convertToType(k, keyType);
+                    var value = ModelUtil.convertToType(data[k], valueType);
+                    result[key] = value;
+                }
+            }
+
+            return result;
+        } else {
+            // for unknown type, return the data directly
+            return data;
+        }
+    }
+
+    {{#emitJSDoc}}/**
+    * Converts a value to the specified type.
+    * @param {(String|Object)} data The data to convert, as a string or object.
+    * @param {(String|Array.<String>|Object.<String, Object>|Function)} type The type to return. Pass a string for simple types
+    * or the constructor function for a complex type. Pass an array containing the type name to return an array of that type. To
+    * return an object, pass an object with one property whose name is the key type and whose value is the corresponding value type:
+    * all properties on <code>data<code> will be converted to this type.
+    * @returns An instance of the specified type or null or undefined if data is null or undefined.
+    */
+    {{/emitJSDoc}}
+    static convertToType(data, type) {
+        if (data === null || data === undefined)
+            return data
+
+        switch (type) {
+            case 'Boolean':
+                return Boolean(data);
+            case 'Integer':
+                return parseInt(data, 10);
+            case 'Number':
+                return parseFloat(data);
+            case 'String':
+                return String(data);
+            case 'Date':
+                return this.parseDate(String(data));
+            case 'Blob':
+                return data;
+            default:
+                return this.defaultDataConversionCase(type, data);
+        }
+    }
+
+    {{#emitJSDoc}}/**
+    * Constructs a new map or array model from REST data.
+    * @param data {Object|Array} The REST data.
+    * @param obj {Object|Array} The target object or array.
+    */{{/emitJSDoc}}
+    static constructFromObject(data, obj, itemType) {
+        if (Array.isArray(data)) {
+            for (var i = 0; i < data.length; i+=1) {
+                if (Object.prototype.hasOwnProperty.call(data, i))
+                    obj[i] = ModelUtil.convertToType(data[i], itemType);
+            }
+        } else {
+            for (let k in data) {
+                if (Object.prototype.hasOwnProperty.call(data, k))
+                    obj[k] = ModelUtil.convertToType(data[k], itemType);
+            }
+        }
+    };
+}
+
+{{#emitJSDoc}}/**
+ * Enumeration of collection format separator strategies.
+ * @enum {String}
+ * @readonly
+ */{{/emitJSDoc}}
+ModelUtil.CollectionFormatEnum = {
+    {{#emitJSDoc}}/**
+     * Comma-separated values. Value: <code>csv</code>
+     * @const
+     */{{/emitJSDoc}}
+    CSV: ',',
+
+    {{#emitJSDoc}}/**
+     * Space-separated values. Value: <code>ssv</code>
+     * @const
+     */{{/emitJSDoc}}
+    SSV: ' ',
+
+    {{#emitJSDoc}}/**
+     * Tab-separated values. Value: <code>tsv</code>
+     * @const
+     */{{/emitJSDoc}}
+    TSV: '\t',
+
+    {{#emitJSDoc}}/**
+     * Pipe(|)-separated values. Value: <code>pipes</code>
+     * @const
+     */{{/emitJSDoc}}
+    PIPES: '|',
+
+    {{#emitJSDoc}}/**
+     * Native array. Value: <code>multi</code>
+     * @const
+     */{{/emitJSDoc}}
+    MULTI: 'multi'
+};
+
+{{#emitJSDoc}}/**
+* The default API client implementation.
+* @type {module:{{#invokerPackage}}{{.}}/{{/invokerPackage}}ModelUtil}
+*/{{/emitJSDoc}}
+ModelUtil.instance = new ModelUtil();
+export default ModelUtil;

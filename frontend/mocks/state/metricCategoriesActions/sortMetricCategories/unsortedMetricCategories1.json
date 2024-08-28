@@ -1,0 +1,44 @@
+[
+  {
+    "id": "all",
+    "title": "All",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-1",
+    "title": "Category 1",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-2",
+    "title": "Category 2",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-3",
+    "title": "Category 3",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-4",
+    "title": "Category 4",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-5",
+    "title": "Category 5",
+    "unselected": true,
+    "metrics": []
+  },
+  {
+    "id": "category-6",
+    "title": "Category 6",
+    "unselected": false,
+    "metrics": []
+  }
+]

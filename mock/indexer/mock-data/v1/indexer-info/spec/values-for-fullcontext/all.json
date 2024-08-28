@@ -1,0 +1,707 @@
+{
+  "soa_NF_NSI": {
+    "fullContext": {
+      "name": "NF_NSI",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NF_NSI",
+        "valueDocumentName": "vi_NF_NSI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NF_NSI",
+        "valueDocumentName": "vi_NF_NSI_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NF_NSI",
+        "valueDocumentName": "vi_NF_NSI_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_NF_NSI",
+        "valueDocumentName": "vi_NF_NSI_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_NF_NSI",
+        "valueDocumentName": "vi_NF_NSI_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      }
+    ]
+  },
+  "soa_NF_Site": {
+    "fullContext": {
+      "name": "NF_Site",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NF_Site",
+        "valueDocumentName": "vi_NF_Site_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NF_Site",
+        "valueDocumentName": "vi_NF_Site_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NF_Site",
+        "valueDocumentName": "vi_NF_Site_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_NF_Site",
+        "valueDocumentName": "vi_NF_Site_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_NF_Site",
+        "valueDocumentName": "vi_NF_Site_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      }
+    ]
+  },
+  "soa_NF_SNSSAI": {
+    "fullContext": {
+      "name": "NF_SNSSAI",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr4",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 4",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr4_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_AMFMeanRegNbr4",
+        "description": "AMFMeanRegNbr4 Description"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_NF_SNSSAI",
+        "valueDocumentName": "vi_NF_SNSSAI_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      }
+    ]
+  },
+  "soa_NF": {
+    "fullContext": {
+      "name": "NF",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NF",
+        "valueDocumentName": "vi_NF_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NF",
+        "valueDocumentName": "vi_NF_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NF",
+        "valueDocumentName": "vi_NF_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_NF",
+        "valueDocumentName": "vi_NF_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_NF",
+        "valueDocumentName": "vi_NF_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_NF",
+        "valueDocumentName": "vd_NF_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_NSI_Site": {
+    "fullContext": {
+      "name": "NSI_Site",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NSI_Site",
+        "valueDocumentName": "vi_NSI_Site_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NSI_Site",
+        "valueDocumentName": "vi_NSI_Site_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NSI_Site",
+        "valueDocumentName": "vi_NSI_Site_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_NSI_Site",
+        "valueDocumentName": "vi_NSI_Site_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_NSI_Site",
+        "valueDocumentName": "vi_NSI_Site_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      }
+    ]
+  },
+  "soa_NSI": {
+    "fullContext": {
+      "name": "NSI",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_NSI",
+        "valueDocumentName": "vi_NSI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_NSI",
+        "valueDocumentName": "vi_NSI_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_NSI",
+        "valueDocumentName": "vi_NSI_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_NF",
+        "valueDocumentName": "vi_NF_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_NF",
+        "valueDocumentName": "vi_NF_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_NF",
+        "valueDocumentName": "vd_NF_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_PN_SNSNSN": {
+    "fullContext": {
+      "name": "PN_SNSNSN",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "eatenBananas",
+        "displayName": "Bananas Eaten",
+        "description": "Eaten Bananas",
+        "valueContextDocumentName": "PN_SNSNSN_eatenBananas",
+        "valueDocumentName": "vd_PN_SNSNSN_eatenBananas",
+        "type": "double"
+      },
+      {
+        "name": "screamsPerMinute",
+        "description": "Screams Per Minute",
+        "valueContextDocumentName": "PN_SNSNSN_screamsPerMinute",
+        "valueDocumentName": "vi_PN_SNSNSN_screamsPerMinute",
+        "type": "integer"
+      },
+      {
+        "name": "handshakesPerDay",
+        "description": "Handshakes Per Day",
+        "valueContextDocumentName": "PN_SNSNSN_handshakesPerDay",
+        "valueDocumentName": "vi_PN_SNSNSN_handshakesPerDay",
+        "type": "integer"
+      },
+      {
+        "name": "timeSpentHoldingBabies",
+        "description": "Time Spent Holding Babies",
+        "valueContextDocumentName": "PN_SNSNSN_timeSpentHoldingBabies",
+        "valueDocumentName": "vd_PN_SNSNSN_timeSpentHoldingBabies",
+        "type": "double"
+      },
+      {
+        "name": "numberOfMisquitoBites",
+        "description": "Number Of Misquito Bites",
+        "valueContextDocumentName": "PN_SNSNSN_numberOfMisquitoBites",
+        "valueDocumentName": "vi_PN_SNSNSN_numberOfMisquitoBites",
+        "type": "integer"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_SNSSAI_NSI",
+        "valueDocumentName": "vi_SNSSAI_NSI_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_SNSSAI_NSI",
+        "valueDocumentName": "vi_SNSSAI_NSI_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      },
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "double",
+        "valueContextDocumentName": "AMFMeanRegNbr_SNSSAI_NSI",
+        "valueDocumentName": "vd_SNSSAI_NSI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      }
+    ]
+  },
+  "soa_PN": {
+    "fullContext": {
+      "name": "PN",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_NF",
+        "valueDocumentName": "vi_NF_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_NF",
+        "valueDocumentName": "vi_NF_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_NF",
+        "valueDocumentName": "vd_NF_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_Site_SNSSAI": {
+    "fullContext": {
+      "name": "Site_SNSSAI",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_Site_SNSSAI",
+        "valueDocumentName": "vi_Site_SNSSAI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_Site_SNSSAI",
+        "valueDocumentName": "vi_Site_SNSSAI_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_Site_SNSSAI",
+        "valueDocumentName": "vi_Site_SNSSAI_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_Site_SNSSAI",
+        "valueDocumentName": "vi_Site_SNSSAI_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_Site_SNSSAI",
+        "valueDocumentName": "vi_Site_SNSSAI_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      }
+    ]
+  },
+  "soa_Site": {
+    "fullContext": {
+      "name": "Site",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_Site",
+        "valueDocumentName": "vi_Site_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_Site",
+        "valueDocumentName": "vi_Site_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_Site",
+        "valueDocumentName": "vi_Site_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_Site",
+        "valueDocumentName": "vi_Site_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_Site",
+        "valueDocumentName": "vi_Site_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_Site",
+        "valueDocumentName": "vd_Site_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_SNSNSN": {
+    "fullContext": {
+      "name": "SNSNSN",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_NF",
+        "valueDocumentName": "vi_NF_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_NF",
+        "valueDocumentName": "vi_NF_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_NF",
+        "valueDocumentName": "vd_NF_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_SNSSAI": {
+    "fullContext": {
+      "name": "SNSSAI",
+      "context": []
+    },
+    "value": [
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr_SNSSAI",
+        "valueDocumentName": "vi_SNSSAI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      },
+      {
+        "name": "AMFMeanRegNbr2",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 2",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr2_SNSSAI",
+        "valueDocumentName": "vi_SNSSAI_AMFMeanRegNbr2",
+        "description": "AMFMeanRegNbr2 Description"
+      },
+      {
+        "name": "AMFMeanRegNbr3",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr 3",
+        "type": "integer",
+        "valueContextDocumentName": "AMFMeanRegNbr3_SNSSAI",
+        "valueDocumentName": "vi_SNSSAI_AMFMeanRegNbr3",
+        "description": "AMFMeanRegNbr3 Description"
+      },
+      {
+        "name": "SmfModificationCmdRcvd",
+        "displayName": "Smf Modification Cmd Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SmfModificationCmdRcvd_NF",
+        "valueDocumentName": "vi_NF_SmfModificationCmdRcvd",
+        "description": "SmfModificationCmdRcvd Description"
+      },
+      {
+        "name": "DlUnstrDropPackets",
+        "displayName": "Dl Unstr Drop Packets",
+        "unit": "errors/minute",
+        "valueContextDocumentName": "DlUnstrDropPackets_NF",
+        "valueDocumentName": "vi_NF_dlUnstrDropPackets",
+        "type": "integer",
+        "description": "DlUnstrDropPackets Description"
+      },
+      {
+        "name": "UlIpv6DropPackets",
+        "unit": "errors/minute",
+        "displayName": "Ul Ipv 6Drop Packets",
+        "type": "float",
+        "valueContextDocumentName": "UlIpv6DropPackets_NF",
+        "valueDocumentName": "vd_NF_UlIpv6DropPackets",
+        "description": "UlIpv6DropPackets Description"
+      }
+    ]
+  },
+  "soa_SNSSAI_NSI": {
+    "fullContext": {
+      "name": "NSSAI_NSI",
+      "context": [
+        {
+          "name": "nssai_nsi",
+          "displayName": "NSSAI_NSI",
+          "documentName": "c_NSSAI_NSI",
+          "description": "NSSAI_NSI description"
+        }
+      ]
+    },
+    "value": [
+      {
+        "name": "PDUSessionEstSR",
+        "displayName": "PDU Session Est SR",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "PDUSessionEstSR_NSSAI_NSI",
+        "valueDocumentName": "vi_NSSAI_NSI_PDUSessionEstSR",
+        "description": "PDUSessionEstSR Description"
+      },
+      {
+        "name": "SessionModificationReqRcvd",
+        "displayName": "Session Modification Req Rcvd",
+        "unit": "errors/minute",
+        "type": "integer",
+        "valueContextDocumentName": "SessionModificationReqRcvd_NSSAI_NSI",
+        "valueDocumentName": "vi_NSSAI_NSI_SessionModificationReqRcvd",
+        "description": "SessionModificationReqRcvd Description"
+      },
+      {
+        "name": "AMFMeanRegNbr",
+        "unit": "errors/minute",
+        "displayName": "AMF Mean Reg Nbr",
+        "type": "float",
+        "valueContextDocumentName": "AMFMeanRegNbr_NSSAI_NSI",
+        "valueDocumentName": "vd_NSSAI_NSI_AMFMeanRegNbr",
+        "description": "AMFMeanRegNbr Description"
+      }
+    ]
+  }
+}

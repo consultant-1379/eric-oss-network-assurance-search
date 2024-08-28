@@ -1,0 +1,205 @@
+modelVersion: '3.0'
+dependencies:
+# jose 4.14.4 is in SCAS but under 8/CTX1030626. 4.14.4 is also missing in Mimer.
+- ID: jose+4.14.4
+  additional_info:
+    fossa-attribution:
+      Description: '''JSON Web Almost Everything'' - JWA, JWS, JWE, JWT, JWK, JWKS
+        for Node.js, Browser, Cloudflare Workers, Deno, Bun, and other Web-interoperable
+        runtimes'
+      Package: jose
+      Source: npm
+      Version: 4.14.4
+      Hash: ''
+      licenses:
+      - MIT
+      Title: jose
+      DownloadURL: https://registry.npmjs.org/jose/-/jose-4.14.4.tgz
+  bazaar:
+    register: 'no'
+    prim: 6/CTX1030626
+    community_link: https://www.npmjs.com/package/jose
+    community_name: https://www.npmjs.com/package/jose
+    community_url: https://www.npmjs.com/package/jose
+    component_comment: ''
+    component_highlevel_description: '"JSON Web Almost Everything" - JWA, JWS, JWE,
+      JWT, JWK, JWKS with no dependencies using runtime''s native crypto in Node.js,
+      Browser, Cloudflare Workers, Electron, and Deno.'
+    component_name: jose panva
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 4.9.1
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://registry.npmjs.org/jose/-/jose-4.9.1.tgz
+    stako_decision_reason: manual
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1021895&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Czech Republic
+    crypto: 'NO'
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: jose
+    target_sw: linux
+    vendor: npm
+    version: 4.14.4
+    web_url: https://www.npmjs.com/package/jose
+  licenses:
+  - MIT
+  name: jose
+  primary:
+  - '@adp/kubernetes'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.14.4
+  mimer:
+    linking: Dynamic
+    product_number: CTX1030626
+    product_version_label: 4.14.4
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+# underscore 1.13.6 doesn't exist in SCAS and Mimer
+- ID: underscore+1.13.6
+  additional_info:
+    fossa-attribution:
+      Description: JavaScript's functional programming helper library.
+      Package: underscore
+      Source: npm
+      Version: 1.13.6
+      Hash: ''
+      licenses:
+      - MIT
+      Title: underscore
+      DownloadURL: https://registry.npmjs.org/underscore/-/underscore-1.13.6.tgz
+  bazaar:
+    register: 'no'
+    prim: 17/CAX1055903
+    community_link: https://www.npmjs.com/package/underscore
+    community_name: https://www.npmjs.com/package/underscore
+    community_url: https://www.npmjs.com/package/underscore
+    component_comment: ''
+    component_highlevel_description: Underscore is a utility-belt library for JavaScript
+      that provides a lot of the functional programming support that you would expect
+      in Prototype.js (or Ruby), but without extending any of the built-in JavaScript
+      objects. It's the tie to go along with jQuery's tux, and Backbone.js's suspenders.
+    component_name: Underscore.js
+    component_platform: linux
+    component_programing_language: JavaScript
+    component_version: 1.13.3
+    licenses:
+    - FAL1159008 (MIT License (MIT))
+    src_download_link: https://registry.npmjs.org/underscore/-/underscore-1.13.3.tgz
+    stako_decision_reason: manual
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1013947&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: JavaScript
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: underscore
+    target_sw: linux
+    vendor: npm
+    version: 1.13.6
+    web_url: https://www.npmjs.com/package/underscore
+  licenses:
+  - MIT
+  name: underscore
+  primary:
+  - '@adp/kubernetes'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.13.6
+  mimer:
+    linking: Dynamic
+    product_number: CAX1055903
+    product_version_label: 1.13.6
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+# url-value-parser 2.2.0 doesn't exist in SCAS and Mimer
+- ID: url-value-parser+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: extracts and replaces values and IDs in URLs
+      Package: url-value-parser
+      Source: npm
+      Version: 2.2.0
+      Hash: ''
+      licenses:
+      - MIT
+      - mit-0
+      Title: url-value-parser
+      DownloadURL: https://registry.npmjs.org/url-value-parser/-/url-value-parser-2.2.0.tgz
+  bazaar:
+    register: 'no'
+    prim: 2/CTX1033103
+    community_link: https://www.npmjs.com/package/url-value-parser
+    community_name: https://www.npmjs.com/package/url-value-parser
+    community_url: https://www.npmjs.com/package/url-value-parser
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: UrlValueParser
+    component_platform: linux
+    component_programing_language: ''
+    component_version: 2.1.0
+    licenses:
+    - FAL1159224 (Do What The F*ck You Want To Public License (WTFPL))
+    src_download_link: https://registry.npmjs.org/url-value-parser/-/url-value-parser-2.1.0.tgz
+    stako_decision_reason: manual
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1013948&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: ''
+    programming_language: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: url-value-parser
+    target_sw: linux
+    vendor: npm
+    version: 2.2.0
+    web_url: https://www.npmjs.com/package/url-value-parser
+  licenses:
+  - MIT
+  - mit-0
+  name: url-value-parser
+  primary:
+  - '@adp/pm-service'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  mimer:
+    linking: Dynamic
+    product_number: CTX1033103
+    product_version_label: 2.2.0
+    selected_licenses:
+    - WTFPL
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'

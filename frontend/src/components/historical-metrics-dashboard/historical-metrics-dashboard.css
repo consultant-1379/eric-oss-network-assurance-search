@@ -1,0 +1,23 @@
+/* style goes here */
+:host {
+  display: block;
+  background-color: var(--layer2, #fafafa);
+  height: 100%;
+}
+
+#iframe {
+  flex: 2;
+  padding-left: 6px;
+  height: 100%;
+}
+
+#cnom-assurance-dashboard {
+  border: none;
+  display: none;
+}
+
+#loading-banner {
+  padding-top: 20%;
+  justify-content: center;
+  text-align: center;
+}

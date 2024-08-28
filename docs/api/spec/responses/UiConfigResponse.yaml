@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/UiConfig.yaml'
+    example:
+      logging:
+        logLevel: "info"
+      routes:
+        internal:
+          prefix: "/ui"
+          routes:
+            config: "/configuration"

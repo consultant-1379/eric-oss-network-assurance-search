@@ -1,0 +1,47 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "FOO",
+        "context": [
+          {
+            "name": "NSSI",
+            "documentName": "Doc NSSI",
+            "description": "NSSI"
+          },
+          {
+            "name": "NF",
+            "documentName": "Doc NF",
+            "description": "NF"
+          }
+        ]
+      },
+      {
+        "name": "BAR",
+        "context": [
+          {
+            "name": "NF",
+            "documentName": "Doc NF",
+            "description": "NF"
+          },
+          {
+            "name": "NSI",
+            "documentName": "Doc NSI",
+            "description": "NSI"
+          }
+        ]
+      },
+      {
+        "name": "BAZ",
+        "context": [
+          {
+            "name": "EVC",
+            "documentName": "Doc EVC",
+            "description": "EVC"
+          }
+        ]
+      }
+    ]
+  }
+]

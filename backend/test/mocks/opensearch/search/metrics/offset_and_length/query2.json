@@ -1,0 +1,65 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 1000,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "full_context": "NF_SNSSAI"
+            }
+          }
+        ],
+        "should": [
+          {
+            "match": {
+              "c_SNSSAI": "1:2"
+            }
+          },
+          {
+            "match": {
+              "c_SNSSAI": "2:1"
+            }
+          },
+          {
+            "match": {
+              "c_SNSSAI": "2:2"
+            }
+          },
+          {
+            "match": {
+              "c_NF": "AMF_BC"
+            }
+          },
+          {
+            "match": {
+              "c_NF": "AMF_ON1"
+            }
+          },
+          {
+            "match": {
+              "c_NF": "AMF_ON2"
+            }
+          }
+        ],
+        "minimum_should_match": 2,
+        "filter": {
+          "bool": {
+            "should": [
+              {
+                "range": {
+                  "vi_NF_SNSSAI_AMFMeanRegNbr": {
+                    "gte": 0
+                  }
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      }
+    }
+  }
+}

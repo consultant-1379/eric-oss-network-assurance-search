@@ -1,0 +1,58 @@
+{
+  "schema-version": "1.0.0",
+  "documents": [
+    {
+      "name": "basic-tutorial",
+      "displayName": "Basic Tutorial",
+      "version": "B",
+      "path": "./path/to/doc1.md",
+      "type": "tutorial",
+      "format": "markdown",
+      "groupNames": ["eea", "tutorials"]
+    },
+    {
+      "name": "administration-guide",
+      "displayName": "Administration Guide",
+      "version": "PA",
+      "path": "./path/to/doc.html",
+      "type": "document",
+      "format": "html",
+      "groupNames": ["eea", "administration"]
+    },
+    {
+      "name": "tech-tutorial",
+      "displayName": "Tech Tutorial",
+      "version": "B",
+      "path": "./path/to/doc3.md",
+      "type": "tutorial",
+      "format": "markdown",
+      "groupNames": ["technical"]
+    },
+    {
+      "name": "dev-tutorial",
+      "displayName": "Developers Tutorial",
+      "version": "B",
+      "path": "./path/to/dev-doc.md",
+      "type": "tutorial",
+      "format": "markdown",
+      "groupNames": ["technical"]
+    }
+  ],
+  "groups": [
+    {
+      "name": "tutorials",
+      "displayName": "Tutorials",
+      "type": "category"
+    },
+    {
+      "name": "eea",
+      "displayName": "EEA4 Documentation",
+      "type": "product"
+    },
+    {
+      "name": "administration",
+      "displayName": "Administration Guides",
+      "type": "category"
+    }
+  ]
+}

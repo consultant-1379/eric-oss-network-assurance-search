@@ -1,0 +1,21 @@
+{
+  "id" : "125f6457-cf8f-44ff-82e7-77a21cc3428a",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/indexer-list",
+    "method" : "GET",
+    "headers" : {
+      "Content-Type" : {
+        "equalTo" : "application/json"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"name\":\"nameOfIndexerA\",\"description\":\"description for indexer A\"},{\"name\":\"indexerB\",\"description\":\"description of indexer B\"}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "125f6457-cf8f-44ff-82e7-77a21cc3428a"
+}

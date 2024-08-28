@@ -1,0 +1,5 @@
+xray:
+  name: Network Assurance Search
+  version: {version}
+  paths:
+  - "- ARM-SELI/{xray-repo}/{artifactory-subpath}-{stage}/{image}:{version}"

@@ -1,0 +1,22 @@
+{
+  "ADD_TAB": "ajouter un onglet",
+  "ADDING_TAB_TITLE": "Ajouter un contexte KPI",
+  "ADDING_TAB_FLYOUT_PANEL_ADD": "Ajouter",
+  "ADDING_TAB_FLYOUT_PANEL_CANCEL": "Annuler",
+
+  "APP_LOADING": "Le tableau de bord est en cours de chargement...",
+
+  "ARIA_CLEAR_MATCH_DESCRIPTION": "Effacer tous les contextes correspondants",
+
+  "CLEAR_MATCH_BTN_LABEL": "Clair",
+
+  "ERROR": "Erreur",
+
+  "FIND_CONTEXTS_LABEL": "Trouver des contextes de KPI",
+  "FIND_CONTEXTS_PLACEHOLDER": "Rechercher des contextes KPI par nom...",
+
+  "NETWORK_ERROR_MESSAGE": "Le tableau de bord n'a pas pu se charger. Rechargez la page pour réessayer.",
+  "CONTEXT_FILTER_LABEL_PREFIX": "Contextes KPI",
+  "CONTEXT_FILTER_LABEL_SHOWING": "Montrant",
+  "CONTEXT_FILTER_LABEL_OF": "of"
+}

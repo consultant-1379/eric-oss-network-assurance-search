@@ -1,0 +1,920 @@
+{
+  "families": [
+    {
+      "name": "default",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_accessibility_subscribers",
+      "title": "Accessibility (Subscribers)",
+      "unit": "Subs",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_utilization_sessions",
+      "title": "Utilization (Sessions)",
+      "unit": "Sessions",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_successful_request_percentage",
+      "unit": "Req (%)",
+      "title": "Successful Sessions Operations (Request %)",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_accessibility_failed_request_percentage",
+      "unit": "Req (%)",
+      "title": "Failed Session Operations (Request %)",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_integrity_dl",
+      "unit": "packets",
+      "title": "Integrity - Download (packets)",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_integrity_ul",
+      "unit": "packets",
+      "title": "Integrity - Upload (packets)",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_integrity_throughput",
+      "unit": " bits/s",
+      "title": "Integrity (bits/s)",
+      "widget": "timeline"
+    },
+    {
+      "name": "generic_timeline_ms",
+      "unit": "ms",
+      "widget": "timeline"
+    },
+    {
+      "name": "generic_timeline_percent",
+      "unit": "%",
+      "widget": "timeline"
+    },
+    {
+      "name": "generic_timeline_count",
+      "unit": "count",
+      "widget": "timeline"
+    },
+    {
+      "name": "generic_timeline_throughput",
+      "unit": " bits/s",
+      "widget": "timeline"
+    },
+    {
+      "name": "generic_donut_ms",
+      "unit": "ms",
+      "widget": "donut"
+    },
+    {
+      "name": "generic_donut_percent",
+      "unit": "%",
+      "widget": "donut"
+    },
+    {
+      "name": "generic_donut_count",
+      "unit": "count",
+      "widget": "donut"
+    },
+    {
+      "name": "generic_donut_throughput",
+      "unit": " kbit/s",
+      "widget": "donut"
+    },
+    {
+      "name": "timeline_ms",
+      "title": "Average Packet Transmission Delays",
+      "subtitle": "Average packet transmission delay for gNB-DU",
+      "unit": "ms",
+      "widget": "timeline"
+    },
+    {
+      "name": "donut_ms",
+      "title": "Average Packet Transmission Delays",
+      "subtitle": "Average packet transmission delay for gNB-DU",
+      "unit": "ms",
+      "widget": "donut"
+    },
+    {
+      "name": "donut_average_packet_transmission_delays",
+      "title": "Average Packet Transmission Delays",
+      "subtitle": "Average packet transmission delay for gNB-DU",
+      "unit": "ms",
+      "widget": "donut"
+    },
+    {
+      "name": "timeline_average_packet_transmission_delays",
+      "title": "Average Packet Transmission Delays",
+      "subtitle": "Average packet transmission delay for gNB-DU",
+      "unit": "ms",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_average_ue_throughput_in_uplink",
+      "title": "Average UE throughput in uplink",
+      "subtitle": "These KPIs describes the average uplink RAN UE throughput",
+      "unit": "kbps",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_average_ue_throughput_in_downlink",
+      "title": "Average UE throughput in downlink",
+      "subtitle": "Average packet transmission delay for gNB-DU",
+      "unit": "kbps",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_granhosr",
+      "title": "GRANHOSR",
+      "subtitle": "This KPI identifies how often a handover within NR-RAN is successful",
+      "unit": "count",
+      "widget": "timeline"
+    },
+    {
+      "name": "timeline_5gsepshosr",
+      "title": "5GSEPSHOSR",
+      "subtitle": "This KPI calculates 5GS to EPS handover success rate as a percentage",
+      "unit": "percent",
+      "widget": "timeline"
+    }
+  ],
+  "groups": [
+    {
+      "name": "default",
+      "title": "Historical Dashboard",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_overview",
+      "title": "Performance Overview",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_accessibility",
+      "title": "DRB Accessibility",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_integrity",
+      "title": "Integrity",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_mobility",
+      "title": "Mobility",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_core",
+      "title": "Core Slice KPIs",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_ran",
+      "title": "RAN Slice KPIs",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_core_slice_kpis",
+      "title": "Core Slice KPIs",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    },
+    {
+      "name": "group_core_slice_kpis_proprietary",
+      "title": "Core Slice KPIs (proprietary)",
+      "sort": "alphabetical",
+      "sortOrder": "asc"
+    }
+  ],
+  "categories": [
+    {
+      "name": "accessibility",
+      "title": "Accessibility"
+    },
+    {
+      "name": "integrity",
+      "title": "Integrity"
+    },
+    {
+      "name": "utilization",
+      "title": "Utilization"
+    },
+    {
+      "name": "health",
+      "title": "Health"
+    },
+    {
+      "name": "mobility",
+      "title": "Mobility"
+    }
+  ],
+  "contexts": [
+    {
+      "contextFields": ["site"],
+      "name": "Slice Owner (Core) - Site Focus",
+      "description": "Aggregate based on site"
+    },
+    {
+      "contextFields": ["site", "nssi"],
+      "name": "Slice Owner (Core) - NSSI Site Focus",
+      "description": "Aggregate based on the NSSI and Site"
+    },
+    {
+      "contextFields": ["plmnId", "snssai", "site"],
+      "name": "Service Owner (Core) - Site Focus",
+      "description": "5G Core Service Owner Site Focus"
+    },
+    {
+      "contextFields": ["plmnId", "snssai", "nssi"],
+      "name": "Service Owner (Core) - NSSI Focus",
+      "description": "5G Core Service Owner NSSI Focus"
+    },
+    {
+      "contextFields": ["plmnId", "snssai", "nssi", "nf"],
+      "name": "Service Owner (Core) - NSSI NF Focus",
+      "description": "5G Core Service Owner NSSI NFFocus"
+    },
+    {
+      "contextFields": ["plmnId", "snssai", "nssi", "nf", "site"],
+      "name": "Service Owner (Core) - NSSI Site NF Focus",
+      "description": "5G Core Service Owner NSSI Site NF Focus"
+    },
+    {
+      "contextFields": ["cfid", "snssai", "nsi"],
+      "name": "SNSSAI & NSI",
+      "description": "SNSSAI & NSI"
+    },
+    {
+      "contextFields": ["nf", "snssai"],
+      "name": "Service Owner (Core) - NF Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated by Network Function"
+    },
+    {
+      "contextFields": ["snssai"],
+      "name": "Service Owner (Core) - Network Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated against the entire network"
+    },
+    {
+      "contextFields": ["nf"],
+      "name": "Network Owner (Core) - NF Focus",
+      "description": "Service KPIs for specific Network Function"
+    },
+    {
+      "contextFields": ["plmnId", "snssai"],
+      "name": "Service Owner (RAN & Core) - Network Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated against the entire network"
+    },
+    {
+      "contextFields": ["nssi", "plmnId", "snssai"],
+      "name": "Service Owner (RAN) - NSSI Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated by NSSI"
+    },
+    {
+      "contextFields": ["nssi", "plmnId", "snssai", "tac"],
+      "name": "Service Owner (RAN) - TA Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated by NSSI and Tracking Area"
+    },
+    {
+      "contextFields": ["managedElement", "nssi", "plmnId", "snssai"],
+      "name": "Service Owner (RAN) - NF Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated by NSSI and gNodeB"
+    },
+    {
+      "contextFields": ["cellId", "managedElement", "nssi", "plmnId", "snssai", "tac"],
+      "name": "Service Owner (RAN) - Cell Focus",
+      "description": "Service KPIs for a specific S-NSSAI aggregated by NSSI, Tracking Area, gNodeB and Cell"
+    },
+    {
+      "contextFields": ["plmnId", "qos", "snssai"],
+      "name": "Service Owner (RAN) - 5QI Network Focus",
+      "description": "Service KPIs for a specific S-NSSAI and QoS aggregated against the entire network"
+    },
+    {
+      "contextFields": ["nssi", "plmnId", "qos", "snssai"],
+      "name": "Service Owner (RAN) - 5QI NSSI Focus",
+      "description": "Service KPIs for a specific S-NSSAI and QoS aggregated by NSSI"
+    },
+    {
+      "contextFields": ["nssi", "plmnId", "qos", "snssai", "tac"],
+      "name": "Service Owner (RAN) - 5QI TA Focus",
+      "description": "Service KPIs for a specific S-NSSAI and QoS aggregated by NSSI and Tracking Area"
+    },
+    {
+      "contextFields": ["managedElement", "nssi", "plmnId", "qos", "snssai"],
+      "name": "Service Owner (RAN) - 5QI NF Focus",
+      "description": "Service KPIs for a specific S-NSSAI and QoS aggregated by NSSI and gNodeB"
+    },
+    {
+      "contextFields": ["cellId", "managedElement", "nssi", "plmnId", "qos", "snssai", "tac"],
+      "name": "Service Owner (RAN) - 5QI Cell Focus",
+      "description": "Service KPIs for a specific S-NSSAI and QoS aggregated by NSSI, Tracking Area, gNodeB and Cell"
+    },
+    {
+      "contextFields": ["qos"],
+      "name": "Slice Owner (RAN) - 5QI Network Focus",
+      "description": "Service KPIs for a specific QoS aggregated against the entire network"
+    },
+    {
+      "contextFields": ["nssi", "qos"],
+      "name": "Slice Owner (RAN) - 5QI NSSI Focus",
+      "description": "Service KPIs for the network aggregated by QoS and NSSI"
+    },
+    {
+      "contextFields": ["nssi", "qos", "tac"],
+      "name": "Slice Owner (RAN) - 5QI TA Focus",
+      "description": "Service KPIs for the network aggregated by QoS, NSSI and Tracking Area"
+    },
+    {
+      "contextFields": ["managedElement", "nssi", "qos"],
+      "name": "Slice Owner (RAN) - 5QI NF Focus",
+      "description": "Service KPIs for the network aggregated by QoS, NSSI and gNodeB"
+    },
+    {
+      "contextFields": ["cellId", "managedElement", "nssi", "qos", "tac"],
+      "name": "Slice Owner (RAN) - 5QI Cell Focus",
+      "description": "Service KPIs for the network aggregated by QoS, NSSI, Tracking Area, gNodeB and Cell"
+    },
+    {
+      "contextFields": ["nssi"],
+      "name": "Slice Owner (RAN & Core) - NSSI Focus",
+      "description": "Service KPIs for the network aggregated by NSSI"
+    },
+    {
+      "contextFields": ["nssi", "tac"],
+      "name": "Slice Owner (RAN) - TA Focus",
+      "description": "Service KPIs for the network aggregated by NSSI and Tracking Area"
+    },
+    {
+      "contextFields": ["managedElement", "nssi"],
+      "name": "Slice Owner (RAN) - NF Focus",
+      "description": "Service KPIs for the network aggregated by NSSI and gNodeB"
+    },
+    {
+      "contextFields": ["cellId", "managedElement", "nssi", "tac"],
+      "name": "Slice Owner (RAN) - Cell Focus",
+      "description": "Service KPIs for the network aggregated by NSSI, Tracking Area, gNodeB and Cell"
+    },
+    {
+      "contextFields": ["tac"],
+      "name": "Network Owner (RAN) - TA Focus",
+      "description": "Service KPIs for the network aggregated by Tracking Area"
+    },
+    {
+      "contextFields": ["managedElement"],
+      "name": "Network Owner (RAN) - NF Focus",
+      "description": "Service KPIs for the network aggregated by gNodeB"
+    },
+    {
+      "contextFields": ["cellId", "managedElement", "tac"],
+      "name": "Network Owner (RAN) - Cell Focus",
+      "description": "Service KPIs for the network aggregated by Tracking Area, gNodeB and Cell"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "PartialDRBAccessibility",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "group_overview": [
+          "timeline_ms"
+        ],
+        "group_ran": [
+          "donut_ms"
+        ],
+        "group_accessibility": [
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "DRBAccessibility",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "group_overview": [
+          "timeline_ms"
+        ],
+        "group_ran": [
+          "timeline_ms"
+        ],
+        "group_accessibility": [
+          "timeline_ms"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DLLat_gNB_DU",
+      "category": [
+        "mobility"
+      ],
+      "groups": {
+        "group_overview": [
+          "timeline_ms",
+          "donut_ms"
+        ],
+        "group_ran": [
+          "timeline_ms"
+        ],
+        "group_integrity": [
+          "timeline_ms"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DLDelay_GnbDu",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_integrity": [
+          "donut_average_packet_transmission_delays",
+          "timeline_average_packet_transmission_delays"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DLDelay_gNBDU_Cell",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_ran": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_integrity": [
+          "donut_average_packet_transmission_delays",
+          "timeline_average_packet_transmission_delays"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DLDelay_gNBDU_SNw",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_ran": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_integrity": [
+          "donut_average_packet_transmission_delays",
+          "timeline_average_packet_transmission_delays"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DLDelay_gNBDU_Nss",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_ran": [
+          "donut_average_packet_transmission_delays"
+        ],
+        "group_integrity": [
+          "donut_average_packet_transmission_delays",
+          "timeline_average_packet_transmission_delays"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DlUeThroughput_Cell",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DlUeThroughput_SNw",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "DlUeThroughput_Nss",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "UlUeThroughput_Cell",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "UlUeThroughput_SNw",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "UlUeThroughput_Nss",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "group_overview": [
+          "generic_timeline_throughput"
+        ],
+        "group_ran": [
+          "generic_donut_throughput"
+        ],
+        "group_integrity": [
+          "generic_timeline_throughput"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "GRANHOSR",
+      "category": [
+        "mobility"
+      ],
+      "groups": {
+        "group_overview": [
+          "timeline_granhosr"
+        ],
+        "group_ran": [
+          "timeline_granhosr"
+        ],
+        "group_mobility": [
+          "timeline_granhosr"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "5GSEPSHOSR",
+      "category": [
+        "mobility"
+      ],
+      "groups": {
+        "group_overview": [
+          "timeline_5gsepshosr"
+        ],
+        "group_ran": [
+          "timeline_5gsepshosr"
+        ],
+        "group_mobility": [
+          "timeline_5gsepshosr"
+        ]
+      },
+      "query": "${metricName}{tac=~\"sn.*-4\"}"
+    },
+    {
+      "name": "AMFMeanRegNbr",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_accessibility_subscribers"
+        ],
+        "group_core": [
+          "timeline_accessibility_subscribers"
+        ]
+      }
+    },
+    {
+      "name": "AMFMaxRegNbr",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_accessibility_subscribers"
+        ],
+        "group_core": [
+          "timeline_accessibility_subscribers"
+        ]
+      }
+    },
+    {
+      "name": "PDUSessionEstSR",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_successful_request_percentage"
+        ],
+        "group_core": [
+          "timeline_successful_request_percentage"
+        ]
+      }
+    },
+    {
+      "name": "UTSNSI",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_throughput"
+        ],
+        "group_core": [
+          "timeline_throughput"
+        ]
+      }
+    },
+    {
+      "name": "DTSNSI",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_throughput"
+        ],
+        "group_core": [
+          "generic_timeline_throughput"
+        ]
+      }
+    },
+    {
+      "name": "UGTPTN",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_throughput"
+        ],
+        "group_core": [
+          "generic_timeline_throughput"
+        ]
+      }
+    },
+    {
+      "name": "DGTPTN",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_throughput"
+        ],
+        "group_core": [
+          "timeline_ms"
+        ]
+      }
+    },
+    {
+      "name": "PDUSesMeanNbr",
+      "category": [
+        "utilization"
+      ],
+      "groups": {
+        "default": [
+          "timeline_utilization_sessions"
+        ],
+        "group_core": [
+          "timeline_utilization_sessions",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "PDUSesMaxNbr",
+      "category": [
+        "utilization"
+      ],
+      "groups": {
+        "default": [
+          "timeline_utilization_sessions"
+        ],
+        "group_core": [
+          "timeline_utilization_sessions"
+        ]
+      }
+    },
+    {
+      "name": "PDUSessModSR",
+      "category": [
+        "utilization"
+      ],
+      "groups": {
+        "default": [
+          "timeline_successful_request_percentage"
+        ],
+        "group_core": [
+          "timeline_successful_request_percentage",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "ULIpv4PacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_ul"
+        ],
+        "group_core": [
+          "timeline_ms",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "DLIpv4PacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_dl"
+        ],
+        "group_core": [
+          "timeline_ms"
+        ]
+      }
+    },
+    {
+      "name": "ULIpv6PacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_ul"
+        ],
+        "group_core": [
+          "timeline_ms",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "DLIpv6PacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_dl"
+        ],
+        "group_core": [
+          "timeline_ms",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "ULUnstrPacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_ul"
+        ],
+        "group_core": [
+          "timeline_ms",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "DLUnstrPacketsDr",
+      "category": [
+        "integrity"
+      ],
+      "groups": {
+        "default": [
+          "timeline_integrity_dl"
+        ],
+        "group_core": [
+          "timeline_ms",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "PFCPSessEstFR",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_accessibility_failed_request_percentage"
+        ],
+        "group_core": [
+          "timeline_accessibility_failed_request_percentage",
+          "donut_ms"
+        ]
+      }
+    },
+    {
+      "name": "PFCPSessModFR",
+      "category": [
+        "accessibility"
+      ],
+      "groups": {
+        "default": [
+          "timeline_accessibility_failed_request_percentage"
+        ],
+        "group_core": [
+          "timeline_accessibility_failed_request_percentage",
+          "donut_ms"
+        ]
+      }
+    }
+  ]
+}

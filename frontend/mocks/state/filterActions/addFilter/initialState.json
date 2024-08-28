@@ -1,0 +1,106 @@
+{
+  "browsers": [
+    {
+      "title": " NSSAI & NSI",
+      "filters": [],
+      "loading": false,
+      "active": true,
+      "id": "testid",
+      "context": {
+        "filterCategories": [
+          {
+            "type": "context",
+            "title": "Network Filters",
+            "selection": "checkbox",
+            "fields": [
+              {
+                "label": "Network Slice Selection Assistance Information",
+                "name": "NSSAI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSSAI",
+                  "description": "Network Slice Selection Assistance Information",
+                  "valueType": "string"
+                }
+              },
+              {
+                "label": "Network Slice Instance",
+                "name": "NSI",
+                "filterCategory": "context",
+                "type": {
+                  "id": "NSI",
+                  "description": "Network Slice Instance",
+                  "valueType": "string"
+                }
+              }
+            ],
+            "help": "NETWORK_FILTER_TOOLTIP_MESSAGE"
+          },
+          {
+            "type": "metric",
+            "title": "Measurement Filters",
+            "selection": "radio",
+            "fields": [
+              {
+                "label": "Session Modification Request Received",
+                "name": "vi_sessionModificationReqRcvd",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_sessionModificationReqRcvd",
+                  "valueType": "integer",
+                  "description": "Session Modification Request Received"
+                }
+              },
+              {
+                "label": "Dropped Packets",
+                "name": "vi_dlUnstrDropPackets",
+                "filterCategory": "metric",
+                "type": {
+                  "id": "vi_dlUnstrDropPackets",
+                  "valueType": "integer",
+                  "description": "Dropped Packets"
+                }
+              }
+            ],
+            "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE"
+          }
+        ],
+        "columns": [
+          {
+            "title": "Network Slice Selection Assistance Information",
+            "attribute": "NSSAI",
+            "valueType": "string",
+            "sortable": true
+          },
+          {
+            "title": "Network Slice Instance",
+            "attribute": "NSI",
+            "valueType": "string",
+            "sortable": true
+          },
+          {
+            "title": "Session Modification Request Received",
+            "attribute": "vi_sessionModificationReqRcvd",
+            "valueType": "integer",
+            "sortable": true
+          },
+          {
+            "title": "Dropped Packets",
+            "attribute": "vi_dlUnstrDropPackets",
+            "valueType": "integer",
+            "sortable": true
+          }
+        ]
+      },
+      "match": "",
+      "data": {
+        "tableData": [],
+        "sort": {},
+        "currentpage": 1,
+        "numentries": 20,
+        "numpages": 1,
+        "fetchTime": 1686597285023
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+apiVersion: siptls.sec.ericsson.com/v1
+kind: InternalCertificate
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}-fh-client-cert
+  labels:
+    {{- include "eric-oss-network-assurance-search.helmK8s-labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+spec:
+  kubernetes:
+    generatedSecretName: {{ include "eric-oss-network-assurance-search.name" . }}-fh-client-cert
+  certificate:
+    subject:
+      cn: {{ include "eric-oss-network-assurance-search.name" . }}
+    issuer:
+      reference: eric-fh-alarm-handler-fi-server-client-ca
+    extendedKeyUsage:
+      tlsClientAuth: true
+      tlsServerAuth: false
+
+{{ end }}

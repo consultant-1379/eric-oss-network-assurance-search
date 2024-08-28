@@ -1,0 +1,26 @@
+{
+  "name": "consumer-contract-tests",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "20.12.2"
+  },
+  "type": "module",
+  "scripts": {
+    "mock:indexer": "wiremock --root-dir . --port 8282 --enable-stub-cors --enable-browser-proxying --trust-all-proxy-targets --disable-banner &",
+    "test:contract:indexer": "npm run mock:indexer && sleep 1s && mocha --reporter mochawesome --reporter-options inline=true,reportDir=reports/mochawesome indexer.spec.js --exit | tee reports/consumer-contract-test-results.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://gerrit-gamma.gic.ericsson.se:29418/OSS/com.ericsson.oss.use/eric-oss-network-assurance-search"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pact-foundation/pact": "^12.1.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "wiremock": "^3.0.3"
+  }
+}

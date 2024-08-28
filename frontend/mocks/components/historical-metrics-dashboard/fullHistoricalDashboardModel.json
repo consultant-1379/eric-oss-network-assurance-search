@@ -1,0 +1,625 @@
+{
+  "$schema": "../../../server/jsonSchemas/dashboardModel.schema.json",
+  "namespace": "assurance",
+  "dashboards": [
+    {
+      "_id": "dashboard_zolemr24",
+      "title": "tac_548 (timelines)",
+      "tiles": [
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "timeline_b5k79y7"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "timeline_2l3mle4r"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "timeline_3bku43e"
+        }
+      ]
+    },
+    {
+      "_id": "dashboard_8o0kf22",
+      "title": "tac_548 (bar charts)",
+      "tiles": [
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "barChart_9lyw30tr"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "barChart_kz22lhkg"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "barChart_z4vyf81d"
+        }
+      ]
+    },
+    {
+      "_id": "dashboard_1ubjikcn",
+      "title": "tac_548 (donut)",
+      "tiles": [
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "donut_2qcvgf2"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "donut_lykbx1m"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "donut_cb9j6uc6"
+        }
+      ]
+    },
+    {
+      "_id": "dashboard_hd7jet8s",
+      "title": "tac_548 (kpi)",
+      "tiles": [
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "kpi_bu3hvwis"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "kpi_2ojtpuqph"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "kpi_9n1fh0md"
+        }
+      ]
+    },
+    {
+      "_id": "dashboard_5ztb0w6h",
+      "title": "tac_548 (gauge)",
+      "tiles": [
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "gauge_lnge8cn"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "gauge_c1039sdk"
+        },
+        {
+          "xSize": 8,
+          "ySize": 1,
+          "widget": "gauge_fjc23h46"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "_id": "timeline_b5k79y7",
+      "widgetType": "timeline",
+      "title": "Partial DRB Accessibility,GRANGOSR,5GSEPHOSR",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 352,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 350,
+          "color": "green"
+        }
+      ],
+      "rightPanelContent": {
+        "features": ["settings", "valuesTable"],
+        "openByDefault": "none"
+      }
+    },
+    {
+      "_id": "timeline_2l3mle4r",
+      "widgetType": "timeline",
+      "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 352,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 350,
+          "color": "green"
+        }
+      ],
+      "rightPanelContent": {
+        "features": ["settings", "valuesTable"],
+        "openByDefault": "none"
+      }
+    },
+    {
+      "_id": "timeline_3bku43e",
+      "widgetType": "timeline",
+      "title": "DLUeThroughput,UlUeThroughput",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 352,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 350,
+          "color": "green"
+        }
+      ],
+      "rightPanelContent": {
+        "features": ["settings", "valuesTable"],
+        "openByDefault": "none"
+      }
+    },
+    {
+      "_id": "barChart_9lyw30tr",
+      "widgetType": "barChart",
+      "title": "Partial DRB Accessibility,GRANGOSR,5GSEPHOSR",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 92,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 90,
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "_id": "barChart_kz22lhkg",
+      "widgetType": "barChart",
+      "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 92,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 90,
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "_id": "barChart_z4vyf81d",
+      "widgetType": "barChart",
+      "title": "DLUeThroughput,UlUeThroughput",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5"
+        }
+      ],
+      "thresholds": [
+        {
+          "condition": "moreThan",
+          "value": 92,
+          "color": "red"
+        },
+        {
+          "condition": "lessThan",
+          "value": 90,
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "_id": "kpi_bu3hvwis",
+      "widgetType": "kpi",
+      "title": "Partial DRB Accessibility,GRANGOSR,5GSEPHOSR",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l",
+          "heading": "Partial DRB Accessibility",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h",
+          "heading": "GRANGOSR",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f",
+          "heading": "5GSEPHOSR",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        }
+      ],
+      "showTimestamp": true
+    },
+    {
+      "_id": "kpi_2ojtpuqph",
+      "widgetType": "kpi",
+      "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr",
+          "heading": "DLLat_gNB-DU",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb",
+          "heading": "DLDelay_gNBDU",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        }
+      ],
+      "showTimestamp": true
+    },
+    {
+      "_id": "kpi_9n1fh0md",
+      "widgetType": "kpi",
+      "title": "DLUeThroughput,UlUeThroughput",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef",
+          "heading": "DLUeThroughput",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5",
+          "heading": "UlUeThroughput",
+          "kpiType": "progressBar",
+          "extraData": {
+            "maxValue": 100
+          }
+        }
+      ],
+      "showTimestamp": true
+    },
+    {
+      "_id": "gauge_lnge8cn",
+      "widgetType": "gauge",
+      "title": "Partial DRB Accessibility,GRANGOSR,5GSEPHOSR",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f"
+        }
+      ],
+      "size": "medium",
+      "dataKey": "Cavendish",
+      "min": 0,
+      "max": 100,
+      "limits": [
+        {
+          "from": 1,
+          "to": 10,
+          "label": "Low",
+          "color": "red"
+        },
+        {
+          "from": 90,
+          "to": 100,
+          "label": "High",
+          "color": "yellow"
+        },
+        {
+          "from": 10,
+          "to": 90,
+          "label": "Normal",
+          "color": "transparent"
+        }
+      ]
+    },
+    {
+      "_id": "gauge_c1039sdk",
+      "widgetType": "gauge",
+      "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb"
+        }
+      ],
+      "size": "medium",
+      "dataKey": "Cavendish",
+      "min": 0,
+      "max": 100,
+      "limits": [
+        {
+          "from": 1,
+          "to": 10,
+          "label": "Low",
+          "color": "red"
+        },
+        {
+          "from": 90,
+          "to": 100,
+          "label": "High",
+          "color": "yellow"
+        },
+        {
+          "from": 10,
+          "to": 90,
+          "label": "Normal",
+          "color": "transparent"
+        }
+      ]
+    },
+    {
+      "_id": "gauge_fjc23h46",
+      "widgetType": "gauge",
+      "title": "DLUeThroughput,UlUeThroughput",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5"
+        }
+      ],
+      "size": "medium",
+      "dataKey": "Cavendish",
+      "min": 0,
+      "max": 100,
+      "limits": [
+        {
+          "from": 1,
+          "to": 10,
+          "label": "Low",
+          "color": "red"
+        },
+        {
+          "from": 90,
+          "to": 100,
+          "label": "High",
+          "color": "yellow"
+        },
+        {
+          "from": 10,
+          "to": 90,
+          "label": "Normal",
+          "color": "transparent"
+        }
+      ]
+    },
+    {
+      "_id": "donut_2qcvgf2",
+      "widgetType": "donut",
+      "title": "Partial DRB Accessibility,GRANGOSR,5GSEPHOSR",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f"
+        }
+      ]
+    },
+    {
+      "_id": "donut_lykbx1m",
+      "widgetType": "donut",
+      "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb"
+        }
+      ]
+    },
+    {
+      "_id": "donut_cb9j6uc6",
+      "widgetType": "donut",
+      "title": "DLUeThroughput,UlUeThroughput",
+      "subtitle": "tac_548",
+      "sources": [
+        {
+          "source": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef"
+        },
+        {
+          "source": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "_id": "pmStatsQueryService_vd_tac_PartialDRBAccessibility_prqrm66l",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "Partial DRB Accessibility": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h4"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_DLLat_gNB-DU_j4k4zvgr",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "DLLat_gNB-DU": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h5"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_DLDelay_gNBDU_05xms0zb",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "DLDelay_gNBDU": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h6"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_DLUeThroughput_cj7bcef",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "DLUeThroughput": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h7"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_UlUeThroughput_jv7qcu5",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "UlUeThroughput": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h8"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_GRANGOSR_3yv9mu8h",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "GRANGOSR": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h9"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    },
+    {
+      "_id": "pmStatsQueryService_vd_tac_5GSEPHOSR_nqa5ma2f",
+      "sourceType": "pmStatsQueryService",
+      "schema": "kpi",
+      "entitySet": "kpi_csac_tac_10",
+      "timestampField": "aggregation_end_time",
+      "sourceFields": {
+        "5GSEPHOSR": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33m0"
+      },
+      "queryParameters": {
+        "$filter": "tac eq '548'"
+      }
+    }
+  ]
+}

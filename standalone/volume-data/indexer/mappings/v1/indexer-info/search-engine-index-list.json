@@ -1,0 +1,1 @@
+{"request": {"urlPath": "/v1/indexer-info/search-engine-index-list", "method": "GET", "headers": {"Content-Type": {"equalTo": "application/json"}}}, "response": {"status": 200, "bodyFileName": "../__files/v1/indexer-info/search-engine-index-list.json"}}

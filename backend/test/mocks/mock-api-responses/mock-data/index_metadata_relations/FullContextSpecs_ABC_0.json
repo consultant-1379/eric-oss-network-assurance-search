@@ -1,0 +1,72 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "ContextA-ContextB-ContextC",
+        "context": [
+          {
+            "name": "ContextA",
+            "documentName": "Doc A",
+            "description": "ContextA"
+          },
+          {
+            "name": "ContextB",
+            "documentName": "Doc B",
+            "description": "ContextB"
+          },
+          {
+            "name": "ContextC",
+            "documentName": "Doc C",
+            "description": "ContextC"
+          }
+        ]
+      },
+      {
+        "name": "ContextA",
+        "context": [
+          {
+            "name": "ContextA",
+            "documentName": "Doc A",
+            "description": "ContextA"
+          }
+        ]
+      },
+      {
+        "name": "ContextB",
+        "context": [
+          {
+            "name": "ContextB",
+            "documentName": "Doc B",
+            "description": "ContextB"
+          }
+        ]
+      },
+      {
+        "name": "ContextC",
+        "context": [
+          {
+            "name": "ContextC",
+            "documentName": "Doc C",
+            "description": "ContextC"
+          }
+        ]
+      },
+      {
+        "name": "ContextB-ContextC",
+        "context": [
+          {
+            "name": "ContextB",
+            "documentName": "Doc B",
+            "description": "ContextB"
+          },
+          {
+            "name": "ContextC",
+            "documentName": "Doc C",
+            "description": "ContextC"
+          }
+        ]
+      }
+    ]
+  }
+]

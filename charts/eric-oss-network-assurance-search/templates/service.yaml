@@ -1,0 +1,30 @@
+{{- $global := fromJson (include "eric-oss-network-assurance-search.global" .) -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}
+  labels:
+    {{- $serviceLabels := .Values.service.labels -}}
+    {{- $labels := include "eric-oss-network-assurance-search.labels" . | fromYaml -}}
+    {{- include "eric-oss-network-assurance-search.mergeLabels" (dict "location" .Template.Name "sources" (list $labels $serviceLabels)) | nindent 4 }}
+  annotations:
+    {{- $serviceAnnotations := .Values.service.annotations -}}
+    {{- $annotations := include "eric-oss-network-assurance-search.service-annotations" . | fromYaml }}
+    {{- include "eric-oss-network-assurance-search.mergeAnnotations" (dict "location" .Template.Name "sources" (list $annotations $serviceAnnotations)) | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  {{- if $global.internalIPFamily }}
+  ipFamilies: [{{ $global.internalIPFamily | quote  }}]
+  {{- end }}
+  ports:
+    - port: {{ include "eric-oss-network-assurance-search.service-port" . }}
+      targetPort: nas-svr-port
+      protocol: TCP
+      {{- if $global.security.tls.enabled }}
+      name: https-tls
+      {{- else }}
+      name: http
+      {{- end }}
+  selector:
+    app.kubernetes.io/name: {{ include "eric-oss-network-assurance-search.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

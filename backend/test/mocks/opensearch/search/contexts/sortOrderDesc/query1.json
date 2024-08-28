@@ -1,0 +1,29 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 10,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "wildcard": {
+              "c_SNSSAI": {
+                "value": "1:*",
+                "case_insensitive": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "c_SNSSAI": {
+          "order": "desc",
+          "unmapped_type": "long"
+        }
+      }
+    ]
+  }
+}

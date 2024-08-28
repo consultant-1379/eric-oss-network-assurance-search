@@ -1,0 +1,56 @@
+[
+  {
+    "contextType": {
+      "id": "NF_NSI",
+      "contextFields": [
+        {
+          "id": "c_NF",
+          "name": "NF",
+          "description": null
+        },
+        {
+          "id": "c_NSI",
+          "name": "NSI",
+          "description": null
+        }
+      ]
+    },
+    "count": 2
+  },
+  {
+    "contextType": {
+      "id": "NF_SNSSAI",
+      "contextFields": [
+        {
+          "id": "c_NF",
+          "name": "NF",
+          "description": null
+        },
+        {
+          "id": "c_SNSSAI",
+          "name": "SNSSAI",
+          "description": null
+        }
+      ]
+    },
+    "count": 3
+  },
+  {
+    "contextType": {
+      "id": "NF_Site",
+      "contextFields": [
+        {
+          "id": "c_Site",
+          "name": "Site",
+          "description": null
+        },
+        {
+          "id": "c_NF",
+          "name": "NF",
+          "description": null
+        }
+      ]
+    },
+    "count": 1
+  }
+]

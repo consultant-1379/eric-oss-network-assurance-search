@@ -1,0 +1,13 @@
+allOf:
+  - $ref: '../schemas/Filter.yaml'
+  - type: object
+    required:
+      - propertyName
+      - booleanValue
+    properties:
+      propertyName:
+        type: string
+        description: property name to test
+      booleanValue:
+        type: boolean
+        description: boolean value used for testing

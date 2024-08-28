@@ -1,0 +1,176 @@
+# Config Parameters
+# =============================================================================================
+#
+# `name`: The metric name.
+#
+# `description`: The metric description.
+#
+# `type`: Prometheus metric types ('counter', 'gauge', 'histogram', 'summary').
+#
+# `operation`: The operation that will be applied. It only will be used with the gauge
+#              type, and you can choose between `inc`, `dec` or `set`.
+#
+# `mean`: The mean value that the metric value will hover around.
+#
+# =============================================================================================
+
+---
+config:
+  - name: vi_AMFMeanRegNbr
+    description: "Mean number of subscribers registered to a network slice instance
+      measured at the AMF "
+    type: gauge
+    operation: set
+    mean: 100
+
+  - name: vd_PDUSessEstSR
+    description: Rate of successful PDU session establishment requests for an SMF related
+      to one network slice (S-NSSAI)
+    type: gauge
+    operation: set
+    mean: 120
+
+  - name: vd_PDUSessModSR
+    description: Rate of successful PDU session modifications
+    type: gauge
+    operation: set
+    mean: 140
+
+  - name: vi_AMFMaxRegNbr
+    description: Maximum number of subscribers registered to a network slice at the
+      AMF
+    type: gauge
+    operation: set
+    mean: 160
+
+  - name: vd_UTSNSI
+    description: Upstream throughput of one single network slice
+    type: gauge
+    operation: set
+    mean: 180
+
+  - name: vd_DTSNSI
+    description: Downstream throughput of one single network slice
+    type: gauge
+    operation: set
+    mean: 200
+
+  - name: vd_UGTPTS
+    description: Upstream throughput at the N3 interface
+    type: gauge
+    operation: set
+    mean: 220
+
+  - name: vd_N3DownstreamThr
+    description: Downstream throughput at the N3 interface
+    type: gauge
+    operation: set
+    mean: 240
+
+  - name: vd_PDUSesMeanNbr
+    description: Mean number of PDU sessions of network and network slice instance
+    type: gauge
+    operation: set
+    mean: 260
+
+  - name: vi_PDUSessMaxNbr
+    description: Maximum number of PDU sessions of network and network slice instance
+    type: gauge
+    operation: set
+    mean: 280
+
+  - name: vi_ULIpv4PacketsDr
+    description: Total number of dropped incoming uplink IPv4 payload packets
+    type: gauge
+    operation: set
+    mean: 300
+
+  - name: vi_DLIpv4PacketsDr
+    description: Total number of dropped incoming downlink IPv4 packets
+    type: gauge
+    operation: set
+    mean: 320
+
+  - name: vi_ULIpv6PacketsDr
+    description: Total number of dropped incoming uplink IPv6 payload packets
+    type: gauge
+    operation: set
+    mean: 340
+
+  - name: vi_DLIpv6PacketsDr
+    description: Total number of dropped incoming downlink IPv6 packets
+    type: gauge
+    operation: set
+    mean: 360
+
+  - name: vi_DLUnstrPacketsDr
+    description: Total number of dropped incoming downlink non-IP payload packets
+    type: gauge
+    operation: set
+    mean: 380
+
+  - name: vi_ULUnstrPacketsDr
+    description: Total number of dropped incoming uplink non-IP payload packets
+    type: gauge
+    operation: set
+    mean: 400
+
+  - name: vd_PFCPSessEstFR
+    description: Failure rate for PFCP session establishment in the UPF
+    type: gauge
+    operation: set
+    mean: 420
+
+  - name: vd_PFCPSessModFR
+    description: Failure rate for PFCP session modifications in the UPF
+    type: gauge
+    operation: set
+    mean: 440
+
+  - name: vd_PartialDRBAccessibility
+    description: The Data Radio Bearer (DRB) setup success rate, including the success
+      rate for setting up Radio Resource Control (RRC) connection and Next Generation
+      (NG) signaling connection
+    type: gauge
+    operation: set
+    mean: 460
+
+  - name: vd_DLLat_gNB-DU
+    description: The gNodeB-Distributed unit (gNB-DU) part of the packet transmission
+      latency experienced by an end-user. It is used to evaluate the gNB latency contribution
+      to the total packet latency
+    type: gauge
+    operation: set
+    mean: 480
+
+  - name: vd_DLDelay_gNBDU
+    description: The average packet transmission delay through RAN to the UE. It is
+      used to evaluate delay performance of NG-RAN in downlink for a network slice subnet
+    type: gauge
+    operation: set
+    mean: 500
+
+  - name: vd_DLUeThroughput
+    description: The average downlink RAN UE throughput for a NRCellDU
+    type: gauge
+    operation: set
+    mean: 520
+
+  - name: vd_UlUeThroughput
+    description: The average uplink RAN UE throughput for a NRCellDU
+    type: gauge
+    operation: set
+    mean: 540
+
+  - name: vd_GRANGOSR
+    description: Identifies how often a handover within NR-RAN is successful; whether
+      the handover was made due to bad coverage or for any other reason
+    type: gauge
+    operation: set
+    mean: 560
+
+  - name: vd_5GSEPHOSR
+    description: 5GS to EPS handover success rate as a percentage
+    type: gauge
+    operation: set
+    mean: 580

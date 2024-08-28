@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/definitions.schema.json",
+  "definitions": {
+    "_id": {
+      "type": "string",
+      "pattern": "^([^:]+:[^:]+|[^:]+)$",
+      "$comment": "Should match either 'namespace:id' or just 'id'"
+    },
+    "variables": {
+      "description": "Variables used in sources. Adding a key-value pair here will cause '$key' in the sources to be replaced by the value. Variables can be set in many ways and have an inheritance mechanism, please see documentation for variables.",
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [{ "type": "string" }, { "type": "null" }]
+      }
+    },
+    "thresholds": {
+      "description": "Threshold configuration. Thresholds help identify values that are below or above a given threshold value.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["condition", "value", "color"],
+        "additionalProperties": false,
+        "properties": {
+          "condition": {
+            "description": "The threshold condition.",
+            "type": "string",
+            "enum": ["moreThan", "lessThan"]
+          },
+          "value": {
+            "description": "The threshold value.",
+            "type": "number"
+          },
+          "color": {
+            "description": "The color when value crosses the threshold.",
+            "type": "string",
+            "enum": ["red", "orange", "yellow", "green"]
+          }
+        }
+      }
+    },
+    "address": {
+      "description": "The address (hostname:port/basePath) of the service. If not given, use the address defined in the CNOM Server configuration. The basePath is optional.",
+      "type": "string"
+    },
+    "download": {
+      "description": "Enable the ability to download the data displayed in the widget as CSV file.",
+      "type": "boolean",
+      "default": true
+    },
+    "tableWidgetSource": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "description": "The target of the source. 'content' means source is used to get main panel data. 'selector' means that source is used to get left panel selector data. 'detail' displays the source data in the detail tile panel.",
+          "type": "string",
+          "default": "content",
+          "enum": ["content", "selector", "detail"]
+        },
+        "group": {
+          "description": "The group name of main panel data or the group name what second level selector depends on. ",
+          "type": "string"
+        },
+        "heading": {
+          "description": "The heading of the source to be visualized.",
+          "type": "string"
+        },
+        "onlyDynamicColumns": {
+          "description": "Whether to only use columns provided by the source data of the table widget.",
+          "type": "boolean"
+        }
+      }
+    },
+    "commonWidgetSource": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "description": "The target of the source. 'content' means source is used to get main panel data. 'selector' means that source is used to get left panel selector data.",
+          "type": "string",
+          "default": "content",
+          "enum": ["content", "selector"]
+        },
+        "group": {
+          "description": "The group name of main panel data or the group name what second level selector depends on. ",
+          "type": "string"
+        },
+        "heading": {
+          "description": "The heading of the source to be visualized.",
+          "type": "string"
+        },
+        "onlyDynamicColumns": {
+          "description": "Whether to only use columns provided by the source data of the table widget.",
+          "type": "boolean"
+        }
+      }
+    },
+    "selectionWidgetSource": {
+      "type": "object",
+      "if": {
+        "properties": {
+          "target": {
+            "const": "selector"
+          }
+        },
+        "required": ["target"]
+      },
+      "then": {
+        "required": ["selectorLevel"],
+        "properties": {
+          "selectorLevel": {
+            "description": "The level of the selector that is only required if target of source is 'selector'. 'first' means that the selector will be displayed as default. 'second' means that the selector's visibility depends on first level selection result. And 'third' means that the selector's visibility depends on second level selection result.",
+            "type": "string",
+            "enum": ["zeroth", "first", "second", "third"]
+          },
+          "dataType": {
+            "description": "The dataType of selector.",
+            "type": "string",
+            "enum": ["single", "multi"]
+          }
+        }
+      }
+    },
+    "sourceReturnFormat": {
+      "description": "The format the sources of the widget returns its data in.",
+      "type": "string",
+      "enum": ["list", "single"]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "PN_SNSNSN",
+      "name": "PN & SNSNSN",
+      "contextFields": [
+        {
+          "id": "c_SNSNSN",
+          "name": "My SNSNSN",
+          "description": "Sauce Near Soup Never Sounds Normal"
+        },
+        {
+          "id": "c_PN",
+          "name": "Nationality",
+          "description": "Person Nationality"
+        }
+      ]
+    }
+  },
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "NF_SNSSAI",
+      "name": "NF & SNSSAI",
+      "contextFields": [
+        {
+          "id": "c_SNSSAI",
+          "name": "My SNSSAI",
+          "description": "Soup Network Slice Selection Assistance Information"
+        },
+        {
+          "id": "c_NF",
+          "name": "My NF",
+          "description": "New Finger"
+        }
+      ]
+    }
+  },
+  {
+    "relationType": "CONTAINED_BY",
+    "related": {
+      "id": "NF_NSI",
+      "name": "NF & NSI",
+      "contextFields": [
+        {
+          "id": "c_NSI",
+          "name": "My NSI",
+          "description": "No Sharks Inside"
+        },
+        {
+          "id": "c_NF",
+          "name": "My NF",
+          "description": "New Finger"
+        }
+      ]
+    }
+  },
+  {
+    "relationType": "CONTAINS",
+    "related": {
+      "id": "NSI_SNSSAI",
+      "name": "NSI & SNSSAI",
+      "contextFields": [
+        {
+          "id": "c_SNSSAI",
+          "name": "My SNSSAI",
+          "description": "Soup Network Slice Selection Assistance Information"
+        },
+        {
+          "id": "c_NSI",
+          "name": "My NSI",
+          "description": "No Singing Institution"
+        }
+      ]
+    }
+  }
+]

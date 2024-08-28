@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nas.ericsson.com/schemas/opensearchDocumentSourceModel.schema.json",
+  "title": "Opensearch Document Source Model Schema",
+  "description": "The schema for the `_source` property of the Opensearch documents which are contained within the response object coming from Opensearch after a successful request has been made.",
+  "type": "object",
+  "required": ["full_context", "context", "csac_table", "csac_column"],
+  "properties": {
+    "full_context": {
+      "type": "string"
+    },
+    "context": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "csac_table": {
+      "type": "string"
+    },
+    "csac_column": {
+      "type": "string"
+    },
+    "ft_begin_timestamp": {
+      "type": "integer"
+    },
+    "ft_end_timestamp": {
+      "type": "integer"
+    },
+    "fk_begin_timestamp": {
+      "type": "string"
+    },
+    "fk_end_timestamp": {
+      "type": "string"
+    }
+  }
+}

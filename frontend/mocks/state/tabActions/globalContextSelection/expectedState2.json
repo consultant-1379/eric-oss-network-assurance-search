@@ -1,0 +1,139 @@
+{
+  "browsers": [
+    {
+      "id": "a42aab1b-5611-47c6-800d-08d5dde5128d",
+      "title": "Metric Browser",
+      "loading": false,
+      "historicalDashboardData": {
+        "historicalDashboardModel": {
+          "$schema": "../../../server/jsonSchemas/dashboardModel.schema.json",
+          "namespace": "assurance",
+          "dashboards": [
+            {
+              "_id": "dashboard_6490jsxn",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (timelines)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_vb7l8z3"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_pm0uhaor"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_jdx0kmyd"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_ew5scp2o",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (bar charts)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_xj70mt6p"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_evpyh28j"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_rvuxna0n"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_3txhp2qc",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (donut)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_v3lhkjx"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_gzhh9z5m"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_53ktu1jt"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_lr5u6x1a",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (kpi)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_9kjattnk"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_d5docm1u"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_tj03tjs6"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_yc8jza2h",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (gauge)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_boierbqj"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_xu52eioq"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_5pk46wep"
+                }
+              ]
+            }
+          ],
+          "widgets": [],
+          "sources": []
+        }
+      },
+      "active": true
+    }
+  ],
+  "version": "1.0.0",
+  "postgresSchemaName": "kpi",
+  "loading": false,
+  "discoveryCompleted": true,
+  "selectedKpiContext": {
+    "contextName": "",
+    "context": {
+      "type": {
+        "contextFields": []
+      },
+      "contextFields": []
+    },
+    "metrics": []
+  }
+}

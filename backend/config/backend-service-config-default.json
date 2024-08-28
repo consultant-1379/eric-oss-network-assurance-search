@@ -1,0 +1,85 @@
+{
+  "searchEngineUrl": "http://localhost:9200",
+  "indexerUrl": "http://localhost:8080",
+  "victoriaMetricsUrl": "http://localhost:8428",
+  "csacUrl": "http://localhost:8525",
+  "persistenceEngine": "os",
+  "k8sLabelPropertyName": "help.ericsson.com/part-of",
+  "k8sLabelValue": "workspace-gui",
+  "k8sQueryServiceEnabled": true,
+  "configQueryProtocolAnnotation": "ui.ericsson.com/protocol",
+  "configQueryPortAnnotation": "ui.ericsson.com/port",
+  "uiContentConfigContextAnnotation": "ui.ericsson.com/config-context",
+  "appNameLabel": "app.kubernetes.io/name",
+  "appVersionLabel": "app.kubernetes.io/version",
+  "logging": {
+    "enabled": true,
+    "defaultLogLevel": "info",
+    "serviceName": "eric-oss-network-assurance-search",
+    "stdout": {
+      "enabled": true
+    },
+    "filelog": {
+      "enabled": false
+    },
+    "syslog": {
+      "enabled": true,
+      "syslogHost": "eric-log-transformer",
+      "syslogFacility": "local0",
+      "facilityCategories": {
+        "local": "local0",
+        "audit": "logaudit"
+      }
+    }
+  },
+  "faultIndications": {
+    "enabled": false
+  },
+  "ingressHost": "localhost",
+  "ingressPort": "80",
+  "discoverIngress": false,
+  "useHttps": false,
+  "verifyClientCertificate": "optional",
+  "enforcedTLS": "required",
+  "headlessServiceName": "eric-oss-network-assurance-search-headless-svc",
+  "servicePort": 3000,
+  "dependencies": {
+    "logtransformer": {
+      "enabled": true,
+      "syslogHost": "eric-log-transformer",
+      "syslogFacility": "local0",
+      "syslogAppName": "eric-oss-network-assurance-search",
+      "tls": {
+        "verifyServerCert": true,
+        "sendClientCert": true
+      }
+    },
+    "prometheus": {
+      "enabled": true,
+      "appName": "eric-oss-network-assurance-search",
+      "endpointsToCountRequests": ["/ui", "/internal-api/uiConfig"],
+      "tls": {
+        "verifyServerCert": false,
+        "sendClientCert": false
+      }
+    },
+    "faultHandler": {
+      "enabled": false,
+      "tls": {
+        "verifyServerCert": true,
+        "sendClientCert": true
+      },
+      "hostname": "eric-fh-alarm-handler",
+      "tlsPort": 6006,
+      "httpPort": 6005,
+      "serviceName": "eric-oss-network-assurance-search"
+    },
+    "httpClient": {
+      "enabled": true,
+      "tls": {
+        "verifyServerCert": true,
+        "sendClientCert": true
+      }
+    }
+  }
+}

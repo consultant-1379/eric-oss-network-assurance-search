@@ -1,0 +1,64 @@
+[
+  {
+    "id": "PN_SNSNSN",
+    "contextFields": [
+      {
+        "id": "c_SNSNSN",
+        "name": "My SNSNSN",
+        "description": "Sauce Near Soup Never Sounds Normal"
+      },
+      {
+        "id": "c_PN",
+        "name": "Nationality",
+        "description": "Person Nationality"
+      }
+    ]
+  },
+  {
+    "id": "NF_NSI",
+    "contextFields": [
+      {
+        "id": "c_NF",
+        "name": "My NF",
+        "description": "New Finger"
+      },
+      {
+        "id": "c_NSI",
+        "name": "My NSI",
+        "description": "No Sharks Inside"
+      }
+    ]
+  },
+  {
+    "id": "NF_SNSSAI",
+    "contextFields": [
+      {
+        "id": "c_NF",
+        "name": "My NF",
+        "description": "New Finger"
+      },
+      {
+        "id": "c_SNSSAI",
+        "name": "My SNSSAI",
+        "description": "Soup Network Slice Selection Assistance Information"
+      }
+    ],
+    "name": "Service Owner (Core) - NF Focus",
+    "description": "Service KPIs for a specific S-NSSAI aggregated by Network Function"
+  },
+  {
+    "id": "SNSSAI_NSI",
+    "contextFields": [
+      {
+        "id": "c_SNSSAI",
+        "name": "My SNSSAI",
+        "description": "Soup Network Slice Selection Assistance Information"
+      },
+      {
+        "id": "c_NSI",
+        "name": "My NSI",
+        "description": "No Sharks Inside"
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+type: object
+description: sort by
+schema:
+  oneOf:
+    - $ref: '../schemas/MetricType.yaml'
+    - $ref: '../schemas/EntityType.yaml'

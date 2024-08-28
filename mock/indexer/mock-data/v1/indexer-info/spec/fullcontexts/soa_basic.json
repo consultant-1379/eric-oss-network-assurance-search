@@ -1,0 +1,228 @@
+[
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF_NSI",
+        "context": [
+          {
+            "name": "NSI",
+            "displayName": "My NSI",
+            "documentName": "c_NSI",
+            "description": "Network Slice Instance"
+          },
+          {
+            "name": "NF",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "Network Function"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF_Site",
+        "context": [
+          {
+            "name": "Site",
+            "displayName": "My Site",
+            "documentName": "c_Site",
+            "description": "Site"
+          },
+          {
+            "name": "NF",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "Network Function"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF_SNSSAI",
+        "context": [
+          {
+            "name": "SNSSAI",
+            "displayName": "My SNSSAI",
+            "documentName": "c_SNSSAI",
+            "description": "Single - Network Slice Selection Assistance Information"
+          },
+          {
+            "name": "NF",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "Network Function"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NF",
+        "context": [
+          {
+            "name": "NF",
+            "displayName": "My NF",
+            "documentName": "c_NF",
+            "description": "Network Function"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NSI_Site",
+        "context": [
+          {
+            "name": "Site",
+            "displayName": "My Site",
+            "documentName": "c_Site",
+            "description": "Site"
+          },
+          {
+            "name": "NSI",
+            "displayName": "My NSI",
+            "documentName": "c_NSI",
+            "description": "Network Slice Instance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "NSI",
+        "context": [
+          {
+            "name": "NSI",
+            "displayName": "My NSI",
+            "documentName": "c_NSI",
+            "description": "Network Slice Instance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "PN_SNSNSN",
+        "context": [
+          {
+            "name": "SNSNSN",
+            "displayName": "My SNSNSN",
+            "documentName": "c_SNSNSN"
+          },
+          {
+            "name": "PN",
+            "displayName": "Nationality",
+            "documentName": "c_PN",
+            "description": "Person Nationality"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "PN",
+        "context": [
+          {
+            "name": "PN",
+            "displayName": "Nationality",
+            "documentName": "c_PN",
+            "description": "Person Nationality"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "Site_SNSSAI",
+        "context": [
+          {
+            "name": "Site",
+            "displayName": "My Site",
+            "documentName": "c_Site",
+            "description": "Site"
+          },
+          {
+            "name": "SNSSAI",
+            "displayName": "My SNSSAI",
+            "documentName": "c_SNSSAI",
+            "description": "Single - Network Slice Selection Assistance Information"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "Site",
+        "context": [
+          {
+            "name": "Site",
+            "displayName": "My Site",
+            "documentName": "c_Site",
+            "description": "Site"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "SNSNSN",
+        "context": [
+          {
+            "name": "SNSNSN",
+            "displayName": "My SNSNSN",
+            "documentName": "c_SNSNSN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "documentName": "full_context",
+    "fullContext": [
+      {
+        "name": "SNSSAI",
+        "context": [
+          {
+            "name": "SNSSAI",
+            "displayName": "My SNSSAI",
+            "documentName": "c_SNSSAI",
+            "description": "Single - Network Slice Selection Assistance Information"
+          }
+        ]
+      }
+    ]
+  }
+]

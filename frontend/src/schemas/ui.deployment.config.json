@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "localMode": {
+      "type": "boolean"
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "logLevel": {
+          "type": "string"
+        }
+      },
+      "required": ["logLevel"]
+    },
+    "frontendRoutePrefix": {
+      "type": "string"
+    },
+    "routes": {
+      "type": "object",
+      "properties": {
+        "serviceAggregationApi": {
+          "type": "object",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "routes": {
+              "type": "object",
+              "properties": {
+                "config": {
+                  "type": "string"
+                },
+                "ui": {
+                  "type": "string"
+                }
+              },
+              "required": ["config", "ui"]
+            }
+          },
+          "required": ["prefix", "routes"]
+        },
+        "internal": {
+          "type": "object",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "routes": {
+              "type": "object",
+              "properties": {
+                "configuration": {
+                  "type": "string"
+                }
+              },
+              "required": ["configuration"]
+            }
+          },
+          "required": ["prefix", "routes"]
+        },
+        "api": {
+          "type": "object",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "routes": {
+              "type": "object",
+              "properties": {
+                "searchMetrics": {
+                  "type": "string"
+                },
+                "searchContexts": {
+                  "type": "string"
+                },
+                "searchRelatedContextsFacets": {
+                  "type": "string"
+                },
+                "metadataRelations": {
+                  "type": "string"
+                },
+                "metadataContexts": {
+                  "type": "string"
+                },
+                "metadataMetrics": {
+                  "type": "string"
+                },
+                "metadataAll": {
+                  "type": "string"
+                },
+                "metadataIndexes": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "searchMetrics",
+                "searchContexts",
+                "searchRelatedContextsFacets",
+                "metadataRelations",
+                "metadataContexts",
+                "metadataMetrics",
+                "metadataAll",
+                "metadataIndexes"
+              ]
+            }
+          },
+          "required": ["prefix", "routes"]
+        },
+        "meta": {
+          "type": "object",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "routes": {
+              "type": "object",
+              "properties": {
+                "groups": {
+                  "type": "string"
+                }
+              },
+              "required": ["groups"]
+            }
+          },
+          "required": ["prefix", "routes"]
+        }
+      },
+      "required": ["serviceAggregationApi", "internal", "api", "meta"]
+    },
+    "exponentialBackoffRetryAttempts": {
+      "type": "integer"
+    },
+    "authnConfig": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": ["integer", "null", "string"]
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": ["host", "port", "path"]
+    },
+    "cnomConfig": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": ["integer", "null", "string"]
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": ["host", "port", "path"]
+    },
+    "cnomDataSourceType": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "localMode",
+    "logging",
+    "frontendRoutePrefix",
+    "routes",
+    "exponentialBackoffRetryAttempts",
+    "authnConfig",
+    "cnomConfig",
+    "cnomDataSourceType"
+  ]
+}

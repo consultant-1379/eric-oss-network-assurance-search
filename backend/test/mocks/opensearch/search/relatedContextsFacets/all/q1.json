@@ -1,0 +1,36 @@
+{
+  "index": "soa",
+  "body": {
+    "from": 0,
+    "size": 0,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "full_context": "NSI_Site"
+            }
+          },
+          {
+            "match": {
+              "c_NSI": "Slice1"
+            }
+          }
+        ],
+        "filter": {
+          "bool": {
+            "must": [
+              {
+                "range": {
+                  "vi_NSI_Site_AMFMeanRegNbr": {
+                    "gte": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

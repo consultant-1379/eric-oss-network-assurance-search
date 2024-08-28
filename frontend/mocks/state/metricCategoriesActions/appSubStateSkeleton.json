@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "context": {
+    "metricTypes": [],
+    "columns": []
+  },
+  "metricCategoryPickerData": {
+    "viewAllSelected": false,
+    "maxPillCount": 10,
+    "metricCategories": []
+  }
+}

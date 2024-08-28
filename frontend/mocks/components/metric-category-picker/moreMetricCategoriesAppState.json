@@ -1,0 +1,495 @@
+{
+  "version": "1.0.2",
+  "settings": {},
+  "browsers": [
+    {
+      "id": "50ecac0e-8881-44bb-9438-6fd3f9f9b1cd",
+      "title": "Metric Browser",
+      "loading": true,
+      "active": true,
+      "context": {
+        "metricTypes": [
+          {
+            "id": "vd_tac_PartialDRBAccessibility",
+            "name": "Partial DRB Accessibility",
+            "valueType": "float",
+            "description": "The Data Radio Bearer (DRB) setup success rate, including the success rate for setting up Radio Resource Control (RRC) connection and Next Generation (NG) signaling connection",
+            "unit": "successes",
+            "visualization": {
+              "category": ["accessibility", "bb-category"],
+              "group1": ["family1"],
+              "group2": ["family2"],
+              "query": "${metricName}{tac=~\"sn.*-4\"}",
+              "groups": {
+                "default": ["vd_tac_PartialDRBAccessibility"]
+              }
+            },
+            "dataType": "metricType"
+          },
+          {
+            "id": "vd_tac_DLLat_gNB-DU",
+            "name": "DLLat_gNB-DU",
+            "valueType": "float",
+            "description": "The gNodeB-Distributed unit (gNB-DU) part of the packet transmission latency experienced by an end-user. It is used to evaluate the gNB latency contribution to the total packet latency",
+            "unit": "milliseconds",
+            "visualization": {
+              "category": ["mobility", "da-category"],
+              "group1": ["family1"],
+              "group2": ["family2"],
+              "query": "${metricName}{tac=~\"sn.*-4\"}",
+              "groups": {
+                "default": ["vd_tac_DLLat_gNB-DU"]
+              }
+            },
+            "dataType": "metricType"
+          },
+          {
+            "id": "vd_tac_DLDelay_gNBDU",
+            "name": "DLDelay_gNBDU",
+            "valueType": "float",
+            "description": "The average packet transmission delay through RAN to the UE. It is used to evaluate delay performance of NG-RAN in downlink for a network slice subnet",
+            "unit": "milliseconds",
+            "visualization": {
+              "category": ["observability", "db-category"],
+              "group1": ["family1"],
+              "group2": ["family2"],
+              "query": "${metricName}{tac=~\"sn.*-4\"}",
+              "groups": {
+                "default": ["vd_tac_DLDelay_gNBDU"]
+              }
+            },
+            "dataType": "metricType"
+          },
+          {
+            "id": "vd_tac_DLUeThroughput",
+            "name": "DLUeThroughput",
+            "valueType": "float",
+            "description": "The average downlink RAN UE throughput for a NRCellDU",
+            "unit": "bits/second",
+            "visualization": {
+              "category": ["db-category", "accessibility"],
+              "group1": ["family1"],
+              "group2": ["family2"],
+              "query": "${metricName}{tac=~\"sn.*-4\"}",
+              "groups": {
+                "default": ["vd_tac_DLUeThroughput"]
+              }
+            },
+            "dataType": "metricType"
+          },
+          {
+            "id": "vd_tac_UlUeThroughput",
+            "name": "UlUeThroughput",
+            "valueType": "float",
+            "description": "The average uplink RAN UE throughput for a NRCellDU",
+            "unit": "bits/second",
+            "visualization": {
+              "category": ["bb-category", "observability"],
+              "group1": ["family1"],
+              "group2": ["family2"],
+              "query": "${metricName}{tac=~\"sn.*-4\"}",
+              "groups": {
+                "default": ["vd_tac_UlUeThroughput"]
+              }
+            },
+            "dataType": "metricType"
+          },
+          {
+            "id": "vd_tac_GRANGOSR",
+            "name": "GRANGOSR",
+            "valueType": "float",
+            "description": "Identifies how often a handover within NR-RAN is successful; whether the handover was made due to bad coverage or for any other reason",
+            "unit": "successes",
+            "dataType": "metricType",
+            "visualization": {
+              "groups": {
+                "default": ["vd_tac_GRANGOSR"]
+              }
+            }
+          },
+          {
+            "id": "vd_tac_5GSEPHOSR",
+            "name": "5GSEPHOSR",
+            "valueType": "float",
+            "description": "5GS to EPS handover success rate as a percentage",
+            "unit": "successes",
+            "dataType": "metricType",
+            "visualization": {
+              "groups": {
+                "default": ["vd_tac_5GSEPHOSR"]
+              }
+            }
+          }
+        ]
+      },
+      "metricCategories": [
+        {
+          "id": "all",
+          "title": "All",
+          "unselected": false,
+          "metrics": [
+            {
+              "id": "vd_tac_PartialDRBAccessibility",
+              "name": "Partial DRB Accessibility"
+            },
+            {
+              "id": "vd_tac_DLLat_gNB-DU",
+              "name": "DLLat_gNB-DU"
+            },
+            {
+              "id": "vd_tac_DLDelay_gNBDU",
+              "name": "DLDelay_gNBDU"
+            },
+            {
+              "id": "vd_tac_DLUeThroughput",
+              "name": "DLUeThroughput"
+            },
+            {
+              "id": "vd_tac_UlUeThroughput",
+              "name": "UlUeThroughput"
+            },
+            {
+              "id": "vd_tac_GRANGOSR",
+              "name": "GRANGOSR"
+            },
+            {
+              "id": "vd_tac_5GSEPHOSR",
+              "name": "5GSEPHOSR"
+            }
+          ]
+        },
+        {
+          "id": "accessibility",
+          "title": "Accessibility",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_PartialDRBAccessibility",
+              "name": "Partial DRB Accessibility"
+            },
+            {
+              "id": "vd_tac_DLUeThroughput",
+              "name": "DLUeThroughput"
+            }
+          ]
+        },
+        {
+          "id": "bb-category",
+          "title": "Bb Category",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_PartialDRBAccessibility",
+              "name": "Partial DRB Accessibility"
+            },
+            {
+              "id": "vd_tac_UlUeThroughput",
+              "name": "UlUeThroughput"
+            }
+          ]
+        },
+        {
+          "id": "mobility",
+          "title": "Mobility",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_DLLat_gNB-DU",
+              "name": "DLLat_gNB-DU"
+            }
+          ]
+        },
+        {
+          "id": "da-category",
+          "title": "Da Category",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_DLLat_gNB-DU",
+              "name": "DLLat_gNB-DU"
+            }
+          ]
+        },
+        {
+          "id": "observability",
+          "title": "Observability",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_DLDelay_gNBDU",
+              "name": "DLDelay_gNBDU"
+            },
+            {
+              "id": "vd_tac_UlUeThroughput",
+              "name": "UlUeThroughput"
+            }
+          ]
+        },
+        {
+          "id": "db-category",
+          "title": "Db Category",
+          "unselected": true,
+          "metrics": [
+            {
+              "id": "vd_tac_DLDelay_gNBDU",
+              "name": "DLDelay_gNBDU"
+            },
+            {
+              "id": "vd_tac_DLUeThroughput",
+              "name": "DLUeThroughput"
+            }
+          ]
+        },
+        {
+          "id": "category-1",
+          "title": "Category 1",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-2",
+          "title": "Category 2",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-3",
+          "title": "Category 3",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-4",
+          "title": "Category 4",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-5",
+          "title": "Category 5",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-6",
+          "title": "Category 6",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-7",
+          "title": "Category 7",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-8",
+          "title": "Category 8",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-9",
+          "title": "Category 9",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-10",
+          "title": "Category 10",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-11",
+          "title": "Category 11",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-12",
+          "title": "Category 12",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-13",
+          "title": "Category 13",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-14",
+          "title": "Category 14",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-15",
+          "title": "Category 15",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-16",
+          "title": "Category 16",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-17",
+          "title": "Category 17",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-18",
+          "title": "Category 18",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-19",
+          "title": "Category 19",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-20",
+          "title": "Category 20",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-21",
+          "title": "Category 21",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-22",
+          "title": "Category 22",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-23",
+          "title": "Category 23",
+          "unselected": true,
+          "metrics": []
+        },
+        {
+          "id": "category-24",
+          "title": "Category 24",
+          "unselected": true,
+          "metrics": []
+        }
+      ]
+    }
+  ],
+  "applicationInitialized": true,
+  "configuration": {
+    "families": [
+      {
+        "name": "default",
+        "widget": "timeline"
+      },
+      {
+        "name": "family1",
+        "widget": "timeline",
+        "title": "Family 1",
+        "subtitle": "Subtitle for Family 1",
+        "unit": "unit1"
+      },
+      {
+        "name": "family2",
+        "widget": "donut",
+        "title": "Family 2",
+        "subtitle": "Subtitle for Family 2",
+        "unit": "unit2"
+      },
+      {
+        "name": "family3",
+        "widget": "barChart",
+        "title": "Family 3",
+        "subtitle": "Subtitle for Family 3",
+        "unit": "unit3"
+      },
+      {
+        "name": "family4",
+        "widget": "kpi",
+        "title": "Family 4",
+        "subtitle": "Subtitle for Family 4",
+        "unit": "unit4"
+      },
+      {
+        "name": "family5",
+        "widget": "gauge",
+        "title": "Family 5",
+        "subtitle": "Subtitle for Family 5",
+        "unit": "unit5"
+      }
+    ],
+    "groups": [
+      {
+        "name": "default",
+        "title": "Historical Dashboard",
+        "sort": "alphabetical",
+        "sortOrder": "asc"
+      },
+      {
+        "name": "group1",
+        "title": "Panel 1",
+        "sort": "alphabetical",
+        "sortOrder": "asc"
+      },
+      {
+        "name": "group2",
+        "title": "Panel 2",
+        "sort": "alphabetical",
+        "sortOrder": "asc"
+      }
+    ],
+    "categories": [
+      {
+        "name": "category1",
+        "title": "Category 1"
+      },
+      {
+        "name": "category2",
+        "title": "Category 2"
+      },
+      {
+        "name": "accessibility",
+        "title": "Accessibility"
+      },
+      {
+        "name": "mobility",
+        "title": "Mobility"
+      },
+      {
+        "name": "observability",
+        "title": "Observability"
+      },
+      {
+        "name": "bb-category",
+        "title": "Bb Category"
+      },
+      {
+        "name": "ba-category",
+        "title": "Ba Category"
+      },
+      {
+        "name": "da-category",
+        "title": "Da Category"
+      },
+      {
+        "name": "db-category",
+        "title": "Db Category"
+      }
+    ]
+  },
+  "loading": false,
+  "discoveryCompleted": true,
+  "localStateIsLoaded": true
+}

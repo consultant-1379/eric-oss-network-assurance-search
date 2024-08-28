@@ -1,0 +1,36 @@
+type: object
+description: context type
+required:
+  - id
+  - contextFields
+properties:
+  id:
+    $ref: '../schemas/ContextTypeId.yaml'
+    description: a unique identifier of this context type
+    example: "SNSSAI_NF"
+  name:
+    type: string
+    description: a display name of the context
+    example: "SNSSAI & NF"
+  description:
+    type: string
+    description: a description of the context
+    example: "My SNSSAI and NF"
+  contextFields:
+    type: array
+    description: aggregated entities
+    items:
+      $ref: '../schemas/EntityType.yaml'
+    minItems: 1
+    example:
+      [
+        {
+          "id": "c_NF",
+          "name": "My NF"
+        },
+        {
+          "id": "c_SNSSAI",
+          "name": "My SNSSAI",
+          "description": "Network Slice Selection Assistance Information"
+        }
+      ]

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": []
+  },
+  "stats": {
+    "seriesFetched": "137",
+    "executionTimeMsec": 4
+  }
+}

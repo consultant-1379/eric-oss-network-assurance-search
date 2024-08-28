@@ -1,0 +1,24 @@
+{
+  "id" : "3a6bb4d7-b187-471c-990d-64d5cf881daa",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/spec/values-for-fullcontext",
+    "method" : "GET",
+    "queryParameters" : {
+      "searchEngineIndexName" : {
+        "equalTo" : "assurance-searchEngineIndexName"
+      },
+      "fullContextName" : {
+        "equalTo" : "invalidContext"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"type\":\"about:blank\",\"title\":\"Not Found\",\"status\":404,\"detail\":\"An item with the context index 'invalidContext', was not found.\",\"instance\":null}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "3a6bb4d7-b187-471c-990d-64d5cf881daa"
+}

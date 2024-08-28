@@ -1,0 +1,10 @@
+{
+  "SAMPLE": {
+    "version": "0.2",
+    "faultName": "sample_fault_for_test_only",
+    "serviceName": "eric-oss-network-assurance-search",
+    "severity": "Warning",
+    "description": "default sample fault indication description",
+    "expiration": 0
+  }
+}

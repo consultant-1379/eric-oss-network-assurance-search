@@ -1,0 +1,40 @@
+type: object
+description: key performance metric (KPI)
+properties:
+  type:
+    $ref: '../schemas/MetricType.yaml'
+    description: metric type
+    example:
+      id: 'vi_SNSSAI_NSI_sessionModificationReqRcvd'
+      description: 'Session Modification Request Received'
+  id:
+    $ref: '../schemas/MetricId.yaml'
+  value:
+    type: number
+    description: metric value
+    example: 34.3432
+  beginTimestamp:
+    type: integer
+    format: int64
+    description: the time when collection of this metric begins
+    example: 1212133444
+  endTimestamp:
+    type: integer
+    format: int64
+    description: the time when collection of this metric ends
+    example: 1212133455
+  metadata:
+    type: array
+    description: key/value pair
+    items:
+      $ref: "../schemas/MetadataItem.yaml"
+    example: [
+      {
+        "key": "csac_table",
+        "value": "kpi_simple_ssnssai_15"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_0fcf6508_67cc_4969_1f2f_566c106e38b0"
+      }
+    ]

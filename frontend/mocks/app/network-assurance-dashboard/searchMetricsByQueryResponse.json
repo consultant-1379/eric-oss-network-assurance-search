@@ -1,0 +1,80 @@
+{
+  "length": 1,
+  "offset": 0,
+  "total": 42,
+  "results": [
+    {
+      "context": {
+        "contextFields": [
+          {
+            "description": "Instance of SNSSAI 1234",
+            "id": "1234",
+            "name": "SNSSAI 1234",
+            "type": {
+              "id": "c_SNSSAI",
+              "description": "Network Slice Selection Assistance Information"
+            }
+          },
+          {
+            "description": "Instance of NSI 4321",
+            "id": "NSI_4321",
+            "name": "NSI 4321",
+            "type": {
+              "id": "c_NSI",
+              "description": "Network Slice Instance"
+            }
+          }
+        ],
+        "id": "SNSSAI_NSI",
+        "name": "SNSSAI & NSI Context",
+        "type": {
+          "id": "SNSSAI_NSI",
+          "contextFields": [
+            {
+              "id": "c_NSI"
+            },
+            {
+              "id": "c_SNSSAI"
+            }
+          ]
+        }
+      },
+      "metrics": [
+        {
+          "type": {
+            "id": "vi_SNSSAI_NSI_DlUnstrDropPackets",
+            "name": "Dl Unstr Drop Packets",
+            "description": "Dropped Packets",
+            "unit": "errors/minute",
+            "valueType": "integer"
+          },
+          "id": "MID_12342",
+          "timestamp": 1513520073,
+          "value": -8618.52
+        },
+        {
+          "type": {
+            "id": "vi_SNSSAI_NSI_SessionModificationReqRcvd",
+            "name": "Session Modification Req Rcvd",
+            "description": "Session Modification Request Received",
+            "unit": "errors/minute",
+            "valueType": "integer"
+          },
+          "timestamp": 727058848,
+          "value": 3379.882952
+        },
+        {
+          "type": {
+            "id": "vi_SNSSAI_NSI_PDUSessionEstSR",
+            "name": "PDU Session Est SR",
+            "description": "PDU Session",
+            "unit": "errors/minute",
+            "valueType": "integer"
+          },
+          "timestamp": 830809911,
+          "value": 16948.1818
+        }
+      ]
+    }
+  ]
+}

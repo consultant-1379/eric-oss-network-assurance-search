@@ -1,0 +1,22 @@
+type: object
+description: entity type
+required:
+  - id
+properties:
+  id:
+    type: string
+    description: entity type id, normally has the prefix of 'c_'
+    example: "c_SNSSAI"
+  name:
+    type: string
+    description: entity type name
+    example: "My SNSSAI"
+  description:
+    type: string
+    description: entity description
+    example: "Network Slice Selection Assistance Information"
+example: {
+   "id": "c_SNSSAI",
+   "name": "My SNSSAI",
+   "description": "Network Slice Selection Assistance Information"
+  }

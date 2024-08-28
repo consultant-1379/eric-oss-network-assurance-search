@@ -1,0 +1,13 @@
+/* style goes here */
+:host{
+  display: block;
+}
+
+#info-banner {
+  justify-content: center;
+  text-align: center;
+}
+
+#info-banner eui-icon{
+  vertical-align: top;
+}

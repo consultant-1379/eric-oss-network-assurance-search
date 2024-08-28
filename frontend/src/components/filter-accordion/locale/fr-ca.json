@@ -1,0 +1,10 @@
+{
+  "OPERATOR_LABEL_EQUAL": "Égal à",
+  "OPERATOR_LABEL_NOT_EQUAL": "Pas égal à",
+  "OPERATOR_LABEL_GREATER_THEN_EQUAL": "Supérieur ou égal à",
+  "OPERATOR_LABEL_LESS_THAN_EQUAL": "Inférieur ou égal à",
+  "OPERATOR_LABEL_IN_RANGE": "Dans la plage",
+  "OPERATOR_LABEL_NOT_IN_RANGE": "Hors gamme",
+  "OPERATOR_LABEL_DOESNT_MATCH": "Ne correspond pas",
+  "OPERATOR_LABEL_UNKNOWN": "Inconnu"
+}

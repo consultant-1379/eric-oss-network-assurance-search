@@ -1,0 +1,256 @@
+{
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 18,
+      "relation": "eq"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__NF_AMF_BC__SNSSAI_1:2",
+        "_score": 1,
+        "_source": {
+          "c_NF": "AMF_BC",
+          "c_SNSSAI": "1:2",
+          "full_context": "NF_SNSSAI",
+          "context": ["NF", "SNSSAI"],
+          "xc_eyJORiI6eyJuYW1lIjoiTkYiLCJuYW1lVHlwZSI6InN0cmFpZ2h0In0sIlNOU1NBSSI6eyJuYW1lIjoiZ2VuZXJpYyIsIm5hbWVUeXBlIjoiY29sb25TZXBhcmF0ZWQifX0A": true,
+          "value_context": "NF_SNSSAI_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 0,
+          "xv_NF_SNSSAI_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__NF_AMF_BC__SNSSAI_1:2",
+          "offset": "84",
+          "vintage": "F4BD1ED1DFCB6D4B2531A4F4431CB1B0",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr3__NF_AMF_BC__SNSSAI_1:2",
+        "_score": 1,
+        "_source": {
+          "c_NF": "AMF_BC",
+          "c_SNSSAI": "1:2",
+          "full_context": "NF_SNSSAI",
+          "context": ["NF", "SNSSAI"],
+          "xc_eyJORiI6eyJuYW1lIjoiTkYiLCJuYW1lVHlwZSI6InN0cmFpZ2h0In0sIlNOU1NBSSI6eyJuYW1lIjoiZ2VuZXJpYyIsIm5hbWVUeXBlIjoiY29sb25TZXBhcmF0ZWQifX0A": true,
+          "value_context": "NF_SNSSAI_AMFMeanRegNbr3",
+          "value_name": "AMFMeanRegNbr3",
+          "vi_NF_SNSSAI_AMFMeanRegNbr3": 20,
+          "xv_NF_SNSSAI_AMFMeanRegNbr3_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIzIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr3__NF_AMF_BC__SNSSAI_1:2",
+          "offset": "84",
+          "vintage": "F4BD1ED1DFCB6D4B2531A4F4431CB1B0",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__NF_AMF_BC__SNSSAI_1:1",
+        "_score": 1,
+        "_source": {
+          "c_NF": "AMF_BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "NF_SNSSAI",
+          "context": ["NF", "SNSSAI"],
+          "xc_eyJORiI6eyJuYW1lIjoiTkYiLCJuYW1lVHlwZSI6InN0cmFpZ2h0In0sIlNOU1NBSSI6eyJuYW1lIjoiZ2VuZXJpYyIsIm5hbWVUeXBlIjoiY29sb25TZXBhcmF0ZWQifX0A": true,
+          "value_context": "NF_SNSSAI_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_NF_SNSSAI_AMFMeanRegNbr": 0,
+          "xv_NF_SNSSAI_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__NF_AMF_BC__SNSSAI_1:1",
+          "offset": "83",
+          "vintage": "F4BD1ED1DFCB6D4B2531A4F4431CB1B0",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__SNSSAI_1:1__Site_BC",
+        "_score": 1,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_SNSSAI_Site_AMFMeanRegNbr": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__SNSSAI_1:1__Site_BC",
+          "offset": "27",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__SNSSAI_1:2",
+        "_score": 1,
+        "_source": {
+          "c_SNSSAI": "1:2",
+          "full_context": "SNSSAI",
+          "context": ["SNSSAI"],
+          "xc_eyJTTlNTQUkiOnsibmFtZSI6IlNOU1NBSSIsIm5hbWVUeXBlIjoic3RyYWlnaHQifX0A": true,
+          "value_context": "SNSSAI_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_SNSSAI_AMFMeanRegNbr": 0,
+          "xv_SNSSAI_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__SNSSAI_1:2",
+          "offset": "29",
+          "vintage": "E3E5E5521076A6EA7C18C2084A2B3C79",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__SNSSAI_1:1",
+        "_score": 1,
+        "_source": {
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI",
+          "context": ["SNSSAI"],
+          "xc_eyJTTlNTQUkiOnsibmFtZSI6IlNOU1NBSSIsIm5hbWVUeXBlIjoic3RyYWlnaHQifX0A": true,
+          "value_context": "SNSSAI_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_SNSSAI_AMFMeanRegNbr": 0,
+          "xv_SNSSAI_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__SNSSAI_1:1",
+          "offset": "28",
+          "vintage": "E3E5E5521076A6EA7C18C2084A2B3C79",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr3__SNSSAI_1:1",
+        "_score": 1,
+        "_source": {
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI",
+          "context": ["SNSSAI"],
+          "xc_eyJTTlNTQUkiOnsibmFtZSI6IlNOU1NBSSIsIm5hbWVUeXBlIjoic3RyYWlnaHQifX0A": true,
+          "value_context": "SNSSAI_AMFMeanRegNbr3",
+          "value_name": "AMFMeanRegNbr3",
+          "vi_SNSSAI_AMFMeanRegNbr3": 10,
+          "xv_SNSSAI_AMFMeanRegNbr3_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIzIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr3__SNSSAI_1:1",
+          "offset": "28",
+          "vintage": "E3E5E5521076A6EA7C18C2084A2B3C79",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr3__NF_AMF_BC__SNSSAI_1:1",
+        "_score": 1,
+        "_source": {
+          "c_NF": "AMF_BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "NF_SNSSAI",
+          "context": ["NF", "SNSSAI"],
+          "xc_eyJORiI6eyJuYW1lIjoiTkYiLCJuYW1lVHlwZSI6InN0cmFpZ2h0In0sIlNOU1NBSSI6eyJuYW1lIjoiZ2VuZXJpYyIsIm5hbWVUeXBlIjoiY29sb25TZXBhcmF0ZWQifX0A": true,
+          "value_context": "NF_SNSSAI_AMFMeanRegNbr3",
+          "value_name": "AMFMeanRegNbr3",
+          "vi_NF_SNSSAI_AMFMeanRegNbr3": 10,
+          "xv_NF_SNSSAI_AMFMeanRegNbr3_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIzIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr3__NF_AMF_BC__SNSSAI_1:1",
+          "offset": "83",
+          "vintage": "F4BD1ED1DFCB6D4B2531A4F4431CB1B0",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr2__SNSSAI_1:1__Site_BC",
+        "_score": 1,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:1",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr2",
+          "value_name": "AMFMeanRegNbr2",
+          "vi_SNSSAI_Site_AMFMeanRegNbr2": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr2_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIyIiwidHlwZSI6ImludGVnZXIifX0A": true,
+          "doc_id": "AMFMeanRegNbr2__SNSSAI_1:1__Site_BC",
+          "offset": "27",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      },
+      {
+        "_index": "soa",
+        "_type": "_doc",
+        "_id": "AMFMeanRegNbr__SNSSAI_1:2__Site_BC",
+        "_score": 1,
+        "_source": {
+          "c_Site": "BC",
+          "c_SNSSAI": "1:2",
+          "full_context": "SNSSAI_Site",
+          "context": ["SNSSAI", "Site"],
+          "xc_eyJTaXRlIjp7Im5hbWUiOiJTaXRlIiwibmFtZVR5cGUiOiJzdHJhaWdodCJ9LCJTTlNTQUkiOnsibmFtZSI6ImdlbmVyaWMiLCJuYW1lVHlwZSI6ImNvbG9uU2VwYXJhdGVkIn19": true,
+          "value_context": "SNSSAI_Site_AMFMeanRegNbr",
+          "value_name": "AMFMeanRegNbr",
+          "vi_SNSSAI_Site_AMFMeanRegNbr": 0,
+          "xv_SNSSAI_Site_AMFMeanRegNbr_eyIiOnsibmFtZSI6IkFNRk1lYW5SZWdOYnIiLCJ0eXBlIjoiaW50ZWdlciJ9fQAA": true,
+          "doc_id": "AMFMeanRegNbr__SNSSAI_1:2__Site_BC",
+          "offset": "28",
+          "vintage": "DB327BFF1106DDB6CCB208C666A6919B",
+          "csac_table": "kpi_csac_simple_snssai_mofdn_15",
+          "csac_column": "csac_0fcf6508_67cc_4969_a1f2_566c106e38b0",
+          "ft_begin_timestamp": 1676241825,
+          "ft_end_timestamp": 1676242825
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "initialBrowserStateForSettings": {
+    "id": "f0387528-bcbb-4650-a115-36e3bcd2d646",
+    "title": "Metric Browser",
+    "settings": {
+      "autoRefresh": false,
+      "rowHeight": "compact"
+    },
+    "context": {
+      "columns": [
+        {
+          "title": "My NF",
+          "attribute": "c_NF",
+          "sortable": true,
+          "additionalInfo": "New Finger",
+          "width": "300px"
+        },
+        {
+          "title": "AMF Mean Reg Nbr (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 2 (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr2",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr2 Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 2"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 3 (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr3",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr3 Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 3"
+        },
+        {
+          "title": "Smf Modification Cmd Rcvd (errors/minute)",
+          "attribute": "vi_NF_SmfModificationCmdRcvd",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "SmfModificationCmdRcvd Description",
+          "width": "300px",
+          "sortNotificationInfo": "Smf Modification Cmd Rcvd"
+        },
+        {
+          "title": "Dl Unstr Drop Packets (errors/minute)",
+          "attribute": "vi_NF_dlUnstrDropPackets",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "DlUnstrDropPackets Description",
+          "width": "300px",
+          "sortNotificationInfo": "Dl Unstr Drop Packets"
+        },
+        {
+          "title": "Ul Ipv 6Drop Packets (errors/minute)",
+          "attribute": "vd_NF_UlIpv6DropPackets",
+          "valueType": "float",
+          "sortable": true,
+          "additionalInfo": "UlIpv6DropPackets Description",
+          "width": "300px",
+          "sortNotificationInfo": "Ul Ipv 6Drop Packets"
+        }
+      ]
+    }
+  },
+  "expectedBrowserStateForSettings": {
+    "id": "f0387528-bcbb-4650-a115-36e3bcd2d646",
+    "title": "Metric Browser",
+    "settings": {
+      "autoRefresh": true,
+      "rowHeight": "tiny"
+    },
+    "context": {
+      "columns": [
+        {
+          "title": "My NF",
+          "attribute": "c_NF",
+          "sortable": true,
+          "additionalInfo": "New Finger",
+          "width": "300px",
+          "pinned": true
+        },
+        {
+          "title": "AMF Mean Reg Nbr 2 (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr2",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr2 Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 2"
+        },
+        {
+          "title": "AMF Mean Reg Nbr (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr"
+        },
+        {
+          "title": "AMF Mean Reg Nbr 3 (errors/minute)",
+          "attribute": "vi_NF_AMFMeanRegNbr3",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "AMFMeanRegNbr3 Description",
+          "width": "300px",
+          "sortNotificationInfo": "AMF Mean Reg Nbr 3"
+        },
+        {
+          "title": "Smf Modification Cmd Rcvd (errors/minute)",
+          "attribute": "vi_NF_SmfModificationCmdRcvd",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "SmfModificationCmdRcvd Description",
+          "width": "300px",
+          "sortNotificationInfo": "Smf Modification Cmd Rcvd",
+          "hidden": true
+        },
+        {
+          "title": "Dl Unstr Drop Packets (errors/minute)",
+          "attribute": "vi_NF_dlUnstrDropPackets",
+          "valueType": "integer",
+          "sortable": true,
+          "additionalInfo": "DlUnstrDropPackets Description",
+          "width": "300px",
+          "sortNotificationInfo": "Dl Unstr Drop Packets",
+          "hidden": true
+        },
+        {
+          "title": "Ul Ipv 6Drop Packets (errors/minute)",
+          "attribute": "vd_NF_UlIpv6DropPackets",
+          "valueType": "float",
+          "sortable": true,
+          "additionalInfo": "UlIpv6DropPackets Description",
+          "width": "300px",
+          "sortNotificationInfo": "Ul Ipv 6Drop Packets",
+          "hidden": true
+        }
+      ]
+    }
+  }
+}

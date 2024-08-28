@@ -1,0 +1,21 @@
+{
+  "ARIA_ICON_CONTAINER_LABEL": "Icon container for edit and remove icons",
+  "ARIA_EDIT_ICON_LABEL": "Edit Item",
+  "ARIA_EDIT_ICON_IMG_ALT": "Pencil icon",
+  "EDIT_ICON_TOOLTIP_MSG": "Edit",
+  "ARIA_REMOVE_ICON_LABEL": "Remove Item",
+  "ARIA_REMOVE_ICON_IMG_ALT": "Trashcan icon",
+  "REMOVE_ICON_TOOLTIP_MSG": "Remove",
+  "FILTER_ITEM": "filter item",
+  "NO_FILTERS_APPLIED": "No Filters Applied",
+  "OPERATOR_LABEL_EQUAL": "Equal to",
+  "OPERATOR_LABEL_NOT_EQUAL": "Not Equal to",
+  "OPERATOR_LABEL_GREATER_THEN_EQUAL": "Greater than or equal to",
+  "OPERATOR_LABEL_LESS_THAN_EQUAL": "Less than or equal to",
+  "OPERATOR_LABEL_NOT_RANGE": "Not in Range",
+  "OPERATOR_LABEL_RANGE": "In Range",
+  "OPERATOR_LABEL_NOT": "Doesn't Match",
+  "OPERATOR_LABEL_MATCH": "Matches",
+  "OPERATOR_LABEL_DOESNT_MATCH": "Doesn't match",
+  "UNKNOWN_LABEL": "Unknown"
+}

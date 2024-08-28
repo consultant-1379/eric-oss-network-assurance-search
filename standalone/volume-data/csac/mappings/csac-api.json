@@ -1,0 +1,37 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/v1/version"
+      },
+      "response": {
+        "status": 200,
+        "body": "CSAC wire-mock-draft-0.0.1",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/api/get-demo-contexts",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "sample-data.json"
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/v1/runtime/status/current",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "state.json"
+      }
+    }
+  ]
+}

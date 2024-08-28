@@ -1,0 +1,20 @@
+with(
+  context_filter = {context=~"nf",},
+  k1 = last_over_time(vi_AMFMeanRegNbr{context_filter}[15m]),
+  k2 = last_over_time(vi_AMFMaxRegNbr{context_filter}[15m]),
+  k3 = last_over_time(vd_DTSNSI{context_filter}[15m]),
+  k4 = last_over_time(vd_N3DownstreamThr{context_filter}[15m]),
+  k5 = last_over_time(vd_PDUSesMeanNbr{context_filter}[15m]),
+  k6 = last_over_time(vd_PDUSessEstSR{context_filter}[15m]),
+  count(l, k) = count_values without() (l, k),
+  c1 = count('vi_AMFMeanRegNbr',k1),
+  c2 = count('vi_AMFMaxRegNbr',k2),
+  c3 = count('vd_DTSNSI',k3),
+  c4 = count('vd_N3DownstreamThr',k4),
+  c5 = count('vd_PDUSesMeanNbr',k5),
+  c6 = count('vd_PDUSessEstSR',k6),
+  aggregated = c1 * on(nf) group_left(vi_AMFMaxRegNbr) c2 * on(nf) group_left(vd_DTSNSI) c3 * on(nf) group_left(vd_N3DownstreamThr) c4 * on(nf) group_left(vd_PDUSesMeanNbr) c5 * on(nf) group_left(vd_PDUSessEstSR) c6,
+  limited = limit_offset(2, 0, aggregated)
+)(
+  sort_by_label_numeric(limited, 'vi_AMFMeanRegNbr')
+)

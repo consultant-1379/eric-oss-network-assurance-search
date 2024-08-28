@@ -1,0 +1,149 @@
+version: '3'
+
+services:
+  # Network Assurance Search Microservice
+  network-assurance-search:
+    restart: always
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.dev
+      args:
+        - DEV=true
+    depends_on:
+      - opensearch-node
+      - indexer-mock
+      - csac-mock
+    environment:
+      SEARCH_ENGINE_URL: 'https://opensearch-node:9200'
+      INDEXER_URL: 'http://indexer-mock:8080'
+      CSAC_URL: 'http://csac-mock:8080'
+      STANDALONE: true
+      OPENSEARCH_USERNAME: admin
+      OPENSEARCH_PASSWORD: admin
+    volumes:
+      - ../frontend:/nas/frontend
+      - ../backend:/nas/backend
+    networks:
+      - standalone-network
+    ports:
+      - '3000:3000'
+
+  # OpenSearch service - Standing in for ADP Search Engine
+  opensearch-node:
+    image: opensearchproject/opensearch:2.6.0
+    container_name: opensearch-node
+    environment:
+      - cluster.name=opensearch-cluster
+      - node.name=opensearch-node
+      - discovery.seed_hosts=opensearch-node
+      - cluster.initial_cluster_manager_nodes=opensearch-node
+      - bootstrap.memory_lock=true # along with the memlock settings below, disables swapping
+      - 'OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m' # minimum and maximum Java heap size, recommend setting both to 50% of system RAM
+      - 'SEARCH_ENGINE_URL=https://opensearch-node:9200'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536 # maximum number of open files for the OpenSearch user, set to at least 65536 on modern systems
+        hard: 65536
+    networks:
+      - standalone-network
+    ports:
+      - '9200:9200'
+      - '9600:9600' # required for Performance Analyzer
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+      - $PWD/volume-data/opensearch/opensearch-docker-entrypoint.sh:/usr/share/opensearch/opensearch-docker-entrypoint.sh
+      - $PWD/volume-data/opensearch/sample-data:/usr/share/opensearch/sample-data
+
+  # Uncomment this service if OpenSearch dashboards are required
+  # opensearch-dashboards:
+  #   image: opensearchproject/opensearch-dashboards:2.6.0 # Make sure the version of opensearch-dashboards matches the version of opensearch installed on other nodes
+  #   container_name: opensearch-dashboards
+  #   ports:
+  #     - 5601:5601 # Map host port 5601 to container port 5601
+  #   expose:
+  #     - '5601' # Expose port 5601 for web access to OpenSearch Dashboards
+  #   environment:
+  #     OPENSEARCH_HOSTS: '["https://opensearch-node:9200"]' # Define the OpenSearch nodes that OpenSearch Dashboards will query
+  #   networks:
+  #     - standalone-network
+
+  # Assurance Indexer Mocking Service
+  indexer-mock:
+    container_name: indexer-mock
+    image: wiremock/wiremock:2.35.0
+    ports:
+      - '8080:8080'
+    volumes:
+      - $PWD/volume-data/indexer/mappings:/home/wiremock/mappings
+      - ../mock/indexer/mock-data:/home/wiremock/__files
+    command:
+      - --verbose
+      - --enable-stub-cors
+      - --enable-browser-proxying
+      - --trust-all-proxy-targets
+    networks:
+      - standalone-network
+
+  # CSAC Mocking Service
+  csac-mock:
+    container_name: csac-mock
+    image: wiremock/wiremock:2.35.0
+    ports:
+      - '8525:8080'  # 8080 is wiremock internal port and expose the service on 8525
+    volumes:
+      - $PWD/volume-data/csac/mappings:/home/wiremock/mappings
+      - ../mock/csac:/home/wiremock/__files
+    command:
+      - --verbose
+      - --enable-stub-cors
+      - --enable-browser-proxying
+      - --trust-all-proxy-targets
+    networks:
+      - standalone-network
+
+  # VictoriaMetrics Service
+  victoriametrics:
+    container_name: victoriametrics
+    image: victoriametrics/victoria-metrics:v1.99.0
+    restart: always
+    ports:
+      - 8428:8428
+    command:
+      - "--storageDataPath=/storage"
+      - "--httpListenAddr=:8428"
+      - "--retentionPeriod=91d"
+    networks:
+      - standalone-network
+
+  # Generates metrics for VictoriaMetrics
+  corvus-data-generator:
+    container_name: corvus-data-generator
+    build: $PWD/corvus-data-generator/.
+    depends_on:
+      - victoriametrics
+    restart: always
+    ports:
+      - 9000:9000
+    environment:
+      - ENABLE_SEARCH_ENGINE_DATA_GENERATION=false
+      - ENABLE_VICTORIAMETRICS_DATA_GENERATION=true
+      - EXPOSE_PORT=9000
+      - DATA_CONFIG_PATH=/home/src/config/data-config.json
+      - METRICS_CONFIG_PATH=/home/src/config/metrics-config.yaml
+      - VM_IMPORT_URL=http://victoriametrics:8428/api/v1/import
+      - VM_REQUESTS_PER_METRIC=30
+      - VM_HISTORICAL_DATA_LOOKBACK_MINUTES=360  # 6 hours
+      # - VM_HISTORICAL_DATA_LOOKBACK_MINUTES=129600  # 90 days
+      # - VM_DEFAULT_METRIC_VALUE_DEVIATION=0  # Uncomment this ENV VAR for performance testing
+    networks:
+      - standalone-network
+
+volumes:
+  opensearch-data:
+
+networks:
+  standalone-network:
+    driver: bridge

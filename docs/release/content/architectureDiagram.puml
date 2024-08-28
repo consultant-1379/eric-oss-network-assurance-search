@@ -1,0 +1,70 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/ie.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+!include FONTAWESOME/puzzle_piece.puml
+
+AddElementTag("existing", $bgColor="lightgrey")
+
+
+
+' LAYOUT_WITH_LEGEND()
+
+Person(serviceOwner, "User", "Service Owner", $sprite="users")
+Person(sliceOwner, "User", "Slice Owner", $sprite="users")
+
+
+' Container(assurance, "Slice Assurance", "web-component", "Handles all business logic", $sprite="puzzle_piece")
+
+Boundary(c1, "Web Application", "OSS Web Application", $link="https://github.com/plantuml-stdlib/C4-PlantUML") {
+    ' Component(topology, "Topology", "web-component", "Topology (CTS) browser", $sprite="puzzle_piece")
+    Component(details, "Entity Details", "web-component", "Displays Entity details", $sprite="puzzle_piece", $tags="existing")
+    Component(search, "Metric Search", "web-component", "Metric-based search", $sprite="puzzle_piece")
+    Component(metrics, "KPI Dashboard", "web-component", "KPI dashboard", $sprite="puzzle_piece", $tags="existing")
+    Component(settings, "User Workspace Settings", "web-component", "Application Settings", $sprite="puzzle_piece")
+    Component(application_shell, "Network Assurance Web Application", "application", "Application Shell", $sprite="puzzle_piece")
+    Component(entity_presets, "Entity Presets", "application", "Application entity presets", $sprite="puzzle_piece")
+
+}
+
+Boundary(microservices, "APIs", "Microservices", $link="https://github.com/plantuml-stdlib/C4-PlantUML") {
+    Component(network_assurance_microservice, "Network Assurance Dashboard Microservice", "microservice", "Serves static UI application assets", $sprite="puzzle_piece")
+
+    Component(cts, "CTS", "microservice", "Common topology service", $sprite="puzzle_piece", $tags="existing")
+    Component(search_microservice, "Network Assurance Search", "microservice", "Provides support for metric-based queries", $sprite="puzzle_piece")
+    Component(cnom, "CNOM Server", "microservice", "Serves metrics data", $sprite="puzzle_piece", $tags="existing")
+    Component(ui_settings, "UI Settings Microservice", "microservice", "Generic UI settings service", $sprite="puzzle_piece")
+
+}
+
+Rel(serviceOwner, search, "Uses", "HTTPS")
+Rel(serviceOwner, metrics, "Uses", "HTTPS")
+Rel(serviceOwner, settings, "Uses", "HTTPS")
+
+
+
+Rel(sliceOwner, search, "Uses", "HTTPS")
+Rel(sliceOwner, details, "Uses", "HTTPS")
+' Rel(sliceOwner, topology, "Uses", "HTTPS")
+Rel(sliceOwner, metrics, "Uses", "HTTPS")
+Rel(sliceOwner, settings, "Uses", "HTTPS")
+
+
+' Microservices
+Rel(application_shell, network_assurance_microservice, "Makes API Call", "REST")
+
+Rel(settings, ui_settings, "Makes API Call", "REST")
+Rel(details, cts, "Makes API Call", "REST")
+' Rel(topology, cts, "Makes API Call", "REST")
+Rel(search, search_microservice, "Makes API Call", "REST")
+Rel(metrics, cnom, "Makes API Call", "REST")
+Rel(entity_presets, search_microservice, "Makes API Call", "REST")
+
+
+@enduml

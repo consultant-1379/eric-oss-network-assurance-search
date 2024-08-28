@@ -1,0 +1,19 @@
+{
+  "type": {
+    "id": "NF",
+    "contextFields": [
+      {
+        "id": "NF"
+      }
+    ]
+  },
+  "contextFields": [
+    {
+      "id": "NF_AMF_ON1",
+      "type": {
+        "id": "c_NF"
+      },
+      "name": "AMF_ON1"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_1A1",
+          "name": "1A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_AMF_BC",
+          "name": "AMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": []
+  },
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_2A1",
+          "name": "2A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_SMF_BC",
+          "name": "SMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": []
+  },
+  {
+    "context": {
+      "type": {
+        "id": "NF_SNSSAI",
+        "contextFields": [
+          {
+            "id": "SNSSAI"
+          },
+          {
+            "id": "NF"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "SNSSAI_3A1",
+          "name": "3A1",
+          "type": {
+            "id": "c_SNSSAI"
+          }
+        },
+        {
+          "id": "NF_SMF_BC",
+          "name": "SMF_BC",
+          "type": {
+            "id": "c_NF"
+          }
+        }
+      ]
+    },
+    "metrics": []
+  }
+]

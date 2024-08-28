@@ -1,0 +1,63 @@
+type: object
+description: metric type
+required:
+  - id
+properties:
+  id:
+    type: string
+    description: MetricType id prepended with an identifier, either as 'vi_' or 'vd_'
+    example: 'vi_SNSSAI_NSI_sessionModificationReqRcvd'
+  name:
+    type: string
+    description: Display name or MetricType id prepended without identifier, 'vi_' or 'vd'
+    example: 'AMF Mean Reg Nbr'
+  valueType:
+    type: string
+    enum:
+      - integer
+      - float
+    example: 'float'
+    default: integer
+  description:
+    type: string
+    description: entity description
+    example: 'AMF Mean Reg Nbr description'
+  unit:
+    type: string
+    description: specification of the value's unit of measurement.
+    example: 'errors/minute'
+  visualization:
+    type: object
+    description: metric visualization data
+    properties:
+      category:
+        type: array
+        items:
+          type: string
+        description: Categories for this metric
+        example:
+          - "observability"
+          - "performance"
+      query:
+        type: string
+        description: An example query string
+        example: "${metricName}{snssai=~\"sn.*-4\"}"
+      groups:
+        type: object
+        additionalProperties:
+          type: array
+          description: List of metric families for the group
+          items:
+            type: string
+            example:
+              - "family1"
+              - "family2"
+    example:
+      {
+        "category": ["observability", "performance"],
+        "groups": {
+          "group1": ["family1", "family2"],
+          "group2": ["family2"]
+        },
+        "query": "${metricName}{snssai=~\"sn.*-4\"}"
+      }

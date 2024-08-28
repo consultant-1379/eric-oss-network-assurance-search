@@ -1,0 +1,8 @@
+/* style goes here */
+:host{
+  display: block;
+}
+
+#filter-box {
+  padding: 0 8px 10px;
+}

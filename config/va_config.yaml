@@ -1,0 +1,1390 @@
+model_version: 2.1
+product_va_config:
+    name: Service Assurance Dashboard
+    product_name: eric-oss-network-assurance-search
+    product_number: APR 201 726
+    version: {version}
+    va_template_version: 2.0.0
+    description: Service Assurance Dashboard with Bob based CI and release automation pipelines
+    images:
+        - /eric-oss-network-assurance-search:{version}
+    issue_trackers:
+    # The `default` key is looked up if no hint provided on what tracker
+    # should be used.  This is not added automatically, one has to provide
+    # this explicitly.
+        default: "https://eteamproject.internal.ericsson.com/browse/"
+    # Further entries might be added with their own identifiers.
+        OSS: "https://jira-oss.seli.wh.rnd.internal.ericsson.com/browse/"
+    additional_tool_information:
+        # ciscat:                   # runs in pipeline, but test needs updating
+        dependencychecker: 8.4.2    # not in va template
+        kubehunter: 1.0.0-10        # not in va template
+        mss: 1.1                    # not in va template
+        zap: D-2023-11-07           # disabled in pipeline
+    explanations_for_tools_not_scanned:
+        ciscat: "manual"            # structure in place, but test needs updating
+        defensics: "unknown"
+        dependencychecker: "manual"
+        kubehunter: "pipeline"      # running in pipeline
+        mss: "manual"
+        zap: "manual"               # disabled in pipeline
+    mitigations:
+        # Critical
+        GHSA-2jcg-qqmg-46q6:
+            category: FP
+            severity_based_on_risk_assessment: NONE
+            description_of_usage: >-
+                The resolve library has reference to a private test dependency package which
+                has the same name as a known malicious package and is being flagged as a
+                vulnerability. This is a false positive finding by the tool because these
+                two packages are not actually referencing the same monorepo-symlink-test.
+                The path to resolve's test package which is named 'monorepo-symlink-test' is
+                'node_modules/resolve/test/resolver/multirepo/package.json'.
+            likelihood_of_attack: >-
+                N/A.
+                This is a false positive since it is not the real malicious monorepo-symlink-test.
+            impact: N/A
+            evaluation:
+                status: FP
+                rationale: >-
+                    Severity Based on Risk Assessment: NONE
+
+                    Description of Usage:
+                    The resolve library has reference to a private test dependency package which
+                    has the same name as a known malicious package and is being flagged as a
+                    vulnerability. This is a false positive finding by the tool because these
+                    two packages are not actually referencing the same monorepo-symlink-test.
+                    The path to resolve's test package which is named 'monorepo-symlink-test' is
+                    'node_modules/resolve/test/resolver/multirepo/package.json'.
+
+                    Likelihood of attack:
+                    N/A. This is a false positive since it is not the real malicious
+                    monorepo-symlink-test.
+
+                    Impact: N/A
+            mitigation: None
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+
+# PSDAP says Finding does not require exemption!
+# Vulnerability finding with ID CVE-2024-28757 and severity undefined does not require exemption and will be excluded from the submitted exemption request.
+        # CVE-2024-28757:
+        #     category: UT
+        #     severity_based_on_risk_assessment: MEDIUM
+        #     description_of_usage: >-
+        #         Flaw found in the libexpat found in CBOS. This microservice does not call libexpat
+        #         directly. Parsers created using libexpat's XML_ExternalEntityParserCreate are
+        #         vulnerable XML Entity Expansion attacks.
+        #     likelihood_of_attack: >-
+        #         Low. Our microservice does not run libexpat. Attacker would need to get onto the
+        #         pod/container and deploy their own code. This is unlikely, as root and ssh access
+        #         are disabled on the container.
+        #     impact: High. Denial of service / container failure.
+        #     evaluation:
+        #         status: UT
+        #         rationale: >-
+        #             Severity Based on Risk Assessment: MEDIUM
+
+        #             Description of Usage:
+        #             Flaw found in the libexpat found in CBOS. This microservice does not call
+        #             libexpat directly. Parsers created using libexpat's
+        #             XML_ExternalEntityParserCreate are vulnerable XML Entity Expansion attacks.
+
+        #             Likelihood of attack:
+        #             Low. Our microservice does not run libexpat. Attacker would need to get
+        #             onto the pod/container and deploy their own code. This is unlikely, as
+        #             root and ssh access are disabled on the container.
+
+        #             Impact (in case of successful exploit):
+        #             High. Denial of service / container failure.
+        #     mitigation: >-
+        #         Upgrade the latest CBOS in the next release.
+        #         Root access is denied on container
+        #     sce:
+        #         status: Pending
+        #         expires: 2024-04-05T00:00:00Z
+        #         planned_fix: ESOA/2.1
+
+        # HIGH
+        CVE-2024-4068:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in braces pulled in from adp/base.
+                Microservices does not call braces.
+            likelihood_of_attack: >-
+                Low. Attacker would need to get into the container and deploy their
+                own code and attempt to parse and imabalanced amount of braces as input.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in braces pulled in from adp/base.
+                    Microservices does not call braces.
+
+                    Likelihood of attack:
+                    Low. Attacker would need to get into the container and deploy their
+                    own code and attempt to parse and imabalanced amount of braces as input.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service.
+            mitigation: Upgrade the adp/base with newer version of braces next release.
+        # CVE-2024-4741:
+        #     category: UT
+        #     severity_based_on_risk_assessment: MEDIUM
+        #     description_of_usage: >-
+        #         Flaw found in nothing.
+        #         RESERVED
+        #     likelihood_of_attack: >-
+        #         N/A
+        #     impact: N/A
+        #     evaluation:
+        #         status: UT
+        #         rationale: >-
+        #             Severity Based on Risk Assessment: MEDIUM
+
+        #             Description of Usage:
+        #             Flaw found in nothing.
+        #             RESERVED.
+
+        #             Likelihood of attack:
+        #             N/A
+
+        #             Impact (in case of successful exploit):
+        #             N/A
+        #     mitigation: N/A
+        CVE-2024-33599:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                Microservice is not using glibc.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. glibc isn't called in the microservice code.
+                Attacker would need to get into the container and deploy their
+                own code. They would need to enable and configure nscd.
+                This is unlikely, as root and ssh access are disabled on
+                the container.
+            impact: High. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                    Microservice is not using glibc.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. glibc isn't called in the microservice code.
+                    Attacker would need to get into the container and deploy their
+                    own code. They would need to enable and configure nscd.
+                    This is unlikely, as root and ssh access are disabled on
+                    the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2024-33600:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                Microservice is not using glibc.
+                Not found in Node.js dependencies."
+            likelihood_of_attack: >-
+                Low. glibc isn't called in the microservice code.
+                Attacker would need to get into the container and deploy their
+                own code. They would need to enable and configure nscd.
+                This is unlikely, as root and ssh access are disabled on
+                the container.
+                Attacker could then send a request to trigger a non-found response in the nscd and
+                could then gain access into memory by exploiting a null pointer dereference to bypass
+                security logic, reveal debugging information, or cause software reliability issues.
+            impact: High. Denial of Service. Confidential Information Exposure.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in glibc. CBOS is using glibc nscd for DNS.
+                    Microservice is not using glibc.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. glibc isn't called in the microservice code.
+                    Attacker would need to get into the container and deploy their
+                    own code. This is unlikely, as root and ssh access are disabled on
+                    the container.
+                    Attacker could then send a request to trigger a non-found response in the nscd and
+                    could then gain access into memory by exploiting a null pointer dereference  to bypass
+                    security logic, reveal debugging information, or cause software reliability issues.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service. Confidential Information Exposure.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2024-33601:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                Microservice is not using glibc.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. glibc isn't called in the microservice code.
+                Attacker would need to get into the container and deploy their
+                own code. They would need to enable and configure nscd.
+                This is unlikely, as root and ssh access are disabled on the container.
+                Attacker could then trigger the xmalloc or xrealloc memory allocation failure.
+            impact: High. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                    Microservice is not using glibc.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. glibc isn't called in the microservice code.
+                    Attacker would need to get into the container and deploy their
+                    own code. They would need to enable and configure nscd.
+                    This is unlikely, as root and ssh access are disabled on the container.
+                    Attacker could then trigger the xmalloc or xrealloc memory allocation failure.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2024-33602:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                Microservice is not using glibc.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. glibc isn't called in the microservice code.
+                Attacker would need to get into the container and deploy their
+                own code. They would need to enable and configure nscd.
+                This is unlikely, as root and ssh access are disabled on the container.
+                Attacker could then trigger the NSS callback function.
+            impact: High. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in glibc. CBOS is using glibc, however CBOS does not use nscd.
+                    Microservice is not using glibc.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. glibc isn't called in the microservice code.
+                    Attacker would need to get into the container and deploy their
+                    own code. They would need to enable and configure nscd.
+                    This is unlikely, as root and ssh access are disabled on the container.
+                    Attacker could then trigger the NSS callback function.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service.
+            mitigation: Upgrade the latest CBOS in the next release.
+        ApparmorAny:
+            category: FP
+            severity_based_on_risk_assessment: NONE
+            description_of_usage: >-
+                A FP introduced by tools parsing annotations instead of securityContext.
+                According to ADP DR (DR-D1123-128) the AppArmor values should be set as
+                empty as default and customer are responsible to make their decision.
+            likelihood_of_attack: N/A
+            impact: N/A
+            evaluation:
+                status: FP
+                rationale: >-
+                    A FP introduced by tools parsing annotations instead of securityContext.
+                    According to ADP DR (DR-D1123-128) the AppArmor values should be set as
+                    empty as default and customer are responsible to make their decision.
+            mitigation: None
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        SeccompProfileMissing-Deployment:
+            category: FP
+            severity_based_on_risk_assessment: NONE
+            description_of_usage: >-
+                A FP introduced by tools parsing annotations instead of securityContext.
+                According to ADP DR (DR-D1123-128) the Seccomp values should be set as
+                empty as default and customer are responsible to make their decision.
+            likelihood_of_attack: N/A
+            impact: N/A
+            evaluation:
+                status: FP
+                rationale: >-
+                    A FP introduced by tools parsing annotations instead of
+                    securityContext. According to ADP DR (DR-D1123-128) the Seccomp
+                    values should be set as empty as default and customer are responsible
+                    to make their decision.
+            mitigation: None
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        # Resolved
+        CVE-2018-6913:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in perl-base coming in from CBOS.
+                Microservice does not use Perl.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own code to cause a buffer overflow.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Remote Code Execution.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in perl-base coming in from CBOS.
+                    Microservice does not use Perl.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own code to cause a buffer overflow.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Remote Code Execution.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2018-6798:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in perl-base coming in from CBOS.
+                Microservice does not use Perl.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own code to cause a buffer overflow.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Remote Code Execution.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in perl-base coming in from CBOS.
+                    Microservice does not use Perl.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own code to cause a buffer overflow.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Remote Code Execution.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2021-41720:
+            mitigation: >-
+                CVE has been withdrawn and has been concluded that it is not a vulnerability.
+        CVE-2022-4899:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in zstd Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own code. This is unlikely, as root and ssh access are disabled on
+                the container.
+            impact: High. Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in zstd Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own code. This is unlikely, as root and ssh access are disabled on
+                    the container.
+
+                    Impact (in case of successful exploit):
+                    High. Availability
+                mitigation: >-
+                    Upgrade the latest CBOS in the next release.
+                    Root access is denied on container.
+        CVE-2022-25883:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                The microservice does not call new Range.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own code.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. DoS
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    The microservice does not call new Range.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own code.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. DoS
+            mitigation: >-
+                Upgrade in next release.
+            sce:
+                sce-id: SCED-2023-101546
+                status: Pending
+                expires: 2024-07-25T00:00:00Z
+        CVE-2023-1667:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in libssh Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own code. This is unlikely, as root and ssh access are disabled on
+                the container.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in libssh Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own code. This is unlikely, as root and ssh access are disabled on
+                    the container.
+
+                    Impact (in case of successful exploit):
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-2283:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in libssh Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own code. This is unlikely, as root and ssh access are disabled on
+                the container.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in libssh Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own code. This is unlikely, as root and ssh access are disabled on
+                    the container.
+
+                    Impact (in case of successful exploit):
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-4527:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in glibc Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own
+                code. This is unlikely, as root and ssh access are disabled on the
+                container.
+            impact: High. Memory Leak, Container crash
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in glibc Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own
+                    code. This is unlikely, as root and ssh access are disabled on the
+                    container.
+
+                    Impact (in case of successful exploit):
+                    High. Memory Leak, Container crash
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-5156:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in CBOS GNU C Library. Microservice is not
+                calling this library. Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own
+                code. This is unlikely, as root and ssh access are disabled on the
+                container.
+            impact: High. Memory Leak, Container crash
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in CBOS GNU C Library. Microservice is not
+                    calling this library. Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own
+                    code. This is unlikely, as root and ssh access are disabled on the
+                    container.
+
+                    Impact (in case of successful exploit):
+                    High. Memory Leak, Container crash
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+            sce:
+                sce-id: SCED-2023-101777
+                status: Pending
+                expires: 2024-01-24T00:00:00Z
+        CVE-2023-5678:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against OpenSSL functions.
+                Microservice is not calling these functions.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own
+                code. This is unlikely, as root and ssh access are disabled on the
+                container.
+            impact: High. Memory Leak, Container crash
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against OpenSSL functions.
+                    Microservice is not calling these functions.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own
+                    code. This is unlikely, as root and ssh access are disabled on the
+                    container.
+
+                    Impact (in case of successful exploit):
+                    High. Memory Leak, Container crash
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-6004:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in libssh Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own code.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in libssh Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own code.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-6597:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw in the CPython found in CBOS. This microservice does not call CPython
+                directly. Users can modify permissions of files referenced by symlinks.
+            likelihood_of_attack: >-
+                Low. Our microservice does not run CPython. Attacker would need to get
+                onto the pod/container and deploy their own code. They would need to
+                invoke the vulnerable tempfile. TemporaryDirectory class. This is unlikely,
+                as root and ssh access are disabled on the container.
+            impact: High. Privilege Elevation.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in the CPython found in CBOS. This microservice does not
+                    call CPython directly. Users can modify permissions of files
+                    referenced by symlinks.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not run CPython. Attacker would need to
+                    get onto the pod/container and deploy their own code. They would
+                    need to invoke the vulnerable tempfile. TemporaryDirectory class.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Privilege Elevation.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+            sce:
+                status: Pending
+                expires: 2024-04-05T00:00:00Z
+                planned_fix: ESOA/2.1
+        CVE-2023-26136:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                The vulnerability is only present when in the
+                rejectPublicSuffixes=false mode. From the tough-cookie documentation,
+                the default mode is rejectPublicSuffixes=true and we are using the
+                default mode.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own
+                code. This is unlikely, as root and ssh access are disabled on the
+                container.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    The vulnerability is only present when in the
+                    rejectPublicSuffixes=false mode. From the tough-cookie documentation,
+                    the default mode is rejectPublicSuffixes=true and we are using the
+                    default mode.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own
+                    code. This is unlikely, as root and ssh access are disabled on the
+                    container.
+
+                    Impact (in case of successful exploit):
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade in the next release.
+
+                Implemented Mitigation as per vendor.
+                https://help.salesforce.com/s/articleView?id=000395871&type=1
+
+                Not vulnerable as tough-cookie is not listed as a direct dependency.
+            sce:
+                sce-id: SCED-2023-101777
+                status: Pending
+                expires: 2024-01-24T00:00:00Z
+        CVE-2023-29491:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in ncurses Library.
+                Microservice is not calling this library.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own
+                code. This is unlikely, as root and ssh access are disabled on the
+                container.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in ncurses Library.
+                    Microservice is not calling this library.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own
+                    code. This is unlikely, as root and ssh access are disabled on the
+                    container.
+
+                    Impact (in case of successful exploit):
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+        CVE-2023-30608:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in libprotobuf-lite25_1_0 coming in via CBOS.
+                Microservice does not use libprotobuf-lite.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their
+                own python code to use the sqlparse module to evaluate a specific regular
+                expression which would cause a Regular Expression Denial of Service attack.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in libprotobuf-lite25_1_0 coming in via CBOS.
+                    Microservice does not use libprotobuf-lite.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their
+                    own python code to use the sqlparse module to evaluate a specific regular
+                    expression which would cause a Regular Expression Denial of Service attack.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service.
+            mitigation: Upgrade the latest CBOS in the next release.
+        CVE-2023-32002:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against node.js when used with the experimental
+                policy.
+            likelihood_of_attack: >-
+                Low. In order for this to be exposed, node.js would have to be
+                lauched with the --experimental-policy flag enabled.
+
+                Our Dockerfile runs this:
+                npm ci --production --unsafe-perm
+                run build:prod == (snowpack build && rollup -c)
+
+                We are running: node ./bin/www.js
+                which is without the experimental-policy flag.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against node.js when used with the experimental
+                    policy.
+
+                    Likelihood of attack:
+                    Low. In order for this to be exposed, node.js would have to be
+                    lauched with the --experimental-policy flag enabled.
+
+                    Our Dockerfile runs this:
+                    npm ci --production --unsafe-perm
+                    run build:prod == (snowpack build && rollup -c)
+
+                    We are running: node ./bin/www.js
+                    which is without the experimental-policy flag.
+
+                    Impact:
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Do not use the experimental release/policy.
+            sce:
+                sce-id: SCED-2023-101777
+                status: Pending
+                expires: 2024-01-24T00:00:00Z
+        CVE-2023-32006:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against node.js when used with the
+                experimental policy.
+            likelihood_of_attack: >-
+                Low. In order for this to be exposed, node.js would have to be
+                lauched with the --experimental-policy flag enabled.
+
+                Our Dockerfile runs this:
+                npm ci --production --unsafe-perm
+                run build:prod == (snowpack build && rollup -c)
+
+                We are running: node ./bin/www.js
+                which is without the experimental-policy flag.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against node.js when used with the
+                    experimental policy.
+
+                    Likelihood of attack:
+                    Low. In order for this to be exposed, node.js would have to be
+                    lauched with the --experimental-policy flag enabled.
+
+                    Our Dockerfile runs this:
+                    npm ci --production --unsafe-perm
+                    run build:prod == (snowpack build && rollup -c)
+
+                    We are running: node ./bin/www.js
+                    which is without the experimental-policy flag.
+
+                    Impact:
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade in the next release.
+                This vulnerability is fixed with the upgrade of node.js in the LA release.
+            sce:
+                sce-id: SCED-2023-101777
+                status: Pending
+                expires: 2024-01-24T00:00:00Z
+        CVE-2023-32559:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against node.js when used with the experimental policy.
+            likelihood_of_attack: >-
+                Low. In order for this to be exposed, node.js would have to be
+                lauched with the --experimental-policy flag enabled.
+
+                Our Dockerfile runs this:
+                npm ci --production --unsafe-perm
+                run build:prod == (snowpack build && rollup -c)
+
+                We are running: node ./bin/www.js
+                which is without the experimental-policy flag.
+            impact: High. Confidentiality/Integrity/Availability
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against node.js when used with the
+                    experimental policy.
+
+                    Likelihood of attack:
+                    Low. In order for this to be exposed, node.js would have to be
+                    lauched with the --experimental-policy flag enabled.
+
+                    Our Dockerfile runs this:
+                    npm ci --production --unsafe-perm
+                    run build:prod == (snowpack build && rollup -c)
+
+                    We are running: node ./bin/www.js
+                    which is without the experimental-policy flag.
+
+                    Impact:
+                    High. Confidentiality/Integrity/Availability
+            mitigation: >-
+                Upgrade in the next release.
+                This vulnerability is fixed with the upgrade of node.js in the LA release.
+            sce:
+                sce-id: SCED-2023-101777
+                status: Pending
+                expires: 2024-01-24T00:00:00Z
+        CVE-2023-38552:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against node.js when used with the experimental policy.
+                This is not used by service, and it can't be enabled during runtime.
+            likelihood_of_attack: >-
+                Low. In order for this to be exposed, node.js would have to be lauched
+                with the --experimental-policy flag enabled.
+
+                Our Dockerfile runs this:
+                npm ci --production --unsafe-perm
+                run build:prod == (snowpack build && rollup -c)
+
+                We are running: node ./bin/www.js
+                which is without the experimental-policy flag.
+            impact: High. Integrity.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against node.js when used with the
+                    experimental policy. This is not used by service, and it can't
+                    be enabled during runtime.
+
+                    Likelihood of attack:
+                    Low. In order for this to be exposed, node.js would have
+                    to be lauched with the --experimental-policy flag enabled.
+
+                    Our Dockerfile runs this:
+                    npm ci --production --unsafe-perm
+                    run build:prod == (snowpack build && rollup -c)
+
+                    We are running: node ./bin/www.js
+                    which is without the experimental-policy flag.
+
+                    Impact:
+                    High. Integrity.
+            mitigation: >-
+                Uplift Nodejs version to 20.10.0.
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        CVE-2023-44487:
+            TR:
+            - id: IDUN-99561
+              tracker: OSS
+            category: UT
+            severity_based_on_risk_assessment: HIGH
+            description_of_usage: >-
+                http2 vulnerability exists, where request cancellation can reset many
+                streams quickly affecting memory, file system storage, database
+                connection pool entries, and CPU resources.
+            likelihood_of_attack: >-
+                High. All messages sent over http/2. Ingress controller can be
+                configured to limit the number of request received.
+            impact: High. Denial of service / container failure.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: HIGH
+
+                    Description of Usage:
+                    http2 vulnerability exists, where request cancellation
+                    can reset many streams quickly affecting memory, file system storage,
+                    database connection pool entries, and CPU resources.
+
+                    Likelihood of attack:
+                    High. All messages sent over http/2.
+                    Ingress controller can be configured to limit the number of request
+                    received.
+
+                    Impact:
+                    High. Denial of service / container failure.
+            mitigation: >-
+                Ingress controller can be configured to limit the number of request
+                received. Uplift Nodejs version to 20.10.0.
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        CVE-2023-52425:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Flaw found in the libexpat found in CBOS. Parsing really big tokens that
+                requires multiple buffer fills to complete, can cause many full reparsings.
+                This microservice does not call libexpat directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not run libexpat. Attacker would need to get onto
+                the pod/container and deploy their own code. This is unlikely, as root and ssh
+                access are disabled on the container.
+            impact: High. Denial of service / container failure.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Flaw found in the libexpat found in CBOS. Parsing really big tokens that
+                    requires multiple buffer fills to complete, can cause many full reparsings.
+                    This microservice does not call libexpat directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not run libexpat. Attacker would need to get onto
+                    the pod/container and deploy their own code. This is unlikely, as root and
+                    ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of service / container failure.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+                planned_fix: ESOA/2.1
+        CVE-2024-0727:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability against OpenSSL functions.
+                Microservice is not calling these functions.
+                Not found in Node.js dependencies.
+            likelihood_of_attack: >-
+                Low. Function isn't called in the code.
+                Attacker would need to get onto the pod/container and deploy their own code.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Memory Leak, Container crash
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability against OpenSSL functions.
+                    Microservice is not calling these functions.
+                    Not found in Node.js dependencies.
+
+                    Likelihood of attack:
+                    Low. Function isn't called in the code.
+                    Attacker would need to get onto the pod/container and deploy their own code.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Memory Leak, Container crash
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container.
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        CVE-2024-21892:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Microservice uses impacted nodejs version 20.10.0 however exploit requires
+                the server to be running with elevated privileges which would allow unprivileged
+                users to inject code that inherits the process's elevated privileges.
+                The server isn't configured with root privileges. Root and ssh access are disabled
+                on the container.
+            likelihood_of_attack: >-
+                Very low.
+                Attacker would need to redeploy the container with adjusted settings to give the
+                server elevated privileges and then initiate attack.
+                This is unlikely, as root and ssh access are disabled on the container.
+            impact: High. Disclosure of sensitive information. Addition or modification of data. Denial of Service.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Microservice uses impacted nodejs version 20.10.0 however exploit requires
+                    the server to be running with elevated privileges which would allow unprivileged
+                    users to inject code that inherits the process's elevated privileges.
+                    The server isn't configured with root privileges. Root and ssh access are disabled
+                    on the container.
+
+                    Likelihood of attack:
+                    Very low.
+                    Attacker would need to redeploy the container with adjusted settings to give the
+                    server elevated privileges and then initiate attack.
+                    This is unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Disclosure of sensitive information. Addition or modification of data. Denial of Service.
+            mitigation: Upgrade nodejs to 20.12.2.
+        CVE-2024-22019:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Microservice uses nodejs 20.10.0. Attacker can send a malicious request to an endpoint using
+                chunked transcoding and reduce availability of the server.
+                Requires the server to be using HTTP/1.1 since chunked encoding is not supported in HTTP/2.
+                Server is using HTTP/2 and has no streaming endpoints.
+            likelihood_of_attack: >-
+                Very low.
+                Attacker can send a specially formulated attack request and impact the server.
+                This is unlikely, as root and ssh access are disabled on the container,
+                the attack requires a streaming endpoint to exist, and for the server to be using HTTP/1.1.
+            impact: High. Denial of service. Impacted availability.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Microservice uses nodejs 20.10.0. Attacker can send a malicious request to an endpoint using
+                    chunked transcoding and reduce availability of the server.
+                    Requires the server to be using HTTP/1.1 since chunked encoding is not supported in HTTP/2.
+                    Server is using HTTP/2 and has no streaming endpoints.
+
+                    Likelihood of attack:
+                    Very low.
+                    Attacker can send a specially formulated attack request and impact the server.
+                    This is unlikely, as root and ssh access are disabled on the container,
+                    the attack requires a streaming endpoint to exist, and for the server to be using HTTP/1.1.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of service. Impacted availability.
+            mitigation: Upgrade nodejs to 20.12.2.
+        CVE-2024-25062:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                libxml2 Flaw found in the libexpat found in CBOS. This microservice does not
+                call libexpat directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not use this library. Attacker would need to get
+                onto the pod/container and deploy their own code. This is unlikely, as root
+                and ssh access are disabled on the container.
+            impact: High. Denial of Service. Use After Free.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    libxml2 Flaw found in the libexpat found in CBOS. This microservice does not
+                    call libexpat directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not use this library. Attacker would need to get
+                    onto the pod/container and deploy their own code. This is unlikely, as root
+                    and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of Service. Use After Free.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container
+            sce:
+                sce-id: SCED-2024-000153
+                status: Pending
+                expires: 2024-03-26T00:00:00Z
+        CVE-2024-26458:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability in Kerberos 5 (krb5) found in CBOS, where attacker could cause
+                a memory leak by re-triggering the memory allocating without memory freeing.
+                This microservice does not call krb5 directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not run krb5. Attacker would need to get onto
+                the pod/container and deploy their own code, and cause the mem_alloc to
+                re-trigger without the memory freeing. This is unlikely, as root and ssh
+                access are disabled on the container.
+            impact: High. Denial of service / resource exhaustion.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability in Kerberos 5 (krb5) found in CBOS, where attacker could
+                    cause a memory leak by re-triggering the memory allocating without memory
+                    freeing. This microservice does not call krb5 directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not run krb5. Attacker would need to get onto
+                    the pod/container and deploy their own code, and cause the mem_alloc to
+                    re-trigger without the memory freeing. This is unlikely, as root and
+                    ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of service / resource exhaustion.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container
+            sce:
+                status: Pending
+                expires: 2024-05-01T00:00:00Z
+                planned_fix: ESOA/2.1
+        CVE-2024-26461:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability in Kerberos 5 (krb5) found in CBOS, where attacker could cause
+                a memory leak by re-triggering the memory allocating without memory freeing.
+                This microservice does not call krb5 directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not run krb5. Attacker would need to get onto the
+                pod/container and deploy their own code, and cause the mem_alloc to
+                re-trigger without the memory freeing. This is unlikely, as root and ssh
+                access are disabled on the container.
+            impact: High. Denial of service / resource exhaustion.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability in Kerberos 5 (krb5) found in CBOS,
+                    where attacker could cause a memory leak by re-triggering the memory
+                    allocating without memory freeing. This microservice does not call
+                    krb5 directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not run krb5. Attacker would need to get
+                    onto the pod/container and deploy their own code, and cause the
+                    mem_alloc to re-trigger without the memory freeing. This is
+                    unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of service / resource exhaustion.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container
+            sce:
+                status: Pending
+                expires: 2024-05-01T00:00:00Z
+                planned_fix: ESOA/2.1
+        CVE-2024-26462:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability in Kerberos 5 (krb5) found in CBOS, where attacker could
+                cause a memory leak by re-triggering the memory allocating without
+                memory freeing. This microservice does not call krb5 directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not run krb5. Attacker would need to get
+                onto the pod/container and deploy their own code, and cause the
+                mem_alloc to re-trigger without the memory freeing. This is unlikely,
+                as root and ssh access are disabled on the container.
+            impact: High. Denial of service / resource exhaustion.
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability in Kerberos 5 (krb5) found in CBOS, where attacker
+                    could cause a memory leak by re-triggering the memory allocating
+                    without memory freeing. This microservice does not call krb5
+                    directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not run krb5. Attacker would need to
+                    get onto the pod/container and deploy their own code, and cause
+                    the mem_alloc to re-trigger without the memory freeing. This is
+                    unlikely, as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Denial of service / resource exhaustion.
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container
+            sce:
+                status: Pending
+                expires: 2024-05-01T00:00:00Z
+                planned_fix: ESOA/2.1
+        CVE-2024-28085:
+            category: UT
+            severity_based_on_risk_assessment: MEDIUM
+            description_of_usage: >-
+                Vulnerability in the util-linux library (versions less than 2.40) found
+                in CBOS, which allows escape sequences to be sent to other users'
+                terminals through argv. There may be plausible scenarios where this
+                leads to account takeover. This microservice does not call the
+                util-linux library directly.
+            likelihood_of_attack: >-
+                Low. Our microservice does not explicitly use the util-linux library.
+                Attacker would need to get onto the pod/container and deploy their own
+                code which sends escape sequences to other pods/containers to exploit
+                this vulnerability. This is unlikely, as root and ssh access are
+                disabled on the container.
+            impact: High. Privilege Elevation / account takeover
+            evaluation:
+                status: UT
+                rationale: >-
+                    Severity Based on Risk Assessment: MEDIUM
+
+                    Description of Usage:
+                    Vulnerability in the util-linux library (versions less than 2.40)
+                    found in CBOS, which allows escape sequences to be sent to other
+                    users' terminals through argv. There may be plausible scenarios
+                    where this leads to account takeover. This microservice does not
+                    call the util-linux library directly.
+
+                    Likelihood of attack:
+                    Low. Our microservice does not explicitly use the util-linux
+                    library. Attacker would need to get onto the pod/container and
+                    deploy their own code which sends escape sequences to other
+                    pods/containers to exploit this vulnerability. This is unlikely,
+                    as root and ssh access are disabled on the container.
+
+                    Impact (in case of successful exploit):
+                    High. Privilege Elevation / account takeover
+            mitigation: >-
+                Upgrade the latest CBOS in the next release.
+                Root access is denied on container
+            sce:
+                status: Pending
+                expires: 2024-05-01T00:00:00Z
+                planned_fix: ESOA/2.1
+        open_ports:
+            3000/tcp:
+                intended: true

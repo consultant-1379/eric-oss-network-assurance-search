@@ -1,0 +1,47 @@
+version: '2.1'
+services:
+  seleniumhub:
+    container_name: docker_seleniumhub_integration_${BUILD_TAG}
+    image: armdocker.rnd.ericsson.se/dockerhub-ericsson-remote/selenium/hub:3.141.59-20210929 # update this regularly
+    shm_size: 1g
+
+  nodechrome:
+    container_name: docker_nodechrome_integration_${BUILD_TAG}
+    image: armdocker.rnd.ericsson.se/dockerhub-ericsson-remote/selenium/node-chrome:3.141.59-20210929 # update this regularly
+    links:
+      - seleniumhub:hub
+    depends_on:
+      - seleniumhub
+    environment:
+      - HUB_HOST=hub
+      - HUB_PORT=4444
+    volumes:
+      - ../:/local/app
+    shm_size: 2g
+
+  tester:
+    container_name: docker_tester_integration_${BUILD_TAG}
+    image: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/adp-nodejs-lts-builder-image:20.10.0-0
+    command: >
+      bash -c "
+      npx wait-on --log -i 2000 -t 600000 http-get://seleniumhub:4444 &&
+      cd /local/app &&
+      npm run test:frontend:integration ;
+      TEST_STATUS=$$? ;
+      npm run test:frontend:generateReport ;
+      exit $$TEST_STATUS"
+    links:
+      - seleniumhub
+    depends_on:
+      - nodechrome
+    environment:
+      - KUBERNETES_MASTER_NODE=${KUBERNETES_MASTER_NODE}
+      - SERVICE_PATH=${SERVICE_PATH}
+      - SELENIUM_HOST=seleniumhub
+      - SELENIUM_PORT=4444
+      - DOWNLOAD_DIRECTORY_PATH=${DOWNLOAD_PATH}
+      - TEST_MODE=mock
+    volumes:
+      - ../../:/local/app
+    shm_size: 1g
+    user: node

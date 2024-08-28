@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/gaugeWidget.schema.json",
+  "title": "Gauge widget",
+  "description": "A widget that displays a gauge with a lower and upper bound.",
+  "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataKey"],
+      "properties": {
+        "_id": true,
+        "title": true,
+        "subtitle": true,
+        "widgetType": {
+          "const": "gauge"
+        },
+        "variables": true,
+        "maximizable": {
+          "default": false
+        },
+        "showWhen": true,
+        "placeholder": true,
+        "sources": true,
+        "unit": {
+          "description": "The unit of the data.",
+          "type": "string",
+          "examples": ["MB", "%"],
+          "maxLength": 8
+        },
+        "min": {
+          "description": "The lower bound for the gauge.",
+          "type": "number",
+          "default": 0
+        },
+        "max": {
+          "description": "The upper bound for the gauge.",
+          "type": "number",
+          "default": 100
+        },
+        "dataKey": {
+          "description": "Key to look for in the data from the source. It is this data that will be shown in the gauge.",
+          "type": "string"
+        },
+        "decimals": {
+          "description": "Number of decimals shown.",
+          "type": "number",
+          "default": 0
+        },
+        "size": {
+          "description": "Sets the size of the gauge.",
+          "default": "medium",
+          "type": "string",
+          "enum": ["small", "medium", "large"]
+        },
+        "limits": {
+          "description": "Threshold ranges shown in the gauge with custom labels.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to", "label"],
+            "additionalProperties": false,
+            "properties": {
+              "from": {
+                "description": "The lower bound for the threshold.",
+                "type": "number"
+              },
+              "to": {
+                "description": "The upper bound of the threshold.",
+                "type": "number"
+              },
+              "label": { "description": "Threshold label.", "type": "string" },
+              "color": {
+                "description": "The color of the threshold.",
+                "type": "string",
+                "enum": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "grey",
+                  "transparent"
+                ]
+              }
+            }
+          },
+          "default": [],
+          "examples": [
+            [
+              { "from": 60, "to": 80, "label": "Warning", "color": "yellow" },
+              { "from": 80, "to": 100, "label": "Danger", "color": "red" }
+            ]
+          ]
+        }
+      }
+    },
+    { "$ref": "./widget.schema.json#/definitions/baseWidgetSchema" }
+  ]
+}

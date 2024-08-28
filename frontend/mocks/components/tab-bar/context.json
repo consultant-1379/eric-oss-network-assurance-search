@@ -1,0 +1,51 @@
+{
+  "index": "ran",
+  "name": "NSSAI & NSI",
+  "contextType": {
+    "id": "NSSAI_NSI",
+    "contextFields": [
+      {
+        "id": "NSSAI",
+        "description": "Network Slice Selection Assistance Information"
+      },
+      {
+        "id": "NSI",
+        "description": "Network Slice Instance"
+      }
+    ],
+    "name": "NSSAI & NSI"
+  },
+  "relations": [
+    {
+      "relationType": "RELATED_TO",
+      "related": {
+        "id": "CID_1234",
+        "contextFields": [
+          {
+            "id": "NSSAI_1234",
+            "name": "NSSAI 1234",
+            "description": "Instance of NSSAI 1234"
+          },
+          {
+            "id": "NSI_4321",
+            "name": "NSI 4321",
+            "description": "Instance of NSI 4321"
+          }
+        ],
+        "name": "NSSAI & NSI Context"
+      }
+    }
+  ],
+  "metricTypes": [
+    {
+      "id": "vi_sessionModificationReqRcvd",
+      "valueType": "integer",
+      "description": "Session Modification Request Received"
+    },
+    {
+      "id": "vi_dlUnstrDropPackets",
+      "valueType": "integer",
+      "description": "Dropped Packets"
+    }
+  ]
+}

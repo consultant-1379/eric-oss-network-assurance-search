@@ -1,0 +1,15 @@
+{
+  "@types/http-proxy": "@types/http-proxy, DefinitelyTyped",
+  "@types/minipass": "@types/minipass, Definitely Typed",
+  "@types/underscore": "@types/underscore, Definitely Typed",
+  "follow-redirects": "Follow Redirects",
+  "psl": "psl (Public Suffix List)",
+  "tar": "nod-tar",
+  "supports-preserve-symlinks-flag": "node-supports-preserve-symlinks-flag",
+  "node-domexception": "DOMException",
+  "urlpattern-polyfill": "URLPattern polyfills",
+  "jose": "jose, panva",
+  "ws": "ws, websockets",
+  "@opensearch-project/opensearch": "Opensearch-js",
+  "jsonschema": "jsonschema, tdegrunt"
+}

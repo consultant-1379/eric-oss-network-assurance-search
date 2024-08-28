@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cnom.ericsson.com/schemas/widgets/widget.schema.json",
+  "title": "A widget",
+  "description": "A widget is a single GUI element in a dashboard. The widget is laid out in a grid layout.",
+  "definitions": {
+    "baseWidgetSchema": {
+      "type": "object",
+      "required": ["title", "widgetType"],
+      "properties": {
+        "_id": {
+          "description": "A unique ID for the widget.",
+          "$ref": "../definitions.schema.json#/definitions/_id"
+        },
+        "title": {
+          "description": "The title of the widget.",
+          "type": "string"
+        },
+        "subtitle": {
+          "description": "The subtitle of the widget.",
+          "type": "string"
+        },
+        "widgetType": {
+          "description": "The type of the widget.",
+          "type": "string",
+          "enum": [
+            "kpi",
+            "barChart",
+            "timeline",
+            "stackedArea",
+            "table",
+            "graph",
+            "gauge",
+            "settings",
+            "nodeSelector",
+            "donut",
+            "viewSelector",
+            "selectableSourceDataVisualizer",
+            "overviewTables"
+          ]
+        },
+        "variables": {
+          "$ref": "../definitions.schema.json#/definitions/variables"
+        },
+        "maximizable": {
+          "description": "Whether the widget can be maximized.",
+          "type": "boolean",
+          "default": true
+        },
+        "showWhen": {
+          "description": "Used to control whether to show the widget or not. When it's empty or any item in this list occurs in dashboard's variables and the value of it is not empty, this widget will be present otherwise hidden",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "placeholder": {
+          "description": "The settings of placeholder when the widget is empty.",
+          "type": "object",
+          "required": ["title"],
+          "properties": {
+            "icon": {
+              "description": "The icon type of placeholder.",
+              "type": "object"
+            },
+            "title": {
+              "description": "The title of placeholder.",
+              "type": "object"
+            },
+            "description": {
+              "description": "The content of placeholder.",
+              "type": "object"
+            },
+            "linkLabel": {
+              "description": "The action content within placeholder.",
+              "type": "object"
+            },
+            "linkUri": {
+              "description": "The link to the action within placeholder.",
+              "type": "object"
+            }
+          }
+        },
+        "sources": {
+          "description": "The sources providing data to the widget.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "description": "_id of the source.",
+                "$ref": "../definitions.schema.json#/definitions/_id"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "required": ["widgetType"],
+        "properties": {
+          "widgetType": true
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "kpi" } }
+            },
+            "then": {
+              "$ref": "./kpiWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "barChart" } }
+            },
+            "then": {
+              "$ref": "./barChartWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "timeline" } }
+            },
+            "then": {
+              "$ref": "./timelineWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "stackedArea" } }
+            },
+            "then": {
+              "$ref": "./stackedAreaWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "table" } }
+            },
+            "then": {
+              "$ref": "./tableWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "graph" } }
+            },
+            "then": {
+              "$ref": "./graphWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "gauge" } }
+            },
+            "then": {
+              "$ref": "./gaugeWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "settings" } }
+            },
+            "then": {
+              "$ref": "./settingsWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "donut" } }
+            },
+            "then": {
+              "$ref": "./donutWidget.schema.json"
+            }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "viewSelector" } }
+            },
+            "then": { "$ref": "./viewSelectorWidget.schema.json" }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": { "widgetType": { "const": "overviewTables" } }
+            },
+            "then": { "$ref": "./overviewTablesWidget.schema.json" }
+          },
+          {
+            "if": {
+              "type": "object",
+              "properties": {
+                "widgetType": { "const": "selectableSourceDataVisualizer" }
+              }
+            },
+            "then": {
+              "$ref": "./widget.schema.json#/definitions/baseWidgetSchema"
+            }
+          }
+        ]
+      }
+    },
+    { "$ref": "#/definitions/baseWidgetSchema" }
+  ]
+}

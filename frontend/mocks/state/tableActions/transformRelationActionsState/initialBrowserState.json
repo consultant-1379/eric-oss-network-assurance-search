@@ -1,0 +1,76 @@
+{
+  "relationActions": [
+    {
+      "label": "My NSI & My NF",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_NSI",
+          "contextFields": [
+            {
+              "id": "c_NSI",
+              "name": "My NSI",
+              "description": "No Sharks Inside",
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_NF",
+              "name": "My NF",
+              "description": "New Finger",
+              "dataType": "entityType"
+            }
+          ],
+          "name": "My NSI & My NF"
+        }
+      }
+    },
+    {
+      "label": "My Site & My NF",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_Site",
+          "contextFields": [
+            {
+              "id": "c_Site",
+              "name": "My Site",
+              "description": "Site",
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_NF",
+              "name": "My NF",
+              "description": "New Finger",
+              "dataType": "entityType"
+            }
+          ],
+          "name": "My Site & My NF"
+        }
+      }
+    },
+    {
+      "label": "My SNSSAI & My NF",
+      "data": {
+        "operation": "open-tab",
+        "context": {
+          "id": "NF_SNSSAI",
+          "contextFields": [
+            {
+              "id": "c_SNSSAI",
+              "name": "My SNSSAI",
+              "description": "Soup Network Slice Selection Assistance Information",
+              "dataType": "entityType"
+            },
+            {
+              "id": "c_NF",
+              "name": "My NF",
+              "description": "New Finger",
+              "dataType": "entityType"
+            }
+          ],
+          "name": "My SNSSAI & My NF"
+        }
+      }
+    }
+  ]
+}

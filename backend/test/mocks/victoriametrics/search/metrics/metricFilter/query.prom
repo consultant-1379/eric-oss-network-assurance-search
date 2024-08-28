@@ -1,0 +1,11 @@
+with(
+  context_filter = {context=~"nf,snssai",},
+  k1_0 = last_over_time(vi_AMFMeanRegNbr{context_filter}[15m]),
+  k1 = k1_0 >= 108.3 AND k1_0 <= 122.78,
+  count(l, k) = count_values without() (l, k),
+  c1 = count('vi_AMFMeanRegNbr',k1),
+  aggregated = c1,
+  limited = limit_offset(10, 0, aggregated)
+)(
+  sort_by_label_numeric(limited, 'vi_AMFMeanRegNbr')
+)

@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "file://schema/HelpPackageMetadata#",
+  "title": "Help Package Metadata",
+  "description": "Help Package Metadata describes a package of the help content.",
+  "type": "object",
+  "properties": {
+    "schema-version": {
+      "description": "The version of the schema used to validate Help Package Metadata.",
+      "type": "string",
+      "pattern": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$"
+    },
+    "documents": {
+      "description": "List of documents in the current package.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "path", "format", "name", "displayName"],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^(.+)\\/([^\\/]+)$"
+          },
+          "format": {
+            "type": "string",
+            "enum": ["html", "markdown", "pdf"]
+          },
+          "childNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "groupNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "descriptionShort": {
+            "type": "string"
+          },
+          "descriptionLong": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "acronym": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["tutorial", "document"]
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "groups": {
+      "description": "Group of documents in the current package.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "descriptionShort": {
+            "type": "string"
+          },
+          "descriptionLong": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "acronym": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": ["category", "product"]
+          }
+        },
+        "additionalProperties": false,
+        "required": ["name", "displayName"]
+      }
+    }
+  },
+  "required": ["schema-version", "documents", "groups"],
+  "additionalProperties": false
+}

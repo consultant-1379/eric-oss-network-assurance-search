@@ -1,0 +1,3 @@
+__pycache__/
+src/generated-files/opensearch/*
+src/generated-files/postgres/*

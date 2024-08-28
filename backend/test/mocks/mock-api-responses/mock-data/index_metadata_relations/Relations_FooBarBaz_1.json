@@ -1,0 +1,30 @@
+[
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "FOO",
+      "contextFields": [
+        {
+          "id": "Doc BAR",
+          "name": "context-field-BAR",
+          "description": "BAR"
+        }
+      ],
+      "name": "FOO"
+    }
+  },
+  {
+    "relationType": "RELATED_TO",
+    "related": {
+      "id": "BAR",
+      "contextFields": [
+        {
+          "id": "Doc BAR",
+          "name": "context-field-BAR",
+          "description": "BAR"
+        }
+      ],
+      "name": "BAR"
+    }
+  }
+]

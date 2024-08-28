@@ -1,0 +1,122 @@
+{
+  "active": true,
+  "context": {
+    "columns": [
+      {
+        "attribute": "NSSAI",
+        "sortable": true,
+        "title": "Network Slice Selection Assistance Information",
+        "valueType": "string"
+      },
+      {
+        "attribute": "NSI",
+        "sortable": true,
+        "title": "Network Slice Instance",
+        "valueType": "string"
+      },
+      {
+        "attribute": "vi_sessionModificationReqRcvd",
+        "sortable": true,
+        "title": "Session Modification Request Received",
+        "valueType": "integer"
+      },
+      {
+        "attribute": "vi_dlUnstrDropPackets",
+        "sortable": true,
+        "title": "Dropped Packets",
+        "valueType": "integer"
+      }
+    ],
+    "filterCategories": [
+      {
+        "fields": [
+          {
+            "filterCategory": "context",
+            "label": "Network Slice Selection Assistance Information",
+            "name": "NSSAI",
+            "type": {
+              "description": "Network Slice Selection Assistance Information",
+              "id": "NSSAI",
+              "valueType": "string"
+            }
+          },
+          {
+            "filterCategory": "context",
+            "label": "Network Slice Instance",
+            "name": "NSI",
+            "type": {
+              "description": "Network Slice Instance",
+              "id": "NSI",
+              "valueType": "string"
+            }
+          }
+        ],
+        "help": "NETWORK_FILTER_TOOLTIP_MESSAGE",
+        "selection": "checkbox",
+        "title": "Network Filters",
+        "type": "context"
+      },
+      {
+        "disclosureForAttribute": "",
+        "fields": [
+          {
+            "filterCategory": "metric",
+            "label": "Session Modification Request Received",
+            "name": "vi_sessionModificationReqRcvd",
+            "type": {
+              "description": "Session Modification Request Received",
+              "id": "vi_sessionModificationReqRcvd",
+              "valueType": "integer"
+            }
+          },
+          {
+            "filterCategory": "metric",
+            "label": "Dropped Packets",
+            "name": "vi_dlUnstrDropPackets",
+            "type": {
+              "description": "Dropped Packets",
+              "id": "vi_dlUnstrDropPackets",
+              "valueType": "integer"
+            }
+          }
+        ],
+        "help": "MEASUREMENT_FILTER_TOOLTIP_MESSAGE",
+        "selection": "radio",
+        "title": "Measurement Filters",
+        "type": "metric"
+      }
+    ]
+  },
+  "data": {
+    "currentpage": 1,
+    "fetchTime": 1686597285023,
+    "numentries": 20,
+    "numpages": 1,
+    "sort": {},
+    "tableData": []
+  },
+  "filters": [
+    {
+      "filterCategory": "context",
+      "id": "1234",
+      "name": "NSI",
+      "selected": true,
+      "type": {
+        "description": "Network Slice Instance",
+        "id": "NSI",
+        "valueType": "string"
+      },
+      "value": {
+        "from": 0,
+        "not": false,
+        "operation": "eq",
+        "searchPattern": "Slice B",
+        "to": 0
+      }
+    }
+  ],
+  "id": "testid",
+  "loading": true,
+  "match": "",
+  "title": " NSSAI & NSI"
+}

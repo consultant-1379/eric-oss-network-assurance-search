@@ -1,0 +1,24 @@
+{
+  "id" : "249da7f4-f9f2-413a-a80f-3e371fc14f35",
+  "request" : {
+    "urlPath" : "/v1/indexer-info/spec/values-for-fullcontext",
+    "method" : "GET",
+    "queryParameters" : {
+      "searchEngineIndexName" : {
+        "equalTo" : "assurance-searchEngineIndexName"
+      },
+      "fullContextName" : {
+        "equalTo" : "Context4_c1"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"value\":[{\"name\":\"valueFieldX-name\",\"displayName\":\"Context Field A\",\"unit\":\"errors/minute\",\"type\":\"float\",\"valueContextDocumentName\":\"value_context\",\"valueDocumentName\":\"vd_ContextA_ContextB_valueFieldX-name\",\"description\":\"valueFieldX Description\"},{\"name\":\"vi\",\"displayName\":null,\"unit\":null,\"type\":\"integer\",\"valueContextDocumentName\":\"value_context\",\"valueDocumentName\":\"vi_Context1_c1_vi\",\"description\":\"value description for vi\"}]}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "249da7f4-f9f2-413a-a80f-3e371fc14f35"
+}

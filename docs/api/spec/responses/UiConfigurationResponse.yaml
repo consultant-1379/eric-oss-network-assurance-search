@@ -1,0 +1,43 @@
+description: OK
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/UiConfiguration.yaml'
+    example:
+      {
+        "families": [
+          {
+            "name": "family1",
+            "widget": "timeline"
+          },
+          {
+            "name": "family2",
+            "widget": "donut"
+          }
+        ],
+        "groups": [
+          {
+            "name": "group1",
+            "title": "Panel 1",
+            "sort": "alphabetical",
+            "sortOrder": "asc"
+          },
+          {
+            "name": "group2",
+            "title": "Panel 2",
+            "sort": "alphabetical",
+            "sortOrder": "asc"
+          }
+        ],
+        "categories": [
+          {
+            "name": "category1",
+            "title": "Category 1"
+          },
+          {
+            "name": "category2",
+            "title": "Category 2"
+          }
+        ]
+      }
+

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "vi_NF_AMFMeanRegNbr",
+    "name": "AMF Mean Reg Nbr",
+    "description": "AMFMeanRegNbr Description",
+    "value": 60,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5baaaaaa"
+      }
+    ],
+    "visualization": {
+      "groups": {
+        "default": ["vi_NF_AMFMeanRegNbr"]
+      }
+    }
+  },
+  {
+    "id": "vi_NF_AMFMeanRegNbr2",
+    "name": "AMF Mean Reg Nbr 2",
+    "description": "AMFMeanRegNbr2 Description",
+    "value": 60,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5bbbbbbb"
+      }
+    ],
+    "visualization": {
+      "category": ["category1"],
+      "groups": {
+        "group1": ["family1", "family2", "family3", "family4"],
+        "group2": ["family2"]
+      },
+      "query": "todo"
+    }
+  },
+  {
+    "id": "vi_NF_AMFMeanRegNbr3",
+    "name": "AMF Mean Reg Nbr 3",
+    "description": "AMFMeanRegNbr3 Description",
+    "value": 60,
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5bcccccc"
+      }
+    ],
+    "visualization": {
+      "category": ["category1", "category2", "category3"],
+      "groups": {
+        "group1": ["family1", "family2"],
+        "group2": ["family2"],
+        "group3": ["family1"]
+      },
+      "query": "todo"
+    }
+  },
+  {
+    "id": "vi_NF_SmfModificationCmdRcvd",
+    "name": "Smf Modification Cmd Rcvd",
+    "description": "SmfModificationCmdRcvd Description",
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5bdddddd"
+      }
+    ],
+    "visualization": {
+      "category": ["category1", "category2", "category3", "category4"],
+      "groups": {
+        "group1": ["family1", "family2"],
+        "group2": ["family2"],
+        "group3": ["family2"],
+        "group4": ["family1"],
+        "group5": ["family1"]
+      },
+      "query": "todo"
+    }
+  },
+  {
+    "id": "vi_NF_dlUnstrDropPackets",
+    "name": "Dl Unstr Drop Packets",
+    "description": "DlUnstrDropPackets Description",
+    "valueType": "integer",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5beeeeee"
+      }
+    ],
+    "visualization": {
+      "groups": {
+        "group1": ["family1", "family2"],
+        "group2": ["family2"]
+      },
+      "query": "todo"
+    }
+  },
+  {
+    "id": "vd_NF_UlIpv6DropPackets",
+    "name": "Ul Ipv 6Drop Packets",
+    "description": "UlIpv6DropPackets Description",
+    "valueType": "float",
+    "unit": "errors/minute",
+    "extra": [
+      {
+        "key": "csac_table",
+        "value": "kpi_csac_nf_10"
+      },
+      {
+        "key": "csac_column",
+        "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5bffffff"
+      }
+    ],
+    "visualization": {
+      "category": ["category1", "category2"],
+      "groups": {
+        "group1": ["family1", "family2"],
+        "group2": ["family2"]
+      },
+      "query": "todo"
+    }
+  }
+]

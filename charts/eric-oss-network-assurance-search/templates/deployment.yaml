@@ -1,0 +1,259 @@
+{{- $global := fromJson (include "eric-oss-network-assurance-search.global" .) -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "eric-oss-network-assurance-search.name" . }}
+  labels:
+    {{- include "eric-oss-network-assurance-search.labels-and-logStream" . | indent 4 }}
+  annotations:
+    {{- include "eric-oss-network-assurance-search.commonAnnotations" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "eric-oss-network-assurance-search.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  strategy:
+    type: {{ .Values.updateStrategy.type }}
+    {{- if and (eq .Values.updateStrategy.type "RollingUpdate") .Values.updateStrategy.rollingUpdate }}
+    rollingUpdate:
+      {{- if .Values.updateStrategy.rollingUpdate.maxUnavailable }}
+      maxUnavailable: {{ .Values.updateStrategy.rollingUpdate.maxUnavailable }}
+      {{- end }}
+      {{- if .Values.updateStrategy.rollingUpdate.maxSurge }}
+      maxSurge: {{ .Values.updateStrategy.rollingUpdate.maxSurge }}
+      {{- end }}
+    {{- end }}
+  template:
+    metadata:
+      labels:
+      {{- include "eric-oss-network-assurance-search.labels-and-logStream" . | indent 8 }}
+      annotations:
+      {{- include "eric-oss-network-assurance-search.mergedAnnotations" . | nindent 8 }}
+    spec:
+      {{- with .Values.topologySpreadConstraints }}
+      topologySpreadConstraints:
+        {{ toYaml . | nindent 6 }}
+      {{- end }}
+      {{- if eq .Values.affinity.podAntiAffinity "hard" }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - {{ include "eric-oss-network-assurance-search.name" . }}
+              topologyKey: {{ .Values.affinity.topologyKey }}
+      {{- else if eq .Values.affinity.podAntiAffinity  "soft" }}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - {{ include "eric-oss-network-assurance-search.name" . }}
+                topologyKey: {{ .Values.affinity.topologyKey }}
+      {{- end }}
+      serviceAccountName: {{ include "eric-oss-network-assurance-search.name" . }}-sa
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
+      containers:
+      - name: assurancesearch
+        image: {{ template "eric-oss-network-assurance-search.imagePath" (dict "imageId" "assurancesearch" "values" .Values "files" .Files) }}
+        imagePullPolicy: {{ template "eric-oss-network-assurance-search.registryImagePullPolicy" . }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          privileged: false
+          runAsNonRoot: true
+          runAsUser: 264522
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+              - all
+  {{- include "eric-oss-network-assurance-search.seccompProfile" . | nindent 8 }}
+        env:
+        - name: K8S_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: K8S_CONTAINER
+          value: {{ .Chart.Name }}
+        - name: K8S_POD
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: K8S_CHART_VERSION
+          value: {{ include "eric-oss-network-assurance-search.chart" . | quote}}
+        - name: K8S_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: K8S_MEMORY_LIMIT
+          valueFrom:
+            resourceFieldRef:
+              containerName: assurancesearch
+              resource: limits.memory
+        - name: TZ
+          value: {{ template "eric-oss-network-assurance-search.timezone" . }}
+        - name: PERSISTENCE_ENGINE
+          value: {{ $global.persistenceEngine | quote }}
+        - name: METADATA_DISCOVERY
+          value: {{ $global.discovery | quote }}
+        {{- if eq $global.persistenceEngine "vm" }}
+        - name: VM_URL
+          value: {{ .Values.victoriaMetricsUrl }}
+        {{- else }}
+        - name: SEARCH_ENGINE_URL
+          value: {{ .Values.searchEngineUrl }}
+        {{- end }}
+        {{- if eq $global.discovery "csac" }}
+        - name: CSAC_URL
+          value: {{ .Values.csacUrl }}
+        {{- else }}
+        - name: INDEXER_URL
+          value: {{ .Values.indexerUrl }}
+        {{- end }}
+        - name: PORT
+          value: "{{ include "eric-oss-network-assurance-search.service-port" . }}"
+        {{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+        - name: TLS_DIR
+          value: /runtime/server/certificates/httpClient/
+        - name: TLS_CERT
+          value: cert.pem
+        - name: TLS_KEY
+          value: key.pem
+        {{- end }}
+        ports:
+          - name: nas-svr-port
+            containerPort: {{ include "eric-oss-network-assurance-search.service-port" . }}
+            protocol: TCP
+        resources:
+          {{- toYaml .Values.resources.assurancesearch | nindent 12 }}
+        livenessProbe:
+          {{- with index .Values "probes" "assurancesearch" "livenessProbe" }}
+          initialDelaySeconds: {{ .initialDelaySeconds }}
+          periodSeconds: {{ .periodSeconds }}
+          timeoutSeconds: {{ .timeoutSeconds }}
+          failureThreshold: {{ .failureThreshold }}
+          {{- end }}
+          {{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+          exec:
+            command:
+              - /bin/sh
+              - -c
+              - curl -k --cert $TLS_DIR$TLS_CERT --key $TLS_DIR$TLS_KEY https://localhost:{{ include "eric-oss-network-assurance-search.service-port" . }}/status
+          {{- else }}
+          httpGet:
+            path: /status
+            port: nas-svr-port
+          {{- end }}
+        readinessProbe:
+          {{- with index .Values "probes" "assurancesearch" "readinessProbe" }}
+          initialDelaySeconds: {{ .initialDelaySeconds }}
+          periodSeconds: {{ .periodSeconds }}
+          timeoutSeconds: {{ .timeoutSeconds }}
+          failureThreshold: {{ .failureThreshold }}
+          {{- end }}
+          {{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+          exec:
+            command:
+              - /bin/sh
+              - -c
+              - curl -k --cert $TLS_DIR$TLS_CERT --key $TLS_DIR$TLS_KEY https://localhost:{{ include "eric-oss-network-assurance-search.service-port" . }}/status
+          {{- else }}
+          httpGet:
+            path: /status
+            port: nas-svr-port
+          {{- end }}
+        volumeMounts:
+          - name: apache2
+            mountPath: /etc/apache2
+          - name: application
+            mountPath: /app
+          - name: varlog
+            mountPath: /var/log/apache2
+          - name: config-vol
+            mountPath: /runtime/server/config/backend-service-config
+          - name: ui-config-vol
+            mountPath: /runtime/frontend/deployment-config
+          {{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+          - name: server-cert-vol
+            mountPath: /runtime/server/certificates/httpServer
+            readOnly: true
+          - name: client-cert-vol
+            mountPath: /runtime/server/certificates/httpClient
+            readOnly: true
+          - name: client-ca-cert-vol
+            mountPath: /runtime/server/certificates/commonClientCA
+            readOnly: true
+          - name: sip-tls-root-cert-vol
+            mountPath: /runtime/server/certificates/root
+            readOnly: true
+          - name: log-trans-cert-vol
+            mountPath: /runtime/server/certificates/logtransformer
+          - name: fault-handler-cert-vol
+            mountPath: /runtime/server/certificates/faultHandler
+          - name: search-engine-client-cert-vol
+            mountPath: /runtime/server/certificates/search
+            readOnly: true
+          {{ end }}
+      volumes:
+        - name: apache2
+          emptyDir: {}
+        - name: application
+          emptyDir: {}
+        - name: varlog
+          emptyDir: {}
+        - name: config-vol
+          configMap:
+            name: {{ include "eric-oss-network-assurance-search.name" . }}-config
+        - name: ui-config-vol
+          configMap:
+            name: {{ include "eric-oss-network-assurance-search.name" . }}-ui-configmap
+        {{- if  (eq (include "eric-oss-network-assurance-search.nas-security-tls-enabled" .) "true") }}
+        - name: server-cert-vol
+          secret:
+            optional: true
+            secretName: {{ include "eric-oss-network-assurance-search.name" . }}-server-cert
+        - name: client-cert-vol
+          secret:
+            optional: true
+            secretName: {{ include "eric-oss-network-assurance-search.name" . }}-client-cert
+        - name: client-ca-cert-vol
+          secret:
+            optional: true
+            secretName: {{ .Values.config.httpClient.commonClientCaSecret }}
+        - name: sip-tls-root-cert-vol
+          secret:
+            optional: true
+            secretName: eric-sec-sip-tls-trusted-root-cert
+        - name: log-trans-cert-vol
+          secret:
+            optional: true
+            secretName: {{ include "eric-oss-network-assurance-search.name" . }}-logtrans-client-cert
+        - name: fault-handler-cert-vol
+          secret:
+            optional: true
+            secretName: {{ include "eric-oss-network-assurance-search.name" . }}-fh-client-cert
+        - name: search-engine-client-cert-vol
+          secret:
+            optional: true
+            secretName: {{ include "eric-oss-network-assurance-search.name" . }}-se-client-cert-secret
+        {{ end }}
+      {{- if include "eric-oss-network-assurance-search.pullSecrets" . }}
+      imagePullSecrets:
+        - name: {{ template "eric-oss-network-assurance-search.pullSecrets" . }}
+      {{- end }}
+      {{- if (index .Values "podPriority" "assurancesearch" "priorityClassName") }}
+      priorityClassName: {{ (index .Values "podPriority" "assurancesearch" "priorityClassName") }}
+      {{- end }}
+      nodeSelector: {{ include "eric-oss-network-assurance-search.nodeSelector" . | nindent 6 -}}
+      {{- if or .Values.tolerations $global.tolerations }}
+      tolerations: {{- include "eric-oss-network-assurance-search.merge-tolerations" . | nindent 6 }}
+{{ toYaml . | indent 8 }}
+    {{- end }}

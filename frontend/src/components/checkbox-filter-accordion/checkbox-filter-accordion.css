@@ -1,0 +1,17 @@
+/* style goes here */
+:host {
+  display: block;
+}
+
+#remove-all {
+  float: right;
+}
+
+#filters-controls {
+  padding: 8px 10px 8px 0px;
+}
+
+#clear-all,
+#select-all {
+  padding: none;
+}

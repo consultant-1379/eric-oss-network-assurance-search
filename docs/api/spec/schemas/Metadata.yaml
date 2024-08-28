@@ -1,0 +1,4 @@
+type: object
+description: metadata property
+additionalProperties:
+  $ref: '../schemas/MetadataItem.yaml'

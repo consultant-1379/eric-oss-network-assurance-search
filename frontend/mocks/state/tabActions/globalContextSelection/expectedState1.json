@@ -1,0 +1,685 @@
+{
+  "browsers": [
+    {
+      "id": "a42aab1b-5611-47c6-800d-08d5dde5128d",
+      "title": "Metric Browser",
+      "loading": false,
+      "historicalDashboardData": {
+        "historicalDashboardModel": {
+          "$schema": "../../../server/jsonSchemas/dashboardModel.schema.json",
+          "namespace": "assurance",
+          "dashboards": [
+            {
+              "_id": "dashboard_6490jsxn",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (timelines)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_vb7l8z3"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_pm0uhaor"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "timeline_jdx0kmyd"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_ew5scp2o",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (bar charts)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_xj70mt6p"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_evpyh28j"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "barChart_rvuxna0n"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_3txhp2qc",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (donut)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_v3lhkjx"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_gzhh9z5m"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "donut_53ktu1jt"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_lr5u6x1a",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (kpi)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_9kjattnk"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_d5docm1u"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "kpi_tj03tjs6"
+                }
+              ]
+            },
+            {
+              "_id": "dashboard_yc8jza2h",
+              "title": "nssi_MMSharedSlice_1_NSSI, qos_86 (gauge)",
+              "tiles": [
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_boierbqj"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_xu52eioq"
+                },
+                {
+                  "xSize": 8,
+                  "ySize": 1,
+                  "widget": "gauge_5pk46wep"
+                }
+              ]
+            }
+          ],
+          "widgets": [
+            {
+              "_id": "timeline_vb7l8z3",
+              "widgetType": "timeline",
+              "title": "Partial DRB Accessibility",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 352,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 350,
+                  "color": "green"
+                }
+              ],
+              "rightPanelContent": {
+                "features": [
+                  "settings",
+                  "valuesTable"
+                ],
+                "openByDefault": "none"
+              }
+            },
+            {
+              "_id": "timeline_pm0uhaor",
+              "widgetType": "timeline",
+              "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a"
+                },
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 352,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 350,
+                  "color": "green"
+                }
+              ],
+              "rightPanelContent": {
+                "features": [
+                  "settings",
+                  "valuesTable"
+                ],
+                "openByDefault": "none"
+              }
+            },
+            {
+              "_id": "timeline_jdx0kmyd",
+              "widgetType": "timeline",
+              "title": "DLUeThroughput",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 352,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 350,
+                  "color": "green"
+                }
+              ],
+              "rightPanelContent": {
+                "features": [
+                  "settings",
+                  "valuesTable"
+                ],
+                "openByDefault": "none"
+              }
+            },
+            {
+              "_id": "barChart_xj70mt6p",
+              "widgetType": "barChart",
+              "title": "Partial DRB Accessibility",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 92,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 90,
+                  "color": "green"
+                }
+              ]
+            },
+            {
+              "_id": "barChart_evpyh28j",
+              "widgetType": "barChart",
+              "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a"
+                },
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 92,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 90,
+                  "color": "green"
+                }
+              ]
+            },
+            {
+              "_id": "barChart_rvuxna0n",
+              "widgetType": "barChart",
+              "title": "DLUeThroughput",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq"
+                }
+              ],
+              "thresholds": [
+                {
+                  "condition": "moreThan",
+                  "value": 92,
+                  "color": "red"
+                },
+                {
+                  "condition": "lessThan",
+                  "value": 90,
+                  "color": "green"
+                }
+              ]
+            },
+            {
+              "_id": "kpi_9kjattnk",
+              "widgetType": "kpi",
+              "title": "Partial DRB Accessibility",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc",
+                  "heading": "Partial DRB Accessibility",
+                  "kpiType": "progressBar",
+                  "extraData": {
+                    "maxValue": 100
+                  }
+                }
+              ],
+              "showTimestamp": true
+            },
+            {
+              "_id": "kpi_d5docm1u",
+              "widgetType": "kpi",
+              "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a",
+                  "heading": "DLLat_gNB-DU",
+                  "kpiType": "progressBar",
+                  "extraData": {
+                    "maxValue": 100
+                  }
+                },
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4",
+                  "heading": "DLDelay_gNBDU",
+                  "kpiType": "progressBar",
+                  "extraData": {
+                    "maxValue": 100
+                  }
+                }
+              ],
+              "showTimestamp": true
+            },
+            {
+              "_id": "kpi_tj03tjs6",
+              "widgetType": "kpi",
+              "title": "DLUeThroughput",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq",
+                  "heading": "DLUeThroughput",
+                  "kpiType": "progressBar",
+                  "extraData": {
+                    "maxValue": 100
+                  }
+                }
+              ],
+              "showTimestamp": true
+            },
+            {
+              "_id": "gauge_boierbqj",
+              "widgetType": "gauge",
+              "title": "Partial DRB Accessibility",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc"
+                }
+              ],
+              "size": "medium",
+              "dataKey": "Cavendish",
+              "min": 0,
+              "max": 100,
+              "limits": [
+                {
+                  "from": 1,
+                  "to": 10,
+                  "label": "Low",
+                  "color": "red"
+                },
+                {
+                  "from": 90,
+                  "to": 100,
+                  "label": "High",
+                  "color": "yellow"
+                },
+                {
+                  "from": 10,
+                  "to": 90,
+                  "label": "Normal",
+                  "color": "transparent"
+                }
+              ]
+            },
+            {
+              "_id": "gauge_xu52eioq",
+              "widgetType": "gauge",
+              "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a"
+                },
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4"
+                }
+              ],
+              "size": "medium",
+              "dataKey": "Cavendish",
+              "min": 0,
+              "max": 100,
+              "limits": [
+                {
+                  "from": 1,
+                  "to": 10,
+                  "label": "Low",
+                  "color": "red"
+                },
+                {
+                  "from": 90,
+                  "to": 100,
+                  "label": "High",
+                  "color": "yellow"
+                },
+                {
+                  "from": 10,
+                  "to": 90,
+                  "label": "Normal",
+                  "color": "transparent"
+                }
+              ]
+            },
+            {
+              "_id": "gauge_5pk46wep",
+              "widgetType": "gauge",
+              "title": "DLUeThroughput",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq"
+                }
+              ],
+              "size": "medium",
+              "dataKey": "Cavendish",
+              "min": 0,
+              "max": 100,
+              "limits": [
+                {
+                  "from": 1,
+                  "to": 10,
+                  "label": "Low",
+                  "color": "red"
+                },
+                {
+                  "from": 90,
+                  "to": 100,
+                  "label": "High",
+                  "color": "yellow"
+                },
+                {
+                  "from": 10,
+                  "to": 90,
+                  "label": "Normal",
+                  "color": "transparent"
+                }
+              ]
+            },
+            {
+              "_id": "donut_v3lhkjx",
+              "widgetType": "donut",
+              "title": "Partial DRB Accessibility",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc"
+                }
+              ]
+            },
+            {
+              "_id": "donut_gzhh9z5m",
+              "widgetType": "donut",
+              "title": "DLLat_gNB-DU,DLDelay_gNBDU",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a"
+                },
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4"
+                }
+              ]
+            },
+            {
+              "_id": "donut_53ktu1jt",
+              "widgetType": "donut",
+              "title": "DLUeThroughput",
+              "subtitle": "nssi_MMSharedSlice_1_NSSI, qos_86",
+              "sources": [
+                {
+                  "source": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq"
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "pmStatsQueryService_vd_nssi_qos_PartialDRBAccessibility_d6m33cxc",
+              "sourceType": "pmStatsQueryService",
+              "schema": "kpi",
+              "entitySet": "kpi_csac_nssi_qos_10",
+              "timestampField": "aggregation_end_time",
+              "sourceFields": {
+                "Partial DRB Accessibility": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h4"
+              },
+              "queryParameters": {
+                "$filter": "nssi eq 'MMSharedSlice_1_NSSI' and qos eq '86'"
+              }
+            },
+            {
+              "_id": "pmStatsQueryService_vd_nssi_qos_DLLat_gNB-DU_5tz2g79a",
+              "sourceType": "pmStatsQueryService",
+              "schema": "kpi",
+              "entitySet": "kpi_csac_nssi_qos_10",
+              "timestampField": "aggregation_end_time",
+              "sourceFields": {
+                "DLLat_gNB-DU": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h5"
+              },
+              "queryParameters": {
+                "$filter": "nssi eq 'MMSharedSlice_1_NSSI' and qos eq '86'"
+              }
+            },
+            {
+              "_id": "pmStatsQueryService_vd_nssi_qos_DLDelay_gNBDU_wlwvn1q4",
+              "sourceType": "pmStatsQueryService",
+              "schema": "kpi",
+              "entitySet": "kpi_csac_nssi_qos_10",
+              "timestampField": "aggregation_end_time",
+              "sourceFields": {
+                "DLDelay_gNBDU": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h6"
+              },
+              "queryParameters": {
+                "$filter": "nssi eq 'MMSharedSlice_1_NSSI' and qos eq '86'"
+              }
+            },
+            {
+              "_id": "pmStatsQueryService_vd_nssi_qos_DLUeThroughput_hyvx4kq",
+              "sourceType": "pmStatsQueryService",
+              "schema": "kpi",
+              "entitySet": "kpi_csac_nssi_qos_10",
+              "timestampField": "aggregation_end_time",
+              "sourceFields": {
+                "DLUeThroughput": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h7"
+              },
+              "queryParameters": {
+                "$filter": "nssi eq 'MMSharedSlice_1_NSSI' and qos eq '86'"
+              }
+            }
+          ]
+        }
+      },
+      "active": true
+    }
+  ],
+  "version": "1.0.0",
+  "postgresSchemaName": "kpi",
+  "loading": false,
+  "discoveryCompleted": true,
+  "selectedKpiContext": {
+    "contextName": "NSSI & QoS",
+    "context": {
+      "type": {
+        "id": "nssi_qos",
+        "contextFields": [
+          {
+            "id": "nssi"
+          },
+          {
+            "id": "qos"
+          }
+        ]
+      },
+      "contextFields": [
+        {
+          "id": "nssi_MMSharedSlice_1_NSSI",
+          "type": {
+            "id": "c_nssi"
+          },
+          "name": "MMSharedSlice_1_NSSI"
+        },
+        {
+          "id": "qos_86",
+          "type": {
+            "id": "c_qos"
+          },
+          "name": "86"
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "id": "vd_nssi_qos_PartialDRBAccessibility",
+        "name": "Partial DRB Accessibility",
+        "description": "The Data Radio Bearer (DRB) setup success rate, including the success rate for setting up Radio Resource Control (RRC) connection and Next Generation (NG) signaling connection",
+        "value": 25.3,
+        "valueType": "float",
+        "unit": "successes",
+        "visualization": {
+          "groups": {
+            "default": [
+              "vd_nssi_qos_PartialDRBAccessibility"
+            ]
+          }
+        },
+        "extra": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_nssi_qos_10"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h4"
+          }
+        ]
+      },
+      {
+        "id": "vd_nssi_qos_DLLat_gNB-DU",
+        "name": "DLLat_gNB-DU",
+        "description": "The gNodeB-Distributed unit (gNB-DU) part of the packet transmission latency experienced by an end-user. It is used to evaluate the gNB latency contribution to the total packet latency",
+        "value": 113.1,
+        "valueType": "float",
+        "unit": "milliseconds",
+        "visualization": {
+          "groups": {
+            "default": [
+              "vd_nssi_qos_DLLat_gNB-DU"
+            ]
+          }
+        },
+        "extra": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_nssi_qos_10"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h5"
+          }
+        ]
+      },
+      {
+        "id": "vd_nssi_qos_DLDelay_gNBDU",
+        "name": "DLDelay_gNBDU",
+        "description": "The average packet transmission delay through RAN to the UE. It is used to evaluate delay performance of NG-RAN in downlink for a network slice subnet",
+        "value": 473.5,
+        "valueType": "float",
+        "unit": "milliseconds",
+        "visualization": {
+          "groups": {
+            "default": [
+              "vd_nssi_qos_DLDelay_gNBDU"
+            ]
+          }
+        },
+        "extra": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_nssi_qos_10"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h6"
+          }
+        ]
+      },
+      {
+        "id": "vd_nssi_qos_DLUeThroughput",
+        "name": "DLUeThroughput",
+        "description": "The average downlink RAN UE throughput for a NRCellDU",
+        "value": 160.9,
+        "valueType": "float",
+        "unit": "bits/second",
+        "visualization": {
+          "groups": {
+            "default": [
+              "vd_nssi_qos_DLUeThroughput"
+            ]
+          }
+        },
+        "extra": [
+          {
+            "key": "csac_table",
+            "value": "kpi_csac_nssi_qos_10"
+          },
+          {
+            "key": "csac_column",
+            "value": "csac_ffbfa0d1_9257_4cb8_9ae0_f2ed5b7f33h7"
+          }
+        ]
+      }
+    ]
+  }
+}
